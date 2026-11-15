@@ -1,0 +1,431 @@
+{
+  "schema": "receiver-paired-comparison-v1",
+  "frozen": true,
+  "freeze_date": "2026-11-14 America/Los_Angeles",
+  "purpose": "Engineering comparison under small throw perturbations; not hardware reliability or training evaluation.",
+  "scenario_count": 50,
+  "method_count": 3,
+  "routes": [
+    "go",
+    "out",
+    "slant"
+  ],
+  "sampler": {
+    "bit_generator": "PCG64",
+    "seed": 20261114,
+    "distribution": "independent uniform [-.02,.02] per lateral aim m, vertical aim m, release-time offset s",
+    "numpy_version": "2.5.4"
+  },
+  "scenarios_sha256": "1d66170292817a58a2eb53881b0c5ac4b4c3cea4a2e82d2876c8a2a0beaa2d1a",
+  "scenarios": [
+    {
+      "trial_id": 0,
+      "lateral_m": 0.017994086192341326,
+      "height_m": -0.013348840822006389,
+      "release_s": -0.00425765058945164
+    },
+    {
+      "trial_id": 1,
+      "lateral_m": -0.012156890209120443,
+      "height_m": 0.009457999184013369,
+      "release_s": 0.017519446095705164
+    },
+    {
+      "trial_id": 2,
+      "lateral_m": 0.016786133768960133,
+      "height_m": -0.01956427094055719,
+      "release_s": 0.015380904737401578
+    },
+    {
+      "trial_id": 3,
+      "lateral_m": -0.007623392560596529,
+      "height_m": -0.014038242530861469,
+      "release_s": 0.01504254200455633
+    },
+    {
+      "trial_id": 4,
+      "lateral_m": -0.0016136619701706768,
+      "height_m": -0.006691044694573112,
+      "release_s": -0.01992467433493343
+    },
+    {
+      "trial_id": 5,
+      "lateral_m": 0.007924001881718197,
+      "height_m": -0.01540975144823476,
+      "release_s": 0.009649043311740595
+    },
+    {
+      "trial_id": 6,
+      "lateral_m": -0.01202206689807888,
+      "height_m": 0.013505438592589805,
+      "release_s": -0.003273750323644462
+    },
+    {
+      "trial_id": 7,
+      "lateral_m": -0.0036894037048629657,
+      "height_m": 0.0119755775514271,
+      "release_s": 0.00902790216840617
+    },
+    {
+      "trial_id": 8,
+      "lateral_m": -0.0009356931936352187,
+      "height_m": 0.016897514610393485,
+      "release_s": -0.004609646193485579
+    },
+    {
+      "trial_id": 9,
+      "lateral_m": 0.006555623979598897,
+      "height_m": 0.003825800352663511,
+      "release_s": 0.01825479831790462
+    },
+    {
+      "trial_id": 10,
+      "lateral_m": 0.0003551233735214332,
+      "height_m": -0.018895493227671985,
+      "release_s": -0.009307144099755527
+    },
+    {
+      "trial_id": 11,
+      "lateral_m": -0.01384580765434354,
+      "height_m": -0.01240915206609078,
+      "release_s": -0.013114695097016918
+    },
+    {
+      "trial_id": 12,
+      "lateral_m": -0.002164850893039265,
+      "height_m": 0.01859922873315868,
+      "release_s": -0.010538342877998872
+    },
+    {
+      "trial_id": 13,
+      "lateral_m": -0.0030810614236664647,
+      "height_m": -0.009358653187190997,
+      "release_s": -0.011669287438868303
+    },
+    {
+      "trial_id": 14,
+      "lateral_m": -0.019611353921809127,
+      "height_m": -0.0007268289202127853,
+      "release_s": 0.003297285391523168
+    },
+    {
+      "trial_id": 15,
+      "lateral_m": -0.018411495588783317,
+      "height_m": -0.00861993915699593,
+      "release_s": -0.0011780976759728735
+    },
+    {
+      "trial_id": 16,
+      "lateral_m": 0.004312420424571282,
+      "height_m": 0.006659150156555644,
+      "release_s": -0.009898729336106351
+    },
+    {
+      "trial_id": 17,
+      "lateral_m": -0.0005148907626677479,
+      "height_m": -0.015640402407629504,
+      "release_s": 0.016676563116666696
+    },
+    {
+      "trial_id": 18,
+      "lateral_m": 0.008964193425928536,
+      "height_m": -0.019339291246266176,
+      "release_s": -0.00207741447969366
+    },
+    {
+      "trial_id": 19,
+      "lateral_m": -0.010060126433378556,
+      "height_m": 0.011952116697758561,
+      "release_s": -0.01108802422214875
+    },
+    {
+      "trial_id": 20,
+      "lateral_m": 0.016885074198883965,
+      "height_m": 0.01134276883928616,
+      "release_s": -0.013399844107838605
+    },
+    {
+      "trial_id": 21,
+      "lateral_m": 0.005562508741129393,
+      "height_m": 0.0017226236345008106,
+      "release_s": 0.004359879566990883
+    },
+    {
+      "trial_id": 22,
+      "lateral_m": -0.015791760069612196,
+      "height_m": 0.002501410648332296,
+      "release_s": 0.011324975936876208
+    },
+    {
+      "trial_id": 23,
+      "lateral_m": 0.008339192951274254,
+      "height_m": -0.014230800073195509,
+      "release_s": 0.012118018160587147
+    },
+    {
+      "trial_id": 24,
+      "lateral_m": 0.007301928913060829,
+      "height_m": -0.013528825889794828,
+      "release_s": 0.014970627478822723
+    },
+    {
+      "trial_id": 25,
+      "lateral_m": -0.017064811086987257,
+      "height_m": 0.0020440865089572124,
+      "release_s": -0.008738275088167349
+    },
+    {
+      "trial_id": 26,
+      "lateral_m": -0.009902100982603006,
+      "height_m": -0.0025069827700139945,
+      "release_s": 0.01133956277938979
+    },
+    {
+      "trial_id": 27,
+      "lateral_m": 0.00027398240705869717,
+      "height_m": -0.009984962535097184,
+      "release_s": 0.0002810323870673459
+    },
+    {
+      "trial_id": 28,
+      "lateral_m": -0.018762835544820878,
+      "height_m": 0.003042311519837724,
+      "release_s": 0.018163685678990144
+    },
+    {
+      "trial_id": 29,
+      "lateral_m": -0.00468729135535817,
+      "height_m": 0.013024348003120143,
+      "release_s": -0.0156023719404662
+    },
+    {
+      "trial_id": 30,
+      "lateral_m": -0.0022663015161063127,
+      "height_m": -0.01658572890527879,
+      "release_s": 0.013338205331056115
+    },
+    {
+      "trial_id": 31,
+      "lateral_m": -0.007822057376219287,
+      "height_m": 0.012811724819635556,
+      "release_s": 0.018003373549238928
+    },
+    {
+      "trial_id": 32,
+      "lateral_m": -0.019703910877853503,
+      "height_m": -0.006955872435552961,
+      "release_s": 0.019269580883263717
+    },
+    {
+      "trial_id": 33,
+      "lateral_m": 0.006735024564698362,
+      "height_m": -0.0048992630279573795,
+      "release_s": 0.013620069656781659
+    },
+    {
+      "trial_id": 34,
+      "lateral_m": -0.017737594787142985,
+      "height_m": 0.005197187710487423,
+      "release_s": -0.01429551483930013
+    },
+    {
+      "trial_id": 35,
+      "lateral_m": 0.0066563270763221015,
+      "height_m": -0.009608731734030429,
+      "release_s": -0.0037803634499613725
+    },
+    {
+      "trial_id": 36,
+      "lateral_m": 0.0015279477708483658,
+      "height_m": 0.012738551097664726,
+      "release_s": 0.005178096386260109
+    },
+    {
+      "trial_id": 37,
+      "lateral_m": 0.0015937313358323601,
+      "height_m": 0.018688640770707695,
+      "release_s": -0.006575673298553526
+    },
+    {
+      "trial_id": 38,
+      "lateral_m": -0.016216870464592775,
+      "height_m": 0.010508335949084034,
+      "release_s": -0.019323161506391497
+    },
+    {
+      "trial_id": 39,
+      "lateral_m": 0.0192012964152503,
+      "height_m": -0.014603990519238478,
+      "release_s": -0.017852337237421717
+    },
+    {
+      "trial_id": 40,
+      "lateral_m": 0.004132348783898094,
+      "height_m": -0.014226707385920103,
+      "release_s": 0.005225008581730215
+    },
+    {
+      "trial_id": 41,
+      "lateral_m": -0.013485493914496237,
+      "height_m": -0.01217576392393398,
+      "release_s": 0.010380917657454067
+    },
+    {
+      "trial_id": 42,
+      "lateral_m": 0.011091619478173805,
+      "height_m": 0.01155543750410463,
+      "release_s": 0.006370017332969895
+    },
+    {
+      "trial_id": 43,
+      "lateral_m": 0.015651315064001827,
+      "height_m": 0.016609520586881962,
+      "release_s": -0.015683092124228658
+    },
+    {
+      "trial_id": 44,
+      "lateral_m": -0.0032554990330425637,
+      "height_m": 0.009374962056744774,
+      "release_s": -0.009961107002920012
+    },
+    {
+      "trial_id": 45,
+      "lateral_m": 0.01584127242193935,
+      "height_m": 0.0069155043678126036,
+      "release_s": 0.0036287142181266807
+    },
+    {
+      "trial_id": 46,
+      "lateral_m": -0.013875912861821665,
+      "height_m": 0.01943717647091985,
+      "release_s": -0.009189911236057547
+    },
+    {
+      "trial_id": 47,
+      "lateral_m": 0.01985519121434614,
+      "height_m": 0.01785451338226997,
+      "release_s": -0.012148891375312632
+    },
+    {
+      "trial_id": 48,
+      "lateral_m": 0.012231841192247605,
+      "height_m": -0.017954264411307937,
+      "release_s": -0.011486668655734573
+    },
+    {
+      "trial_id": 49,
+      "lateral_m": -0.009733001410321011,
+      "height_m": -0.015440788316084624,
+      "release_s": 0.01909160682306308
+    }
+  ],
+  "methods": [
+    "current",
+    "earlier",
+    "exact_ball_diagnostic"
+  ],
+  "method_definitions": {
+    "current": "Latest form-oriented sensor catch controller frozen before batch.",
+    "earlier": "Route-specific previous sensor controller; method bundle comparison when multiple parameters differ.",
+    "exact_ball_diagnostic": "Current controller with exact current ball center at every existing detector call, including invisible/occluded frames, covariance=identity*1e-12 m2. Capture cadence and fitted-velocity tracker unchanged; removes position error, visibility loss and position uncertainty together. No exact velocity, contact, future state or receiver pose. New privileged observation diagnostic, not historical, deployable or a guaranteed upper bound."
+  },
+  "throw_perturbation": {
+    "lateral_basis": "Fixed per-route surveyed lateral vector declared in route manifest, same across methods.",
+    "mutate_only": [
+      "play.quarterback_target_m horizontal lateral offset",
+      "play.quarterback_target_m vertical offset",
+      "play.release_s offset"
+    ],
+    "fixed": [
+      "machine origin",
+      "receiver start",
+      "catch plane",
+      "approach axis",
+      "cameras",
+      "controller",
+      "nominal route"
+    ],
+    "commanded_release_event_visible": true,
+    "release_adapter": "If route uses commanded event-relative release delay, add identical release_s offset to that delay and declare mapping. Do not change measured route event."
+  },
+  "physics": {
+    "timestep_s": 0.001,
+    "ccd_tolerance": 1e-08,
+    "ccd_iterations": 35,
+    "ccd_review_complete": true,
+    "native_ccd": true,
+    "native_tendon_force_limit_n": 65.55555555555556,
+    "native_thumb_abduction_torque_limit_nm": 0.59,
+    "limits": "Full-episode symmetric optimistic stall limits. Not calibrated torque-speed, pull-only, thermal or hardware safety limits.",
+    "contact_timeconstant_s": {
+      "go": 0.0025,
+      "out": 0.0025,
+      "slant": 0.02
+    },
+    "material_calibrated": false,
+    "require_same_model_within_route": true,
+    "no_pooled_route_rate": true
+  },
+  "horizons_s": {
+    "go": 11.0,
+    "out": 10.0,
+    "slant": 9.5
+  },
+  "primary": {
+    "name": "Retained catch under declared model",
+    "definition": "all(anatomical_score.physics_checks.values()) and anatomical_score.form.pass and anatomical_score.upright is True",
+    "score_source": "src/g1_receiver/anatomical_catch_eval.py",
+    "unchanged_thresholds": true,
+    "reference_model_match_separately_reported": true,
+    "full_horizon_required": true,
+    "simulator_warnings_disqualify": true
+  },
+  "secondary": [
+    "longest_clean_bilateral_s",
+    "first_excluded_support_s",
+    "form.pass",
+    "final_bilateral_fraction",
+    "legacy short receive",
+    "running check",
+    "route check",
+    "minimum_ball_contact_distance_m"
+  ],
+  "analysis": {
+    "interval": "Wilson 95%",
+    "denominator": 50,
+    "show_counts": true,
+    "paired_differences": true,
+    "retain_failures": true,
+    "never_select_best_subset": true,
+    "exact_ball_not_guaranteed_upper_bound": true
+  },
+  "execution": {
+    "max_workers_per_route": 2,
+    "per_trial_timeout_s": 180,
+    "immutable_source_snapshot": true,
+    "keep_all_traces": true,
+    "retries": "Infrastructure only, same inputs/seed/source; preserve failed receipt. No resampling.",
+    "no_tuning_against_batch": true,
+    "route_manifest_required": [
+      "profiles and hashes",
+      "source archive hash",
+      "structured command",
+      "exact model identity",
+      "lateral basis",
+      "method changes",
+      "50 fixed scenario hash"
+    ]
+  },
+  "oracle_contract": {
+    "validity_mask": "all existing ball detector calls; bypasses visibility/occlusion",
+    "covariance_m2": "I * 1e-12",
+    "timestamp": "current plant time must equal frame capture time within 1e-8 s",
+    "position_source": "football freejoint qpos current center, world survey frame",
+    "forbidden": [
+      "qvel",
+      "contact",
+      "future states",
+      "receiver truth"
+    ]
+  }
+}

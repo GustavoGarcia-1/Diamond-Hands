@@ -1,0 +1,54 @@
+{
+  "scope": "Local verification in newly cloned clean sibling repository, not a hostedCI or exact600replay",
+  "python": "3.12.13",
+  "platform": "macOS arm64",
+  "lock_unchanged": true,
+  "checks": [
+    {
+      "command": "uv sync --locked --python 3.12 --extra training --extra test --extra video",
+      "exit_code": 0
+    },
+    {
+      "command": "python scripts/fetch_runtime_assets.py",
+      "exit_code": 0,
+      "verified_files": 56,
+      "verified_bytes": 35315456,
+      "models_gitignored": true
+    },
+    {
+      "command": "uv run --no-sync python scripts/fetch_aero_hand.py assets/aero",
+      "exit_code": 0,
+      "fresh_destination": true
+    },
+    {
+      "command": "AERO_SOURCE=\"$PWD/assets/aero\" uv run --no-sync pytest -q",
+      "exit_code": 0,
+      "passed": 220,
+      "seconds": 21.0
+    },
+    {
+      "command": "Model-free64subset in separate wbc/test-only environment, robotweightsabsent",
+      "exit_code": 0,
+      "passed": 64,
+      "seconds": 4.38
+    },
+    {
+      "command": "python -m g1_receiver.sim --frames 60 withseparate sensor/truth/overviewoutputs",
+      "exit_code": 0,
+      "warning": "ARB_clip_control unavailable; limiteddepthprecision"
+    },
+    {
+      "command": "python -m g1_receiver.perception output_sensor --allow-synthetic-fixture --plane-point 1 0 0 --plane-normal 1 0 0",
+      "exit_code": 0,
+      "sensor_only_predictions": true
+    },
+    {
+      "command": "--help forprobe_aero_out,probe_go_side_causal_pass,probe_slant_lower_palms,train_out_late_reach",
+      "exit_code": 0,
+      "not_fullroute_replay": true
+    }
+  ],
+  "hosted_actions_run": false,
+  "hardware_tested": false,
+  "historical600fresh_replay": false
+}

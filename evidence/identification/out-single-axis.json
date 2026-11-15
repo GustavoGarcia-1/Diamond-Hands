@@ -1,0 +1,197 @@
+{
+  "source": "Two new no-contact trials; exact B disabled anchor gate precedes excitation",
+  "all29_joint_names": [
+    "left_hip_pitch_joint",
+    "left_hip_roll_joint",
+    "left_hip_yaw_joint",
+    "left_knee_joint",
+    "left_ankle_pitch_joint",
+    "left_ankle_roll_joint",
+    "right_hip_pitch_joint",
+    "right_hip_roll_joint",
+    "right_hip_yaw_joint",
+    "right_knee_joint",
+    "right_ankle_pitch_joint",
+    "right_ankle_roll_joint",
+    "waist_yaw_joint",
+    "waist_roll_joint",
+    "waist_pitch_joint",
+    "left_shoulder_pitch_joint",
+    "left_shoulder_roll_joint",
+    "left_shoulder_yaw_joint",
+    "left_elbow_joint",
+    "left_wrist_roll_joint",
+    "left_wrist_pitch_joint",
+    "left_wrist_yaw_joint",
+    "right_shoulder_pitch_joint",
+    "right_shoulder_roll_joint",
+    "right_shoulder_yaw_joint",
+    "right_elbow_joint",
+    "right_wrist_roll_joint",
+    "right_wrist_pitch_joint",
+    "right_wrist_yaw_joint"
+  ],
+  "excited_joint": "right_shoulder_pitch_joint",
+  "causal_forecast_arrival_s": 6.200489764991968,
+  "training_window_s": [
+    6.340000000000452,
+    6.6800000000005655
+  ],
+  "heldout_window_s": [
+    6.780000000000599,
+    7.120000000000712
+  ],
+  "training_samples": 18,
+  "test_samples": 18,
+  "fit": {
+    "lag_samples": 2,
+    "a": 0.6525368989336241,
+    "b": 0.34965051184172447,
+    "train_rmse_rad": 0.0002560424746863302,
+    "design_condition": 3.407008381423803,
+    "design_singular_values": [
+      0.08882808468525703,
+      0.026072165002463364
+    ]
+  },
+  "all_preregistered_lag_fits": [
+    {
+      "lag_samples": 0,
+      "a": 0.8469486963813708,
+      "b": 0.20892088077862112,
+      "train_rmse_rad": 0.001321648782709827,
+      "design_condition": 1.9160838257208936,
+      "design_singular_values": [
+        0.08207051706684211,
+        0.042832425160712624
+      ]
+    },
+    {
+      "lag_samples": 1,
+      "a": 0.770361312880915,
+      "b": 0.2635086442084741,
+      "train_rmse_rad": 0.0007183454423181497,
+      "design_condition": 2.44932737282071,
+      "design_singular_values": [
+        0.08570726302485686,
+        0.03499216314483682
+      ]
+    },
+    {
+      "lag_samples": 2,
+      "a": 0.6525368989336241,
+      "b": 0.34965051184172447,
+      "train_rmse_rad": 0.0002560424746863302,
+      "design_condition": 3.407008381423803,
+      "design_singular_values": [
+        0.08882808468525703,
+        0.026072165002463364
+      ]
+    },
+    {
+      "lag_samples": 3,
+      "a": 0.45148327909039865,
+      "b": 0.5077021767997434,
+      "train_rmse_rad": 0.0010397185954229451,
+      "design_condition": 5.504998911754897,
+      "design_singular_values": [
+        0.0910846989903594,
+        0.01654581598478885
+      ]
+    },
+    {
+      "lag_samples": 4,
+      "a": 0.3543879351988248,
+      "b": 0.5709970781563413,
+      "train_rmse_rad": 0.0026478466942739267,
+      "design_condition": 11.611592537320242,
+      "design_singular_values": [
+        0.09223389314518553,
+        0.00794325953556682
+      ]
+    },
+    {
+      "lag_samples": 5,
+      "a": 1.8871419352730394,
+      "b": -0.8351801923413014,
+      "train_rmse_rad": 0.0017417103077080839,
+      "design_condition": 10.571824293385546,
+      "design_singular_values": [
+        0.09216390276236706,
+        0.008717880680256015
+      ]
+    },
+    {
+      "lag_samples": 6,
+      "a": 1.483674240451125,
+      "b": -0.49227999579316645,
+      "train_rmse_rad": 0.0007733592935492459,
+      "design_condition": 5.167921408016461,
+      "design_singular_values": [
+        0.09087649301115393,
+        0.01758472814044475
+      ]
+    }
+  ],
+  "heldout_free_run_axis_rmse_rad": 0.0005600730864819254,
+  "persistence_axis_rmse_rad": 0.012770441449048691,
+  "zero_effect_axis_rmse_rad": 0.014234963659309166,
+  "stable_AR_coefficient": true,
+  "axis_beats_persistence": true,
+  "heldout_palm_rmse_m": [
+    0.000758420858983513,
+    0.0008717491653061463
+  ],
+  "heldout_palm_max_error_m": [
+    0.0012184458856786633,
+    0.001602055817575144
+  ],
+  "persistence_palm_rmse_m": [
+    0.000758420858983513,
+    0.0044345083181002685
+  ],
+  "qualified_1mm_and_better_than_persistence": false,
+  "prefix_sensor_q_exact": true,
+  "max_requested_vs_applied_excitation_rad": 5.898059818321144e-17,
+  "peak_applied_excitation_rad": 0.02999909410879642,
+  "peak_encoder_paired_axis_response_rad": 0.025034811799195755,
+  "paired_other_encoder_rms_rad": [
+    0.0034124298372158043,
+    0.0018312929649985986,
+    0.002406016132535216,
+    0.0034713880865586185,
+    0.001109245769901232,
+    0.0013193234147917917,
+    0.00270198952542885,
+    0.0014089593480286881,
+    0.0031805406084252433,
+    0.0006792036205486465,
+    0.0015949633236985714,
+    0.0016486845358228415,
+    0.0015403672641235936,
+    0.0007711843719833165,
+    0.0015492727120948056,
+    0.0006596385294954682,
+    0.0005630120752319807,
+    0.0009243280758719643,
+    0.0007144047161887685,
+    0.0005955213631233966,
+    0.00028211283046521184,
+    0.00043011551358301445,
+    0.014234963659309166,
+    0.00015648019865117653,
+    0.00030569559586464027,
+    0.0026856565769694547,
+    0.001073841493545168,
+    0.0005145249982734355,
+    0.0005666162129630302
+  ],
+  "paired_gyro_rms_rad_s": [
+    0.014703958865705372,
+    0.01147027747979567,
+    0.021279772060103275
+  ],
+  "model_boundary": "Only raw29encoder/IMU/knowncommands andCAD. No actualstate/ball/contact/force inputs. Conditional FK error around contemporaneous baseline encoder is evaluation-only; no futurebaseline sensor enters ARX prediction. Unmodeled otherjoint/bodyresponses remain full-FK error.",
+  "identifiability": "Singleaxis with independentsecondtimebump tests localresponse repeatability; it does not identifyfullcrossjoint map orvalidate arrival-phase/loaded catch response. Lags are discreteconditionalfits, notproven motortransportdelay. No confidenceinterval fromtwo correlatedbumps.",
+  "no_runtime_model_deployment": true
+}

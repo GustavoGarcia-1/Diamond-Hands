@@ -1,0 +1,27 @@
+.venv*/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.DS_Store
+MUJOCO_LOG.TXT
+.env
+.env.*
+*.pem
+*.key
+/assets/
+artifacts/
+reports/
+outputs/
+site/
+*.npz
+*.mp4
+*.onnx
+*.pt
+*.pth
+*.zip
+*.tar.gz
+# Runtime data are fetched from pinned, hashed upstream inputs.
+src/g1_receiver/_vendor/g1_runtime/assets/robot/
+src/g1_receiver/_vendor/g1_runtime/checkpoints/
+src/g1_receiver/_vendor/g1_runtime/assets/upstream/*.yaml

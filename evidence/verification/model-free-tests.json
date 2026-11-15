@@ -1,0 +1,23 @@
+{
+  "command": [
+    "python",
+    "-m",
+    "pytest",
+    "-q",
+    "tests/test_perception.py",
+    "tests/test_catching.py",
+    "tests/test_observable.py",
+    "tests/test_routes_evaluation.py",
+    "tests/test_running_catch_eval.py",
+    "tests/test_receiver_comparison_plot.py",
+    "tests/test_rgbd_impairments.py",
+    "tests/test_anatomical_catch_eval.py"
+  ],
+  "exit_code": 0,
+  "stdout": "................................................................         [100%]\n64 passed in 4.38s\n",
+  "stderr": "",
+  "python": "3.12.13",
+  "environment": "Fresh .venv-ci, uv sync --locked --extra wbc --extra test; no torch; robot/weights directories temporarily absent; AERO_SOURCE absent",
+  "local_platform": "macOS arm64",
+  "not_github_actions_run": true
+}

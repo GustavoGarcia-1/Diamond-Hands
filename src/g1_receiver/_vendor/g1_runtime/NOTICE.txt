@@ -1,0 +1,15 @@
+Licensed by NVIDIA Corporation under the NVIDIA Open Model License
+
+The G1 MuJoCo model, mesh assets, YAML configurations, and pretrained
+walk/balance checkpoints originate from NVlabs/GR00T-WholeBodyControl,
+revision b042411fae38ee4d1af9aac82a37a1f8d14d6dd0. ASSET-MANIFEST.json
+records exact upstream URLs and SHA-256 checksums for the copied files.
+
+The NVIDIA code license is in assets/upstream/CODE-LICENSE.txt. The
+checkpoint license is in assets/upstream/WEIGHTS-LICENSE.txt. Preserve
+these notices and license files when redistributing the assets.
+
+pool/wbc.py and pool/contracts.py were copied from the user's existing
+g1-pool project, which implements the NumPy/ONNX adapter for the pinned
+NVIDIA policies. This copy changes asset lookup to accept a runtime
+directory, and otherwise retains the existing adapter and observations.

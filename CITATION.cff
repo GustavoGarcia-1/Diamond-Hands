@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite this repository when referring to the Diamond Hands research code."
+title: "Diamond Hands: Can a humanoid robot learn to catch a ball in stride?"
+authors:
+  - family-names: Garcia
+    given-names: Gustavo
+    affiliation: University of California San Diego
+version: 0.1.0
+url: https://github.com/GustavoGarcia-1/Diamond-Hands
