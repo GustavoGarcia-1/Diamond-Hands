@@ -11,7 +11,7 @@ dependencies = ["numpy>=1.26,<3"]
 
 [project.optional-dependencies]
 sim = ["mujoco==3.15.0"]
-test = ["pytest>=8,<10"]
+test = ["pytest>=8,<10", "gymnasium==1.4.0"]
 video = ["imageio==2.38.1", "imageio-ffmpeg==0.6.0", "Pillow==12.2.0"]
 wbc = ["mujoco==3.15.0", "onnxruntime==1.31.0", "scipy==1.17.1", "PyYAML>=6,<7"]
 training = ["g1-receiver[wbc]", "gymnasium==1.4.0", "stable-baselines3==2.9.2"]

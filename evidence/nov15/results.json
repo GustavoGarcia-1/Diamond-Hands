@@ -1,0 +1,983 @@
+{
+  "scope": "Declared simulation models, walking receives. Separate routes and fixed development sets are not pooled.",
+  "source_hashes": {
+    "go_confirmation": "59a7e263cb777dac3565d51be80b0772e40f03f042d6f14c57cbe8b1d2bde5bc",
+    "go_development": "c59671cfa7710d81c7334b997e1ed7301c7e4572a2ad582bf166da610384290f",
+    "slant_factorial": "92acc601ba5b8514652596c0bc43f1224906e56004d4dd6a8b6cd4157d870acf",
+    "slant_hybrid": "048be4f2b0b583ad566b49b22aaa73375907605bee99c149efdcfe6c3a8f1274",
+    "evidence/nov15/slant-confirmation-summary.json": "e2110e2ae4ec09e65b0a87d3c31de7355e8834a700b1c5a3ff80600b8ce79fda",
+    "evidence/nov15/slant-confirmation-protocol.json": "79cf0d64eb4dc0142152579a451ec88942a73348ba03050d08b3920ebdd89261",
+    "evidence/nov15/slant-confirmation-draws.json": "8b5bc721fee36d82719702f290d7a1922c6f5233388b0182715b48a920327e6c",
+    "evidence/nov15/slant-confirmation-independent-summary.json": "acda9ff64e38280b7f0f171708e7e592c83d2be853cb9b4202ada162523d1cc2",
+    "evidence/nov15/slant-confirmation-analysis-validation-erratum.json": "c364054cc19e65b92797e98352baec46ecda233daf73740168af16f0cbce0198",
+    "evidence/nov15/slant-confirmation-peer-audit.json": "a4bc6a913226e229e053a22d1e85ab9df11b30a86958f1181c81cb146f5a7ca5"
+  },
+  "go_confirmation": {
+    "sample_count_per_method": 50,
+    "counts": {
+      "baseline": 2,
+      "persistent": 34
+    },
+    "wilson95": {
+      "baseline": [
+        0.011038884327619805,
+        0.1346009068750702
+      ],
+      "persistent": [
+        0.5418970269185592,
+        0.7924178373934316
+      ]
+    },
+    "paired_difference_fraction": 0.64,
+    "paired_bootstrap95": [
+      0.5,
+      0.78
+    ],
+    "contingency": {
+      "both_fail": 16,
+      "baseline_only": 0,
+      "persistent_only": 32,
+      "both_pass": 2
+    },
+    "exact_mcnemar_two_sided_p": 4.656612873077393e-10,
+    "failure_gate_counts": {
+      "baseline": {
+        "final_anatomical_hand_hold": 48,
+        "no_excluded_floor_body_or_applied_support": 48,
+        "no_deep_ball_penetration": 23,
+        "continuous_anatomical_bilateral_075s": 14
+      },
+      "persistent": {
+        "continuous_anatomical_bilateral_075s": 15,
+        "final_anatomical_hand_hold": 15,
+        "no_excluded_floor_body_or_applied_support": 15,
+        "no_deep_ball_penetration": 14
+      }
+    },
+    "shortened_horizons": {
+      "baseline": 0,
+      "persistent": 0
+    },
+    "all100_fullscores_recomputed_exact": true,
+    "all_native_caps_zero_excess": true,
+    "all_free_ball_no_load": true,
+    "all_prerelease_stationary": true,
+    "model_hashes": [
+      "b0a28bb13dbe61329b81abffacfec474c80cacfdbe966fad57c75f4466e24adf"
+    ]
+  },
+  "go_development": {
+    "sample_count_per_method": 50,
+    "counts": {
+      "baseline": 4,
+      "persistent": 31
+    },
+    "wilson95": {
+      "baseline": [
+        0.03154951408859298,
+        0.18838246918342838
+      ],
+      "persistent": [
+        0.4815044693099298,
+        0.7413721068980641
+      ]
+    },
+    "paired_difference_fraction": 0.54,
+    "paired_bootstrap95": [
+      0.4,
+      0.68
+    ],
+    "contingency": {
+      "both_fail": 19,
+      "baseline_only": 0,
+      "persistent_only": 27,
+      "both_pass": 4
+    },
+    "exact_mcnemar_two_sided_p": 1.4901161193847656e-08,
+    "failure_gate_counts": {
+      "baseline": {
+        "continuous_anatomical_bilateral_075s": 18,
+        "final_anatomical_hand_hold": 46,
+        "no_excluded_floor_body_or_applied_support": 46,
+        "no_deep_ball_penetration": 35,
+        "load_bearing_hands": 4
+      },
+      "persistent": {
+        "continuous_anatomical_bilateral_075s": 19,
+        "final_anatomical_hand_hold": 17,
+        "no_excluded_floor_body_or_applied_support": 17,
+        "no_deep_ball_penetration": 15,
+        "load_bearing_hands": 3,
+        "upright": 1,
+        "full11s_horizon": 1
+      }
+    },
+    "shortened_horizons": {
+      "baseline": 0,
+      "persistent": 1
+    },
+    "all100_fullscores_recomputed_exact": true,
+    "all_native_caps_zero_excess": true,
+    "all_free_ball_no_load": true,
+    "all_prerelease_stationary": true,
+    "model_hashes": [
+      "b0a28bb13dbe61329b81abffacfec474c80cacfdbe966fad57c75f4466e24adf"
+    ]
+  },
+  "out_original_development": {
+    "retained": 9,
+    "throws": 50
+  },
+  "out_combined_development": {
+    "retained": 8,
+    "throws": 50,
+    "gains": 2,
+    "losses": 3,
+    "promotion": false
+  },
+  "slant_factorial": {
+    "schema": "slant_fixed_seven_factorial_summary_v1",
+    "units": {
+      "distance": "m",
+      "time": "s",
+      "normal_force": "N",
+      "scalar_normal_impulse": "N s",
+      "native_cap_excess": "SI, zero for every cell"
+    },
+    "conditions": 7,
+    "new_episodes": 16,
+    "reused_without_floor_cells": 14,
+    "factorial_cells": 28,
+    "new_training": false,
+    "posthoc_existing_development": true,
+    "original50_and_fresh_confirmation_unused": true,
+    "world_axis_note": "lateral_m is world Y throw aim shift; height_m is world Z. Commanded release+10ms quantizes to actual+20ms. Commanded minus10ms aliases nominal and was excluded explicitly to retain seven unique cases.",
+    "aggregate": {
+      "zero_no_floor": {
+        "conditions": 7,
+        "anatomical_retained": 0,
+        "retained_with_form_and_upright": 0,
+        "short_receive": 2,
+        "historical_realistic": 0,
+        "original_self_overlap_failures": 3
+      },
+      "zero_floor": {
+        "conditions": 7,
+        "anatomical_retained": 1,
+        "retained_with_form_and_upright": 1,
+        "short_receive": 2,
+        "historical_realistic": 0,
+        "original_self_overlap_failures": 3
+      },
+      "learned_no_floor": {
+        "conditions": 7,
+        "anatomical_retained": 0,
+        "retained_with_form_and_upright": 0,
+        "short_receive": 4,
+        "historical_realistic": 0,
+        "original_self_overlap_failures": 1
+      },
+      "learned_floor": {
+        "conditions": 7,
+        "anatomical_retained": 4,
+        "retained_with_form_and_upright": 4,
+        "short_receive": 4,
+        "historical_realistic": 0,
+        "original_self_overlap_failures": 1
+      }
+    },
+    "all_30_original_full_and_short_scores_exact": true,
+    "exact_171_zero_and_1995_learned_floor_anchors": true,
+    "all14_physical_command_prefixes_exact": true,
+    "all_model_gates_pass": true,
+    "historical_realistic_flag_false_all": true,
+    "running_at_catch_false_all": true,
+    "cells": [
+      {
+        "condition": "nominal",
+        "requested_scenario": {
+          "lateral_m": 0,
+          "height_m": 0,
+          "release_s": 0
+        },
+        "cells": {
+          "zero_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.1710000000000571,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": true,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.0021037761937663536,
+            "ball_overlap_m": 0.03104741536438701,
+            "first_excluded_support_s": 8.014000000000998,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.008668763160428184,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 1274.4304497482717,
+            "first20ms_scalar_normal_impulse_Ns": 2.108704020005449,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "zero_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.1710000000000571,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": true,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.0022172009398907,
+            "ball_overlap_m": 0.03350414451132658,
+            "first_excluded_support_s": 8.11800000000094,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0012477125840114085,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 1274.4304497482717,
+            "first20ms_scalar_normal_impulse_Ns": 2.108704020005449,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.8730000000002915,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": true,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.0047743231774299375,
+            "ball_overlap_m": 0.0019815237467270875,
+            "first_excluded_support_s": 8.475000000000742,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.009534364358471346,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 650.1396428841733,
+            "first20ms_scalar_normal_impulse_Ns": 2.2306937105705886,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_floor": {
+            "anatomical_retained": true,
+            "retained_with_original_form_and_upright": true,
+            "clean_bilateral_s": 1.9950000000006662,
+            "endpoint_bilateral_fraction": 1.0,
+            "original_short_receive": true,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.0021037761937663536,
+            "ball_overlap_m": 0.0019815237467270875,
+            "first_excluded_support_s": null,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0007588602772912421,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 650.1396428841733,
+            "first20ms_scalar_normal_impulse_Ns": 2.2306937105705886,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          }
+        }
+      },
+      {
+        "condition": "lateral_minus_1cm",
+        "requested_scenario": {
+          "lateral_m": -0.01,
+          "height_m": 0,
+          "release_s": 0
+        },
+        "cells": {
+          "zero_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.001000000000000334,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.003012516669269721,
+            "ball_overlap_m": 0.035388320901470205,
+            "first_excluded_support_s": 6.974000000000664,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0010663229586603835,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 545.2403977270258,
+            "first20ms_scalar_normal_impulse_Ns": 2.2698688244306227,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "zero_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.001000000000000334,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.003012516669269721,
+            "ball_overlap_m": 0.035388320901470205,
+            "first_excluded_support_s": 6.974000000000664,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0005698682925345238,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 545.2403977270258,
+            "first20ms_scalar_normal_impulse_Ns": 2.2698688244306227,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.009000000000003006,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.004175697844725097,
+            "ball_overlap_m": 0.034851141695622395,
+            "first_excluded_support_s": 7.0840000000007,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0013281887481902885,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 583.7549154069985,
+            "first20ms_scalar_normal_impulse_Ns": 2.528154931428206,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.009000000000003006,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.004175697844725097,
+            "ball_overlap_m": 0.034851141695622395,
+            "first_excluded_support_s": 7.0840000000007,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0008072706097748423,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 583.7549154069985,
+            "first20ms_scalar_normal_impulse_Ns": 2.528154931428206,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          }
+        }
+      },
+      {
+        "condition": "lateral_plus_1cm",
+        "requested_scenario": {
+          "lateral_m": 0.01,
+          "height_m": 0,
+          "release_s": 0
+        },
+        "cells": {
+          "zero_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.008000000000002672,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.005616320511011233,
+            "ball_overlap_m": 0.0338441504507303,
+            "first_excluded_support_s": 6.961000000000659,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.00039432038538587955,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 1275.612768879324,
+            "first20ms_scalar_normal_impulse_Ns": 2.3781598937462864,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "zero_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.008000000000002672,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.005616320511011233,
+            "ball_overlap_m": 0.0338441504507303,
+            "first_excluded_support_s": 6.961000000000659,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0002596506625295418,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 1275.612768879324,
+            "first20ms_scalar_normal_impulse_Ns": 2.3781598937462864,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.2800000000000935,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": true,
+            "form_fraction": 0.8333333333333334,
+            "self_overlap_m": 0.0021037761937663536,
+            "ball_overlap_m": 0.0036228857621659182,
+            "first_excluded_support_s": 8.502000000000727,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.011619988491677039,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 769.5346537857392,
+            "first20ms_scalar_normal_impulse_Ns": 2.274338366895432,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_floor": {
+            "anatomical_retained": true,
+            "retained_with_original_form_and_upright": true,
+            "clean_bilateral_s": 2.0200000000006746,
+            "endpoint_bilateral_fraction": 1.0,
+            "original_short_receive": true,
+            "form_fraction": 0.8333333333333334,
+            "self_overlap_m": 0.0021037761937663536,
+            "ball_overlap_m": 0.0036228857621659182,
+            "first_excluded_support_s": null,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0007787138505828163,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 769.5346537857392,
+            "first20ms_scalar_normal_impulse_Ns": 2.274338366895432,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          }
+        }
+      },
+      {
+        "condition": "height_minus_1cm",
+        "requested_scenario": {
+          "lateral_m": 0,
+          "height_m": -0.01,
+          "release_s": 0
+        },
+        "cells": {
+          "zero_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.003000000000001002,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.002197035764444705,
+            "ball_overlap_m": 0.034902468742759984,
+            "first_excluded_support_s": 7.021000000000679,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0010052547679755188,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 1318.1961867153098,
+            "first20ms_scalar_normal_impulse_Ns": 2.181716488702004,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "zero_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.003000000000001002,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.002197035764444705,
+            "ball_overlap_m": 0.034902468742759984,
+            "first_excluded_support_s": 7.021000000000679,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0005443874277822874,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 1318.1961867153098,
+            "first20ms_scalar_normal_impulse_Ns": 2.181716488702004,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.01000000000000334,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.0031450835293929703,
+            "ball_overlap_m": 0.034030489973281966,
+            "first_excluded_support_s": 6.996000000000671,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0003932228448769934,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 829.3979499814222,
+            "first20ms_scalar_normal_impulse_Ns": 2.2332389603469616,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.01000000000000334,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.0031450835293929703,
+            "ball_overlap_m": 0.034030489973281966,
+            "first_excluded_support_s": 6.996000000000671,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0003486009084617981,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 829.3979499814222,
+            "first20ms_scalar_normal_impulse_Ns": 2.2332389603469616,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          }
+        }
+      },
+      {
+        "condition": "height_plus_1cm",
+        "requested_scenario": {
+          "lateral_m": 0,
+          "height_m": 0.01,
+          "release_s": 0
+        },
+        "cells": {
+          "zero_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.3540000000001182,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": true,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.0033169100230126996,
+            "ball_overlap_m": 0.02950259123445377,
+            "first_excluded_support_s": 8.115000000000942,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.011396131528925863,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 780.4344031864653,
+            "first20ms_scalar_normal_impulse_Ns": 2.1448011318280846,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "zero_floor": {
+            "anatomical_retained": true,
+            "retained_with_original_form_and_upright": true,
+            "clean_bilateral_s": 1.9250000000006429,
+            "endpoint_bilateral_fraction": 1.0,
+            "original_short_receive": true,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.0021037761937663536,
+            "ball_overlap_m": 0.006569761074508814,
+            "first_excluded_support_s": null,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0009511508420937988,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 780.4344031864653,
+            "first20ms_scalar_normal_impulse_Ns": 2.1448011318280846,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.5040000000001683,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": true,
+            "form_fraction": 0.8333333333333334,
+            "self_overlap_m": 0.0023252369509563714,
+            "ball_overlap_m": 0.004521698925865415,
+            "first_excluded_support_s": 8.3710000000008,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.012182203032688287,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 650.924442600042,
+            "first20ms_scalar_normal_impulse_Ns": 2.3924618425345505,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_floor": {
+            "anatomical_retained": true,
+            "retained_with_original_form_and_upright": true,
+            "clean_bilateral_s": 1.985000000000663,
+            "endpoint_bilateral_fraction": 1.0,
+            "original_short_receive": true,
+            "form_fraction": 0.8333333333333334,
+            "self_overlap_m": 0.0021037761937663536,
+            "ball_overlap_m": 0.0038056913095465134,
+            "first_excluded_support_s": null,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0007685762333872054,
+            "actual_release_s": 5.300000000000105,
+            "first20ms_peak_sum_hand_normal_N": 650.924442600042,
+            "first20ms_scalar_normal_impulse_Ns": 2.3924618425345505,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          }
+        }
+      },
+      {
+        "condition": "release_plus_10ms",
+        "requested_scenario": {
+          "lateral_m": 0,
+          "height_m": 0,
+          "release_s": 0.01
+        },
+        "cells": {
+          "zero_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.006000000000002004,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.007137911359801852,
+            "ball_overlap_m": 0.03333454847310639,
+            "first_excluded_support_s": 6.908000000000642,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0005122688862273204,
+            "actual_release_s": 5.320000000000111,
+            "first20ms_peak_sum_hand_normal_N": 1202.610690889779,
+            "first20ms_scalar_normal_impulse_Ns": 2.4342962009480127,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "zero_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.006000000000002004,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.007137911359801852,
+            "ball_overlap_m": 0.03333454847310639,
+            "first_excluded_support_s": 6.908000000000642,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0002616538072574299,
+            "actual_release_s": 5.320000000000111,
+            "first20ms_peak_sum_hand_normal_N": 1202.610690889779,
+            "first20ms_scalar_normal_impulse_Ns": 2.4342962009480127,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.32500000000010854,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": true,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.0021037761937663536,
+            "ball_overlap_m": 0.003307950924826766,
+            "first_excluded_support_s": 8.188000000000901,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.010133398090927477,
+            "actual_release_s": 5.320000000000111,
+            "first20ms_peak_sum_hand_normal_N": 1500.9139454288404,
+            "first20ms_scalar_normal_impulse_Ns": 2.452963630456643,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_floor": {
+            "anatomical_retained": true,
+            "retained_with_original_form_and_upright": true,
+            "clean_bilateral_s": 1.6400000000005477,
+            "endpoint_bilateral_fraction": 1.0,
+            "original_short_receive": true,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.0021037761937663536,
+            "ball_overlap_m": 0.003307950924826766,
+            "first_excluded_support_s": null,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.001038595421384951,
+            "actual_release_s": 5.320000000000111,
+            "first20ms_peak_sum_hand_normal_N": 1500.9139454288404,
+            "first20ms_scalar_normal_impulse_Ns": 2.452963630456643,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          }
+        }
+      },
+      {
+        "condition": "combined_plus",
+        "requested_scenario": {
+          "lateral_m": 0.01,
+          "height_m": 0.01,
+          "release_s": 0.01
+        },
+        "cells": {
+          "zero_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.001000000000000334,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.0055676593315266915,
+            "ball_overlap_m": 0.037834738949399656,
+            "first_excluded_support_s": 6.906000000000641,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.001387320045936495,
+            "actual_release_s": 5.320000000000111,
+            "first20ms_peak_sum_hand_normal_N": 658.2122878700856,
+            "first20ms_scalar_normal_impulse_Ns": 2.6444127783521014,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "zero_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.001000000000000334,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 1.0,
+            "self_overlap_m": 0.0055676593315266915,
+            "ball_overlap_m": 0.037834738949399656,
+            "first_excluded_support_s": 6.906000000000641,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0003653450590163955,
+            "actual_release_s": 5.320000000000111,
+            "first20ms_peak_sum_hand_normal_N": 658.2122878700856,
+            "first20ms_scalar_normal_impulse_Ns": 2.6444127783521014,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_no_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.001000000000000334,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.005991807671525339,
+            "ball_overlap_m": 0.03700912745206899,
+            "first_excluded_support_s": 6.832000000000616,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0005930213322241206,
+            "actual_release_s": 5.320000000000111,
+            "first20ms_peak_sum_hand_normal_N": 1145.7780753795946,
+            "first20ms_scalar_normal_impulse_Ns": 2.4797020563891805,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          },
+          "learned_floor": {
+            "anatomical_retained": false,
+            "retained_with_original_form_and_upright": false,
+            "clean_bilateral_s": 0.001000000000000334,
+            "endpoint_bilateral_fraction": 0.0,
+            "original_short_receive": false,
+            "form_fraction": 0.9090909090909091,
+            "self_overlap_m": 0.005991807671525339,
+            "ball_overlap_m": 0.03700912745206899,
+            "first_excluded_support_s": 6.832000000000616,
+            "native_actuator_cap_excess_SI": 0.0,
+            "maximum_sampled_closing_error_m": 0.0015000000000000013,
+            "mean_finger_positive_closure_m": 0.0002861800238076733,
+            "actual_release_s": 5.320000000000111,
+            "first20ms_peak_sum_hand_normal_N": 1145.7780753795946,
+            "first20ms_scalar_normal_impulse_Ns": 2.4797020563891805,
+            "running_at_catch": false,
+            "historical_realistic_flag": false
+          }
+        }
+      }
+    ],
+    "interpretation": "Within these seven fixed engineering development cases, the scripted late floor retains one with zero actions and four with final PPO. Learning adds three retained conditions relative to floor alone, but is not necessary for height plus and is not sufficient in three remaining cases. Neither method without floor retains any. One play per cell is not a calibrated population success rate. No original scoring threshold changed.",
+    "independent_audit": "../../catch-repair-20261114/post-study/training-three-routes/independent/slant-floor-factorial-r1/independent-factorial-audit.json",
+    "checkpoint_sha256": "58faa28a49460d1231b0672d0d5001451fcf9ce70b077a4f266c170a59559fd1",
+    "source_sha256": "ec55f70929d48ab4f00e460f0c6bdc34dd8252222ac27527538123c1379d1c57",
+    "artifact_sha256": "cf2859fdcf6366ee8a395f092c0e72e66764a074f5807022f8457640caf2491a"
+  },
+  "slant_hybrid_nominal": {
+    "schema": "slant_learned_plus_scripted_late_floor_nominal_v1",
+    "trial_count": 1,
+    "paired_anchor_count": 1,
+    "posthoc_development": true,
+    "new_ppo": false,
+    "checkpoint_sha256": "58faa28a49460d1231b0672d0d5001451fcf9ce70b077a4f266c170a59559fd1",
+    "source_archive_sha256": "3ccbe5d1f3e206aa2f04d04edfe9a0f091dfc74ba7f3d1740be081c678c7598c",
+    "artifact_archive_sha256": "05f4d5cfaad87b5a646cb3a3f43461bf77135770a72baa216ec1e994d4e3654f",
+    "physics": "Common2.5ms engineering hand contact model, not calibrated hardware or historical20ms reference",
+    "cue_plus_floor_delay_s": 1.3,
+    "actual_latch_s": 7.460000000000826,
+    "clean_bilateral_s": {
+      "learned_anchor": 0.8730000000002915,
+      "scripted_floor_candidate": 1.9950000000006662
+    },
+    "endpoint_bilateral_fraction": {
+      "learned_anchor": 0.0,
+      "scripted_floor_candidate": 1.0
+    },
+    "anatomical_hand_control": {
+      "learned_anchor": false,
+      "scripted_floor_candidate": true
+    },
+    "historical_realistic_flag": false,
+    "running_at_catch": false,
+    "recurrent_flights": 0,
+    "first_excluded_support_s": {
+      "learned_anchor": 8.475000000000742,
+      "scripted_floor_candidate": null
+    },
+    "form_fraction": 0.9090909090909091,
+    "maximum_self_overlap_m": 0.0021037761937663536,
+    "maximum_ball_overlap_m": 0.0019815237467270875,
+    "mean_vertical_hand_weight_fraction": 1.0061808845902316,
+    "late_closure_reduction_fraction": 0.9204078794600513,
+    "all_preregistered_nominal_falsification_gates_passed": true,
+    "original_anchor_and_prefix_exact": true,
+    "original_scores_rescored_exact": true,
+    "fixed_component_identity": "fixed-component-identity.json",
+    "actual_native_force_audit": "actual-native-force-audit.json",
+    "limitations": [
+      "One posthoc nominal composition of learned precontact arms and scripted late grip hold; no reliability estimate.",
+      "The scripted floor has not been tested on untrained arms, so this pair alone cannot establish that learning was necessary.",
+      "Historical reference physics and athletic running checks remain false.",
+      "All declared full original scoring criteria remain unchanged."
+    ]
+  },
+  "hardware_validation": false,
+  "athletic_running_at_catch": false,
+  "slant_confirmation": {
+    "schema": "slant_fresh_fifty_matched_confirmation_summary_v1",
+    "status": "Complete and independently audited; no conditional learning gain established",
+    "units": {
+      "probability": "fraction",
+      "difference": "learned minus zero probability fraction",
+      "time": "s",
+      "distance": "m"
+    },
+    "distribution": "IID independent uniform world Y aim\u00b10.01m,world Z height\u00b10.01m,requested release\u00b10.01s; fixed original20ms release grid retained",
+    "sample_size": 50,
+    "paired_plays": 100,
+    "anchor_plays": 2,
+    "draw_seed": 2026111527,
+    "bootstrap_seed": 2026111528,
+    "statistics": {
+      "zero": {
+        "throws": 50,
+        "successes": 19,
+        "probability_estimate": 0.38,
+        "wilson95": [
+          0.25862789310193596,
+          0.5184955306900703
+        ],
+        "anatomical_retained": 19,
+        "short_receive": 19,
+        "historical_realistic": 0,
+        "native_cap_failures": 0,
+        "warnings": 0
+      },
+      "learned": {
+        "throws": 50,
+        "successes": 12,
+        "probability_estimate": 0.24,
+        "wilson95": [
+          0.1429739139699173,
+          0.3741268375794292
+        ],
+        "anatomical_retained": 12,
+        "short_receive": 13,
+        "historical_realistic": 0,
+        "native_cap_failures": 0,
+        "warnings": 0
+      },
+      "paired": {
+        "both_success": 6,
+        "gain": 6,
+        "loss": 13,
+        "both_fail": 25,
+        "learned_minus_zero": -0.14,
+        "paired_percentile_bootstrap95": [
+          -0.3,
+          0.02
+        ],
+        "bootstrap_seed": 2026111528,
+        "bootstrap_replicates": 20000
+      }
+    },
+    "quality": {
+      "zero": {
+        "original_quality_check_failures": {
+          "physics_clock_and_endpoint": 0,
+          "initial_free_flight": 0,
+          "verified_free_joint_no_attachment": 0,
+          "continuous_anatomical_bilateral_075s": 31,
+          "final_anatomical_hand_hold": 31,
+          "no_excluded_floor_body_or_applied_support": 31,
+          "load_bearing_hands": 1,
+          "no_deep_interhand_penetration": 15,
+          "no_deep_ball_penetration": 31,
+          "acquisition_lower_palms_up_form": 1,
+          "upright_through_finish": 0,
+          "reference_physics_verified": 50
+        },
+        "actual_release_bin_counts": {
+          "5.320000000000111": 28,
+          "5.300000000000105": 22
+        },
+        "running_at_catch_count": 0,
+        "minimum_form_fraction": 0.7272727272727273,
+        "maximum_self_overlap_m": 0.00956894882854583
+      },
+      "learned": {
+        "original_quality_check_failures": {
+          "physics_clock_and_endpoint": 0,
+          "initial_free_flight": 0,
+          "verified_free_joint_no_attachment": 0,
+          "continuous_anatomical_bilateral_075s": 38,
+          "final_anatomical_hand_hold": 36,
+          "no_excluded_floor_body_or_applied_support": 36,
+          "load_bearing_hands": 0,
+          "no_deep_interhand_penetration": 6,
+          "no_deep_ball_penetration": 35,
+          "acquisition_lower_palms_up_form": 0,
+          "upright_through_finish": 0,
+          "reference_physics_verified": 50
+        },
+        "actual_release_bin_counts": {
+          "5.320000000000111": 28,
+          "5.300000000000105": 22
+        },
+        "running_at_catch_count": 0,
+        "minimum_form_fraction": 0.8181818181818182,
+        "maximum_self_overlap_m": 0.006488378496929552
+      }
+    },
+    "all_102_original_anatomical_scores_bit_exact": true,
+    "all_short_boolean_None_fields_exact": true,
+    "short_float_roundoff_max_abs": 6.800116025829084e-15,
+    "analysis_erratum": "analysis-validation-erratum.json",
+    "all_50_matched_physical_throws_exact": true,
+    "all_profiles_exact_frozen_draws": true,
+    "all_models_byte_identical": true,
+    "all_caps_pass": true,
+    "all_warnings_zero": true,
+    "retries": 0,
+    "dropped_cases": 0,
+    "historical_realistic_flag_count": 0,
+    "running_at_catch_count": 0,
+    "interpretation": "The fresh confirmation sample has19zero plus floor successes versus12final PPO plus the same floor, six gains and thirteen losses. The paired95percent interval includes zero and does not establish a conditional learning gain. The prior4of7 development outcome is not validated as a population gain. No controller selection or retuning uses this confirmation set.",
+    "scope": "Intervals refer only to the declared throw jitter distribution in the fixed2.5ms engineering model, one frozen trained policy and the fixed sensor setup; not hardware, calibrated physics or training seed variation.",
+    "checkpoint_sha256": "58faa28a49460d1231b0672d0d5001451fcf9ce70b077a4f266c170a59559fd1",
+    "source_sha256": "1f6f2e5e97c3d1eeacb9675c85fd098f5ac12342e09b9052a0fde73bcdd66a7d",
+    "draws_sha256": "8b5bc721fee36d82719702f290d7a1922c6f5233388b0182715b48a920327e6c",
+    "artifact_sha256": "4594baee4a6aab9613fae4672083fcf5332583ee6b2e45a3860ff01c0a324cb7",
+    "independent_audit": "../../catch-repair-20261114/post-study/training-three-routes/independent/slant-confirmation-fifty-r1/independent-confirmation-audit.json",
+    "case_results": "independent-summary.json"
+  }
+}

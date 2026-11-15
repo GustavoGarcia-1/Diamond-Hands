@@ -1,0 +1,19 @@
+{
+  "full_suite": {
+    "passed": 235,
+    "seconds": 12.72,
+    "python": "3.12.13",
+    "scope": "Curated sibling checkout with pinned assets"
+  },
+  "cpu_subset": {
+    "passed": 79,
+    "seconds": 2.46,
+    "extras": [
+      "wbc",
+      "test"
+    ],
+    "torch_installed": false,
+    "scope": "Fresh separate environment; tests use synthetic fixtures and no pretrained models"
+  },
+  "initial_cpu_failure": "New precontact tests imported Gymnasium through the existing RL ledger. Added pinnedGymnasium1.4.0 to test extra and uv.lock, then79passed. Frozen experiment environments unchanged."
+}

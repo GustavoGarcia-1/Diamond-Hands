@@ -1,0 +1,78 @@
+{
+  "schema": "confirmation_analysis_numeric_validation_erratum_v1",
+  "frozen_v1": "audit-frozen-v1.py",
+  "frozen_v1_sha256": "81b63fa4ce01374bae9d8e7d6593ca6a7629417ea75f456f31acd363969c0b46",
+  "v2_sha256": "98ff9cc7bc440532336aad999daffd23fb61842abc0a7c91a4c61c41b3ceed76",
+  "failure": "The original bit equality assertion rejected one derived short score receiver depth on02learned:9.789256178889147 versus9.789256178889149, a1.78e-15 platform arithmetic difference. audit.log and score-mismatch.json preserve the first failure.",
+  "change": "All102 original anatomical scores remain bit exact. Short booleans, integers and None remain exact; only derived float fields permit absolute1e-12 comparison and every difference is recorded. No scoring threshold, primary success definition, sample, model, actor or statistical method changed.",
+  "short_score_cases_with_float_differences": 6,
+  "maximum_short_float_absolute_difference": 6.800116025829084e-15,
+  "recorded_differences": [
+    {
+      "draw_id": "02",
+      "policy": "learned",
+      "fields": {
+        "receiver_depth_at_fingertip_m": {
+          "original": 9.789256178889147,
+          "recomputed": 9.789256178889149,
+          "absolute_difference": 1.7763568394002505e-15
+        }
+      }
+    },
+    {
+      "draw_id": "04",
+      "policy": "zero",
+      "fields": {
+        "receiver_depth_at_fingertip_m": {
+          "original": 9.78603476788231,
+          "recomputed": 9.786034767882308,
+          "absolute_difference": 1.7763568394002505e-15
+        }
+      }
+    },
+    {
+      "draw_id": "22",
+      "policy": "zero",
+      "fields": {
+        "receiver_depth_at_fingertip_m": {
+          "original": 9.789127611779577,
+          "recomputed": 9.789127611779575,
+          "absolute_difference": 1.7763568394002505e-15
+        }
+      }
+    },
+    {
+      "draw_id": "30",
+      "policy": "zero",
+      "fields": {
+        "horizontal_ball_to_body_speed_during_contact_mps": {
+          "original": 0.23362510297186415,
+          "recomputed": 0.233625102971864,
+          "absolute_difference": 1.3877787807814457e-16
+        }
+      }
+    },
+    {
+      "draw_id": "41",
+      "policy": "zero",
+      "fields": {
+        "horizontal_ball_to_body_speed_during_contact_mps": {
+          "original": 0.23982843086196734,
+          "recomputed": 0.23982843086196737,
+          "absolute_difference": 2.7755575615628914e-17
+        }
+      }
+    },
+    {
+      "draw_id": "42",
+      "policy": "zero",
+      "fields": {
+        "horizontal_ball_to_body_speed_during_contact_mps": {
+          "original": 0.18349057643219904,
+          "recomputed": 0.18349057643220584,
+          "absolute_difference": 6.800116025829084e-15
+        }
+      }
+    }
+  ]
+}

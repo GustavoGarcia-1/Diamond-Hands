@@ -2,6 +2,14 @@
 
 This repository is a curated working-source snapshot. The frozen 600-trial results used separate immutable controller bundles. Do not treat a command against today's source as an exact historical replay.
 
+## November 15 additions
+
+The curated source now includes the persistent encoder regulator, its opt in native grip integration, the sensor only precontact PPO interface and the transported camera target. The complete local suite passed **235 tests in 12.72 seconds** after these additions. This is a clean sibling checkout verification with pinned local assets, not a full replay of the frozen Linux studies. The focused CPU CI selection now contains 79 tests; it does not load training weights or robot assets.
+
+`train_precontact_ppo.py` is a generic bridge. It requires a route driver and its frozen configuration from the separately archived experiment; this repository does not claim a standalone one command training replay. The 45 minute budgets, exact optimized versus collected step counts, sensor boundaries and camera provenance erratum are described in `precontact-ppo.md`. The source snapshot manifest records the current reporting metadata correction separately from the unchanged source hash used in the frozen runs.
+
+The current submission package restores seven exact frozen source snapshots by content hash, includes complete raw evidence for its two primary Go plays, and documents pinned external AMP requirements. Secondary dense traces and all raw confirmation trajectories remain separate. See `OVERNIGHT_STUDY.md` for the package checksum and the scope of each result.
+
 ## Verified in the clean sibling checkout
 
 These commands were executed here on macOS arm64 with Python 3.12.13. They are local verification, not an already completed GitHub Actions or Linux/ARM64 deployment run.
@@ -61,6 +69,6 @@ This verifies CLI/import closure, not their historical physical outcomes. Use ex
 
 Included protocols, seed/scenario files, source/checkpoint digests and independent summaries are in `evidence/`. The original 450 trials and separate posthoc 150 were independently rescored from dense traces, with free-ball, model, source, release, physical/form and support checks. The concise summaries retain the outcomes and fingerprints.
 
-Dense NPZ trajectories, per-contact witnesses, selected MP4s, checkpoint files, full frozen controller/source archives and binary assets are intentionally excluded. They are preserved separately in the originating research archive. **This Git repository alone cannot rerun or independently rescore all 600 historical trajectories.** The archives have not been published as GitHub release assets. Obtain the exact source/evidence archives identified by the included SHA256 values before making an exact-replay claim.
+Dense NPZ trajectories, per-contact witnesses, selected MP4s, historical checkpoint files, full frozen controller/source archives and pretrained binary assets are intentionally excluded. The separate November15 evidence folder now includes the small final Slant arm checkpoint and its exact closing limit adapter, with hashes; this does not supply the historical runtime driver or assets. They are preserved separately in the originating research archive. **This Git repository alone cannot rerun or independently rescore all 600 historical trajectories.** The archives have not been published as GitHub release assets. Obtain the exact source/evidence archives identified by the included SHA256 values before making an exact-replay claim.
 
 The later one-hour PPO records are fixed heterogeneous diagnostic comparisons, not new 50-trial success estimates. The reward-specificity audit shows why sensor return cannot select a physical catch. The small included Out identification record is a separate no-ball calibration, not evidence of a learned catch or hardware response.

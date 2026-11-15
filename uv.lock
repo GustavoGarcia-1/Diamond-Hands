@@ -176,6 +176,7 @@ sim = [
     { name = "mujoco" },
 ]
 test = [
+    { name = "gymnasium" },
     { name = "pytest" },
 ]
 training = [
@@ -201,6 +202,7 @@ wbc = [
 [package.metadata]
 requires-dist = [
     { name = "g1-receiver", extras = ["wbc"], marker = "extra == 'training'" },
+    { name = "gymnasium", marker = "extra == 'test'", specifier = "==1.4.0" },
     { name = "gymnasium", marker = "extra == 'training'", specifier = "==1.4.0" },
     { name = "imageio", marker = "extra == 'video'", specifier = "==2.38.1" },
     { name = "imageio-ffmpeg", marker = "extra == 'video'", specifier = "==0.6.0" },

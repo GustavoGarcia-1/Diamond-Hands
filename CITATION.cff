@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "Please cite this repository when referring to the Diamond Hands research code."
-title: "Diamond Hands: Can a humanoid robot learn to catch a ball in stride?"
+title: "Diamond Hands: Can we teach a robot to play football?"
 authors:
   - family-names: Garcia
     given-names: Gustavo

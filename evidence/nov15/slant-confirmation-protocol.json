@@ -1,0 +1,86 @@
+{
+  "schema": "slant_fresh_fifty_matched_confirmation_v1",
+  "frozen_before_any_confirmation_outcome": true,
+  "draw_seed": 2026111527,
+  "draws_sha256": "8b5bc721fee36d82719702f290d7a1922c6f5233388b0182715b48a920327e6c",
+  "draw_count": 50,
+  "methods": [
+    "zero arm actions plus same late floor",
+    "final PPO arm actions plus same late floor"
+  ],
+  "confirmation_plays": 100,
+  "anchor_plays": 2,
+  "actors_frozen": true,
+  "new_training": false,
+  "checkpoint_sha256": "58faa28a49460d1231b0672d0d5001451fcf9ce70b077a4f266c170a59559fd1",
+  "adapter_sha256": "9d3771f36e726586f1e505e8ac8059af7b0978b111cdd92ecf2965150187f8d6",
+  "sampling": {
+    "distribution": "IID independent uniform",
+    "world_Y_aim_m": [
+      -0.01,
+      0.01
+    ],
+    "world_Z_height_m": [
+      -0.01,
+      0.01
+    ],
+    "requested_release_s": [
+      -0.01,
+      0.01
+    ],
+    "existing_training_range": true,
+    "commanded_field_plane_unchanged": true,
+    "release_quantization": "Original20ms machine release control tick remains; record requested and actual release for every play."
+  },
+  "fixed": {
+    "visual_gate_floor_delay_s": 1.3,
+    "native_closing_error_ceiling_m": 0.0015,
+    "thumbs": "All six requests unchanged",
+    "physics": "Common2.5ms engineering model, unchanged mass/friction/CCD/gains/caps",
+    "fixture": "Original fixed aimed1.1s Slant throw except sealed uniform jitter",
+    "episode_s": 9.5,
+    "perception_reward_schema": "Frozen native-transported-intercept-169-v1; no training or reward alteration",
+    "evaluation_seed": 2026211519
+  },
+  "anchors": [
+    "Exact original zero no floor171ms",
+    "Exact original final PPO plus floor1995ms"
+  ],
+  "primary": "Per throw original anatomical_hand_control AND original form.pass AND upright AND compiled native caps respected AND warning_count0. Original thresholds unchanged. Historical realistic flag reported separately and remains reference dependent.",
+  "secondary": [
+    "All original physical and quality checks",
+    "Original short receive",
+    "Full endpoint support/exclusions and overlap",
+    "Running and recurrent flights",
+    "Actual native targets/forces/caps",
+    "Late closure and sampled error"
+  ],
+  "statistics": {
+    "compute_only_after_all_100_complete": true,
+    "marginal": "Wilson95percent interval for each frozen controller conditional success probability over ONLY this declared jitter distribution in this fixed engineering model",
+    "wilson_z": 1.959963984540054,
+    "paired_gain": "Count zero fail to learned pass",
+    "paired_loss": "Count zero pass to learned fail",
+    "difference": "Mean paired binary success difference learned minus zero",
+    "bootstrap": {
+      "method": "Paired percentile bootstrap: resample50 matched throw indices with replacement,20000 replicates;95percent quantiles2.5and97.5",
+      "seed": 2026111528,
+      "replicates": 20000
+    },
+    "no_hardware_or_training_seed_population_claim": true
+  },
+  "integrity": {
+    "no_retries": true,
+    "no_dropping": true,
+    "no_tuning_using_confirmation": true,
+    "all_100_outcomes_preserved": true,
+    "original_Go50_untouched": true,
+    "no_early_stopping_by_outcome": true
+  },
+  "allocation": {
+    "wall_seconds": 1200,
+    "maximum_compute_processes": 2,
+    "scheme": "Two process shards of25 throws each, both methods per throw; main runs one shard and one child runs the other after both exact anchors pass. PrecontactEnv uses one thread within each process."
+  },
+  "artifact_storage": "Each original compiled numeric file is SHA checked, then only byte identical static model files share one hardlink. Every episode path and content remains preserved, including nonidentical files if any. Dynamic trajectories and all100 outcomes remain separate."
+}

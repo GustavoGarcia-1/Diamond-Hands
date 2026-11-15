@@ -2,8 +2,9 @@
 
 No contact, ball truth, full finger-joint state, or force input is accepted.
 Native fractions span each actuator's declared control range. Official plant
-rate limits remain authoritative. Encoders are logged/validated, not treated as
-contact sensors or as a complete measurement of underactuated finger posture.
+rate limits remain authoritative. Default control validates and logs encoders.
+Optional finger regulation limits requested closing error; it does not treat
+encoders as contact sensors or complete underactuated finger posture.
 """
 from dataclasses import dataclass
 import numpy as np
@@ -67,6 +68,14 @@ class NativeCupGrip:
         if not np.isfinite(self.delays).all() or np.any(self.delays<0.) or not np.isfinite(self.ramp) or self.ramp<=0.:
             raise ValueError('nonnegative digit delays and positive ramp required')
         self.rows=[]
+        self.finger_regulation=None
+        regulation=config.get('finger_encoder_regulation')
+        if regulation is not None:
+            if not isinstance(regulation,dict):
+                raise ValueError('finger encoder regulation requires explicit settings')
+            from .finger_encoder_regulation import EncoderGripCompliance,ComplianceConfig
+            self.finger_regulation=EncoderGripCompliance(
+                calibration.ranges,config=ComplianceConfig(**regulation))
 
     def targets(self,now,legacy_closure,release_at,visual_gate_at,encoders):
         sensed=np.asarray(encoders,dtype=float)
@@ -82,4 +91,7 @@ class NativeCupGrip:
                 f=self.preload+u*(self.capture-self.preload);phase=2 if np.any(u<1.) else 3
             target=self.calibration.targets(f)
         self.rows.append((float(now),*sensed,*target,float(phase)))
+        if self.finger_regulation is not None:
+            # Keep the existing nominal log; feedback requests have their own log.
+            return self.finger_regulation.apply(now,target,sensed,visual_gate_at)
         return target

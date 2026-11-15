@@ -21,4 +21,6 @@ jobs:
           tests/test_observable.py tests/test_routes_evaluation.py
           tests/test_running_catch_eval.py tests/test_receiver_comparison_plot.py
           tests/test_rgbd_impairments.py tests/test_anatomical_catch_eval.py
+          tests/test_precontact_native_rl.py tests/test_transport_precontact_rl.py
+          tests/test_persistent_finger_regulation.py
       - run: uv run --no-sync python scripts/summarize_evidence.py

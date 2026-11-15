@@ -1,0 +1,27 @@
+{
+  "scope": "Curated source additions from the verified November15 development tree. Frozen experiment archives remain separate.",
+  "files": {
+    "src/g1_receiver/finger_encoder_regulation.py": "cbcc8e590040acba3087408005ef8f033b19db9d70d575167d9d72deee655e60",
+    "src/g1_receiver/lower_cup_grip.py": "f9b5ac8203d5743639fbbcb1d39c3145a0b869179e131d9808d5cdf38f2aca15",
+    "src/g1_receiver/precontact_native_rl.py": "765c63f7bbf41daa42e647e7c639270605e29174df1ae7ac509a9ba9472ede1c",
+    "src/g1_receiver/precontact_training.py": "55d2eede080a6b3e9e65ef7be920a8d735b96372b20c5d84b7626d1ba9016ede",
+    "src/g1_receiver/transport_precontact_rl.py": "c363fc2a4ac863c3ea3931e59c5f92460391f0fe3f106c97130434ec5b158414",
+    "scripts/train_precontact_ppo.py": "50ad813b05c579d01e1ab099a2b06b7d736be14e9086e2d0f6ffe2bed9d8a416",
+    "tests/test_precontact_native_rl.py": "b32b61cdb2f26e1a5e55534cebda527eb473e25b5fa72a73eb5bde344064926a",
+    "tests/test_transport_precontact_rl.py": "c4d12a9cd524be614456cabe4a178abd4e51c489f737b58df1f534609c38efc4",
+    "tests/test_persistent_finger_regulation.py": "b08865c734a4bed8c5ef7bc768684fc97d4afd01d44eba24e352d7983c0292a7",
+    "tests/fixtures/persistent_finger_regulation.json": "70098227a6a3f83b2a68d07189efc99c7187eb54ce86817b709c290be4f7eefc",
+    "docs/precontact-ppo.md": "4b1ad5b94f1775444db1efc8e001615cac73d65835c7c8331023f0332729218f",
+    "pyproject.toml": "9976177050c3ef67aace11ae7e8b977dcc9e371aeaeec80e7a9521e308105ce2",
+    "uv.lock": "00d18f5cd328f3b76e7f808b6324efc24f3d1c2919704c005fe999f9f33d08ad",
+    "docs/SENSOR_CONTRACT.md": "24da7690d089e7d248be8e370538e7df128b4c51b3d10e66fb6fd6c9ce01c4fa"
+  },
+  "frozen_transport_training_sha256": "eaf01d0524a918566ab0846adc4f6f350f9f6a4b086e655ff63bfa7ec2ed7759",
+  "current_transport_difference": "Reporting metadata and docstring correct the camera identity claim; numerical logic unchanged.",
+  "test_dependency_note": "Gymnasium1.4.0 is now explicitly included in test extras because the new sensor audit tests import the existing RL ledger. Frozen experiment dependencies are unchanged.",
+  "frozen_supplements": {
+    "slant_late_closing_floor_adapter.py": "9d3771f36e726586f1e505e8ac8059af7b0978b111cdd92ecf2965150187f8d6",
+    "slant-final-ppo.zip": "58faa28a49460d1231b0672d0d5001451fcf9ce70b077a4f266c170a59559fd1"
+  },
+  "frozen_supplement_scope": "Exact small final Slant checkpoint and experiment adapter. The adapter requires frozen route driver/configuration/assets from the separate submission bundle. It is not a turnkey hardware controller."
+}
