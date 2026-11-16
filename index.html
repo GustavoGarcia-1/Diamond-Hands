@@ -31,28 +31,43 @@
 
 <figure class="hero">
   <video src="overnight/go-regulated.mp4" controls playsinline preload="metadata"></video>
-  <figcaption>One selected Go play. The receiver keeps two-hand control for 5.66&nbsp;s. This single play is not the result below: over 50 separate fresh throws, the same controller retained 34.</figcaption>
+  <figcaption>One selected Go play: two-hand control for 5.66&nbsp;s. Not the result below: over 50 fresh throws the same controller retained 34.</figcaption>
 </figure>
 
 <h2>Abstract</h2>
-<p>Catching a pass is not catching a ball thrown at you. The receiver has to run a route, work out where the ball will arrive, and hold on while its own body is still moving. We study that problem in simulation with a Unitree G1 and Aero hands, on three routes thrown by a fixed machine about six metres away.</p>
-<p>One change clearly helped. Making the finger tendons respond to their own actuator encoders raised retained catches on the Go route from 2 of 50 throws to 34 of 50, on a confirmation set that was frozen before it was run.</p>
-<p>One change clearly did not. On the Slant route, an arm controller trained with PPO retained 12 of 50 throws, against 19 for a scripted baseline given the same finger limit. We report that as a loss rather than tuning it away.</p>
-<p class="abstract-note">Everything here is simulation. No physical robot has caught a football, and every catch shown is made while walking, not running.</p>
+<p>Catching a pass is not catching a ball thrown at you. The receiver runs a route, works out where the ball will arrive, and has to hold on while its own body is still moving. We study that in simulation: a Unitree G1 with Aero hands, three routes, a fixed passing machine.</p>
+<p>One change clearly helped. Making the finger tendons respond to their own actuator encoders raised retained Go catches from 2 of 50 throws to 34 of 50, on a confirmation set frozen before it was run.</p>
+<p>One change clearly did not. On Slant, an arm controller trained with PPO retained 12 of 50 against 19 for a scripted baseline given the same finger limit. We report it as a loss.</p>
+<p class="abstract-note">Everything here is simulation. No physical robot has caught a football, and every catch shown is a walking catch.</p>
 
 <h2>The setup</h2>
-<p>The receiver is a Unitree G1 with compact Aero hands. It is thrown to by a fixed passing machine. Locomotion comes from pretrained G1 controllers that we hold fixed; our work is the interception and the grip. Three routes set the problem:</p>
-<ul class="routes">
-  <li><strong>Go</strong> — run straight past the defender. The hardest case for holding on, because the ball arrives with the receiver still moving.</li>
-  <li><strong>Out</strong> — break to the sideline. Turning and arriving square to the ball dominates.</li>
-  <li><strong>Slant</strong> — cut inside. The receiver meets the ball across its body.</li>
-</ul>
-<p>Each throw is scored end to end. A catch counts only if the ball still has real hand support when the play ends, with no help from the torso, the floor, or the hand mounts. Everything else is a miss, even if the hands touched the ball convincingly for a while.</p>
+<p>The receiver is a Unitree G1 with compact Aero hands, thrown to by a fixed machine. Locomotion comes from pretrained G1 controllers that we hold fixed; our work is the interception and the grip.</p>
+
+<div class="route-grid">
+  <figure class="route">
+    <video src="plays/aero-go-centerline.mp4" poster="plays/aero-go-centerline.webp" muted loop playsinline autoplay preload="metadata"></video>
+    <h3>Go</h3>
+    <p>Straight stem, ten yards. The hardest case for holding on: the ball arrives while the receiver is still moving.</p>
+  </figure>
+  <figure class="route">
+    <video src="plays/aero-slant-centerline.mp4" poster="plays/aero-slant-centerline.webp" muted loop playsinline autoplay preload="metadata"></video>
+    <h3>Slant</h3>
+    <p>Two steps, then a 45° cut inside. The receiver meets the ball across its body.</p>
+  </figure>
+  <figure class="route">
+    <video src="plays/aero-out-centerline.mp4" poster="plays/aero-out-centerline.webp" muted loop playsinline autoplay preload="metadata"></video>
+    <h3>Out</h3>
+    <p>Five yards, then a 90° break to the sideline. Turning and arriving square to the ball dominates.</p>
+  </figure>
+</div>
+<p class="grid-note">One selected throw per route, taken from the archived play viewer. The counts below come from 50-throw batches, not from these clips.</p>
+
+<p>A catch counts only if the ball still has real hand support when the play ends, with no help from the torso, the floor or the hand mounts. Everything else is a miss, however convincing the contact looked.</p>
 
 <h2>What we tried, and what it gave us</h2>
 
 <table>
-  <caption>Each comparison is against a frozen baseline on the same throws. "Retained" means the ball is still legitimately in hand at the end of the play.</caption>
+  <caption>Each comparison is against a frozen baseline on the same throws.</caption>
   <thead>
     <tr><th scope="col">Change</th><th scope="col">Baseline</th><th scope="col">Changed</th><th scope="col">Verdict</th></tr>
   </thead>
@@ -65,25 +80,25 @@
 </table>
 
 <h2>The one clear gain</h2>
-<p>The original Go controller closed the fingers to a fixed target and stopped listening. If the hand met the ball slightly early, the fingers kept squeezing into it. The change is small: after the visual grasp cue, each of the eight finger tendons limits its requested closure so the commanded target stays at least 1.5&nbsp;mm behind where the finger actually is. The thumb commands are untouched.</p>
+<p>The original Go controller closed the fingers to a fixed target and stopped listening, so a hand that met the ball early kept squeezing into it. The change is small: after the visual grasp cue, each of the eight finger tendons limits requested closure so the commanded target stays at least 1.5&nbsp;mm behind where the finger actually is. The thumb commands are untouched.</p>
 
 <figure>
   <a href="overnight/go-retention-confirmation.svg"><img src="overnight/go-retention-confirmation.png" alt="Retained Go catches rise from 4 to 31 of 50 development throws, and from 2 to 34 of 50 fresh confirmation throws."></a>
-  <figcaption>Development throws on the left, the frozen confirmation set on the right. Wilson 95% intervals: 54.2–79.2% for the changed controller, 1.1–13.5% for the original. The paired improvement is 64 points, with 32 throws gained and none lost.</figcaption>
+  <figcaption>Development throws on the left, the frozen confirmation set on the right. Wilson 95% intervals: 54.2–79.2% for the changed controller, 1.1–13.5% for the original. Paired improvement: 64 points, 32 throws gained and none lost.</figcaption>
 </figure>
 
-<p>That is the strongest result in the project, and it is a narrow one. It holds for one frozen controller, at about six metres, on throws drawn from the distribution we declared in advance. It says nothing about other distances, other seeds, or a real hand.</p>
+<p>The strongest result in the project, and a narrow one: one frozen controller, throws from a distribution declared in advance. Nothing here speaks to other distances, other seeds, or a real hand.</p>
 
 <h2>The one clear loss</h2>
-<p>Slant looked like the place for a learned controller. On seven fixed conditions, an arm policy trained with PPO raised clean two-hand control from 171&nbsp;ms to 873&nbsp;ms, by moving the arms before the predicted arrival.</p>
-<p>Then we froze it and ran 50 fresh throws against a scripted baseline. The learned arms lost: 12 retained against 19. They gained six throws and lost thirteen. The paired difference is −14 points, with a bootstrap interval of −30 to +2 — an interval that includes zero.</p>
+<p>Slant looked like the place for a learned controller. On seven fixed conditions, an arm policy trained with PPO raised clean two-hand control from 171&nbsp;ms to 873&nbsp;ms by moving the arms before the predicted arrival.</p>
+<p>Then we froze it and ran 50 fresh throws against a scripted baseline. The learned arms lost: 12 retained against 19, six gained and thirteen lost. The paired difference is −14 points, with a bootstrap interval of −30 to +2.</p>
 
 <figure>
   <a href="overnight/slant-fresh-confirmation.svg"><img src="overnight/slant-fresh-confirmation.png" alt="Fresh Slant confirmation: scripted arms retain 19 of 50 throws, learned arms 12 of 50."></a>
   <figcaption>Fifty matched throws, same finger limit on both sides. Holding the ball longer during contact did not translate into holding it at the end.</figcaption>
 </figure>
 
-<p>Longer contact is not the same as a catch. That is the most useful thing this project taught us, and it is why the negative result is on this page rather than in a drawer.</p>
+<p>Longer contact is not a catch. That is the most useful thing this project taught us, which is why the negative result is on this page.</p>
 
 <h2>Out, and the ten-yard probe</h2>
 <p>Out is limited before the hands ever close. In an audit of 150 archived plays, 32 of 50 original Out throws hit the torso before the hands, and 38 never reached 0.75&nbsp;s of clean two-hand control. A candidate controller that combined synchronized entry with finger regulation retained 8 of 50 against 9 for the original, so we kept the original.</p>
@@ -93,7 +108,7 @@
   <figcaption>All fifty matched throws are included. A better-looking selected play would not change this count.</figcaption>
 </figure>
 
-<p>A separate ten-yard probe is the longest throw we tested. First contact happens 9.97 yards downfield, and the longest clean two-hand interval is 1.645&nbsp;s. The receiver is moving at 0.93&nbsp;m/s at contact with no foot flights, so it is still a walking catch, and the ball is not held through the final frame.</p>
+<p>Ten yards is the longest throw we tested: first contact 9.97 yards downfield, longest clean two-hand interval 1.645&nbsp;s at 0.93&nbsp;m/s with no foot flights. Still a walking catch, and the ball is not held through the final frame.</p>
 
 <h2>When the catch is missed</h2>
 <p>A dropped pass becomes a safety problem when the ball rolls into the feet. In one natural failed Go catch, a camera spots the loose ball in the predicted foot corridor and cancels the walking command for 250&nbsp;ms. The warning arrives at 6.88&nbsp;s; the ball reaches the ankle at 7.75&nbsp;s.</p>
@@ -118,7 +133,7 @@
 <p>This is scripted avoidance with a camera added, not a learned recovery and not a return to standing.</p>
 
 <h2>How the receiver sees</h2>
-<p>The receiver estimates the ball and its own position on the field from rendered colour and depth images, using surveyed external cameras and a known marker rig. IMU and joint encoders give balance and body configuration. Simulator contacts, exact ball states and force traces are used only to score the result; none of them enter the controller.</p>
+<p>Ball and body estimates come from rendered colour and depth images, surveyed external cameras and a marker rig; IMU and joint encoders give posture. Exact simulator state is used only to score, and never enters the controller.</p>
 
 <table>
   <caption>What each part of the system is allowed to know.</caption>
@@ -136,15 +151,15 @@
 <h2>What this is not</h2>
 <ul class="limits">
   <li><strong>Not hardware.</strong> No physical G1 has run any of this. Contact materials, actuator transmissions and camera noise are uncalibrated.</li>
-  <li><strong>Not a running catch.</strong> Every displayed receive qualifies as walking. Catching inside a recurrent running gait is open.</li>
-  <li><strong>Not a reliability estimate.</strong> Each result is one frozen checkpoint. We did not run multiple training seeds, so none of these intervals describe seed-to-seed variation.</li>
-  <li><strong>Not deployable as is.</strong> It needs surveyed external cameras, a marker rig, a timestamped link to the passing machine, and an Aero hand driver. No ARM64 controller image exists yet.</li>
+  <li><strong>Not a running catch.</strong> Every displayed receive qualifies as walking; catching inside a running gait is open.</li>
+  <li><strong>Not a reliability estimate.</strong> Each result is one frozen checkpoint with no seed variation, so these intervals say nothing about seed-to-seed spread.</li>
+  <li><strong>Not deployable as is.</strong> It needs surveyed cameras, a marker rig, a link to the passing machine and an Aero hand driver. No ARM64 controller image exists.</li>
 </ul>
 
 <h2>Reproduce it</h2>
 <p>The simulator and tests are in the repository. This command renders a short flight episode and writes the sensor and truth arrays; it needs only <code>numpy</code> and <code>mujoco</code>.</p>
 <pre><code>sh run.sh</code></pre>
-<p>It prints <code>Rendered 60 MuJoCo RGB-D frames at 30 Hz</code> and writes <code>flight-sensor.npz</code>, <code>flight-truth.npz</code> and <code>flight-overview.npz</code>. It does not re-render the videos on this page: those come from the frozen study runs, whose raw simulator trees are far too large to ship.</p>
+<p>It prints <code>Rendered 60 MuJoCo RGB-D frames at 30 Hz</code> and writes <code>flight-sensor.npz</code>, <code>flight-truth.npz</code> and <code>flight-overview.npz</code>. It does not re-render the videos here: those come from frozen study runs, whose simulator trees are too large to ship.</p>
 <p class="archive">The earlier 600-trial study, including the methods we abandoned, is preserved unedited in the <a href="study-before-overnight.html">previous write-up</a>.</p>
 
 </main>

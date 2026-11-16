@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light;
   --ink: #17181a;
   --muted: #6b7076;
   --rule: #e3e5e8;
@@ -67,9 +68,11 @@ h1 {
 .code-link img { opacity: 0.8; }
 
 h2 {
-  margin: 3.6rem 0 0.9rem;
-  font: 600 1.16rem/1.4 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  letter-spacing: 0.01em;
+  margin: 4rem 0 1.1rem;
+  padding-top: 1.3rem;
+  border-top: 1px solid var(--rule);
+  font: 700 1.62rem/1.25 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  letter-spacing: -0.012em;
 }
 
 p { margin: 0 0 1.05rem; }
@@ -81,9 +84,44 @@ p { margin: 0 0 1.05rem; }
   font-size: 1rem;
 }
 
-.routes, .limits { margin: 0 0 1.2rem; padding-left: 1.15rem; }
-.routes li, .limits li { margin-bottom: 0.65rem; }
-.limits { padding-left: 1.05rem; }
+.limits { margin: 0 0 1.2rem; padding-left: 1.05rem; }
+.limits li { margin-bottom: 0.65rem; }
+
+.route-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.15rem;
+  margin: 1.7rem 0 0.6rem;
+}
+
+.route { margin: 0; }
+
+.route video {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 1px solid var(--rule);
+}
+
+.route h3 {
+  margin: 0.7rem 0 0.25rem;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.route p {
+  margin: 0;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.grid-note {
+  margin: 0 0 1.4rem;
+  font-size: 0.84rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
 
 figure { margin: 1.9rem 0 2.1rem; }
 
@@ -197,25 +235,13 @@ footer .links { display: flex; flex-wrap: wrap; justify-content: center; gap: 1.
 footer a { color: var(--muted); }
 footer .stamp { margin-top: 1.1rem; font-size: 0.82rem; }
 
-@media (max-width: 640px) {
+@media (max-width: 700px) {
   body { padding: 3rem 1.1rem 3.5rem; font-size: 17px; }
   h1 { font-size: 2.2rem; }
   .subtitle { font-size: 1.08rem; }
   .code-link { margin-left: 0; }
+  h2 { font-size: 1.4rem; margin-top: 3rem; }
+  .route-grid { grid-template-columns: 1fr; gap: 1.5rem; }
   table { font-size: 0.88rem; }
   tbody td { white-space: normal; }
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --ink: #eceef0;
-    --muted: #9aa0a6;
-    --rule: #2b2f33;
-    --bg: #141619;
-    --accent: #7ec699;
-    --bad: #e08a8a;
-  }
-  .code-link:hover { background: #1d2024; border-color: #3a3f45; }
-  code { background: #1d2024; }
-  pre { background: #1a1d21; }
 }
