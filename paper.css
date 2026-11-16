@@ -12,7 +12,7 @@ h1 .brand-silver { color:#68777e; text-shadow:0 0 11px rgba(143,162,170,.25); an
 @keyframes silver-light { 0%,100% { color:#68777e; text-shadow:0 0 11px rgba(143,162,170,.25); } 50% { color:#0b849d; text-shadow:0 0 11px rgba(47,199,222,.25); } }
 @media (prefers-reduced-motion:reduce) { h1 .brand-diamond,h1 .brand-silver { animation:none; } }
 .author { margin:1.5rem auto .15rem; font:400 1.14rem/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
-.author a { color:#0b849d; text-decoration:none; border-bottom:1px solid currentColor; }
+.author a { color:var(--ink); text-decoration:none; border-bottom:1px solid currentColor; }
 .affiliation { margin:0 auto; color:var(--muted); font:400 1rem/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
 .code-link { display:inline-flex; align-items:center; gap:.45rem; margin-top:1.25rem; padding:.43rem 1rem; border-radius:999px; background:#303234; color:#fff; text-decoration:none; font:500 .9rem/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
 .code-link img { display:block; filter:invert(1); }

@@ -30,9 +30,10 @@
   <p class="lead">I developed Diamond Hands for the <a href="https://arena.himrobotics.com/challenges/open-build">HIM Robotics Open Build Challenge</a>. I test three football routes: Go runs straight downfield for about ten yards, Slant cuts roughly 45° inward after its opening steps, and Out runs five yards before turning toward the sideline. On each route, the receiver has to read a moving ball and absorb its momentum without breaking stride. I study that coordination in simulation with a Unitree G1, compact Aero hands, and a passing machine at midfield. Pretrained locomotion moves the robot; surveyed cameras guide interception, while finger encoders regulate the grip.</p>
   <section aria-labelledby="findings-heading">
     <h2 id="findings-heading">Findings</h2>
-    <p>Early receives raised the hands too high and approached the descending ball with the palms turned away. I revised the reach to keep the hands compact until late in the flight, then form a lower cup with the palms facing upward. I also added penalties for excessive hand height, early lifting, and incorrect palm angle to the arm learning objective. These changes address the shape and timing of the attempt; a convincing touch still needs to become sustained possession.</p>
-    <p>I tested two ways to improve that possession. First, I regulated the finger targets using their measured encoder positions instead of commanding one fixed closure. This was the clearest measured gain: on 50 previously unused straight route throws, the regulated fingers retained 34 passes, compared with 2 for the fixed target. Both used the same throws and pretrained locomotion, and both received while walking in simulation. Second, I trained bounded arm corrections with PPO. On 50 fresh inward cutting throws, that learned policy retained 12 passes against 19 for scripted arms, so I did not treat it as an improvement.</p>
-    <p>To test whether perception alone explained the remaining failures, I replayed the original controller on the same 50 throws per route with different ball observations. The table reports retained catches, not brief hand contact.</p>
+    <p>I began with pretrained locomotion, scripted routes, and a camera timed reach. That receiver could meet some passes, but early attempts lifted the hands too soon and turned the palms away from the descending ball. I revised the reach to keep the hands compact until late in the flight, then form a lower cup with the palms facing upward. The later arm learning objective also penalized palms facing away and hands raised above a camera predicted intercept. A separate early hand penalty was implemented, but it was not active in the frozen PPO confirmation.</p>
+    <p>I first tested a simpler way to keep the ball: finger targets followed their measured encoder positions instead of one fixed closure. On 50 previously unused straight route throws, this retained 34 passes, compared with 2 for fixed closure. Both controllers used the same throws and pretrained locomotion, and both received while walking in simulation.</p>
+    <p>I then trained a small arm correction policy with online PPO. It learned from new simulation rollouts, using camera estimates, IMU, and joint readings; the ball predictor was a geometric trajectory fit, not a learned world model or a vision language action model. PPO changed the arms while the route controller and finger schedule stayed fixed. On 50 fresh inward cutting throws, the learned arms retained 12 passes against 19 for scripted arms, so I did not promote the learned policy.</p>
+    <p>I also tested whether the ball estimate explained the remaining misses. I replayed the original controller on the same 50 throws per route with different observations. The table counts passes still held at the finish, rather than brief hand contact.</p>
     <div class="table-wrap" role="region" aria-label="Observation stress test results" tabindex="0">
       <table>
         <caption>Original matched simulation study, 50 throws per route. The uncertainty floor is a separate follow up on those throws.</caption>
@@ -50,22 +51,25 @@
   <section aria-labelledby="method-heading">
     <h2 id="method-heading">Method</h2>
     <p>I give the controller camera estimates of the ball and receiver, together with IMU and joint readings. After the visual grasp cue, the finger controller limits requested closure using measured encoder position. In a separate study, PPO learned bounded arm corrections before predicted ball arrival. The locomotion and finger schedule remained fixed; the stronger straight route result came from scripted finger regulation, not learned catching.</p>
-    <p>For PPO, I rewarded alignment with the camera predicted intercept. I reduced that credit when the estimate was uncertain and subtracted penalties for palms facing away, hands lifted above the predicted intercept, and hands raised too early. The alignment term was:</p>
+    <p>For PPO, I rewarded alignment with the camera predicted intercept and subtracted costs for receiving form, balance, and abrupt or large arm corrections. At exact alignment, greater position uncertainty lowers the alignment term; away from the center, its effect is not always monotonic. The reward uses only a fresh camera estimate before a committed arrival deadline:</p>
     <div class="equation" aria-label="Visual alignment reward equations">
       <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Alignment score phi of e and sigma"><mrow>
         <mi>φ</mi><mo>(</mo><mi>e</mi><mo>,</mo><mi>σ</mi><mo>)</mo><mo>=</mo>
         <munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></munderover>
         <mfrac><msub><mi>s</mi><mi>i</mi></msub><msqrt><msup><msub><mi>s</mi><mi>i</mi></msub><mn>2</mn></msup><mo>+</mo><msup><msub><mi>σ</mi><mi>i</mi></msub><mn>2</mn></msup></msqrt></mfrac>
         <mo>·</mo><mi mathvariant="normal">exp</mi><mo>[</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>
-        <munder><mo>∑</mo><mi>i</mi></munder>
+        <munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></munderover>
         <mfrac><msup><msub><mi>e</mi><mi>i</mi></msub><mn>2</mn></msup><mrow><msup><msub><mi>s</mi><mi>i</mi></msub><mn>2</mn></msup><mo>+</mo><msup><msub><mi>σ</mi><mi>i</mi></msub><mn>2</mn></msup></mrow></mfrac><mo>]</mo>
       </mrow></math>
-      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Visual reward equals 25 times camera time step times alignment score"><mrow>
-        <msub><mi>r</mi><mtext>visual</mtext></msub><mo>=</mo><mn>25</mn><msub><mi>Δt</mi><mtext>camera</mtext></msub><mi>φ</mi><mo>(</mo><mi>e</mi><mo>,</mo><mi>σ</mi><mo>)</mo>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Per step reward is fresh visual alignment credit minus form, balance, action, and action rate costs"><mrow>
+        <msub><mi>r</mi><mi>k</mi></msub><mo>=</mo><mn>25</mn><msub><mi>Δt</mi><mtext>capture</mtext></msub><mi>φ</mi><mo>(</mo><msub><mi>e</mi><mi>k</mi></msub><mo>,</mo><msub><mi>σ</mi><mi>k</mi></msub><mo>)</mo>
+        <msub><mn>𝟙</mn><mtext>valid</mtext></msub><mo>−</mo><mi>Δt</mi><mo>[</mo>
+        <msub><mi>c</mi><mtext>form</mtext></msub><mo>+</mo><mn>2</mn><mi mathvariant="normal">max</mi><mo>(</mo><mn>0</mn><mo>,</mo><mn>0.9</mn><mo>−</mo><mi>u</mi><mo>)</mo><mo>+</mo>
+        <mn>0.05</mn><mo>⟨</mo><msup><mi>a</mi><mn>2</mn></msup><mo>⟩</mo><mo>+</mo><mn>0.02</mn><mo>⟨</mo><msup><mover><mi>δ</mi><mo>˙</mo></mover><mn>2</mn></msup><mo>⟩</mo><mo>]</mo>
       </mrow></math>
-      <p class="equation-condition"><span class="math-scroll-hint">Swipe across the equation to see it in full. </span>Applied only to fresh observations before the predicted arrival deadline.</p>
+      <p class="equation-condition"><span class="math-scroll-hint">Swipe across the equation to see it in full. </span>The valid flag requires a fresh camera capture, enabled receive control, and time before the committed arrival deadline. The costs continue afterward.</p>
     </div>
-    <p class="equation-note">Here <em>e</em> is intercept error estimated from images, <em>σ</em> its uncertainty, and <em>s</em> = (0.12, 0.08, 0.10) m. I apply the hand form, balance, and action costs separately. Simulator contacts and exact ball state are used to evaluate a rollout, never to award the policy a catch.</p>
+    <p class="equation-note">Here <em>e</em> is the image based intercept error, <em>σ</em> its position uncertainty, and <em>s</em> = (0.12, 0.08, 0.10) m. The form cost covers palm orientation and excess hand height when the relevant visual cue is valid; <em>u</em> measures upright orientation, <em>a</em> is the arm request, <em>δ</em> is the delivered arm correction, and angle brackets mean an average across arm actions. Simulator contacts and exact ball state evaluate each rollout but never enter this reward.</p>
   </section>
   <section aria-labelledby="safety-heading">
     <h2 id="safety-heading">Responding to a fall</h2>
@@ -81,12 +85,12 @@
   <section aria-labelledby="conclusion-heading">
     <h2 id="conclusion-heading">Conclusion</h2>
     <p>Encoder feedback gave me a repeatable gain in ball retention on previously unseen straight route throws. The turning routes exposed harder problems in footwork, perception, and impact absorption, and the PPO arm policy did not outperform scripted arms on fresh throws. I would next calibrate ball and hand contact, integrate the actual cameras and Aero hand driver, vary friction and throw conditions, and repeat training over multiple seeds. A sensor based possession estimate and a tested fall response would make a supervised physical attempt more credible.</p>
-    <p>These are simulation results. The exact ball observation study used privileged information that cannot transfer to hardware, and the selected videos do not establish reliable catching in stride. I see the measured successes and failures as a starting point for improving a robot receiver under conditions that a real G1 could eventually face.</p>
+    <p>Diamond Hands is still a simulation study, and no physical G1 has attempted these plays. The controller uses camera, IMU, and encoder estimates, while I used exact simulator ball state only in a separate diagnostic that cannot transfer to hardware. The paired successes and failures give me a measured starting point for improving the receiver before a supervised real world trial.</p>
   </section>
 </main>
 <footer>
   <p>Related work: <a href="https://arth-shukla.github.io/catch-it-all/">Catch It All!</a> studies visual catching with dexterous hands. <a href="https://arxiv.org/html/2511.10635v1">Robot Crash Course</a> studies soft, stylized falling.</p>
-  <p>Header design references: <a href="https://arth-shukla.github.io/catch-it-all/">Catch It All!</a> · <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> · <a href="https://nerfies.github.io/">Nerfies</a></p>
+  <p>Website inspired by: <a href="https://arth-shukla.github.io/catch-it-all/">Catch It All!</a> · <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> · <a href="https://nerfies.github.io/">Nerfies</a></p>
   <p>Diamond Hands · Gustavo Garcia · UC San Diego</p>
 </footer>
 <script>
