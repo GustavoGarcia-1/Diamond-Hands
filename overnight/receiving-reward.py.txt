@@ -1,0 +1,51 @@
+"""Route and receiving reward, verbatim from src/g1_receiver/receiver_env.py.
+
+Published so the equation on the page can be checked against the code it came
+from. Constants live in the same file (EPISODE_S, POLICY_HZ, CONTROL_DT) and in
+the visual retention proxy. Nothing here reads simulator contacts or ball truth:
+the ball, route and dwell terms all come from the same camera-derived estimates
+the controller sees.
+"""
+
+
+    def _reward(self, action: np.ndarray, previous: np.ndarray) -> tuple[float, dict]:
+        vector = self.state.vector
+        upright = -float(vector[OBS_SLICES["gravity_body"]][2])
+        reward = -.05 * max(0., .94 - upright) - .004 * float(np.mean((action - previous)**2))
+        reward -= .001 * float(np.mean(action**2))
+        receiver = self.state.receiver
+        endpoint_error = None
+        if receiver is not None and self.route is not None:
+            path_error, progress = self.route.project(receiver.xy_m)
+            if self._had_receiver:
+                reward += 3. * np.clip(progress - self._progress, -.03, .03)
+            reward -= .012 * min(path_error, .5)
+            self._progress = progress
+            endpoint_error = float(np.linalg.norm(receiver.xy_m - self.route.waypoints[-1]))
+        self._had_receiver = receiver is not None
+        reach_error = None
+        if vector[OBS_SLICES["ball_valid"]][0]:
+            ball = vector[OBS_SLICES["ball_relative_xyz_m"]]
+            if 0. <= ball[0] <= .65 and -.10 <= ball[2] <= .62:
+                q = vector[OBS_SLICES["joint_position_rad"]]
+                imu = self.plant.proprioception()[2]
+                reach_error = float(np.linalg.norm(ball - self.reach.wrist_midpoint(q, imu)))
+                reward += .018 * np.exp(-(reach_error / .16)**2)
+        latest = self._last_retention
+        recent = latest is not None and 0 <= self.plant.timestamp_s - latest.timestamp_s <= self.retention.max_age_s
+        dwell = latest.stable_duration_s if recent else 0.
+        reward += .45 * (min(dwell, 2.) - min(self._previous_dwell, 2.))
+        self._previous_dwell = dwell
+        info = {
+            "family": self.trial.family,
+            "imu_upright": upright,
+            "retained_visual_proxy": bool(recent and latest.retained_proxy),
+            "final_visual_dwell_s": float(dwell),
+            "max_visual_dwell_s": float(self._max_dwell),
+            "visible_ball_frames": self._visible_frames,
+            "camera_frames": self._camera_frames,
+            "measured_route_progress_m": float(self._progress),
+            "measured_endpoint_error_m": endpoint_error,
+            "encoder_fk_reach_error_m": reach_error,
+        }
+        return reward, info
