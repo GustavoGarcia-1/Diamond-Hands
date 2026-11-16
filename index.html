@@ -11,7 +11,7 @@
 <body>
 <header class="masthead">
   <h1><em><span class="brand-diamond">Diamond</span> <span class="brand-silver">Hands:</span></em> Can we teach a robot to play football?</h1>
-  <p class="author">Gustavo Garcia</p>
+  <p class="author"><a href="https://www.linkedin.com/in/gustavogarcia1/">Gustavo Garcia</a></p>
   <p class="affiliation">UC San Diego</p>
   <a class="code-link" href="https://github.com/GustavoGarcia-1/Diamond-Hands"><img src="assets/icons/github.svg" width="18" height="18" alt="" aria-hidden="true">Code</a>
 </header>
@@ -27,11 +27,12 @@
       <figcaption><strong id="route-title">Go.</strong> <span id="route-caption">The hands stay compact before the pass, then rise into the receiving cup. Under an experimental contact setting, the ball remains between the hands for several seconds before coming loose after 10.4 s.</span></figcaption>
     </figure>
   </section>
-  <p class="lead">We developed Diamond Hands for the <a href="https://arena.himrobotics.com/challenges/open-build">HIM Robotics Open Build Challenge</a>. We try three football routes: Go runs straight downfield for about ten yards, Slant cuts roughly 45° inward after its opening steps, and Out runs five yards before turning toward the sideline. A receiver has to follow each route, read a moving ball, and absorb its momentum without breaking stride. We study that coordination in simulation with a Unitree G1, compact Aero hands, and a passing machine at midfield. Pretrained locomotion moves the robot; surveyed cameras guide interception, while finger encoders regulate the grip. The selected plays above explore a late reach with the palms turned upward.</p>
+  <p class="lead">I developed Diamond Hands for the <a href="https://arena.himrobotics.com/challenges/open-build">HIM Robotics Open Build Challenge</a>. I test three football routes: Go runs straight downfield for about ten yards, Slant cuts roughly 45° inward after its opening steps, and Out runs five yards before turning toward the sideline. On each route, the receiver has to read a moving ball and absorb its momentum without breaking stride. I study that coordination in simulation with a Unitree G1, compact Aero hands, and a passing machine at midfield. Pretrained locomotion moves the robot; surveyed cameras guide interception, while finger encoders regulate the grip.</p>
   <section aria-labelledby="findings-heading">
     <h2 id="findings-heading">Findings</h2>
-    <p>The strongest measured improvement came from the grip controller. On 50 previously unused Go throws, finger targets regulated by encoder position retained 34 passes, compared with 2 for the fixed target. Both controllers used the same throws and pretrained locomotion. These were walking receives in simulation.</p>
-    <p>To test whether perception alone explained the failures, we also replayed the original controller on the same 50 throws per route with different ball observations. The table reports retained catches, not brief hand contact.</p>
+    <p>Early receives raised the hands too high and approached the descending ball with the palms turned away. I revised the reach to keep the hands compact until late in the flight, then form a lower cup with the palms facing upward. I also added penalties for excessive hand height, early lifting, and incorrect palm angle to the arm learning objective. These changes address the shape and timing of the attempt; a convincing touch still needs to become sustained possession.</p>
+    <p>I tested two ways to improve that possession. First, I regulated the finger targets using their measured encoder positions instead of commanding one fixed closure. This was the clearest measured gain: on 50 previously unused straight route throws, the regulated fingers retained 34 passes, compared with 2 for the fixed target. Both used the same throws and pretrained locomotion, and both received while walking in simulation. Second, I trained bounded arm corrections with PPO. On 50 fresh inward cutting throws, that learned policy retained 12 passes against 19 for scripted arms, so I did not treat it as an improvement.</p>
+    <p>To test whether perception alone explained the remaining failures, I replayed the original controller on the same 50 throws per route with different ball observations. The table reports retained catches, not brief hand contact.</p>
     <div class="table-wrap" role="region" aria-label="Observation stress test results" tabindex="0">
       <table>
         <caption>Original matched simulation study, 50 throws per route. The uncertainty floor is a separate follow up on those throws.</caption>
@@ -44,12 +45,12 @@
       </table>
     </div>
     <p>Exact ball position is privileged simulator information, not a harder pass. Supplying it with almost no stated uncertainty made the tracker reject otherwise usable flight fits. A small uncertainty floor restored some catches, but the diagnostic still underperformed the camera controller. These tests exposed an estimator mismatch; they are neither a deployable policy nor an upper bound on what a robot could catch.</p>
-    <p>The newer Go finger result above used a different controller and a fresh confirmation set, so its 34 / 50 should not be read as another column of this table. On separate fresh Slant throws, PPO arm corrections retained 12 / 50 against 19 / 50 for scripted arms. A timed Out entry retained 8 / 50 against 9 / 50 in development. Longer contact did not reliably become final possession.</p>
+    <p>The finger and PPO results above used different controllers and fresh confirmation sets; neither belongs in the table’s matched observation study. On a separate outward cutting development set, timed hand entry retained 8 of 50 passes against 9 for the original controller. Longer contact did not reliably become final possession.</p>
   </section>
   <section aria-labelledby="method-heading">
     <h2 id="method-heading">Method</h2>
-    <p>The robot receives camera estimates of the ball and its own position, together with IMU and joint readings. After the visual grasp cue, the Go grip controller limits requested finger closure using the measured encoder position. The arm learning study instead applies bounded corrections before predicted arrival. These are separate interventions; the successful Go result is scripted finger regulation, not learned catching.</p>
-    <p>For the arm study, positive reward depends on camera predicted alignment and fades as the estimate becomes less certain:</p>
+    <p>I give the controller camera estimates of the ball and receiver, together with IMU and joint readings. After the visual grasp cue, the finger controller limits requested closure using measured encoder position. In a separate study, PPO learned bounded arm corrections before predicted ball arrival. The locomotion and finger schedule remained fixed; the stronger straight route result came from scripted finger regulation, not learned catching.</p>
+    <p>For PPO, I rewarded alignment with the camera predicted intercept. I reduced that credit when the estimate was uncertain and subtracted penalties for palms facing away, hands lifted above the predicted intercept, and hands raised too early. The alignment term was:</p>
     <div class="equation" aria-label="Visual alignment reward equations">
       <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Alignment score phi of e and sigma"><mrow>
         <mi>φ</mi><mo>(</mo><mi>e</mi><mo>,</mo><mi>σ</mi><mo>)</mo><mo>=</mo>
@@ -64,28 +65,28 @@
       </mrow></math>
       <p class="equation-condition"><span class="math-scroll-hint">Swipe across the equation to see it in full. </span>Applied only to fresh observations before the predicted arrival deadline.</p>
     </div>
-    <p class="equation-note">Here <em>e</em> is intercept error estimated from images, <em>σ</em> its uncertainty, and <em>s</em> = (0.12, 0.08, 0.10) m. Posture, balance, and action costs are applied separately. Simulator contacts and exact ball state are used to evaluate a rollout, never to award this policy a catch.</p>
+    <p class="equation-note">Here <em>e</em> is intercept error estimated from images, <em>σ</em> its uncertainty, and <em>s</em> = (0.12, 0.08, 0.10) m. I apply the hand form, balance, and action costs separately. Simulator contacts and exact ball state are used to evaluate a rollout, never to award the policy a catch.</p>
   </section>
   <section aria-labelledby="safety-heading">
     <h2 id="safety-heading">Responding to a fall</h2>
-    <p>A missed pass can become a fall when the robot loses balance or the loose ball reaches its feet. We tested a small IMU guided safety response on a complete receiver play as a first step toward safer physical trials. The early brace reduced simulated peak head contact from 1,183 N to 77 N, then settled on the ground. It did not stand back up; a separate balance stop prevented floor contact by giving up the catch. These are scripted responses on one simulated play, not a learned recovery or a hardware safety guarantee.</p>
+    <p>A missed pass can become a fall when the robot loses balance or the loose ball reaches its feet. I tested a small IMU guided safety response on a complete receiver play as a first step toward safer physical trials. The early brace reduced simulated peak head contact from 1,183 N to 77 N, then settled on the ground. It did not stand back up; a separate balance stop prevented floor contact by giving up the catch. These are scripted responses on one simulated play, not a learned recovery or a hardware safety guarantee.</p>
     <div class="fall-tabs" role="tablist" aria-label="Fall response video">
-      <button role="tab" id="brace-tab" aria-controls="fall-video" aria-selected="true" data-video="falls/play-visual-shallow-brace.mp4" data-poster="falls/play-visual-shallow-brace.jpg" data-caption="Early brace: the robot lands with lower head impact and settles on the ground. It does not return to standing.">Early brace</button>
-      <button role="tab" id="baseline-tab" aria-controls="fall-video" aria-selected="false" tabindex="-1" data-video="falls/play-baseline.mp4" data-poster="falls/play-baseline.jpg" data-caption="Baseline: the failed receive ends in a fall, with 1,183 N peak simulated head contact.">Baseline fall</button>
-      <button role="tab" id="balance-tab" aria-controls="fall-video" aria-selected="false" tabindex="-1" data-video="falls/play-visual-balance.mp4" data-poster="falls/play-visual-balance.jpg" data-caption="Balance stop: the robot abandons the catch and remains standing without nonfoot floor contact.">Balance stop</button>
+      <button role="tab" id="brace-tab" aria-controls="fall-video" aria-selected="true" data-video="falls/play-visual-shallow-brace.mp4" data-poster="falls/play-visual-shallow-brace-poster.jpg" data-caption="Early brace: the robot lands with lower head impact and settles on the ground. It does not return to standing.">Early brace</button>
+      <button role="tab" id="baseline-tab" aria-controls="fall-video" aria-selected="false" tabindex="-1" data-video="falls/play-baseline.mp4" data-poster="falls/play-visual-shallow-brace-poster.jpg" data-caption="Baseline: the failed receive ends in a fall, with 1,183 N peak simulated head contact.">Baseline fall</button>
+      <button role="tab" id="balance-tab" aria-controls="fall-video" aria-selected="false" tabindex="-1" data-video="falls/play-visual-balance.mp4" data-poster="falls/play-visual-shallow-brace-poster.jpg" data-caption="Balance stop: the robot abandons the catch and remains standing without nonfoot floor contact.">Balance stop</button>
     </div>
-    <figure><video id="fall-video" role="tabpanel" aria-labelledby="brace-tab" controls playsinline preload="metadata" poster="falls/play-visual-shallow-brace.jpg" src="falls/play-visual-shallow-brace.mp4"></video><figcaption id="fall-caption">Early brace: the robot lands with lower head impact and settles on the ground. It does not return to standing.</figcaption></figure>
-    <p>This safety study was motivated by the possibility of eventually trying the receiver on a real G1. Disney Research’s controlled falling work points toward a learned response that could protect vulnerable components and guide the final pose; we have not reproduced that policy.</p>
+    <figure><video id="fall-video" role="tabpanel" aria-labelledby="brace-tab" controls playsinline preload="metadata" poster="falls/play-visual-shallow-brace-poster.jpg" src="falls/play-visual-shallow-brace.mp4"></video><figcaption id="fall-caption">Early brace: the robot lands with lower head impact and settles on the ground. It does not return to standing.</figcaption></figure>
+    <p>I included this safety study because a physical receiver will sometimes miss. Disney Research’s controlled falling work points toward a learned response that could protect vulnerable components and guide the final pose; I have not reproduced that policy.</p>
   </section>
   <section aria-labelledby="conclusion-heading">
     <h2 id="conclusion-heading">Conclusion</h2>
-    <p>Diamond Hands gives us a measured starting point: encoder feedback substantially improved Go retention on fresh simulated throws, while Slant, Out, and the late hands examples show where route motion, perception, and impact handling still fail. The next study should calibrate ball and hand contact, integrate the actual cameras and Aero hand driver, test across varied friction and throws, and repeat learning with more than one training seed. A sensor based possession estimate and a qualified fall response would make the controller more credible outside simulation.</p>
-    <p>That is the path to a supervised real world attempt. Today’s results are simulation results, and the privileged ball diagnostic cannot transfer to hardware. The value of this work is that the successful and failed plays are measured under explicit conditions, giving us a way to improve the receiver without mistaking a compelling video for a reliable catch.</p>
+    <p>Encoder feedback gave me a repeatable gain in ball retention on previously unseen straight route throws. The turning routes exposed harder problems in footwork, perception, and impact absorption, and the PPO arm policy did not outperform scripted arms on fresh throws. I would next calibrate ball and hand contact, integrate the actual cameras and Aero hand driver, vary friction and throw conditions, and repeat training over multiple seeds. A sensor based possession estimate and a tested fall response would make a supervised physical attempt more credible.</p>
+    <p>These are simulation results. The exact ball observation study used privileged information that cannot transfer to hardware, and the selected videos do not establish reliable catching in stride. I see the measured successes and failures as a starting point for improving a robot receiver under conditions that a real G1 could eventually face.</p>
   </section>
 </main>
 <footer>
   <p>Related work: <a href="https://arth-shukla.github.io/catch-it-all/">Catch It All!</a> studies visual catching with dexterous hands. <a href="https://arxiv.org/html/2511.10635v1">Robot Crash Course</a> studies soft, stylized falling.</p>
-  <p>Website design inspired by <a href="https://arth-shukla.github.io/catch-it-all/">Catch It All!</a> and the pages it credits: the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> and <a href="https://nerfies.github.io/">Nerfies</a>.</p>
+  <p>Header design references: <a href="https://arth-shukla.github.io/catch-it-all/">Catch It All!</a> · <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> · <a href="https://nerfies.github.io/">Nerfies</a></p>
   <p>Diamond Hands · Gustavo Garcia · UC San Diego</p>
 </footer>
 <script>
