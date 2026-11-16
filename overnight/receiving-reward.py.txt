@@ -1,10 +1,11 @@
-"""Route and receiving reward, verbatim from src/g1_receiver/receiver_env.py.
+"""Route and receiving reward excerpts from src/g1_receiver/receiver_env.py.
 
 Published so the equation on the page can be checked against the code it came
 from. Constants live in the same file (EPISODE_S, POLICY_HZ, CONTROL_DT) and in
 the visual retention proxy. Nothing here reads simulator contacts or ball truth:
 the ball, route and dwell terms all come from the same camera-derived estimates
-the controller sees.
+the controller sees. The terminal bonus below uses a visual retention proxy,
+not the independent physical catch label.
 """
 
 
@@ -49,3 +50,10 @@ the controller sees.
             "encoder_fk_reach_error_m": reach_error,
         }
         return reward, info
+
+
+# Terminal logic from ReceiverEnv.step, shown separately from _reward above:
+        fallen = info["imu_upright"] < .55
+        truncated = self.steps >= round(EPISODE_S * POLICY_HZ) and not fallen
+        if (fallen or truncated) and info["retained_visual_proxy"] and not fallen:
+            reward += 2.

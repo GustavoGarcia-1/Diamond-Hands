@@ -31,18 +31,18 @@
 
 <section class="hero">
   <div class="route-switch" role="tablist" aria-label="Choose a route">
-    <button role="tab" id="tab-go" aria-controls="player" aria-selected="true" data-clip="plays/go.mp4" data-poster="plays/go.webp" data-route="Go" data-def="Straight stem, ten yards downfield, ball arriving while the receiver is still moving.">Go</button>
-    <button role="tab" id="tab-slant" aria-controls="player" aria-selected="false" tabindex="-1" data-clip="plays/slant.mp4" data-poster="plays/slant.webp" data-route="Slant" data-def="Two steps, then a 45° cut inside, so the ball is met across the body.">Slant</button>
-    <button role="tab" id="tab-out" aria-controls="player" aria-selected="false" tabindex="-1" data-clip="plays/out.mp4" data-poster="plays/out.webp" data-route="Out" data-def="Five yards, then a 90° break to the sideline. Arriving square to the ball dominates.">Out</button>
+    <button role="tab" id="tab-go" aria-controls="player" aria-selected="true" data-clip="plays/aero-go-centerline.mp4" data-poster="plays/aero-go-centerline.webp" data-route="Go" data-def="A straight ten yard stem and a pass from the midfield machine." data-note="Selected full play: receives at 9.146 m and holds the ball through the finish while walking. No qualifying running phases at contact." data-source="plays/aero-go-centerline.json">Go</button>
+    <button role="tab" id="tab-slant" aria-controls="player" aria-selected="false" tabindex="-1" data-clip="plays/aero-slant-centerline.mp4" data-poster="plays/aero-slant-centerline.webp" data-route="Slant" data-def="Two sustained foot plants, then an inward break and a full pass." data-note="Selected full play: early heading changes 42.49° inward before later curling farther; the ball is held through the finish while walking." data-source="plays/aero-slant-centerline.json">Slant</button>
+    <button role="tab" id="tab-out" aria-controls="player" aria-selected="false" tabindex="-1" data-clip="plays/aero-out-centerline.mp4" data-poster="plays/aero-out-centerline.webp" data-route="Out" data-def="A five yard stem, then a forward left break toward the sideline." data-note="Selected full play: breaks at 4.602 m, turns left 81.53°, and holds the ball through the finish while walking. There is no backward exit travel." data-source="plays/aero-out-centerline.json">Out</button>
   </div>
 
   <figure class="hero-figure">
-    <video id="player" role="tabpanel" controls playsinline preload="none" poster="plays/go.webp" src="plays/go.mp4"
-           aria-label="Selected Go catch"></video>
+    <video id="player" role="tabpanel" controls playsinline preload="none" poster="plays/aero-go-centerline.webp" src="plays/aero-go-centerline.mp4"
+           aria-label="Selected Go full play"></video>
     <figcaption>
       <span class="route-name">Go</span>
-      <span class="route-def">Straight stem, ten yards downfield, ball arriving while the receiver is still moving.</span>
-      <span class="clip-note">Controlled catch demo from the archived play viewer: the ball is released a short distance from the hands at low speed so the grip stays visible. These are not the throws counted below.</span>
+      <span class="route-def">A straight ten yard stem and a pass from the midfield machine.</span>
+      <span class="clip-note">Selected full play: receives at 9.146 m and holds the ball through the finish while walking. No qualifying running phases at contact.</span> <a class="clip-source" href="plays/aero-go-centerline.json">Trial record</a><span class="clip-context"> These selected replays illustrate routes; they are separate from the fifty throw comparisons below.</span>
     </figcaption>
   </figure>
 </section>
@@ -138,7 +138,7 @@
 
 <h2>Our best method</h2>
 <p>The winner is the smallest change in the project. After the visual grasp cue, and for a 0.6&nbsp;s window, each of the eight finger flexors limits requested closure so its commanded target stays at least 1.5&nbsp;mm behind where the finger actually is, restoring over 0.2&nbsp;s afterwards. The six thumb requests are untouched, and so is everything the route controller does.</p>
-<p>In practice that means the fingers are allowed to slow down as they meet something. A hand that arrives early no longer keeps driving into the ball once the ball is already seated.</p>
+<p>In practice that means the fingers are allowed to slow down as they meet something. In these trials the measured finger position limits further requested closure after contact.</p>
 <p class="src">Source: <a href="overnight/finger-regulation.py.txt">finger-regulation.py.txt</a> (verbatim excerpt, constants included)</p>
 
 <h2>Its success rate</h2>
@@ -159,32 +159,32 @@
 
 <h2>Why it performs this way</h2>
 <p>A fixed finger target is an open-loop squeeze. The command keeps asking for more closure after the fingers have already met the ball, so the ball is loaded harder and harder until it finds the one direction with the least support and leaves. That is why the original controller can look excellent in a selected clip and collapse over fifty throws: the outcome depends on where in the squeeze the ball happens to sit.</p>
-<p>Encoder feedback replaces the target with a trailing margin. The fingers can still close fast in free space, because nothing is resisting them, but the commanded target moves with the finger, so contact stops being a competition between two positions. The ball is held by shape rather than force. It also explains the stability of the gain: development 31 of 50 and fresh 34 of 50 are the same behaviour, not a lucky fit.</p>
+<p>Encoder feedback replaces the target with a trailing margin. The fingers can still close fast in free space, because nothing is resisting them, but the commanded target moves with the finger, so contact stops being a competition between two positions. The measured improvement is consistent across the development and fresh confirmation sets: 31 of 50 and 34 of 50. The experiment does not isolate which contact forces caused each catch.</p>
 <p>The Slant result is the mirror image. The learned arms held the ball longer during contact — clean two-hand control rose from 171&nbsp;ms to 873&nbsp;ms on fixed conditions — and still ended with fewer catches. Longer contact is not a catch. The policy was paid for alignment and duration, and it delivered alignment and duration.</p>
 
 <h2>How the reward was written</h2>
-<p>Both policies are trained without privileged state. The reward sees camera ball estimates, IMU, joint and actuator encoders, and the commands it issued. It never sees simulator contacts, the exact ball state, or the evaluator's catch score.</p>
+<p>We used separate learning objectives for precontact arm correction and for an earlier route and receiving environment. Neither objective uses simulator contact labels or the evaluator’s physical catch score. Both use camera estimates, IMU, encoders and known commands, but their rewards are not added together in one training run.</p>
 
 <p>The learned arm policy pays for alignment with a camera-predicted intercept, and only for fresh captures before a deadline that can move earlier but never later:</p>
 
 <div class="formula">
-  <span class="eq-line">D<sub>k</sub> = min{ D<sub>k−1</sub>, T̂<sub>k</sub> − 2σ<sub>T,k</sub> }</span>
+  <span class="eq-line">D<sub>0</sub> = +∞; &nbsp; D<sub>k</sub> = min( D<sub>k−1</sub>, T̂<sub>k</sub> − 2σ<sub>T,k</sub> )</span>
   <span class="eq-line">φ(e, σ) = ∏<sub>i=1..3</sub> s<sub>i</sub> / √(s<sub>i</sub>² + σ<sub>i</sub>²) · exp( −½ ∑<sub>i</sub> e<sub>i</sub>² / (s<sub>i</sub>² + σ<sub>i</sub>²) )</span>
   <span class="eq-line">r<sub>k</sub> = 25 · Δt<sub>capture</sub> · φ(e<sub>k</sub>, σ<sub>k</sub>) · 1[fresh, enabled, t<sub>k</sub> &lt; D<sub>k</sub>]</span>
   <span class="eq-line ind">− Δt · [ c<sub>form</sub> + 2·max(0, 0.9 − u) + 0.05·⟨a²⟩ + 0.02·⟨δ̇²⟩ ]</span>
 </div>
 
-<p class="formula-note">Scales s = (0.12, 0.08, 0.10)&nbsp;m. u is the IMU upright cosine, a the normalized arm request, δ the delivered arm residual. Larger position uncertainty attenuates alignment credit rather than sharpening it: the reward is a Gaussian expectation, not a confidence gate.</p>
+<p class="formula-note">Scales s = (0.12, 0.08, 0.10)&nbsp;m. T̂ is the predicted arrival time and σ<sub>T</sub> its uncertainty; D never moves later. Δt<sub>capture</sub> is the interval since the previous accepted camera capture, capped at 0.08&nbsp;s. u is the IMU upright cosine, a the normalized arm request, and δ the delivered arm residual. The equation writes the per step terms; the code accumulates them across 50&nbsp;Hz callbacks. Larger position uncertainty attenuates alignment credit. No physical possession term appears in this objective.</p>
 
-<p>The route and receiving environment adds a second, denser reward at 25&nbsp;Hz, built from measured route progress, cross-track error, an encoder-based reach error, and observed dwell inside the receiving volume:</p>
+<p>A separate, earlier route and receiving environment used this 25&nbsp;Hz reward. It was not added to the precontact arm objective above. The route progress and cross track terms use surveyed camera estimates; the reach term uses ball estimates and encoder kinematics, and dwell comes from a visual retention proxy:</p>
 
 <div class="formula">
   <span class="eq-line">r<sub>t</sub> = 3·clip(Δp<sub>t</sub>, −0.03, 0.03) − 0.012·min(e<sub>path</sub>, 0.5) + 0.018·exp( −(e<sub>reach</sub>/0.16)² )</span>
   <span class="eq-line">− 0.05·max(0, 0.94 − u) − 0.004·⟨(a<sub>t</sub> − a<sub>t−1</sub>)²⟩ − 0.001·⟨a<sub>t</sub>²⟩</span>
-  <span class="eq-line">+ 0.45·Δmin(dwell<sub>t</sub>, 2&nbsp;s) + 2·1[retained at the end and not fallen]</span>
+  <span class="eq-line">+ 0.45·Δmin(dwell<sub>t</sub>, 2&nbsp;s) + 2·1[episode ends, visual retention proxy, not fallen]</span>
 </div>
 
-<p class="formula-note">The terminal bonus is the only term that rewards an actual retained catch, and it is paid once per episode. Progress increments are clipped so a localization jump cannot earn metres of route in one step, and the reach term uses forward kinematics from encoder angles, not the simulator's ball position.</p>
+<p class="formula-note">The terminal bonus is paid at most once for the visual retention proxy at a non-fall episode end. It is not a physical catch label. Progress increments are clipped; route terms require a camera receiver estimate, and the reach term requires a valid ball estimate inside the declared receiving volume. The independent physical evaluator, not this reward, determines retained catches.</p>
 <p class="src">Sources: <a href="overnight/precontact-objective.py.txt">precontact objective</a> · <a href="overnight/receiving-reward.py.txt">receiving reward</a> · <a href="overnight/learning-protocol.md">learning protocol</a></p>
 
 <h2>The loss we kept</h2>
@@ -286,6 +286,8 @@
   var player = document.getElementById('player');
   var name = document.querySelector('.route-name');
   var def = document.querySelector('.route-def');
+  var note = document.querySelector('.clip-note');
+  var source = document.querySelector('.clip-source');
 
   function select(tab) {
     tabs.forEach(function (t) {
@@ -296,9 +298,11 @@
     player.pause();
     player.poster = tab.dataset.poster;
     player.src = tab.dataset.clip;
-    player.setAttribute('aria-label', 'Selected ' + tab.dataset.route + ' catch');
+    player.setAttribute('aria-label', 'Selected ' + tab.dataset.route + ' full play');
     name.textContent = tab.dataset.route;
     def.textContent = tab.dataset.def;
+    note.textContent = tab.dataset.note;
+    source.href = tab.dataset.source;
     player.load();
   }
 

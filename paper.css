@@ -133,8 +133,12 @@ p { margin: 0 0 1.05rem; }
   display: block;
   margin-top: 0.45rem;
   font-size: 0.82rem;
-  color: #8a9096;
+  color: var(--muted);
 }
+
+.hero-figure .clip-source,
+.hero-figure .clip-context { font-size: 0.82rem; color: var(--muted); }
+.hero-figure .clip-source { text-underline-offset: 0.15em; }
 
 .terms {
   margin: 0 0 1.2rem;
