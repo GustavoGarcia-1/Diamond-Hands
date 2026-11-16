@@ -1,0 +1,73 @@
+{
+  "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+  "mode": "baseline",
+  "initial_pitch_rad": 0.65,
+  "initial_angular_velocity_rad_s": 2.0,
+  "duration_s": 11.999999999998789,
+  "minimum_initial_floor_gap_m": 0.003000000000000007,
+  "initial_pelvis_height_m": 0.6851967863144195,
+  "supervisor_trigger_s": null,
+  "supervisor_config": {
+    "mode": "balance_abort",
+    "severe_upright_cos": 0.95,
+    "warning_upright_cos": 0.985,
+    "warning_gyro_rad_s": 0.35,
+    "confirm_samples": 2,
+    "max_target_velocity_rad_s": 2.5,
+    "max_target_acceleration_rad_s2": 10.0
+  },
+  "impacts_evaluation_only": {
+    "head": {
+      "first_floor_force_s": 1.8619999999999057,
+      "peak_sum_normal_n": 1810.6429478323398,
+      "first150ms_normal_impulse_ns": 8.265502144866343
+    },
+    "hand": {
+      "first_floor_force_s": 0.2830000000000002,
+      "peak_sum_normal_n": 735.0380746855142,
+      "first150ms_normal_impulse_ns": 16.762863721319814
+    },
+    "torso": {
+      "first_floor_force_s": 2.670999999999817,
+      "peak_sum_normal_n": 2174.1552364842764,
+      "first150ms_normal_impulse_ns": 59.197978203049935
+    },
+    "other": {
+      "first_floor_force_s": 0.2640000000000002,
+      "peak_sum_normal_n": 3256.11930137157,
+      "first150ms_normal_impulse_ns": 144.98924963742346
+    }
+  },
+  "first_nonfoot_floor_force_s": 0.2640000000000002,
+  "stable_standing_final2s": false,
+  "recovery_label": "not_recovered",
+  "final_pelvis_height_m": 0.21271914043424395,
+  "final_upright_cos": -0.13340960001454039,
+  "minimum_pelvis_height_m": 0.06424865925768172,
+  "joint_gain_and_effort_clamps_unchanged": true,
+  "actual_body_torque_within_original_limits": true,
+  "no_midplay_state_overwrite": true,
+  "no_active_external_push": true,
+  "head_geometry": "head_link collisionmesh weldedtorso_link",
+  "physics_timestep_s": 0.001,
+  "warning_count": 0,
+  "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+  "initial_state_sha256": "a21dfb6fbb01270ee087286c4f8933f8c35699f3e03ebf1d6f571d327f933d25",
+  "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8",
+  "video_file": "full-forward-baseline.mp4",
+  "video_sha256": "c97ebd73eb8b1054cf58b58f46f9d2947b04612bc5369557acef05db93043d72",
+  "source_view_sha256": "9d14444bf8ebe27789be485b2cadaccc325a25e96bf618847a9316d526ca224e",
+  "frame_count": 301,
+  "fps": 25,
+  "render_only_no_physics_steps": true,
+  "fixed_camera": {
+    "azimuth": 110,
+    "elevation": -18,
+    "lookat": [
+      0.005900524225166848,
+      0.20952588765830865,
+      0.65
+    ],
+    "distance": 5.691670954408675
+  }
+}

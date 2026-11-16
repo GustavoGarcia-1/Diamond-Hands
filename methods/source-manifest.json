@@ -1,0 +1,22 @@
+{
+  "src/g1_receiver/native_cup_residual_rl.py": {
+    "sha256": "6a21c633fa6ea61ddfaf8bec49e392bed428ba65e46f53b71392f79b97042580",
+    "download": "native_cup_residual_rl.py.txt"
+  },
+  "src/g1_receiver/late_reach_rl.py": {
+    "sha256": "857ed1b19d6f0919f1e0f1865a932d6de0cd65487852442ef6b14f25ec9b66fb",
+    "download": "late_reach_rl.py.txt"
+  },
+  "src/g1_receiver/catch_form.py": {
+    "sha256": "fecb409e415426cdb9c34fc96ae6cfe159dcb439ab5b5489b85051a3ec3c543f",
+    "download": "catch_form.py.txt"
+  },
+  "src/g1_receiver/anatomical_catch_eval.py": {
+    "sha256": "c60f4a966d7ce8e126742f77a3fdc83d671456539a3f3ec16bf0a4271c320ac7",
+    "download": "anatomical_catch_eval.py.txt"
+  },
+  "src/g1_receiver/out_late_cup_capture.py": {
+    "sha256": "325a09fcb842cfff665b6b311606286fdf63e98f2ae71264c147f4a747919d58",
+    "download": "out_late_cup_capture.py.txt"
+  }
+}

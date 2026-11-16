@@ -1,0 +1,468 @@
+{
+  "schema": "receiver-comparison-600-evidence-map-v1",
+  "original450_preserved": true,
+  "additional_posthoc150": true,
+  "total_distinct_rollouts": 600,
+  "no_pooled_route_rate": true,
+  "base_summary_sha256": "099fcb475c1cb5b54496ae270decbdf8042067815a8503d467a8c44451c64aef",
+  "appendix_summary_sha256": "cc313731081d3150810a068b91c88a1a7472142b9bf57df97e6c818c9a74ffee",
+  "routes": [
+    {
+      "route": "go",
+      "original_methods": {
+        "current": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 18,
+            "final_anatomical_hand_hold": 46,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 4,
+            "no_deep_ball_penetration": 35,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 46,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 4,
+          "total": 50,
+          "rate": 0.08,
+          "wilson95": [
+            0.03154951408859298,
+            0.18838246918342838
+          ],
+          "actual_release_range_s": [
+            4.339999999999784,
+            4.379999999999797
+          ],
+          "mean_clean_hold_s": 1.9247800000006428,
+          "median_clean_hold_s": 1.692000000000565,
+          "clean_hold_quantiles_s": [
+            0.013000000000004341,
+            0.5117500000001709,
+            1.692000000000565,
+            2.956000000000987,
+            4.995000000001668
+          ],
+          "original_reference_matches": 0,
+          "legacy_realistic_lower_catch_count": 0
+        },
+        "earlier": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 37,
+            "final_anatomical_hand_hold": 47,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 5,
+            "no_deep_ball_penetration": 42,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 47,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 3,
+          "total": 50,
+          "rate": 0.06,
+          "wilson95": [
+            0.02061497034897397,
+            0.16217091688838173
+          ],
+          "actual_release_range_s": [
+            4.339999999999784,
+            4.379999999999797
+          ],
+          "mean_clean_hold_s": 1.1039800000003686,
+          "median_clean_hold_s": 0.17900000000005978,
+          "clean_hold_quantiles_s": [
+            0.013000000000004341,
+            0.12500000000004174,
+            0.17900000000005978,
+            0.8137500000002718,
+            5.228000000001746
+          ],
+          "original_reference_matches": 0,
+          "legacy_realistic_lower_catch_count": 0
+        },
+        "exact_ball_diagnostic": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 50,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 50,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 50,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "actual_release_range_s": [
+            4.339999999999784,
+            4.379999999999797
+          ],
+          "mean_clean_hold_s": 0.0,
+          "median_clean_hold_s": 0.0,
+          "clean_hold_quantiles_s": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "original_reference_matches": 0,
+          "legacy_realistic_lower_catch_count": 0
+        }
+      },
+      "posthoc_uncertainty_floor": {
+        "failed_check_counts": {
+          "continuous_anatomical_bilateral_075s": 16,
+          "final_anatomical_hand_hold": 48,
+          "form.pass": 0,
+          "full_horizon": 0,
+          "initial_free_flight": 0,
+          "load_bearing_hands": 4,
+          "no_deep_ball_penetration": 37,
+          "no_deep_interhand_penetration": 0,
+          "no_excluded_floor_body_or_applied_support": 48,
+          "physics_clock_and_endpoint": 0,
+          "upright": 0,
+          "verified_free_joint_no_attachment": 0,
+          "zero_warnings": 0
+        },
+        "failure_counts_overlap_not_causal_partition": true,
+        "successes": 2,
+        "total": 50,
+        "rate": 0.04,
+        "wilson95": [
+          0.011038884327619805,
+          0.1346009068750702
+        ],
+        "mean_clean_hold_s": 1.9417800000006487,
+        "median_clean_hold_s": 1.599000000000534
+      }
+    },
+    {
+      "route": "out",
+      "original_methods": {
+        "current": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 38,
+            "final_anatomical_hand_hold": 38,
+            "form.pass": 8,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 34,
+            "no_deep_ball_penetration": 27,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 38,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 9,
+          "total": 50,
+          "rate": 0.18,
+          "wilson95": [
+            0.09770192670234178,
+            0.30796053674300783
+          ],
+          "actual_release_range_s": [
+            5.500000000000171,
+            5.520000000000178
+          ],
+          "mean_clean_hold_s": 0.7896400000002636,
+          "median_clean_hold_s": 0.0,
+          "clean_hold_quantiles_s": [
+            0.0,
+            0.0,
+            0.0,
+            0.0027500000000009184,
+            3.6340000000012136
+          ],
+          "original_reference_matches": 0,
+          "legacy_realistic_lower_catch_count": 0
+        },
+        "earlier": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 44,
+            "final_anatomical_hand_hold": 48,
+            "form.pass": 25,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 32,
+            "no_deep_ball_penetration": 27,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 48,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "actual_release_range_s": [
+            5.500000000000171,
+            5.520000000000178
+          ],
+          "mean_clean_hold_s": 0.30476000000010184,
+          "median_clean_hold_s": 0.0,
+          "clean_hold_quantiles_s": [
+            0.0,
+            0.0,
+            0.0,
+            0.09725000000003248,
+            3.3280000000011114
+          ],
+          "original_reference_matches": 0,
+          "legacy_realistic_lower_catch_count": 0
+        },
+        "exact_ball_diagnostic": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 38,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 1,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "actual_release_range_s": [
+            5.500000000000171,
+            5.520000000000178
+          ],
+          "mean_clean_hold_s": 0.07624000000002545,
+          "median_clean_hold_s": 0.0,
+          "clean_hold_quantiles_s": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.5290000000001767
+          ],
+          "original_reference_matches": 0,
+          "legacy_realistic_lower_catch_count": 0
+        }
+      },
+      "posthoc_uncertainty_floor": {
+        "failed_check_counts": {
+          "continuous_anatomical_bilateral_075s": 45,
+          "final_anatomical_hand_hold": 45,
+          "form.pass": 3,
+          "full_horizon": 0,
+          "initial_free_flight": 0,
+          "load_bearing_hands": 42,
+          "no_deep_ball_penetration": 31,
+          "no_deep_interhand_penetration": 0,
+          "no_excluded_floor_body_or_applied_support": 45,
+          "physics_clock_and_endpoint": 0,
+          "upright": 0,
+          "verified_free_joint_no_attachment": 0,
+          "zero_warnings": 0
+        },
+        "failure_counts_overlap_not_causal_partition": true,
+        "successes": 4,
+        "total": 50,
+        "rate": 0.08,
+        "wilson95": [
+          0.03154951408859298,
+          0.18838246918342838
+        ],
+        "mean_clean_hold_s": 0.31470000000010506,
+        "median_clean_hold_s": 0.0
+      }
+    },
+    {
+      "route": "slant",
+      "original_methods": {
+        "current": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 0,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "actual_release_range_s": [
+            5.300000000000105,
+            5.320000000000111
+          ],
+          "mean_clean_hold_s": 0.022680000000007573,
+          "median_clean_hold_s": 0.02300000000000768,
+          "clean_hold_quantiles_s": [
+            0.01000000000000334,
+            0.019000000000006345,
+            0.02300000000000768,
+            0.026000000000008683,
+            0.03500000000001169
+          ],
+          "original_reference_matches": 0,
+          "legacy_realistic_lower_catch_count": 0
+        },
+        "earlier": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 4,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "actual_release_range_s": [
+            5.300000000000105,
+            5.320000000000111
+          ],
+          "mean_clean_hold_s": 0.01542000000000515,
+          "median_clean_hold_s": 0.015500000000005176,
+          "clean_hold_quantiles_s": [
+            0.0,
+            0.011000000000003674,
+            0.015500000000005176,
+            0.021000000000007013,
+            0.02800000000000935
+          ],
+          "original_reference_matches": 0,
+          "legacy_realistic_lower_catch_count": 0
+        },
+        "exact_ball_diagnostic": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 5,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "actual_release_range_s": [
+            5.300000000000105,
+            5.320000000000111
+          ],
+          "mean_clean_hold_s": 0.011800000000003941,
+          "median_clean_hold_s": 0.012000000000004007,
+          "clean_hold_quantiles_s": [
+            0.0,
+            0.007250000000002421,
+            0.012000000000004007,
+            0.016000000000005343,
+            0.022000000000007347
+          ],
+          "original_reference_matches": 0,
+          "legacy_realistic_lower_catch_count": 0
+        }
+      },
+      "posthoc_uncertainty_floor": {
+        "failed_check_counts": {
+          "continuous_anatomical_bilateral_075s": 50,
+          "final_anatomical_hand_hold": 50,
+          "form.pass": 0,
+          "full_horizon": 0,
+          "initial_free_flight": 0,
+          "load_bearing_hands": 0,
+          "no_deep_ball_penetration": 50,
+          "no_deep_interhand_penetration": 0,
+          "no_excluded_floor_body_or_applied_support": 50,
+          "physics_clock_and_endpoint": 0,
+          "upright": 0,
+          "verified_free_joint_no_attachment": 0,
+          "zero_warnings": 0
+        },
+        "failure_counts_overlap_not_causal_partition": true,
+        "successes": 0,
+        "total": 50,
+        "rate": 0.0,
+        "wilson95": [
+          0.0,
+          0.07134759913335872
+        ],
+        "mean_clean_hold_s": 0.022660000000007566,
+        "median_clean_hold_s": 0.022000000000007347
+      }
+    }
+  ],
+  "limits": "1mm reported covariance is a compatibility floor, not actualnoise or calibratedsensoruncertainty. Privilegedvisibility/positiondiagnostic, notdeployable. No hardwareorconvergenceclaim."
+}

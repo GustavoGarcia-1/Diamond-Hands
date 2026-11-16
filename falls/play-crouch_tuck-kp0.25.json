@@ -1,0 +1,53 @@
+{
+  "mode": "crouch_tuck",
+  "label": "crouch_tuck-kp0.25",
+  "fall_body_stiffness_fraction": 0.25,
+  "fall_gain_transition_s": 0.15,
+  "damping_retained": true,
+  "native_hand_gains_unchanged": true,
+  "trigger_s": 4.679999999999898,
+  "duration_s": 11.999999999998789,
+  "stable_standing_final2s": false,
+  "impacts": {
+    "head": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "hand": {
+      "peak_sum_normal_n": 502.3223694823471,
+      "first_contact_s": 5.124000000000046
+    },
+    "torso": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "other": {
+      "peak_sum_normal_n": 5495.9927585802225,
+      "first_contact_s": 0.03400000000000002
+    }
+  },
+  "actual_torque_caps_respected": true,
+  "warning_count": 0,
+  "evaluation_stop_removed_only": true,
+  "no_midplay_pose_overwrite": true,
+  "actual_machine_split_m": 3.45,
+  "historical_route_not_qualified": true,
+  "video_sha256": "809feccf951ef68e93f60aadd1eb8e312376ea7be7844a3cd4204d898547cb9f",
+  "source_view_sha256": "2beb9547c4941504d317f004b53259e86564150637e6587dc6f49b10253e9c49",
+  "source": "reports/fall-recovery-20261114/fullplay-low-gains-linux/artifacts/study/crouch_tuck-kp0.25",
+  "frame_count": 301,
+  "fps": 25,
+  "fixed_camera": {
+    "lookat": [
+      6.556921636837428,
+      2.164410109695473,
+      0.8
+    ],
+    "distance": 11.950922360329399,
+    "azimuth": 110,
+    "elevation": -15
+  },
+  "source_poses_unmodified": true,
+  "no_physics_steps_during_render": true,
+  "field_decor_centered_on_measured_machine_only": true
+}

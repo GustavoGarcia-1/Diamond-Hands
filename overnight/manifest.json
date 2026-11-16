@@ -1,0 +1,190 @@
+{
+  "scope": "Verified November15 simulation evidence; no website modification before15:00UTC",
+  "files": {
+    "go-retention-confirmation.png": {
+      "source": "reports/catch-repair-20261115-performance/figures/go-retention-confirmation.png",
+      "sha256": "bb31b7ff07396c7923dda9cc21fd33a3d5eeccc1ea0533fefe006712186c4ac1"
+    },
+    "go-retention-confirmation.svg": {
+      "source": "reports/catch-repair-20261115-performance/figures/go-retention-confirmation.svg",
+      "sha256": "d4963eb0d1837a0211c1e0c9a498c317bf218bb71d703aa8dea03e7b604ef88a"
+    },
+    "out-original-distribution.png": {
+      "source": "reports/catch-repair-20261115-performance/figures/out-original-distribution.png",
+      "sha256": "3bce0a3db2294497c835b7850577e488428078b067cf18d050c6059d72afde44"
+    },
+    "out-original-distribution.svg": {
+      "source": "reports/catch-repair-20261115-performance/figures/out-original-distribution.svg",
+      "sha256": "688d8df4de4f1f75559ee72453dda997e61d67de2b0bd0ae9f6a5790d981ec39"
+    },
+    "slant-preparation-ablation.png": {
+      "source": "reports/catch-repair-20261115-performance/figures/slant-preparation-ablation.png",
+      "sha256": "0ce5bdd7c0138c5ce94275a4fc81a15cdaf6558e9aa04025a688f30c3e81f699"
+    },
+    "slant-preparation-ablation.svg": {
+      "source": "reports/catch-repair-20261115-performance/figures/slant-preparation-ablation.svg",
+      "sha256": "cc61f6485842e07dbfa7b9d5d0c40898805397aaba9ed762cd79536b587d7f7b"
+    },
+    "slant-ppo-development.png": {
+      "source": "reports/catch-repair-20261115-performance/figures/slant-ppo-development.png",
+      "sha256": "d9fbf8c60882f2c0ea4d3f4a7888a5a8a8dc82b1c78571c9248e390a5e5e9d36"
+    },
+    "slant-ppo-development.svg": {
+      "source": "reports/catch-repair-20261115-performance/figures/slant-ppo-development.svg",
+      "sha256": "27ecc150c590bf5a1b519012cbed4df45f7735b391783be4b287e2326d004d39"
+    },
+    "entry-retention-failure-partition.png": {
+      "source": "reports/catch-repair-20261115-performance/figures/entry-retention-failure-partition.png",
+      "sha256": "6357d5783111d166fc5d7af52fd2bb6d8f4b7fe9a7b10cbba8e8c3eba6974d73"
+    },
+    "entry-retention-failure-partition.svg": {
+      "source": "reports/catch-repair-20261115-performance/figures/entry-retention-failure-partition.svg",
+      "sha256": "9717e4e7f419224bebff07dea5b4c985b8eedb9bea85bd8811f8110ae4410119"
+    },
+    "slant-entry-closure-factorial.png": {
+      "source": "reports/catch-repair-20261115-performance/figures/slant-entry-closure-factorial.png",
+      "sha256": "34d920bae6cd51725e828be303df71f60519974f8262a23017e5fb248be8b643"
+    },
+    "slant-entry-closure-factorial.svg": {
+      "source": "reports/catch-repair-20261115-performance/figures/slant-entry-closure-factorial.svg",
+      "sha256": "4ef51fee542154532d2d77e819f75ef7281495a998dbd5e6043b6aabec092c37"
+    },
+    "slant-fresh-confirmation.png": {
+      "source": "reports/catch-repair-20261115-performance/figures/slant-fresh-confirmation.png",
+      "sha256": "48b6690812cca54ebbd902cc1a90bc0c38244b5476f54a3084cfde67efcc68a1"
+    },
+    "slant-fresh-confirmation.svg": {
+      "source": "reports/catch-repair-20261115-performance/figures/slant-fresh-confirmation.svg",
+      "sha256": "59d2306647fdd416f7b9a9440427a8ccfb459368377ac84630c15bea784fe5d8"
+    },
+    "go-regulated.mp4": {
+      "source": "reports/catch-repair-20261115-go-performance/persistent-r1/media/go02-persistent-wide/full-play.mp4",
+      "sha256": "36f3947a8a144cfcb97addf7942106d9247f08b9bd3cce596dd19a7422e04b58"
+    },
+    "go-tenyard.mp4": {
+      "source": "reports/catch-repair-20261115-go-tenyard/contact-r1/media/go-tenyard-wide/full-play.mp4",
+      "sha256": "a571d8e893f32653d28a5b88e35eef6d1c3990ad520c069bfedbf63c60ddc7dd"
+    },
+    "slant-ppo.mp4": {
+      "source": "reports/catch-repair-20261115-slant-performance/transport-final-eval-r1/media/full-play.mp4",
+      "sha256": "367237ad9368b9dcdbdddb94bf2a62983d7f8f747b94b0bc87fc2df5cdc6932e"
+    },
+    "slant-retained.mp4": {
+      "source": "reports/catch-repair-20261115-slant-performance/learned-late-closing-floor-r1/media/full-play.mp4",
+      "sha256": "ee99abab99f766130da1375e4b77561245fef380a802f8d8a22a0c2617e38d29"
+    },
+    "slant-preparation.mp4": {
+      "source": "reports/catch-repair-20261115-performance/media/slant-early-preparation/full-play.mp4",
+      "sha256": "231c4388a897c4fcfb9b3282b2bd89db19cd180930f35cc66fb53768bebdcb27"
+    },
+    "missed-catch-trip.mp4": {
+      "source": "reports/fall-recovery-20261115-natural-go11/media/dedicated-camera-avoidance/baseline/full-play.mp4",
+      "sha256": "c2bd13633ad1c4c4e46303c242e7f62742ed29aff4ead5b5a702232fa1351593"
+    },
+    "missed-catch-avoidance.mp4": {
+      "source": "reports/fall-recovery-20261115-natural-go11/media/dedicated-camera-avoidance/avoidance/full-play.mp4",
+      "sha256": "c6dda54e53874c44618154fee58695edbdea27d0e9f312213fb960ca308b0024"
+    },
+    "experiments.json": {
+      "source": "reports/catch-repair-20261115-performance/experiments.json",
+      "sha256": "056b859679d4b4583025bb0ced5551a7c44ebf3ab87caa0d2975c175b4617f1f"
+    },
+    "go-confirmation.json": {
+      "source": "reports/catch-repair-20261115-go-performance/persistent-r1/confirmation-r1-audit.json",
+      "sha256": "59a7e263cb777dac3565d51be80b0772e40f03f042d6f14c57cbe8b1d2bde5bc"
+    },
+    "go-development.json": {
+      "source": "reports/catch-repair-20261115-go-performance/persistent-r1/original50-r2-audit-v2.json",
+      "sha256": "c59671cfa7710d81c7334b997e1ed7301c7e4572a2ad582bf166da610384290f"
+    },
+    "entry-retention.json": {
+      "source": "reports/catch-repair-20261115-out-performance/acquisition-retention-review-r1/results.json",
+      "sha256": "7cb80f919e8160fe13e9b3a85d5b1ac3698151a8e020fa0658c7e5ed7c9ed61d"
+    },
+    "entry-retention-audit.py.txt": {
+      "source": "reports/catch-repair-20261115-out-performance/acquisition-retention-review-r1/audit.py",
+      "sha256": "6b1128f55f6610d59dc49d5703374b4d97785f34ddf653337d5d66bc2aeb8744"
+    },
+    "out-development.json": {
+      "source": "reports/catch-repair-20261115-out-performance/original50-regulated-analysis-r1/results.json",
+      "sha256": "89842bbfcaf864fdf91ddbf8ae970771b34cc57da14ebd5e030440e983d956d9"
+    },
+    "slant-paired-results.json": {
+      "source": "reports/catch-repair-20261115-slant-performance/transport-final-eval-r1/independent-final-summary.json",
+      "sha256": "edcc37a09d7c82ca0e063a4108f4f6f18968e5a2604536c76bae70e7ca56d1cf"
+    },
+    "slant-force-metrics.json": {
+      "source": "reports/catch-repair-20261115-slant-performance/transport-final-eval-r1/paired-force-metrics.json",
+      "sha256": "07af1c45b3dbd879744b5aa3fb3473b295b2639f2b82ae8aa6d58f4d761eaacc"
+    },
+    "slant-manifest.json": {
+      "source": "reports/catch-repair-20261115-slant-performance/transport-final-eval-r1/manifest.json",
+      "sha256": "a38fa16b62aaf720b6d2eb5e5bda42d3cad73ca806f33d6138e3efe8075b25e7"
+    },
+    "slant-retained-nominal.json": {
+      "source": "reports/catch-repair-20261115-slant-performance/learned-late-closing-floor-r1/summary.json",
+      "sha256": "048be4f2b0b583ad566b49b22aaa73375907605bee99c149efdcfe6c3a8f1274"
+    },
+    "slant-factorial.json": {
+      "source": "reports/catch-repair-20261115-slant-performance/late-floor-factorial-seven-r1/summary.json",
+      "sha256": "92acc601ba5b8514652596c0bc43f1224906e56004d4dd6a8b6cd4157d870acf"
+    },
+    "slant-confirmation.json": {
+      "source": "reports/catch-repair-20261115-slant-performance/confirmation-fifty-r1/summary.json",
+      "sha256": "e2110e2ae4ec09e65b0a87d3c31de7355e8834a700b1c5a3ff80600b8ce79fda"
+    },
+    "slant-confirmation-protocol.json": {
+      "source": "reports/catch-repair-20261115-slant-performance/confirmation-fifty-r1/protocol.json",
+      "sha256": "79cf0d64eb4dc0142152579a451ec88942a73348ba03050d08b3920ebdd89261"
+    },
+    "slant-confirmation-draws.json": {
+      "source": "reports/catch-repair-20261115-slant-performance/confirmation-fifty-r1/draws.json",
+      "sha256": "8b5bc721fee36d82719702f290d7a1922c6f5233388b0182715b48a920327e6c"
+    },
+    "slant-confirmation-independent.json": {
+      "source": "reports/catch-repair-20261114/post-study/training-three-routes/independent/slant-confirmation-fifty-r1/independent-confirmation-audit.json",
+      "sha256": "a4bc6a913226e229e053a22d1e85ab9df11b30a86958f1181c81cb146f5a7ca5"
+    },
+    "slant-factorial-independent.json": {
+      "source": "reports/catch-repair-20261114/post-study/training-three-routes/independent/slant-floor-factorial-r1/independent-factorial-audit.json",
+      "sha256": "9b37a6f3646d5e9f5d58995caada25fbd63de1a0a28419026daf8f60c1366f29"
+    },
+    "slant-independent.json": {
+      "source": "reports/catch-repair-20261114/post-study/training-three-routes/independent/transport-final-slant-r1/independent-final-audit.json",
+      "sha256": "2d2e470b0541ae05488c52e06552486fb5735d333ce49e14211951c2c13d179c"
+    },
+    "route-survey.json": {
+      "source": "reports/catch-repair-20261114/post-study/training-three-routes/independent/route-frame-audit-r1/route-frame-audit.json",
+      "sha256": "de8ace28bc8ca52e83eef3f4ca433ea950001eaede015c7a4b4df0eba302c6a3"
+    },
+    "avoidance-independent.json": {
+      "source": "reports/fall-recovery-20261115-natural-go11/early-visual-development-r1/independent-development-audit.json",
+      "sha256": "84c4f01012840f2f86d37b5cb1ea38c6694de7abf00f03bc50f8b9a1283a3fbd"
+    },
+    "learning-protocol.md": {
+      "source": "docs/precontact-ppo.md",
+      "sha256": "4b1ad5b94f1775444db1efc8e001615cac73d65835c7c8331023f0332729218f"
+    },
+    "sensor-contract.md": {
+      "source": "SENSOR_CONTRACT.md",
+      "sha256": "0473e0875d3ea7b566516f977fb7030e31c0829eca953b3751e6bd8cb07aea76"
+    },
+    "precontact-objective.py.txt": {
+      "source": "src/g1_receiver/precontact_native_rl.py",
+      "sha256": "765c63f7bbf41daa42e647e7c639270605e29174df1ae7ac509a9ba9472ede1c"
+    },
+    "transport-objective.py.txt": {
+      "source": "src/g1_receiver/transport_precontact_rl.py",
+      "sha256": "c363fc2a4ac863c3ea3931e59c5f92460391f0fe3f106c97130434ec5b158414"
+    },
+    "finger-regulation.py.txt": {
+      "source": "src/g1_receiver/finger_encoder_regulation.py",
+      "sha256": "cbcc8e590040acba3087408005ef8f033b19db9d70d575167d9d72deee655e60"
+    }
+  },
+  "retained_gain_PPO_alone": false,
+  "conditional_learning_gain_with_scripted_limit_fixed_development": true,
+  "slant_ppo_improvement": "Fixed development4/7 versus1/7 does not generalize: fresh confirmation learned12/50 versus scripted19/50 with the same limit. No learning promotion.",
+  "slant_fresh_confirmation_learning_gain_established": false,
+  "all_hardware_integration_unverified": true
+}

@@ -1,0 +1,478 @@
+{
+  "play": {
+    "route": "go",
+    "scale": 3.4,
+    "speed": 2.0,
+    "finish_s": 11.880000000000518,
+    "release_s": 4.35,
+    "flight_s": 0.85,
+    "aim_x": 0.42,
+    "aim_y": 0.0,
+    "aim_z": 0.37,
+    "approach_mps": 2.5,
+    "descent_mps": 0.5,
+    "closure": 0.78,
+    "squeeze": 0.0,
+    "settle_s": 0.4,
+    "acceleration": 1.8,
+    "shoulder_pitch_adjustment": 0.0,
+    "elbow_adjustment": 0.0,
+    "upper_fraction": 1.0,
+    "lateral_gain": 0.0,
+    "yaw_gain": 1.8,
+    "lateral_trim": 0.0,
+    "yaw_trim": 0.0,
+    "pregrip": 0.0,
+    "terminal_blend": 0.0,
+    "terminal_radius_m": 0.75,
+    "allow_downfield_lob": true,
+    "receive_wrist_pitch": 0.0,
+    "receive_wrist_roll": 0.0,
+    "receive_yaw_bias": 0.0,
+    "receive_wrist_pitch_left": 0.0,
+    "grip_retract_m": 0.0,
+    "torso_yaw_hold": 0.0,
+    "receive_elbow": 0.0,
+    "receive_shoulder_pitch": 0.0,
+    "arm_lead": false,
+    "arm_pump": false,
+    "reach_adjustment": 0.0,
+    "stabilize_palms": 0.0,
+    "follow_ball_gain": 0.0,
+    "delivery": "lob",
+    "runup": "imu",
+    "launch_xyz": null,
+    "launch_velocity": null,
+    "quarterback_origin_m": [
+      0.0,
+      -1.8288,
+      1.4
+    ],
+    "quarterback_target_m": [
+      6.300090809765037,
+      -0.367460734412403,
+      1.177621606330717
+    ],
+    "quarterback_level_ball": false,
+    "field_catch_window_m": [
+      6.300090809765037,
+      -0.367460734412403,
+      1.173452356330717
+    ],
+    "grasp_offsets_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "grasp_ramp_s": 0.12,
+    "grasp_joint_lead_s": -0.04,
+    "grip_actuation_delay_s": 0.0,
+    "hold_offsets_rad": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "hold_curls": [
+      0.8,
+      0.8
+    ],
+    "hold_delay_s": 0.35,
+    "hold_ramp_s": 0.1,
+    "brake_x_m": 0.0,
+    "brake_timeout_s": 4.44,
+    "brake_blend_s": 0.65,
+    "brake_absorb_mps": 0.75,
+    "brake_absorb_s": 0.65,
+    "brake_ramp_down_s": 0.8,
+    "brake_terminal_delay_s": 0.0,
+    "brake_no_terminal_correction": false,
+    "brake_predict_progress": false,
+    "grip": {
+      "plane_m": 0.57,
+      "lead_s": 0.24,
+      "height_m": 0.41,
+      "mode": "predict",
+      "lateral_limit_m": 0.25,
+      "predict_beyond_last_frame": true,
+      "crossing_direction": 1
+    },
+    "field_approach_axis_xy": [
+      0.9741374363910821,
+      0.22595631219643
+    ],
+    "minimum_approach_speed_mps": 2.5,
+    "pregrip_closure": 0.2,
+    "quarterback_horizontal_distance_only": true
+  },
+  "break_xy_m": [
+    3.991,
+    2.339
+  ],
+  "finish_xy_m": [
+    3.7,
+    3.92
+  ],
+  "pass_camera": [
+    [
+      3,
+      -3,
+      2.0
+    ],
+    [
+      6,
+      0,
+      1.1
+    ]
+  ],
+  "route_frame": {
+    "heading_rad": 0.0,
+    "scrimmage_origin_xy_m": [
+      0.0,
+      0.0
+    ]
+  },
+  "formation": {
+    "receiver_origin_xy_m": [
+      0.0,
+      0.0
+    ],
+    "quarterback_lateral_m": -1.8288,
+    "arrival_s": 8.880000000000518
+  },
+  "cup_lift_m": 0.12,
+  "out_staged_arm_offsets_rad": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "jaw_width_m": 0.14,
+  "jaw_start_delay_s": 0.12,
+  "slot_separation_m": 1.8288,
+  "overhead_lift_m": 0.5,
+  "static_lower_pose": {
+    "forward_m": 0.44,
+    "target_faces_relative_pelvis_m": [
+      [
+        0.44,
+        0.07,
+        0.37178
+      ],
+      [
+        0.44,
+        -0.07,
+        0.37178
+      ]
+    ],
+    "actual_faces_relative_pelvis_m": [
+      [
+        0.4408382885826301,
+        0.06972343830518277,
+        0.3716445404657508
+      ],
+      [
+        0.4408384031408985,
+        -0.06972343701886928,
+        0.37164451359191863
+      ]
+    ],
+    "position_error_m": [
+      0.0008930640538209658,
+      0.0008931760610177476
+    ],
+    "palm_up_cos": [
+      0.8851865456300455,
+      0.8851760472293422
+    ],
+    "normals": [
+      [
+        -0.4652343849309673,
+        -0.0013215572070417458,
+        0.8851865456300455
+      ],
+      [
+        -0.46525435982343255,
+        0.001321391965251495,
+        0.8851760472293422
+      ]
+    ],
+    "finger_axes": [
+      [
+        0.8825403792284321,
+        0.07658648953592595,
+        0.4639579600048891
+      ],
+      [
+        0.8825298780793577,
+        -0.076587032455888,
+        0.46397784511422
+      ]
+    ],
+    "arm_order": [
+      "left_shoulder_roll_joint",
+      "left_shoulder_yaw_joint",
+      "left_shoulder_pitch_joint",
+      "left_elbow_joint",
+      "left_wrist_roll_joint",
+      "left_wrist_pitch_joint",
+      "left_wrist_yaw_joint",
+      "right_shoulder_roll_joint",
+      "right_shoulder_yaw_joint",
+      "right_shoulder_pitch_joint",
+      "right_elbow_joint",
+      "right_wrist_roll_joint",
+      "right_wrist_pitch_joint",
+      "right_wrist_yaw_joint"
+    ],
+    "arm_targets_rad": [
+      0.05000100000638188,
+      -0.31836926592801773,
+      -0.8300616797318743,
+      0.25000100000000003,
+      -1.6650075026028792,
+      -0.5923741494659726,
+      -0.29355782490141175,
+      -0.05000100000000001,
+      0.3183048062215549,
+      -0.8300395783217867,
+      0.25000100000000003,
+      1.6649955644105416,
+      -0.5923075404716778,
+      0.29359864844356376
+    ],
+    "minimum_joint_margin_rad": 1.000000000007939e-06,
+    "feasible_static": true
+  },
+  "earlier_intercept_calibration": {
+    "arrival_s": 5.2,
+    "no_ball_timestamp_s": 5.200000000000071,
+    "face_centers_m": [
+      [
+        6.394909424755802,
+        0.04122131461484419,
+        1.0718823918225777
+      ],
+      [
+        6.397192589917681,
+        -0.09751595179412444,
+        1.069917585502295
+      ]
+    ],
+    "fixed_target_m": [
+      6.393521759395574,
+      -0.028074718067932276,
+      1.148578151979288
+    ],
+    "horizontal_distance_m": 6.642268590538476
+  },
+  "static_closing_pose": {
+    "pinky_mcp_centers_relative_pelvis_m": [
+      [
+        0.4677338735144718,
+        0.03624496720373907,
+        0.35642523479289956
+      ],
+      [
+        0.4677343828424458,
+        -0.036245079147739154,
+        0.3564257551993473
+      ]
+    ],
+    "pinky_mcp_separation_m": 0.07249004635513555,
+    "minimum_physical_joint_margin_rad": 0.4298402918032471,
+    "forward_m": 0.44,
+    "target_faces_relative_pelvis_m": [
+      [
+        0.44,
+        0.06,
+        0.37178
+      ],
+      [
+        0.44,
+        -0.06,
+        0.37178
+      ]
+    ],
+    "actual_faces_relative_pelvis_m": [
+      [
+        0.4407487393869911,
+        0.059718344414078195,
+        0.37162339923315385
+      ],
+      [
+        0.4407488396052093,
+        -0.05971833921873214,
+        0.3716233741484054
+      ]
+    ],
+    "position_error_m": [
+      0.0008151468204498931,
+      0.0008152454890535316
+    ],
+    "palm_up_cos": [
+      0.7862699641542582,
+      0.7862614192748524
+    ],
+    "normals": [
+      [
+        -0.3714535226503306,
+        -0.4937629228481255,
+        0.7862699641542582
+      ],
+      [
+        -0.371468493259024,
+        0.4937652671824603,
+        0.7862614192748524
+      ]
+    ],
+    "finger_axes": [
+      [
+        0.8806436312563103,
+        0.0808743623361573,
+        0.4668255908199781
+      ],
+      [
+        0.8806333861648172,
+        -0.08087696395283572,
+        0.466844466470002
+      ]
+    ],
+    "arm_order": [
+      "left_shoulder_roll_joint",
+      "left_shoulder_yaw_joint",
+      "left_shoulder_pitch_joint",
+      "left_elbow_joint",
+      "left_wrist_roll_joint",
+      "left_wrist_pitch_joint",
+      "left_wrist_yaw_joint",
+      "right_shoulder_roll_joint",
+      "right_shoulder_yaw_joint",
+      "right_shoulder_pitch_joint",
+      "right_elbow_joint",
+      "right_wrist_roll_joint",
+      "right_wrist_pitch_joint",
+      "right_wrist_yaw_joint"
+    ],
+    "arm_targets_rad": [
+      0.4019795618297797,
+      -0.8402130079861366,
+      -0.9864553882518976,
+      0.25000100000003495,
+      -1.5423565539010302,
+      -0.8960799068980638,
+      0.07632178227703199,
+      -0.40200158431849536,
+      0.8401925090880709,
+      -0.986434279979519,
+      0.25000100000000003,
+      1.542379708196753,
+      -0.8960749527578501,
+      -0.07626291656147008
+    ],
+    "minimum_joint_margin_rad": 1.0000000000287557e-06,
+    "feasible_static": true
+  },
+  "path_audit": "out-review/wide-wrap-path-audit.json",
+  "lower_calibration": {
+    "time_s": 5.2,
+    "face_centers_m": [
+      [
+        6.407853973089819,
+        0.03869712569853346,
+        1.0877448553583744
+      ],
+      [
+        6.4102185402155465,
+        -0.09425175794068144,
+        1.0841588516612655
+      ]
+    ],
+    "normals": [
+      [
+        -0.4043877318138459,
+        -0.1474582088924174,
+        0.9026220909044342
+      ],
+      [
+        -0.3900083794472108,
+        0.13417551907549968,
+        0.9109832018439096
+      ]
+    ],
+    "fixed_target_m": [
+      6.405274421924088,
+      -0.028341830438292994,
+      1.1630300784516243
+    ]
+  },
+  "native_grip": {
+    "mode": "staged",
+    "preload": [
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "capture": [
+      0.65,
+      0.65,
+      0.65,
+      0.65,
+      0.5,
+      0.3,
+      0.4
+    ],
+    "digit_delay_s": [
+      0.35,
+      0.35,
+      0.35,
+      0.35,
+      0.3,
+      0.3,
+      0.3
+    ],
+    "ramp_s": 0.25
+  },
+  "research_scope": "NewGoQBsideCshape; ORIGINALphysicsanchor/separated2.5mscomparison; latearmsfreshRGBDTTConly; nativepreloadstillmachineevent; nolearningclaim",
+  "initial_ball_quaternion_wxyz": [
+    0.6427876096865394,
+    0.0,
+    0.0,
+    0.766044443118978
+  ]
+}

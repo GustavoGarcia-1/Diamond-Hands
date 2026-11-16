@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "results": {
+    "mass-090": {
+      "passed": true,
+      "array_diff": {
+        "body_inertia": 3,
+        "body_invweight0": 2,
+        "body_mass": 1,
+        "body_subtreemass": 2,
+        "cam_poscom0": 27,
+        "dof_M0": 6,
+        "dof_invweight0": 6,
+        "light_poscom0": 6
+      }
+    },
+    "mass-110": {
+      "passed": true,
+      "array_diff": {
+        "body_inertia": 3,
+        "body_invweight0": 2,
+        "body_mass": 1,
+        "body_subtreemass": 2,
+        "cam_poscom0": 27,
+        "dof_M0": 6,
+        "dof_invweight0": 6,
+        "light_poscom0": 6
+      }
+    },
+    "friction-080": {
+      "passed": true,
+      "array_diff": {
+        "pair_friction": 290
+      }
+    },
+    "friction-120": {
+      "passed": true,
+      "array_diff": {
+        "pair_friction": 290
+      }
+    },
+    "native-force-075": {
+      "passed": true,
+      "array_diff": {
+        "actuator_forcerange": 28
+      }
+    }
+  },
+  "derived_camera_and_light_COM": "Mass changes world-subtree COM reference arrays; actual fixed-camera extrinsics and camera modes unchanged."
+}

@@ -1,0 +1,48 @@
+{
+  "mode": "crouch_tuck",
+  "trigger_s": 4.679999999999898,
+  "duration_s": 11.999999999998789,
+  "stable_standing_final2s": false,
+  "impacts": {
+    "head": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "hand": {
+      "peak_sum_normal_n": 693.0231184373941,
+      "first_contact_s": 5.145000000000053
+    },
+    "torso": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "other": {
+      "peak_sum_normal_n": 4175.901316312441,
+      "first_contact_s": 0.03400000000000002
+    }
+  },
+  "actual_torque_caps_respected": true,
+  "warning_count": 0,
+  "evaluation_stop_removed_only": true,
+  "no_midplay_pose_overwrite": true,
+  "actual_machine_split_m": 3.45,
+  "historical_route_not_qualified": true,
+  "video_sha256": "256e11616dd9401a8de60c2a017c46e269f52983fa11c12e093c2eec9c4439f6",
+  "source_view_sha256": "6bbb9a5b41ec87cfd9c31037c77fb55a9c5a12d88c4e7f726a6e447eafaf9566",
+  "source": "reports/fall-recovery-20261114/fullplay-linux/artifacts/study/crouch_tuck",
+  "frame_count": 301,
+  "fps": 25,
+  "fixed_camera": {
+    "lookat": [
+      6.556921636837428,
+      2.164410109695473,
+      0.8
+    ],
+    "distance": 11.950922360329399,
+    "azimuth": 110,
+    "elevation": -15
+  },
+  "source_poses_unmodified": true,
+  "no_physics_steps_during_render": true,
+  "field_decor_centered_on_measured_machine_only": true
+}

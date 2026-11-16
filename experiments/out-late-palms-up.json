@@ -1,0 +1,38 @@
+{
+  "source_trial": "reports/catch-repair-20261114/out-cup/relative-leftup-thumb40-r1/artifacts/rollout/trial",
+  "source_view_sha256": "29a142f25a3ae1bd41cabfda4b6323543ec8e84855ab4e9742e98f1690790e65",
+  "video_sha256": "500b5f18f0693e7bf55eaa8c483c12b76c1a2a48540b0a277a32da22c94815fb",
+  "video_bytes": 162570,
+  "source_and_render_frame_count": 251,
+  "all_poses_and_timestamps_exact": true,
+  "no_cuts_or_crops_or_pose_edits": true,
+  "recorded_end_s": 9.999999999999897,
+  "fps": 25,
+  "encoded_duration_s": 10.04,
+  "camera": {
+    "fixed_lookat_m": [
+      2,
+      4.5,
+      1.1
+    ],
+    "distance_m": 15,
+    "azimuth_relative_field_deg": 105,
+    "elevation_deg": -15
+  },
+  "field_heading_rad": 0.415,
+  "receiver_split_m": 1.8288,
+  "actual_machine_origin_m": [
+    0.737353744689234,
+    -1.6735647269205824,
+    1.4
+  ],
+  "caption": "Experimental walking Out. 0.855 s of clean two-hand control; right wrist-mount support begins at 7.590 s. Complete 10 s play. Uses an uncalibrated 2.5 ms contact assumption; no realistic-catch qualification.",
+  "actual_acquisition_form_fraction": 0.8181818181818182,
+  "clean_interval_s": [
+    6.735,
+    7.589
+  ],
+  "first_excluded_support_s": 7.59,
+  "global_ball_overlap_mm": 3.3719548121429535,
+  "render_visual_qa": "Contact sheet inspected: machine, whole throw and full robot remain visible throughout all 10 s."
+}

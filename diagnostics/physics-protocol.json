@@ -1,0 +1,45 @@
+{
+  "cells": [
+    "nominal",
+    "mass-090",
+    "mass-110",
+    "friction-080",
+    "friction-120",
+    "native-force-075"
+  ],
+  "replicates": 1,
+  "interpretation": "Engineering sensitivity, not calibrated hardware distribution or success rate",
+  "frozen_go_profile_sha256": "2d74bb5c0a6fa74a79af9c70b95aa1404bd21de0d09083e0610c0a8e37ba921d",
+  "contact_tau_s": 0.0025,
+  "nominal_gate": "All original trial NPZ arrays and comparison model hash exact; stop before mutations on any mismatch",
+  "mass": "Scale football body mass and principal inertia together using explicit original inertial frame before compilation. Geometry and density distribution shape fixed.",
+  "friction": "Scale all five explicit ball-Aero hand/mount pair friction coefficients only. No geom/floor/body friction edits.",
+  "native_force": "Scale exactly 14 native actuator forcerange endpoints by .75, never increase caps.",
+  "unchanged": [
+    "scorer",
+    "controller",
+    "cameras",
+    "release and aim",
+    "solref",
+    "solimp",
+    "CCD",
+    "gains",
+    "ball geometry",
+    "all other limits"
+  ],
+  "metrics": [
+    "clean bilateral hold",
+    "endpoint held",
+    "form",
+    "overlap",
+    "first 20ms summed contact force and impulse",
+    "balance",
+    "compiled model identity"
+  ],
+  "heldout50": "unused",
+  "source_archives": {
+    "bootstrap.tar.gz": "bff29ca0b39ac6050db72e5702d92d82ada2c8776bd05a5939d214caedaf64df",
+    "train-receipt.source.tar.gz": "493a103647ec7eb94d8a527d8a74d54cf1ad310125626f31de5f544848c32c18",
+    "final-artifacts.tar.gz": "94dffb919c43818a03d0277ec6766ff4ac64f87873e08ad010a6e029194978a8"
+  }
+}

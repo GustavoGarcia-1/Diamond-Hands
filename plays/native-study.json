@@ -1,0 +1,92 @@
+{
+  "throw_horizontal_distance_m": 6.6535,
+  "duration_s": 9,
+  "controller": "native PPO residual169D20A; checkpoint19456; gain0.5; post-hoc selection",
+  "learned_components": [
+    "14 arm targets",
+    "6 native hand groups"
+  ],
+  "runtime_inputs": [
+    "surveyed RGB-D",
+    "29 body joint encoders and IMU",
+    "14 native hand actuator encoders",
+    "commanded catch plane and release event"
+  ],
+  "baseline": {
+    "continuous_anatomical_hold_s": 1.457,
+    "final_hold": true,
+    "reacquired": true
+  },
+  "learned_cpu": {
+    "continuous_anatomical_hold_s": 3.229,
+    "final_hold": true,
+    "impact_penetration_mm": 43.717,
+    "impact_limit_mm": 10,
+    "quality_pass": false
+  },
+  "learned_cuda": {
+    "continuous_anatomical_hold_s": 3.178,
+    "vertical_aim_minus_plus_2cm_hold_s": [
+      2.645,
+      2.607
+    ],
+    "lateral_aim_minus_plus_2cm_hold_s": [
+      0.114,
+      0.15
+    ]
+  },
+  "primary_route_controller_replaced": false,
+  "clean_linux_cpu_reproduction": true,
+  "hardware_verified": false,
+  "videos": {
+    "baseline": {
+      "sha256": "d3af7a30de100fd19764c979e99163809d734123932ecefd06b159be0a93c061",
+      "encoded_duration_s": 9.04,
+      "fps": 25,
+      "source_poses_unchanged": true,
+      "width": 1280,
+      "height": 720,
+      "framing_audit": {
+        "route": "native-baseline",
+        "recorded_frames": 226,
+        "method": "Perspective bounding spheres of all visible actor/machine geometries; excludes field/world. Conservative frustum bound, not occlusion or pixel segmentation.",
+        "worst": {
+          "normalized_bound": 0.9661117727653694,
+          "time_s": 9.000000000000451,
+          "geom": "football_surface",
+          "body": "football",
+          "horizontal_bound": 0.9661117727653694,
+          "vertical_bound": 0.041838232743892
+        },
+        "all_actor_bounds_in_frame": true,
+        "field_center_error_m": 2.220446049250313e-16,
+        "field_center_at_passer": true
+      }
+    },
+    "learned": {
+      "sha256": "af1798d5e51b2cec54d71f7f8b4c3362eae94299f7311acff3dcae46e66bb7bd",
+      "encoded_duration_s": 9.04,
+      "fps": 25,
+      "source_poses_unchanged": true,
+      "width": 1280,
+      "height": 720,
+      "framing_audit": {
+        "route": "native-learned",
+        "recorded_frames": 226,
+        "method": "Perspective bounding spheres of all visible actor/machine geometries; excludes field/world. Conservative frustum bound, not occlusion or pixel segmentation.",
+        "worst": {
+          "normalized_bound": 0.9645134650618824,
+          "time_s": 9.000000000000451,
+          "geom": "football_surface",
+          "body": "football",
+          "horizontal_bound": 0.9645134650618824,
+          "vertical_bound": 0.042280504417467016
+        },
+        "all_actor_bounds_in_frame": true,
+        "field_center_error_m": 2.220446049250313e-16,
+        "field_center_at_passer": true
+      }
+    }
+  },
+  "presentation": "50-yard field center at measured machine; fixed uninterrupted camera; original physics poses."
+}

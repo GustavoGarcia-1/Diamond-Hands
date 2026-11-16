@@ -1,0 +1,96 @@
+{
+  "schema": "go-fixed-trajectory-reward-specificity-results-v1",
+  "units": {
+    "time": "s",
+    "reward": "dimensionless",
+    "fraction": "0\u20131"
+  },
+  "original_replays_exact": true,
+  "rank": {
+    "original": {
+      "zero_return": 1.1528582901537479,
+      "learned_return": 7.802738413492504,
+      "correctly_ranks_retained_zero_above_failed_learned": false
+    },
+    "augmented": {
+      "zero_return": 8.998117523833038,
+      "learned_return": 10.511398039180573,
+      "correctly_ranks_retained_zero_above_failed_learned": false
+    }
+  },
+  "specificity_qualified": false,
+  "rows": [
+    {
+      "condition": "zero",
+      "observer": "original",
+      "sensor_return": 1.1528582901537479,
+      "valid_captures": 84,
+      "policy_steps": 158,
+      "max_visual_dwell_s": 0.7200000000002404,
+      "final_visual_dwell_s": 0.0,
+      "terminal_bonus": 0.0,
+      "dwell_increment_total_s": 1.6800000000005246,
+      "dwell_increment_at_original_clean_bilateral_s": 1.6400000000005113,
+      "offline_truth": {
+        "clean_bilateral_s": 3.537000000001181,
+        "first_excluded_support_s": null,
+        "end_bilateral_fraction": 1.0,
+        "original_realistic_lower_catch": false
+      }
+    },
+    {
+      "condition": "zero",
+      "observer": "augmented",
+      "sensor_return": 8.998117523833038,
+      "valid_captures": 158,
+      "policy_steps": 158,
+      "max_visual_dwell_s": 1.5200000000005076,
+      "final_visual_dwell_s": 0.03999999999997783,
+      "terminal_bonus": 0.0,
+      "dwell_increment_total_s": 3.120000000000225,
+      "dwell_increment_at_original_clean_bilateral_s": 3.040000000000198,
+      "offline_truth": {
+        "clean_bilateral_s": 3.537000000001181,
+        "first_excluded_support_s": null,
+        "end_bilateral_fraction": 1.0,
+        "original_realistic_lower_catch": false
+      }
+    },
+    {
+      "condition": "learned",
+      "observer": "original",
+      "sensor_return": 7.802738413492504,
+      "valid_captures": 99,
+      "policy_steps": 158,
+      "max_visual_dwell_s": 2.240000000000748,
+      "final_visual_dwell_s": 0.0,
+      "terminal_bonus": 0.0,
+      "dwell_increment_total_s": 2.7600000000007796,
+      "dwell_increment_at_original_clean_bilateral_s": 0.2800000000000935,
+      "offline_truth": {
+        "clean_bilateral_s": 0.13100000000004375,
+        "first_excluded_support_s": 5.6560000000002235,
+        "end_bilateral_fraction": 0.0,
+        "original_realistic_lower_catch": false
+      }
+    },
+    {
+      "condition": "learned",
+      "observer": "augmented",
+      "sensor_return": 10.511398039180573,
+      "valid_captures": 158,
+      "policy_steps": 158,
+      "max_visual_dwell_s": 1.8800000000006278,
+      "final_visual_dwell_s": 0.07999999999995566,
+      "terminal_bonus": 0.0,
+      "dwell_increment_total_s": 4.679999999999431,
+      "dwell_increment_at_original_clean_bilateral_s": 0.16000000000005343,
+      "offline_truth": {
+        "clean_bilateral_s": 0.13100000000004375,
+        "first_excluded_support_s": 5.6560000000002235,
+        "end_bilateral_fraction": 0.0,
+        "original_realistic_lower_catch": false
+      }
+    }
+  ]
+}

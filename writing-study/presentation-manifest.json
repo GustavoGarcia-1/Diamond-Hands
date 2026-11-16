@@ -1,0 +1,44 @@
+{
+  "scope": "Presentation wording and typography only. Frozen trial outcomes and thresholds are unchanged.",
+  "source_baseline_commit": "678cd8adf5bda123a6d2febd1323c55540482b15",
+  "files": {
+    "diamond-hands-writing-study.pdf": {
+      "bytes": 34539,
+      "sha256": "27f519e6e39f09c0107862e8382fcd2831fbebfc3fecc00f575fa7ca5c500e9b"
+    },
+    "combined-report.json": {
+      "bytes": 34858,
+      "sha256": "2e65a4c3174c829d29ef3759e3ccb5dcedf0a85041671e7e78eae60fb97c61e9"
+    },
+    "export_receiver_diagnostics.py.txt": {
+      "bytes": 10316,
+      "sha256": "2f7d3d3293cf79b369d9bb5f9fb1f30422a6c169e9f2db508f9a4eecac36b2dd"
+    },
+    "plot_receiver_research.py.txt": {
+      "bytes": 7685,
+      "sha256": "bd1f43024506de3df2a46c155f435fd86df3690eddc194fcb78c63ac9a5792c7"
+    },
+    "plot_receiver_uncertainty_appendix.py.txt": {
+      "bytes": 10064,
+      "sha256": "acd095eaffb4a3a640690284c752c4716496a89f7172dbf73a14bcbbfcba0e64"
+    }
+  },
+  "site_qa": {
+    "title": "Diamond Hands presentation audit",
+    "hyphen_violations": [],
+    "figure_hyphen_violations": [],
+    "duplicate_ids": [],
+    "missing_links": [],
+    "main_figures": 14,
+    "raw_evidence_unchanged": {
+      "comparison/trials.csv": "a76c559c9394a770141c200434850f6f6a0912886c1515f4da33940399ee7448",
+      "comparison/uncertainty/all-600-trials.csv": "fcc5369efc346b0c5804ad8a86bca32dbfb46bbe407c91c52148eec420f7b19c",
+      "comparison/summary.json": "099fcb475c1cb5b54496ae270decbdf8042067815a8503d467a8c44451c64aef",
+      "comparison/uncertainty/summary.json": "cc313731081d3150810a068b91c88a1a7472142b9bf57df97e6c818c9a74ffee"
+    },
+    "header_emoji_absent": true,
+    "university_unlinked": true,
+    "new_question": true,
+    "math_equations": 4
+  }
+}

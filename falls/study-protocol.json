@@ -1,0 +1,44 @@
+{
+  "hypothesis": "IMU-triggeredzero-velocitybalanceabort may improve moderate stumblerecovery; latecrouchtuck mayredistributecriticalimpacts. No successassumed.",
+  "fixtures": [
+    [
+      "mild-forward",
+      0.12,
+      0.3
+    ],
+    [
+      "mild-backward",
+      -0.12,
+      -0.3
+    ],
+    [
+      "moderate-forward",
+      0.25,
+      0.8
+    ],
+    [
+      "moderate-backward",
+      -0.25,
+      -0.8
+    ],
+    [
+      "full-forward",
+      0.65,
+      2.0
+    ],
+    [
+      "full-backward",
+      -0.65,
+      -2.0
+    ]
+  ],
+  "modes": [
+    "baseline",
+    "balance_abort",
+    "crouch_tuck"
+  ],
+  "duration_s": 12.0,
+  "initial_placement": "allcollidablerobotgeometryminfloorclearance3mm, offlineresetonly",
+  "recovery_definition": "final2s pelvis>.65m/up>.9/planarspeed<.15mps/angularspeed<.35radps; no nonfootfloor=>stumbleonly, otherwisefallen-recovery ifactualachieved",
+  "selection": "All18fixedcasesreported, no adaptiveparametersearch"
+}

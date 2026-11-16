@@ -1,0 +1,130 @@
+[
+  {
+    "case": "dt-0.00025",
+    "numerical_investigation_only": true,
+    "no_quality_promotion": true,
+    "legacy_clock_gate": false,
+    "legacy_anatomical_control": false,
+    "actual_timestamp_longest_clean_bilateral_s": 2.914250000000008,
+    "longest_start_s": 6.08600000000119,
+    "longest_end_s": 9.000000000001197,
+    "final_bilateral_fraction": 1.0,
+    "final_row_clean": true,
+    "first_excluded_s": null,
+    "wholeepisode_overlap_mm": 5.458540847042578,
+    "peak_single_contact_n": 729.5861880870233,
+    "peak_surface": "aero_right_if_tip",
+    "actual_step_sizes_s": [
+      0.00025,
+      0.001
+    ],
+    "prefix_exact": {
+      "actual-state.npz": {
+        "time_qpos": true,
+        "time_qvel": true,
+        "time_control": true,
+        "time_arm_target_phase": true
+      },
+      "self-contact-witness.npz": {
+        "contacts": true
+      }
+    },
+    "form": {
+      "available": true,
+      "sample_count": 11,
+      "clock_coverage_ok": true,
+      "finite": true,
+      "both_up_fraction": 1.0,
+      "both_height_fraction": 1.0,
+      "joint_form_fraction": 1.0,
+      "height_limit_above_shoulder_m": 0.15,
+      "height_exception_basis": null,
+      "pass": true
+    }
+  },
+  {
+    "case": "dt-0.0005",
+    "numerical_investigation_only": true,
+    "no_quality_promotion": true,
+    "legacy_clock_gate": false,
+    "legacy_anatomical_control": false,
+    "actual_timestamp_longest_clean_bilateral_s": 2.7695000000002405,
+    "longest_start_s": 6.230999999999464,
+    "longest_end_s": 8.999999999999705,
+    "final_bilateral_fraction": 0.9999999999988205,
+    "final_row_clean": true,
+    "first_excluded_s": null,
+    "wholeepisode_overlap_mm": 5.521185065554063,
+    "peak_single_contact_n": 790.5704183338382,
+    "peak_surface": "aero_right_if_tip",
+    "actual_step_sizes_s": [
+      0.0005,
+      0.001
+    ],
+    "prefix_exact": {
+      "actual-state.npz": {
+        "time_qpos": true,
+        "time_qvel": true,
+        "time_control": true,
+        "time_arm_target_phase": true
+      },
+      "self-contact-witness.npz": {
+        "contacts": true
+      }
+    },
+    "form": {
+      "available": true,
+      "sample_count": 11,
+      "clock_coverage_ok": true,
+      "finite": true,
+      "both_up_fraction": 1.0,
+      "both_height_fraction": 1.0,
+      "joint_form_fraction": 1.0,
+      "height_limit_above_shoulder_m": 0.15,
+      "height_exception_basis": null,
+      "pass": true
+    }
+  },
+  {
+    "case": "dt-0.001",
+    "numerical_investigation_only": true,
+    "no_quality_promotion": true,
+    "legacy_clock_gate": true,
+    "legacy_anatomical_control": true,
+    "actual_timestamp_longest_clean_bilateral_s": 2.6840000000000073,
+    "longest_start_s": 6.317000000000444,
+    "longest_end_s": 9.000000000000451,
+    "final_bilateral_fraction": 1.0,
+    "final_row_clean": true,
+    "first_excluded_s": null,
+    "wholeepisode_overlap_mm": 6.000300375143891,
+    "peak_single_contact_n": 822.2827145647938,
+    "peak_surface": "aero_right_if_tip",
+    "actual_step_sizes_s": [
+      0.001
+    ],
+    "prefix_exact": {
+      "actual-state.npz": {
+        "time_qpos": true,
+        "time_qvel": true,
+        "time_control": true,
+        "time_arm_target_phase": true
+      },
+      "self-contact-witness.npz": {
+        "contacts": true
+      }
+    },
+    "form": {
+      "available": true,
+      "sample_count": 11,
+      "clock_coverage_ok": true,
+      "finite": true,
+      "both_up_fraction": 1.0,
+      "both_height_fraction": 1.0,
+      "joint_form_fraction": 1.0,
+      "height_limit_above_shoulder_m": 0.15,
+      "height_exception_basis": null,
+      "pass": true
+    }
+  }
+]

@@ -1,0 +1,48 @@
+{
+  "schema": "slant_learned_plus_scripted_late_floor_nominal_v1",
+  "trial_count": 1,
+  "paired_anchor_count": 1,
+  "posthoc_development": true,
+  "new_ppo": false,
+  "checkpoint_sha256": "58faa28a49460d1231b0672d0d5001451fcf9ce70b077a4f266c170a59559fd1",
+  "source_archive_sha256": "3ccbe5d1f3e206aa2f04d04edfe9a0f091dfc74ba7f3d1740be081c678c7598c",
+  "artifact_archive_sha256": "05f4d5cfaad87b5a646cb3a3f43461bf77135770a72baa216ec1e994d4e3654f",
+  "physics": "Common2.5ms engineering hand contact model, not calibrated hardware or historical20ms reference",
+  "cue_plus_floor_delay_s": 1.3,
+  "actual_latch_s": 7.460000000000826,
+  "clean_bilateral_s": {
+    "learned_anchor": 0.8730000000002915,
+    "scripted_floor_candidate": 1.9950000000006662
+  },
+  "endpoint_bilateral_fraction": {
+    "learned_anchor": 0.0,
+    "scripted_floor_candidate": 1.0
+  },
+  "anatomical_hand_control": {
+    "learned_anchor": false,
+    "scripted_floor_candidate": true
+  },
+  "historical_realistic_flag": false,
+  "running_at_catch": false,
+  "recurrent_flights": 0,
+  "first_excluded_support_s": {
+    "learned_anchor": 8.475000000000742,
+    "scripted_floor_candidate": null
+  },
+  "form_fraction": 0.9090909090909091,
+  "maximum_self_overlap_m": 0.0021037761937663536,
+  "maximum_ball_overlap_m": 0.0019815237467270875,
+  "mean_vertical_hand_weight_fraction": 1.0061808845902316,
+  "late_closure_reduction_fraction": 0.9204078794600513,
+  "all_preregistered_nominal_falsification_gates_passed": true,
+  "original_anchor_and_prefix_exact": true,
+  "original_scores_rescored_exact": true,
+  "fixed_component_identity": "fixed-component-identity.json",
+  "actual_native_force_audit": "actual-native-force-audit.json",
+  "limitations": [
+    "One posthoc nominal composition of learned precontact arms and scripted late grip hold; no reliability estimate.",
+    "The scripted floor has not been tested on untrained arms, so this pair alone cannot establish that learning was necessary.",
+    "Historical reference physics and athletic running checks remain false.",
+    "All declared full original scoring criteria remain unchanged."
+  ]
+}

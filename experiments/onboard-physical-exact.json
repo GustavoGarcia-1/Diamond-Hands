@@ -1,0 +1,45 @@
+{
+  "actual-state.npz": {
+    "time_qpos": true,
+    "time_qvel": true,
+    "time_control": true,
+    "time_arm_target_phase": true
+  },
+  "ball-contact-witness.npz": {
+    "ball_contact_witness": true,
+    "geom_names": true,
+    "body_names": true,
+    "geom_bodyid": true
+  },
+  "self-contact-witness.npz": {
+    "contacts": true,
+    "geom_names": true,
+    "body_names": true,
+    "geom_bodyid": true
+  },
+  "trial/trace.npz": {
+    "motion": true,
+    "commands": true,
+    "palms": true,
+    "foot_time_s": true,
+    "foot_floor_contact": true,
+    "robot_floor_contact": true,
+    "sole_clearance_m": true,
+    "contact": true,
+    "native_hand": true,
+    "native_applied_commands": true
+  },
+  "trial/view.npz": {
+    "timestamps_s": true,
+    "qpos": true
+  },
+  "trial/anatomical-contact.npz": {
+    "anatomical_contact": true,
+    "anatomical_contact_columns": true,
+    "anatomical_free_joint_verified": true
+  },
+  "trial/interhand-geometry.npz": {
+    "interhand_geometry": true,
+    "interhand_geometry_columns": true
+  }
+}

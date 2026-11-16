@@ -1,0 +1,48 @@
+{
+  "mode": "baseline",
+  "trigger_s": null,
+  "duration_s": 11.999999999998789,
+  "stable_standing_final2s": false,
+  "impacts": {
+    "head": {
+      "peak_sum_normal_n": 1182.7525288036218,
+      "first_contact_s": 5.591000000000202
+    },
+    "hand": {
+      "peak_sum_normal_n": 1118.7172537039485,
+      "first_contact_s": 5.394000000000136
+    },
+    "torso": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "other": {
+      "peak_sum_normal_n": 2755.2487342468826,
+      "first_contact_s": 0.03400000000000002
+    }
+  },
+  "actual_torque_caps_respected": true,
+  "warning_count": 0,
+  "evaluation_stop_removed_only": true,
+  "no_midplay_pose_overwrite": true,
+  "actual_machine_split_m": 3.45,
+  "historical_route_not_qualified": true,
+  "video_sha256": "3b9f0339c8f8a8006e47ae90019aff49abedba4ef467bee4ce0159f745abc027",
+  "source_view_sha256": "9f9c8dc3664420cd44c75a5de8caaacff7ae0c005b99273297c3f24e12d6247b",
+  "source": "reports/fall-recovery-20261114/fullplay-linux/artifacts/study/baseline",
+  "frame_count": 301,
+  "fps": 25,
+  "fixed_camera": {
+    "lookat": [
+      6.556921636837428,
+      2.164410109695473,
+      0.8
+    ],
+    "distance": 11.950922360329399,
+    "azimuth": 110,
+    "elevation": -15
+  },
+  "source_poses_unmodified": true,
+  "no_physics_steps_during_render": true,
+  "field_decor_centered_on_measured_machine_only": true
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device width,initial scale=1">
+  <meta name="description" content="A matched baseline and learned lower hand receiving experiment, with measured limitations.">
+  <title>Catch study | Diamond Hands</title>
+  <link rel="stylesheet" href="style.css?v=2da130d0fdeb">
+  <script src="catch-study.js?v=4c81756a4b1e" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to video</a>
+  <div class="layout">
+    <aside class="sidebar">
+      <h1><a href="./">Diamond Hands</a></h1>
+      <nav aria-label="Study navigation">
+        <a href="./">Routes</a>
+        <a href="catch-study.html" aria-current="page">Catch study</a>
+        <a href="experiments.html">Experiments</a>
+        <a href="falls.html">Falls</a>
+      </nav>
+    </aside>
+    <main id="main">
+      <div class="view-switch" role="group" aria-label="Controller">
+        <button id="baseline" type="button" aria-pressed="false">Baseline</button>
+        <button id="learned" type="button" aria-pressed="true">Learned</button>
+      </div>
+      <div class="stage">
+        <video id="video" aria-label="Learned lower hand catch trial" controls playsinline preload="metadata" src="plays/native-learned.mp4"></video>
+      </div>
+      <p id="result" class="video-links" role="status">3.229 s continuous bilateral control · held at finish</p>
+      <p style="font-size:12px;color:#777;max-width:760px">Lower, palms-up hands. This is a separate 6.65 m walking experiment with a different learned controller (14 arm targets and 6 hand groups), not one of the November 15 runs. Initial ball–hand overlap still exceeds the 10 mm limit, so this is not yet a realistic catch.</p>
+      <details>
+        <summary>Details</summary>
+        <div class="detail-content">
+          <p>Both videos use the same throw, starting pose, cameras and physics, and each shows the complete nine second simulation. Switching controllers restarts the play. The baseline’s longest continuous two-hand hold is 1.457 s; it later reacquires the ball. The selected learned controller holds continuously for 3.229 s through the finish. This is a selected example, not a success-rate estimate.</p>
+          <p>PPO adjusts fourteen arm targets and six native hand groups using color and depth, IMU and encoders. Locomotion and the nominal grasp are pretrained or scripted. Checkpoint 19,456 at half action gain was selected after screening. These CPU trials reproduce exactly in a fresh Linux environment.</p>
+          <p>Initial overlap is 43.717 mm in the learned trial, above the unchanged 10 mm limit. On CUDA, vertical ±2 cm throw offsets improve retention, but lateral offsets fail. CPU and CUDA are separate measurements. No running receive, hardware result or general robustness is established.</p>
+          <p>The release is 6.65 m from the receiving target. The machine is on the field centerline; the receiver starts two yards beside it. Additional surveyed cameras and the commanded release event require hardware integration.</p>
+          <p><a href="plays/native-study.json">Measured results and video provenance</a> · <a href="./">Back to Go, Out and Slant</a></p>
+        </div>
+      </details>
+    </main>
+  </div>
+</body>
+</html>

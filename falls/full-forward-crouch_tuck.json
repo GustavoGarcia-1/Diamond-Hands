@@ -1,0 +1,73 @@
+{
+  "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+  "mode": "crouch_tuck",
+  "initial_pitch_rad": 0.65,
+  "initial_angular_velocity_rad_s": 2.0,
+  "duration_s": 11.999999999998789,
+  "minimum_initial_floor_gap_m": 0.003000000000000007,
+  "initial_pelvis_height_m": 0.6851967863144195,
+  "supervisor_trigger_s": 0.02000000000000001,
+  "supervisor_config": {
+    "mode": "crouch_tuck",
+    "severe_upright_cos": 0.84,
+    "warning_upright_cos": 0.96,
+    "warning_gyro_rad_s": 1.8,
+    "confirm_samples": 2,
+    "max_target_velocity_rad_s": 2.5,
+    "max_target_acceleration_rad_s2": 10.0
+  },
+  "impacts_evaluation_only": {
+    "head": {
+      "first_floor_force_s": null,
+      "peak_sum_normal_n": 0.0,
+      "first150ms_normal_impulse_ns": 0.0
+    },
+    "hand": {
+      "first_floor_force_s": 0.2700000000000002,
+      "peak_sum_normal_n": 688.230595716962,
+      "first150ms_normal_impulse_ns": 20.007587771945577
+    },
+    "torso": {
+      "first_floor_force_s": null,
+      "peak_sum_normal_n": 0.0,
+      "first150ms_normal_impulse_ns": 0.0
+    },
+    "other": {
+      "first_floor_force_s": 0.2840000000000002,
+      "peak_sum_normal_n": 2779.467263710451,
+      "first150ms_normal_impulse_ns": 130.73457164563348
+    }
+  },
+  "first_nonfoot_floor_force_s": 0.2700000000000002,
+  "stable_standing_final2s": false,
+  "recovery_label": "not_recovered",
+  "final_pelvis_height_m": 0.2756685063715904,
+  "final_upright_cos": 0.09730321000729147,
+  "minimum_pelvis_height_m": 0.17982833114837937,
+  "joint_gain_and_effort_clamps_unchanged": true,
+  "actual_body_torque_within_original_limits": true,
+  "no_midplay_state_overwrite": true,
+  "no_active_external_push": true,
+  "head_geometry": "head_link collisionmesh weldedtorso_link",
+  "physics_timestep_s": 0.001,
+  "warning_count": 0,
+  "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+  "initial_state_sha256": "a21dfb6fbb01270ee087286c4f8933f8c35699f3e03ebf1d6f571d327f933d25",
+  "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8",
+  "video_file": "full-forward-crouch_tuck.mp4",
+  "video_sha256": "863fc09fb20fdd2e4bdda659874926c5046c43512387cf173fb6ce04bfe00365",
+  "source_view_sha256": "6a559150a9f40cb1b4587c5796563607793d2011b2382bd7aeed4c52a632b808",
+  "frame_count": 301,
+  "fps": 25,
+  "render_only_no_physics_steps": true,
+  "fixed_camera": {
+    "azimuth": 110,
+    "elevation": -18,
+    "lookat": [
+      0.005900524225166848,
+      0.20952588765830865,
+      0.65
+    ],
+    "distance": 5.691670954408675
+  }
+}

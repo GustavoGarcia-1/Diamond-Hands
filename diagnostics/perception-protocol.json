@@ -1,0 +1,28 @@
+{
+  "schema": "paired-marker-perception-benchmark-v1",
+  "frozen_before_execution": true,
+  "hypothesis": "Known rigid marker spacing resolves color aliases without introducing associations when the yellow marker is visually absent.",
+  "seed": 2026111502,
+  "study_unit": "Two fixed Go trajectories: zero residual and the final one-hour policy. Images from the final policy were not used to implement association. Frame samples within a trajectory are correlated.",
+  "views": ["pass", "retention", "retention_pose", "late_ball", "late_pose"],
+  "extra_views": {"late_ball": [[10,-2.5,2.4],[11,0,1]], "late_pose": [[8.5,0,1.4],[11,0,0.9]]},
+  "visibility": ["intact", "yellow_marker_hidden", "ball_hidden"],
+  "conditions": [
+    {"name":"clean"},
+    {"name":"dim_rgb", "brightness":0.65},
+    {"name":"bright_rgb", "brightness":1.25},
+    {"name":"depth_bias_10mm", "depth_bias_m":0.01},
+    {"name":"depth_noise_5mm", "depth_noise_std_m":0.005},
+    {"name":"depth_dropout_10pct", "depth_dropout_fraction":0.1},
+    {"name":"survey_x_bias_20mm", "survey_x_bias_m":0.02},
+    {"name":"latency_40ms", "latency_s":0.04},
+    {"name":"latency_120ms", "latency_s":0.12},
+    {"name":"future_timestamp_40ms", "future_timestamp_s":0.04}
+  ],
+  "sampling": "Every100ms from4.4 through10.9s plus10.98s; nearest archived1kHz pose, no interpolation or integration. Same immutable frames/surveys and seeds per observer.",
+  "negative_control": "Hide only the true yellow marker or football by making its visual geometry transparent before rendering, identically for both methods; no physics integration occurs. No pixel truth/segmentation reaches an observer.",
+  "primary_outcomes": ["usable pose coverage within80ms", "3D localization RMSE and95th-percentile error", "false pose with missing yellow marker", "false ball detection with hidden ball", "stale/future pose rejection"],
+  "evaluation_only": "Archived robot state positions the renderer and supplies separate localization error labels; never fed to localization or association.",
+  "claim_limits": "Engineering stress levels are not calibrated real sensor distributions. No controller/physics success change, no catch success rate, no training replication claim. All conditions reported; source/frames/inputs hashed. Sealed50 throw test unused.",
+  "references": ["https://arxiv.org/abs/1703.06907", "https://arxiv.org/abs/1709.06560", "https://www.jmlr.org/papers/v22/20-303.html"]
+}

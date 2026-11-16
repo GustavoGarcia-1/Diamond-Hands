@@ -1,0 +1,3158 @@
+{
+  "archive_sha256": "6e929132ed5bf80fced20a6a1860d21a9593ec35e59997af7c6f79da6588fbb4",
+  "all6scores_exact": true,
+  "nominal_array_identity": {
+    "actual-state.npz": {
+      "time_qpos": true,
+      "time_qvel": true,
+      "time_control": true,
+      "time_arm_target_phase": true
+    },
+    "self-contact-witness.npz": {
+      "contacts": true,
+      "geom_names": true,
+      "body_names": true,
+      "geom_bodyid": true
+    },
+    "native-actuator-trace.npz": {
+      "samples": true,
+      "actuator_names": true,
+      "native_actuator_ids": true,
+      "active_forcelimited": true,
+      "active_forcerange": true,
+      "proposed_symmetric_bounds": true,
+      "gear": true,
+      "trntype": true,
+      "trnid": true,
+      "actuator_gainprm": true,
+      "actuator_biasprm": true
+    },
+    "ball-contact-witness.npz": {
+      "ball_contact_witness": true,
+      "geom_names": true,
+      "body_names": true,
+      "geom_bodyid": true
+    },
+    "trial/trace.npz": {
+      "motion": true,
+      "commands": true,
+      "palms": true,
+      "foot_time_s": true,
+      "foot_floor_contact": true,
+      "robot_floor_contact": true,
+      "sole_clearance_m": true,
+      "contact": true,
+      "native_hand": true,
+      "native_applied_commands": true
+    },
+    "trial/interhand-geometry.npz": {
+      "interhand_geometry": true,
+      "interhand_geometry_columns": true
+    },
+    "trial/view.npz": {
+      "timestamps_s": true,
+      "qpos": true
+    },
+    "trial/anatomical-contact.npz": {
+      "anatomical_contact": true,
+      "anatomical_contact_columns": true,
+      "anatomical_free_joint_verified": true
+    }
+  },
+  "all_nominal_arrays_exact": true,
+  "trials": [
+    {
+      "label": "go-physics:nominal",
+      "trial": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/catch-repair-20261114/post-study/go-physics-sensitivity-r1/linux/artifacts/nominal/smoke/episode-0001/trial/trial",
+      "finish_s": 10.999999999999343,
+      "release_s": 4.379999999999797,
+      "score_exact": true,
+      "clean_hold_s": 3.537000000001181,
+      "physics_checks": {
+        "physics_clock_and_endpoint": true,
+        "initial_free_flight": true,
+        "verified_free_joint_no_attachment": true,
+        "continuous_anatomical_bilateral_075s": true,
+        "final_anatomical_hand_hold": true,
+        "no_excluded_floor_body_or_applied_support": true,
+        "load_bearing_hands": true,
+        "no_deep_interhand_penetration": true,
+        "no_deep_ball_penetration": true
+      },
+      "form": {
+        "available": true,
+        "sample_count": 11,
+        "clock_coverage_ok": true,
+        "finite": true,
+        "both_up_fraction": 1.0,
+        "both_height_fraction": 1.0,
+        "joint_form_fraction": 1.0,
+        "height_limit_above_shoulder_m": 0.15,
+        "height_exception_basis": null,
+        "pass": true
+      },
+      "upright": true,
+      "original_reference_match": false,
+      "warning_count": 0,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 5.222000000000079,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 3.537000000001181,
+        "longest_clean_start_s": 7.464000000000827,
+        "longest_clean_end_s": 10.999999999999343,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.0004211422034432,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 1.0,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 1.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004840296023049943,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 137.6985527498647,
+          "left_thumb": 59.82937252665319,
+          "left_palmar": 721.6804215145393,
+          "right_finger": 458.53698875810653,
+          "right_thumb": 65.10284504650294,
+          "right_palmar": 76.81479940571357,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "input_sha256": {
+        "report.json": "66d560bf0facd4cec4b1100419d0c9579d7ea892a747eca7997201647b4356ab",
+        "trace.npz": "e3847c29aed91660ce9a9497789b70a123bc86e3209b14f1080f87027cf1d61c",
+        "anatomical-contact.npz": "0ac9020ee4a884e6cc3e97b3acbe36c310630a918797b9329993e42a4ef166e0",
+        "anatomical-metadata.json": "1190c4ccfa2b65717cf658505cb5d2118cb7a464f73cdad753d8e97d482e04e6",
+        "anatomical-form.json": "b0650786ae1b804df26d61ba004f7e3244c61623bac2b41a20a56581a1dba292"
+      },
+      "experimental_physical_pass": true,
+      "model_changes": {
+        "condition": "nominal",
+        "changes": [],
+        "compiled_array_changes": {}
+      }
+    },
+    {
+      "label": "go-physics:mass-090",
+      "trial": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/catch-repair-20261114/post-study/go-physics-sensitivity-r1/linux/artifacts/mass-090/smoke/episode-0001/trial/trial",
+      "finish_s": 10.999999999999343,
+      "release_s": 4.379999999999797,
+      "score_exact": true,
+      "clean_hold_s": 3.7090000000012386,
+      "physics_checks": {
+        "physics_clock_and_endpoint": true,
+        "initial_free_flight": true,
+        "verified_free_joint_no_attachment": true,
+        "continuous_anatomical_bilateral_075s": true,
+        "final_anatomical_hand_hold": true,
+        "no_excluded_floor_body_or_applied_support": true,
+        "load_bearing_hands": true,
+        "no_deep_interhand_penetration": true,
+        "no_deep_ball_penetration": true
+      },
+      "form": {
+        "available": true,
+        "sample_count": 11,
+        "clock_coverage_ok": true,
+        "finite": true,
+        "both_up_fraction": 1.0,
+        "both_height_fraction": 1.0,
+        "joint_form_fraction": 1.0,
+        "height_limit_above_shoulder_m": 0.15,
+        "height_exception_basis": null,
+        "pass": true
+      },
+      "upright": true,
+      "original_reference_match": false,
+      "warning_count": 0,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 5.222000000000079,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 3.7090000000012386,
+        "longest_clean_start_s": 7.29200000000077,
+        "longest_clean_end_s": 10.999999999999343,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.000718425801511,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 1.0,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 1.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004737672102118431,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 131.42228787583895,
+          "left_thumb": 49.184661466957856,
+          "left_palmar": 680.8556884648241,
+          "right_finger": 430.9079813506876,
+          "right_thumb": 54.88755132538469,
+          "right_palmar": 65.03669506651697,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "input_sha256": {
+        "report.json": "976aaad08d5bb97388bb6a9b0dd8a93fee646d8ae98b11b441cb50c09853ebc9",
+        "trace.npz": "eb96c9616d54b74377a285879bce0a6908a942d1c510894ae7c0470bab149056",
+        "anatomical-contact.npz": "fdc56ec4999832e8d1b9c29cee6852720d375fa8e3c44f5b7ab80bc885de4d2b",
+        "anatomical-metadata.json": "14a2f1cb5e4d9255f5f2b93732969af5559300fac815e6c2e7c4f69dbfdf1919",
+        "anatomical-form.json": "0c46f44bc6df78fc915bed89610c02de51aee2f024f1cc87c5c1b0e5f6e4e063"
+      },
+      "experimental_physical_pass": true,
+      "model_changes": {
+        "condition": "mass-090",
+        "changes": [
+          {
+            "body": "football",
+            "scale": 0.9,
+            "original_mass": 0.42,
+            "original_inertia": [
+              0.0012138000000000001,
+              0.0023006759999999998,
+              0.0023006759999999998
+            ],
+            "inertial": {
+              "pos": "0.0 0.0 0.0",
+              "quat": "1.0 0.0 0.0 0.0",
+              "mass": "0.378",
+              "diaginertia": "0.0010924200000000002 0.0020706084 0.0020706084"
+            }
+          }
+        ],
+        "compiled_array_changes": {
+          "body_inertia": {
+            "max_abs": 0.0002300675999999998,
+            "changed": 3
+          },
+          "body_invweight0": {
+            "max_abs": 62.70995078791907,
+            "changed": 2
+          },
+          "body_mass": {
+            "max_abs": 0.04199999999999998,
+            "changed": 1
+          },
+          "body_subtreemass": {
+            "max_abs": 0.04200000000000159,
+            "changed": 2
+          },
+          "cam_poscom0": {
+            "max_abs": 0.00602023502508553,
+            "changed": 27
+          },
+          "dof_M0": {
+            "max_abs": 0.04199999999999998,
+            "changed": 6
+          },
+          "dof_invweight0": {
+            "max_abs": 62.70995078791907,
+            "changed": 6
+          },
+          "light_poscom0": {
+            "max_abs": 0.006020235025085363,
+            "changed": 6
+          }
+        }
+      }
+    },
+    {
+      "label": "go-physics:mass-110",
+      "trial": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/catch-repair-20261114/post-study/go-physics-sensitivity-r1/linux/artifacts/mass-110/smoke/episode-0001/trial/trial",
+      "finish_s": 10.999999999999343,
+      "release_s": 4.379999999999797,
+      "score_exact": true,
+      "clean_hold_s": 1.530000000000511,
+      "physics_checks": {
+        "physics_clock_and_endpoint": true,
+        "initial_free_flight": true,
+        "verified_free_joint_no_attachment": true,
+        "continuous_anatomical_bilateral_075s": true,
+        "final_anatomical_hand_hold": false,
+        "no_excluded_floor_body_or_applied_support": false,
+        "load_bearing_hands": true,
+        "no_deep_interhand_penetration": true,
+        "no_deep_ball_penetration": true
+      },
+      "form": {
+        "available": true,
+        "sample_count": 11,
+        "clock_coverage_ok": true,
+        "finite": true,
+        "both_up_fraction": 1.0,
+        "both_height_fraction": 1.0,
+        "joint_form_fraction": 1.0,
+        "height_limit_above_shoulder_m": 0.15,
+        "height_exception_basis": null,
+        "pass": true
+      },
+      "upright": true,
+      "original_reference_match": false,
+      "warning_count": 0,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 5.222000000000079,
+        "first_excluded_support_s": 8.38900000000079,
+        "longest_clean_bilateral_s": 1.530000000000511,
+        "longest_clean_start_s": 6.06500000000036,
+        "longest_clean_end_s": 7.594000000000871,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 0.9740372948783673,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 1.0,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 1.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004933825967605762,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 140.61248554869258,
+          "left_thumb": 52.51671468696957,
+          "left_palmar": 758.7065530715196,
+          "right_finger": 484.4683579547973,
+          "right_thumb": 62.52243660558608,
+          "right_palmar": 79.51627605379055,
+          "excluded_hand": 6.486691763214674,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "input_sha256": {
+        "report.json": "5075bfe287742782296c0761ddfa6fc93f5506b1def10adfd6fd0a61fb3a2a46",
+        "trace.npz": "a4bd5d2f7f8c0e3bc033f98724256049be16237de40946d7ab97be2a0a676d5f",
+        "anatomical-contact.npz": "5d13b21a41cb6c412061e958cc226777dd460271ee6ebfb2a59634b9c16ed828",
+        "anatomical-metadata.json": "7827dcf9b8552dd1ec217066452e8bdcc57b92527f1909668cde3f9d31cf9386",
+        "anatomical-form.json": "2052944d95224bdd8d5a9ed08eea89ee766c1052e87509cda34e9974e4afc482"
+      },
+      "experimental_physical_pass": false,
+      "model_changes": {
+        "condition": "mass-110",
+        "changes": [
+          {
+            "body": "football",
+            "scale": 1.1,
+            "original_mass": 0.42,
+            "original_inertia": [
+              0.0012138000000000001,
+              0.0023006759999999998,
+              0.0023006759999999998
+            ],
+            "inertial": {
+              "pos": "0.0 0.0 0.0",
+              "quat": "1.0 0.0 0.0 0.0",
+              "mass": "0.462",
+              "diaginertia": "0.0013351800000000003 0.0025307436 0.0025307436"
+            }
+          }
+        ],
+        "compiled_array_changes": {
+          "body_inertia": {
+            "max_abs": 0.00023006760000000024,
+            "changed": 3
+          },
+          "body_invweight0": {
+            "max_abs": 51.30814155375208,
+            "changed": 2
+          },
+          "body_mass": {
+            "max_abs": 0.04200000000000004,
+            "changed": 1
+          },
+          "body_subtreemass": {
+            "max_abs": 0.04200000000000159,
+            "changed": 2
+          },
+          "cam_poscom0": {
+            "max_abs": 0.006005515822211649,
+            "changed": 27
+          },
+          "dof_M0": {
+            "max_abs": 0.04200000000000004,
+            "changed": 6
+          },
+          "dof_invweight0": {
+            "max_abs": 51.30814155375208,
+            "changed": 6
+          },
+          "light_poscom0": {
+            "max_abs": 0.006005515822211205,
+            "changed": 6
+          }
+        }
+      }
+    },
+    {
+      "label": "go-physics:friction-080",
+      "trial": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/catch-repair-20261114/post-study/go-physics-sensitivity-r1/linux/artifacts/friction-080/smoke/episode-0001/trial/trial",
+      "finish_s": 10.999999999999343,
+      "release_s": 4.379999999999797,
+      "score_exact": true,
+      "clean_hold_s": 1.3990000000004672,
+      "physics_checks": {
+        "physics_clock_and_endpoint": true,
+        "initial_free_flight": true,
+        "verified_free_joint_no_attachment": true,
+        "continuous_anatomical_bilateral_075s": true,
+        "final_anatomical_hand_hold": false,
+        "no_excluded_floor_body_or_applied_support": false,
+        "load_bearing_hands": true,
+        "no_deep_interhand_penetration": true,
+        "no_deep_ball_penetration": true
+      },
+      "form": {
+        "available": true,
+        "sample_count": 11,
+        "clock_coverage_ok": true,
+        "finite": true,
+        "both_up_fraction": 1.0,
+        "both_height_fraction": 1.0,
+        "joint_form_fraction": 1.0,
+        "height_limit_above_shoulder_m": 0.15,
+        "height_exception_basis": null,
+        "pass": true
+      },
+      "upright": true,
+      "original_reference_match": false,
+      "warning_count": 0,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 5.222000000000079,
+        "first_excluded_support_s": 7.236000000000751,
+        "longest_clean_bilateral_s": 1.3990000000004672,
+        "longest_clean_start_s": 5.837000000000284,
+        "longest_clean_end_s": 7.235000000000751,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.0313094378895078,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 1.0,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 1.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004808762443016385,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 144.59705572294635,
+          "left_thumb": 82.13406595697239,
+          "left_palmar": 715.4996616333889,
+          "right_finger": 478.1883805395246,
+          "right_thumb": 76.78776780311635,
+          "right_palmar": 74.7938099257487,
+          "excluded_hand": 4.8599002349303255,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "input_sha256": {
+        "report.json": "2ba827c6fe2ec5a30ed46816eb83884c0bc8b84c86acef8164b1dda318478868",
+        "trace.npz": "27bf2d4f2aa57eb6e7bc25ff47e1a0327da56ebd6cf7a3d4d9e86a2914352f7d",
+        "anatomical-contact.npz": "d7e0ed3f05c6cdd9730cb20a77180c57764fcf04920011742af0fcbaadf030df",
+        "anatomical-metadata.json": "04e4b5f763837f35a610e2f5b022897e3863ea132680098f2db03b5076b37628",
+        "anatomical-form.json": "3b7f41728c119f77d99b98b69f53dc303dab6691e75ebe45e03037a649c1fb76"
+      },
+      "experimental_physical_pass": false,
+      "model_changes": {
+        "condition": "friction-080",
+        "changes": [
+          {
+            "pair": "contact_model_ball_hand_62",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_63",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_65",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_66",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_67",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_68",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_69",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_70",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_71",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_72",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_73",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_74",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_75",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_79",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_85",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_88",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_94",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_100",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_103",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_109",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_115",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_118",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_124",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_130",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_133",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_137",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_145",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_148",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_152",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_169",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_170",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_172",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_173",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_174",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_175",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_176",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_177",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_178",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_179",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_180",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_181",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_182",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_186",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_192",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_195",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_201",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_207",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_210",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_216",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_222",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_225",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_231",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_237",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_240",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_244",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_252",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_255",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_259",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              0.8,
+              0.8,
+              0.004,
+              8e-05,
+              8e-05
+            ]
+          }
+        ],
+        "compiled_array_changes": {
+          "pair_friction": {
+            "max_abs": 0.19999999999999996,
+            "changed": 290
+          }
+        }
+      }
+    },
+    {
+      "label": "go-physics:friction-120",
+      "trial": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/catch-repair-20261114/post-study/go-physics-sensitivity-r1/linux/artifacts/friction-120/smoke/episode-0001/trial/trial",
+      "finish_s": 10.999999999999343,
+      "release_s": 4.379999999999797,
+      "score_exact": true,
+      "clean_hold_s": 5.1640000000017245,
+      "physics_checks": {
+        "physics_clock_and_endpoint": true,
+        "initial_free_flight": true,
+        "verified_free_joint_no_attachment": true,
+        "continuous_anatomical_bilateral_075s": true,
+        "final_anatomical_hand_hold": true,
+        "no_excluded_floor_body_or_applied_support": true,
+        "load_bearing_hands": true,
+        "no_deep_interhand_penetration": true,
+        "no_deep_ball_penetration": true
+      },
+      "form": {
+        "available": true,
+        "sample_count": 11,
+        "clock_coverage_ok": true,
+        "finite": true,
+        "both_up_fraction": 1.0,
+        "both_height_fraction": 1.0,
+        "joint_form_fraction": 1.0,
+        "height_limit_above_shoulder_m": 0.15,
+        "height_exception_basis": null,
+        "pass": true
+      },
+      "upright": true,
+      "original_reference_match": false,
+      "warning_count": 0,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 5.222000000000079,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 5.1640000000017245,
+        "longest_clean_start_s": 5.837000000000284,
+        "longest_clean_end_s": 10.999999999999343,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.0065295201610225,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 1.0,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 1.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.00482104426373232,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 164.14237335926822,
+          "left_thumb": 44.37728851860919,
+          "left_palmar": 749.655234481456,
+          "right_finger": 458.5369887581024,
+          "right_thumb": 65.60963812927822,
+          "right_palmar": 76.56297841692705,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "input_sha256": {
+        "report.json": "4e07b859b87bd5ac1f20855dd143c0719cf0d11b8c6e29872eaa1dfed1ec3102",
+        "trace.npz": "ebac58a60edcf45cc7d4e4a1c9a12483f46fa69543ee4cb774b323d70f7ce2bf",
+        "anatomical-contact.npz": "13ee675b5288444bf703d77a28488f6dc6ee8ba65fbc71e9a50c3e2e4a91c315",
+        "anatomical-metadata.json": "28d5828e2d507b3a476c105eb75bdfe4fd3e8381b5e1198143dbe5bf67412640",
+        "anatomical-form.json": "872446756c8db7207966c69c7ca0f45c0351735d785a427a4031167456f138cd"
+      },
+      "experimental_physical_pass": true,
+      "model_changes": {
+        "condition": "friction-120",
+        "changes": [
+          {
+            "pair": "contact_model_ball_hand_62",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_63",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_65",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_66",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_67",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_68",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_69",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_70",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_71",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_72",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_73",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_74",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_75",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_79",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_85",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_88",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_94",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_100",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_103",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_109",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_115",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_118",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_124",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_130",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_133",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_137",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_145",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_148",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_152",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_169",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_170",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_172",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_173",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_174",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_175",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_176",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_177",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_178",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_179",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_180",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_181",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_182",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_186",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_192",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_195",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_201",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_207",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_210",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_216",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_222",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_225",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_231",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_237",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_240",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_244",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_252",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_255",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          },
+          {
+            "pair": "contact_model_ball_hand_259",
+            "old": [
+              1.0,
+              1.0,
+              0.005,
+              0.0001,
+              0.0001
+            ],
+            "new": [
+              1.2,
+              1.2,
+              0.006,
+              0.00012,
+              0.00012
+            ]
+          }
+        ],
+        "compiled_array_changes": {
+          "pair_friction": {
+            "max_abs": 0.19999999999999996,
+            "changed": 290
+          }
+        }
+      }
+    },
+    {
+      "label": "go-physics:native-force-075",
+      "trial": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/catch-repair-20261114/post-study/go-physics-sensitivity-r1/linux/artifacts/native-force-075/smoke/episode-0001/trial/trial",
+      "finish_s": 10.999999999999343,
+      "release_s": 4.379999999999797,
+      "score_exact": true,
+      "clean_hold_s": 4.924000000001644,
+      "physics_checks": {
+        "physics_clock_and_endpoint": true,
+        "initial_free_flight": true,
+        "verified_free_joint_no_attachment": true,
+        "continuous_anatomical_bilateral_075s": true,
+        "final_anatomical_hand_hold": false,
+        "no_excluded_floor_body_or_applied_support": false,
+        "load_bearing_hands": true,
+        "no_deep_interhand_penetration": true,
+        "no_deep_ball_penetration": true
+      },
+      "form": {
+        "available": true,
+        "sample_count": 11,
+        "clock_coverage_ok": true,
+        "finite": true,
+        "both_up_fraction": 1.0,
+        "both_height_fraction": 1.0,
+        "joint_form_fraction": 1.0,
+        "height_limit_above_shoulder_m": 0.15,
+        "height_exception_basis": null,
+        "pass": true
+      },
+      "upright": true,
+      "original_reference_match": false,
+      "warning_count": 0,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 5.222000000000079,
+        "first_excluded_support_s": 10.76999999999947,
+        "longest_clean_bilateral_s": 4.924000000001644,
+        "longest_clean_start_s": 5.846000000000287,
+        "longest_clean_end_s": 10.76899999999947,
+        "final_bilateral_fraction": 0.076,
+        "final_max_gap_s": 0.23100000000007714,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.0091703880561502,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 1.0,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 1.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004970620772459561,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 141.51477644330728,
+          "left_thumb": 40.05445940858134,
+          "left_palmar": 722.3606002611493,
+          "right_finger": 458.5691922380072,
+          "right_thumb": 60.534411516384615,
+          "right_palmar": 87.94423413289114,
+          "excluded_hand": 6.608624299155441,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "input_sha256": {
+        "report.json": "5749a57ea06e7c7b3deb6789dc437f15f0b6b965571edd17f7acea4c82070bb9",
+        "trace.npz": "f106155beafc7409906da509a4b579723271505a61a80dba93c373702b4c544d",
+        "anatomical-contact.npz": "80f889c56e15b45f9a335f5f43edb4ec69cabcfc91747459e004fa7f732ca673",
+        "anatomical-metadata.json": "7b4accc8a2681ca2eacf57630c52f022a9457bbfbc45911399828caf6b684cb7",
+        "anatomical-form.json": "e747c9c293ca56793e4c528ae54ccb25a7602f1128b8f2d594b982bd862d0229"
+      },
+      "experimental_physical_pass": false,
+      "model_changes": {
+        "condition": "native-force-075",
+        "changes": [
+          {
+            "actuator": "aero_left_left_index_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_left_left_middle_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_left_left_ring_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_left_left_pinky_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_left_left_thumb_A_cmc_abd",
+            "old": [
+              -0.59,
+              0.59
+            ],
+            "new": [
+              -0.4425,
+              0.4425
+            ]
+          },
+          {
+            "actuator": "aero_left_left_th1_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_left_left_th2_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_right_right_index_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_right_right_middle_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_right_right_ring_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_right_right_pinky_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_right_right_thumb_A_cmc_abd",
+            "old": [
+              -0.59,
+              0.59
+            ],
+            "new": [
+              -0.4425,
+              0.4425
+            ]
+          },
+          {
+            "actuator": "aero_right_right_th1_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          },
+          {
+            "actuator": "aero_right_right_th2_A_tendon",
+            "old": [
+              -65.55555555555556,
+              65.55555555555556
+            ],
+            "new": [
+              -49.16666666666667,
+              49.16666666666667
+            ]
+          }
+        ],
+        "compiled_array_changes": {
+          "actuator_forcerange": {
+            "max_abs": 16.388888888888886,
+            "changed": 28
+          }
+        }
+      }
+    }
+  ],
+  "scope": "Six fixed one-factor cells, one replicate each, not success rate or calibrated hardware distribution",
+  "independent_cross_cell_model_array_differences": {
+    "mass-090": {
+      "body_inertia": 3,
+      "body_invweight0": 2,
+      "body_mass": 1,
+      "body_subtreemass": 2,
+      "cam_poscom0": 27,
+      "dof_M0": 6,
+      "dof_invweight0": 6,
+      "light_poscom0": 6
+    },
+    "mass-110": {
+      "body_inertia": 3,
+      "body_invweight0": 2,
+      "body_mass": 1,
+      "body_subtreemass": 2,
+      "cam_poscom0": 27,
+      "dof_M0": 6,
+      "dof_invweight0": 6,
+      "light_poscom0": 6
+    },
+    "friction-080": {
+      "pair_friction": 290
+    },
+    "friction-120": {
+      "pair_friction": 290
+    },
+    "native-force-075": {
+      "actuator_forcerange": 28
+    }
+  },
+  "nominal_model_sha_exact": true
+}

@@ -1,0 +1,59 @@
+"""Independently rescore the separately declared posthoc oracle uncertainty appendix."""
+import argparse,csv,json,hashlib,importlib.util,ast
+from pathlib import Path
+import numpy as np
+spec=importlib.util.spec_from_file_location('comparison',Path(__file__).with_name('plot_receiver_comparison.py'));m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+METHOD='exact_ball_uncertainty_floor';METHODS=('current','exact_ball_diagnostic',METHOD)
+def plots(route,rows,stats,out):
+ import matplotlib
+ matplotlib.use('Agg')
+ import matplotlib.pyplot as plt
+ plt.rcParams.update({'font.family':'sans-serif','font.sans-serif':['Arial','Helvetica','DejaVu Sans'],'font.size':10,'svg.fonttype':'none','axes.spines.top':False,'axes.spines.right':False})
+ colors=['#202020','#999999','#376d7b'];short=['Sensor','Exact ball','Exact + 1mm'];long=['Current sensor','Original exact ball: negligible covariance','Exact ball: 1 mm uncertainty floor']
+ for web in [False,True]:
+  for kind in ['success-rates','clean-hold-distributions']:
+   fig,ax=plt.subplots(figsize=(5,4.4));ax.set_title(route.capitalize()+' · posthoc appendix');ax.grid(axis='y',alpha=.15);ax.set_axisbelow(True);labels=short if web else long
+   if kind=='success-rates':
+    p=np.array([stats[x]['rate']for x in METHODS]);ci=np.array([stats[x]['wilson95']for x in METHODS]);ax.bar(range(3),p*100,color=colors,width=.6);ax.errorbar(range(3),p*100,yerr=np.maximum(0,np.vstack([p-ci[:,0],ci[:,1]-p]))*100,fmt='none',capsize=4,color='#202020');ax.set_ylim(0,112);ax.set_yticks([0,25,50,75,100]);ax.set_xticks(range(3),labels,rotation=15,ha='right');ax.set_ylabel('Retained catch under\ndeclared model (%)')
+    for i,x in enumerate(METHODS):ax.text(i,max(p[i]*100,ci[i,1]*100)+3,f"{stats[x]['successes']}/50",ha='center')
+   else:
+    limit=max(.05,1.1*max(x['clean_hold_s']for x in rows))
+    for method,label,color,style in zip(METHODS,labels,colors,['-','--',':']):
+     x=np.sort([r['clean_hold_s']for r in rows if r['method']==method]);ax.step(np.r_[0,x,limit],np.r_[0,np.arange(1,51)/50,1]*100,where='post',label=label,color=color,linestyle=style,lw=2)
+    ax.set_xlim(0,limit);ax.set_ylim(0,103);ax.set_xlabel('Longest clean bilateral hold (s)');ax.set_ylabel('Empirical fraction with hold ≤ x (%)');ax.legend(fontsize=8,frameon=False,loc='lower right');ax.text(.02,.97,'Route specific zoom; 0.75 s minimum outside view'if limit<.75 else'Route specific duration axis; minimum 0.75 s',transform=ax.transAxes,va='top',fontsize=8)
+   if not web:fig.text(.03,.02,'Follow up: the same 50 throws; original sensor and oracle outcomes retained.\nOnly reported uncertainty changes; no noise added or physics calibration.\nExact ball bypasses visibility; privileged and nondeployable. Wilson95%.',fontsize=8,color='#666')
+   fig.tight_layout(rect=(0,0 if web else .22,1,1))
+   for ext in ['png','svg']:fig.savefig(out/(route+('-web-'if web else'-')+kind+'.'+ext),dpi=180)
+   plt.close(fig)
+def main():
+ p=argparse.ArgumentParser();p.add_argument('--protocol',type=Path,required=True);p.add_argument('--appendix',type=Path,required=True);p.add_argument('--base-analysis',type=Path,required=True);p.add_argument('--manifest',action='append',required=True);p.add_argument('--output',type=Path,required=True);a=p.parse_args();a.output.mkdir(parents=True,exist_ok=False)
+ protocol,scenarios=m.canonical_protocol(a.protocol);appendix=m.read(a.appendix);m.require(appendix['frozen']and appendix['method']==METHOD,'wrong appendix');m.require(appendix['original_protocol_sha256']==m.digest(a.protocol)and appendix['scenarios_sha256']==protocol['scenarios_sha256'],'appendix original inputs differ');base=m.read(a.base_analysis/'summary.json');artifacts=m.read(a.base_analysis/'artifacts.json');m.require(m.digest(a.base_analysis/'summary.json')==artifacts['summary.json']['sha256']and m.digest(a.base_analysis/'trials.csv')==artifacts['trials.csv']['sha256'],'base validated data changed');m.require(base['full_protocol_complete']and base['protocol_sha256']==m.digest(a.protocol),'original450 audit not complete/matched');old=list(csv.DictReader(open(a.base_analysis/'trials.csv')))
+ for r in old:
+  for k in ['clean_hold_s','actual_release_s']:r[k]=float(r[k])
+  r['trial_id']=int(r['trial_id']);r['primary_success']=r['primary_success']=='True';r['failed_primary_checks']=ast.literal_eval(r['failed_primary_checks'])
+ results=[];allrows=[];seen_routes=set()
+ for value in a.manifest:
+  route,sep,path=value.partition('=');m.require(sep and route in protocol['routes']and route not in seen_routes,'invalid/duplicate route');seen_routes.add(route);new=m.validate_route(route,path,protocol,scenarios,m.digest(a.protocol),methods=(METHOD,),appendix_sha=m.digest(a.appendix));original=next(r for r in base['routes']if r['route']==route);m.require(new['physics_identity_sha256']==original['physics_identity_sha256'],'appendix physical model changed');current={r['trial_id']:r for r in old if r['route']==route and r['method']=='current'};manifest_base=Path(path).parent;raw_new=m.read(manifest_base/'results.json');covariance_checks=[]
+  for raw in raw_new:
+   trial=manifest_base/raw['report_path'];trial=trial.parent;candidate=next((p for parent in [trial,trial.parent,trial.parent.parent]for p in [parent/'oracle-observations.json']if p.is_file()),None)
+   if candidate is not None:
+    evidence=m.read(candidate);m.require(evidence['enabled']and evidence['covariance_m2']==1e-6,'wrong oracle covariance');m.require(all(r['covariance_m2']==1e-6 for r in evidence['rows']),'mixed actual oracle covariance');covariance_checks.append(dict(trial_id=raw['trial_id'],kind='per-capture oracle log',observations=len(evidence['rows']),sha256=m.digest(candidate)))
+   else:
+    candidate=trial/'comparison-receipt.json';evidence=m.read(candidate);m.require(evidence['ball_observation_covariance_m2']==1e-6 and evidence['oracle']and not evidence['noise_actually_added'],'wrong oracle receipt');covariance_checks.append(dict(trial_id=raw['trial_id'],kind='compiled-run receipt; source constant covariance',sha256=m.digest(candidate)))
+  for r in new['rows']:
+   c=current[r['trial_id']];m.require(r['profile_sha256']==c['profile_sha256'],'appendix profile changed');m.require(abs(r['actual_release_s']-c['actual_release_s'])<1e-8,'appendix release changed')
+  rows=[r for r in old if r['route']==route and r['method']in METHODS]+new['rows'];stats={}
+  for method in METHODS:
+   rr=[r for r in rows if r['method']==method];m.require(len(rr)==50,'missing paired outcome');success=sum(r['primary_success']for r in rr);stats[method]=dict(failed_check_counts={key:sum(key in r['failed_primary_checks']for r in rr)for key in sorted(m.CHECKS|{'form.pass','upright','full_horizon','zero_warnings'})},failure_counts_overlap_not_causal_partition=True,successes=success,total=50,rate=success/50,wilson95=m.wilson(success,50),mean_clean_hold_s=float(np.mean([r['clean_hold_s']for r in rr])),median_clean_hold_s=float(np.median([r['clean_hold_s']for r in rr])))
+  paired={}
+  for reference in METHODS[:2]:
+   c={r['trial_id']:r for r in rows if r['method']==reference};n={r['trial_id']:r for r in new['rows']};paired[METHOD+'-minus-'+reference]=dict(new_only_success=sum(n[i]['primary_success']and not c[i]['primary_success']for i in range(50)),reference_only_success=sum(c[i]['primary_success']and not n[i]['primary_success']for i in range(50)),mean_clean_hold_difference_s=float(np.mean([n[i]['clean_hold_s']-c[i]['clean_hold_s']for i in range(50)])))
+  plots(route,rows,stats,a.output);results.append(dict(route=route,methods=stats,paired=paired,new_trace_scores_exact=True,covariance_checks=covariance_checks,profiles_and_model_and_actual_release_identical_to_original_current=True,source_archive_sha256=new['source_archive_sha256'],new_manifest_sha256=new['manifest_sha256'],new_results_sha256=new['results_sha256']));allrows+=new['rows']
+ summary=dict(source_script_sha256=m.digest(__file__),shared_validator_sha256=m.digest(Path(__file__).with_name('plot_receiver_comparison.py')),schema='receiver-uncertainty-floor-appendix-analysis-v1',posthoc=True,requested_routes=sorted(seen_routes),full_appendix_complete=seen_routes==set(protocol['routes']),new_trials=len(allrows),original450_replaced=False,protocol_sha256=m.digest(a.protocol),appendix_protocol_sha256=m.digest(a.appendix),base_summary_sha256=m.digest(a.base_analysis/'summary.json'),base_trials_sha256=m.digest(a.base_analysis/'trials.csv'),analysis_environment=m.analysis_environment(),routes=results,limits='1mm reported covariance is a compatibility floor, not actualnoise or calibratedsensoruncertainty. Privilegedvisibility/positiondiagnostic, notdeployable. No hardwareorconvergenceclaim.')
+ (a.output/'summary.json').write_text(json.dumps(summary,indent=2))
+ if summary['full_appendix_complete']:
+  merged=old+allrows;m.require(len(merged)==600 and len({(r['route'],r['method'],r['trial_id'])for r in merged})==600,'combined600 identity error');fields=list(dict.fromkeys(k for r in merged for k in r))
+  with(a.output/'all-600-trials.csv').open('w',newline='')as f:w=csv.DictWriter(f,fieldnames=fields);w.writeheader();w.writerows(merged)
+  combined=dict(schema='receiver-comparison-600-evidence-map-v1',original450_preserved=True,additional_posthoc150=True,total_distinct_rollouts=600,no_pooled_route_rate=True,base_summary_sha256=m.digest(a.base_analysis/'summary.json'),appendix_summary_sha256=m.digest(a.output/'summary.json'),routes=[dict(route=r['route'],original_methods=r['methods'],posthoc_uncertainty_floor=next(n['methods'][METHOD]for n in results if n['route']==r['route']))for r in base['routes']],limits=summary['limits']);(a.output/'combined-600-summary.json').write_text(json.dumps(combined,indent=2))
+ (a.output/'new-trials.json').write_text(json.dumps(allrows,indent=2));(a.output/'artifacts.json').write_text(json.dumps({f.name:dict(sha256=m.digest(f),bytes=f.stat().st_size)for f in a.output.iterdir()if f.is_file()},indent=2));print(json.dumps(dict(routes=[r['route']for r in results],new_trials=len(allrows))))
+if __name__=='__main__':main()

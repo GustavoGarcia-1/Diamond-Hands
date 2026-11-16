@@ -1,0 +1,485 @@
+{
+  "asof_utc": "2026-11-15T14:57:32.368513+00:00",
+  "website_paused": false,
+  "deadline_utc": "2026-11-15T15:00:00Z",
+  "new_PPO_runs": {
+    "status": "All first hour runs complete and independently audited. No retained catch improvement: Go R2 4/7 versus6/7, Go R3 5/7 versus6/7, Out3/7 unchanged, Slant0/7 unique unchanged.",
+    "shared_reward_sha256": "765c63f7bbf41daa42e647e7c639270605e29174df1ae7ac509a9ba9472ede1c",
+    "observation_schema": "native-precontact-intercept-169-v2-uncertainty",
+    "learned_component": "14 bounded arm residuals until conservative camera-predicted arrival; hold last residual afterward",
+    "fixed_components": [
+      "locomotion",
+      "native finger requests and encoder regulation",
+      "six thumb requests",
+      "nominal route and arm cue"
+    ],
+    "budget_per_route_s": 3600,
+    "workers_per_route": 2,
+    "baseline_replay": "zero action physical traces, model and score exact on all three routes",
+    "go": {
+      "receipt": "reports/catch-repair-20261115-go-performance/ppo-precontact-r2/receipt.json",
+      "source_sha256": "372c483c5908c22ac6e20e0448cc4366bd69c08f3ccbf3e4c4a2c90644689eab",
+      "verified_timesteps": 2560,
+      "verified_optimizer_epochs": 80,
+      "zero_weighted_alignment": 0.00017711653977072725,
+      "limitation": "Original camera supplies only two positive fresh predeadline captures in the nominal diagnostic. Final evaluation regressed; not promoted.",
+      "final_collected_steps": 2886,
+      "final_optimizer_epochs": 88,
+      "final_optimized_rollout_steps": 2816,
+      "final_checkpoint_sha256": "5b84f057f4cc065cb946b3f4b839cc7f9ed3120f6ac0bee074768346bb38eeb4",
+      "final_counts": {
+        "zero": 6,
+        "learned": 4,
+        "conditions": 7
+      },
+      "artifact_sha256": "44ca75348863fa60d29fd1e21a8ebade9eb8c2a872cb11b2708f2206f4d21b69",
+      "result": "One gain(height+), three losses(center,release-,lateral+); reject promotion. All14 raw scores/model arrays/freeball/caps audited."
+    },
+    "slant": {
+      "receipt": "reports/catch-repair-20261115-slant-performance/ppo-precontact-r1/train-receipt.json",
+      "source_sha256": "cea322d7f276efbc0c27e757365dd81a5293facc183e967d01e133f7d72cbc98",
+      "verified_timesteps": 1280,
+      "verified_optimizer_epochs": 40,
+      "zero_weighted_alignment": 0.6908773245,
+      "early1280_result": "Nominal clean2ms versus3ms, endpointdrop. No improvement established.",
+      "separate_late_ring_ablation": "Right ring late0.5mm ceiling leaves171ms short hold unchanged and advances excluded support52ms; negative, not promoted.",
+      "final_collected_steps": 3792,
+      "final_optimizer_epochs": 116,
+      "final_optimized_rollout_steps": 3712,
+      "final_checkpoint_sha256": "039b61c1f91fee816e241c2a50752d17efd8e084f9369f2ff49ab62956743665",
+      "final_counts": {
+        "zero": 0,
+        "learned": 0,
+        "declared_conditions": 8,
+        "unique_physical_conditions": 7
+      },
+      "result": "No retained or short receive pass; learned proxy return lower inall8; release-minus aliases nominal20mscontroltick. All16 raw scores independently audited."
+    },
+    "out": {
+      "receipt": "reports/catch-repair-20261115-out-performance/precontact-training-r1-receipt.json",
+      "source_sha256": "fbe8ef1e83129e67b9f2d14ed4dc04752368c1e0d63b7ebab4249cb2feff8b98",
+      "verified_timesteps": 3968,
+      "verified_optimizer_epochs": 124,
+      "zero_weighted_alignment": 0.76120867,
+      "early512_result": "Nominal primary pass in both methods, but hold2.875s versus3.183s and20ms scalar impulse slightly worse. No improvement established.",
+      "final_collected_steps": 5208,
+      "final_optimizer_epochs": 160,
+      "final_optimized_rollout_steps": 5120,
+      "final_checkpoint_sha256": "fd72b2dcc2a602e4bb1df354334ad0a77ad2d47576163a9034f3db94014b87ad",
+      "final_counts": {
+        "zero": 3,
+        "learned": 3,
+        "conditions": 7
+      },
+      "result": "Same successful conditions. Nominal hold3.183to3.372s but initial peak and20ms scalar impulse worsen. All14 independently audited. No reliability gain."
+    },
+    "evaluation": "full physical catch checks on paired fixed development throws, not proxy reward selection",
+    "reserved_seed_2026111501_used": false,
+    "tests": "231 passed in11.77s",
+    "go_camera_r3": {
+      "receipt": "reports/catch-repair-20261115-go-performance/ppo-precontact-r3/receipt.json",
+      "source_sha256": "765caa7d610efe22be6b1499a168d4ebde765c635c8feb2f2f61e474fc5594ef",
+      "zero_physics_exact": true,
+      "zero_weighted_alignment": 0.786977963785956,
+      "enabled_fresh_predeadline_captures": 11,
+      "comparison_original_camera_captures": 2,
+      "concurrency": "Shares Go GPU with R2; no controlled wall time efficiency comparison",
+      "early512_audit": "reports/catch-repair-20261115-go-performance/ppo-precontact-r3/early512/root-audit.json",
+      "early512_result": "Nominal primary pass in both methods; clean hold5.502s versus5.663s. No catch improvement established.",
+      "final_counts": {
+        "zero": 6,
+        "learned": 5,
+        "conditions": 7
+      },
+      "final_collected_steps": 2578,
+      "final_optimizer_epochs": 80,
+      "final_optimized_rollout_steps": 2560,
+      "final_checkpoint_sha256": "488a4c06da3c56c58bb913ae30b21e1fd36cb28b4594b487d27239a1fcf36e78",
+      "artifact_sha256": "759c194f78449d6a1ef4d6e116f16f6e3c5101e677aaf8d4ac89454191e8d7f6",
+      "result": "Release-minus lost, no gains; all14 fullscores/model/freeball/caps/ledger audited. All7zero traces exactly match original camera zeros."
+    },
+    "reward_metadata_erratum": "Frozen uncertainty_method metadata mentions full logged covariance; implementation uses a diagonal Gaussian approximation with rotated marginal variances. Documentation is explicit; frozen jobs unchanged."
+  },
+  "experiments": [
+    {
+      "id": "out-selective-inlet",
+      "scope": "Opened upstream finger preload, kept downstream wall",
+      "result": "Rejected: clean control3.380s to6ms; lower individual contact peak did not preserve catch",
+      "path": "../catch-repair-20261115-out-performance/live-impact-review.json"
+    },
+    {
+      "id": "observable-possession",
+      "scope": "Causal RGB-D ball surface and private encoder FK compatibility on480 frozen view conditions",
+      "result": "All480 abstain; conservative geometry cannot distinguish admissible load from mount support. No reward change or PPO justified.",
+      "path": "../catch-repair-20261115-reward-observability/results.json"
+    },
+    {
+      "id": "go-encoder-compliance",
+      "scope": "Eight finger tendons, sampled closing-error limit1.5mm for0.60s aftervisualgate,0.20s restoration",
+      "result": "Nominal clean control increased from 3.537 to 4.395 seconds. Initial impact was identical and the half second scalar impulse fell from 28.765 to 13.328 newton seconds. Independent worker audit passed. Both controllers qualified only the center among seven fixed development conditions.",
+      "path": "../catch-repair-20261115-go-performance/r1-results.json"
+    },
+    {
+      "id": "out-index-compliance",
+      "scope": "Two index tendons, sampled closing-error limit0.5mm",
+      "result": "Nominal3.380s to3.582s. Seven fixed conditions retain original quality incenter only for bothmethods. No generalization or impact claim.",
+      "path": "../catch-repair-20261115-out-performance"
+    },
+    {
+      "id": "slant-encoder-compliance",
+      "scope": "Eight finger tendons, sampled closing-error limit0.5mm atcamera delayedclosing onset",
+      "result": "Unchanged 20 millisecond model: clean control increased from 12 to 34 milliseconds, but endpoint retention, penetration and historical form still fail. First 20 millisecond summed peak decreased from 1285.96 to 563.71 newtons and scalar impulse from 12.4527 to 5.8690 newton seconds. Original dry gate failure and separate diagnostic authorization are retained.",
+      "path": "../catch-repair-20261115-slant-performance"
+    },
+    {
+      "id": "fall-total-target-governor",
+      "scope": "3rad/s12rad/s2 target governor fromreset",
+      "result": "Rejected: startupfall before actualreceivingattempt",
+      "path": "../fall-recovery-20261115-early-transition/results.json"
+    },
+    {
+      "id": "fall-damping50Hz",
+      "scope": "One originalkd braking capped25% simulationtorque limits aftercausalvisualreceive+IMUrisk",
+      "result": "Nominalheadcontact avoided andpeak/150msimpulse reduced, buttotalimpulse higher; perturbations expose peak/impulse tradeoffs. No uniformqualification or recovery.",
+      "path": "../fall-recovery-20261115-early-transition/damping-r1"
+    },
+    {
+      "id": "fall-damping500Hz",
+      "scope": "Same gains/caps with500Hzencoders and2ms addedtransportdelay",
+      "result": "Positive residualwork disappears inthree recordedcases; actualjointlimitexcess andimpacttradeoffs remain. No promotion.",
+      "path": "../fall-recovery-20261115-early-transition"
+    },
+    {
+      "id": "go-persistent-regulation",
+      "scope": "Remove transient restoration; preserve the 1.5 millimeter sampled finger closing error ceiling after the same visual event",
+      "result": "Development 31/50 versus4/50; separately frozen confirmation34/50 versus2/50,32gains and0losses. Independent allscore/cap/freeball/model/prefix audit passes. Optional core integration matches eight arrays,model,score andfeedback rows exactly. Scripted walking catch near6m only; seed2026111501 consumed, no retuning.",
+      "path": "../catch-repair-20261115-go-performance/persistent-r1"
+    },
+    {
+      "id": "slant-orientation-contact-factorial",
+      "scope": "One rightwrist orientation correction, native compliance crossed with20ms/2.5ms contact model",
+      "result": "Palms-up form restored. Tight2.5ms contact eliminates large allowedhand overlap but no endpoint retention. Legacy2.5ms clean2ms, compliant2.5ms1ms; compliant allowedhand2.647mm. Global floor overlap afterdrop reported separately.",
+      "path": "../catch-repair-20261115-slant-performance/factorial-r1"
+    },
+    {
+      "id": "slant-elbow-entry",
+      "scope": "Fixed rightelbow extension\u2212.03rad under2.5ms physics",
+      "result": "Dry finite rightentry improved, but live1ms bilateral/enddrop. Leftedge shifts with body coupling; summed20ms peak575.32\u21921074.43N. Candidate not promoted.",
+      "path": "../catch-repair-20261115-slant-performance/elbow-r2"
+    },
+    {
+      "id": "out-gravity-feedforward",
+      "scope": "Private static model gravity from encoders/IMU, unchanged caps and gains",
+      "result": "Tracking worsened, catch3.380\u2192.594s/enddrop and formfailed. Firstimpact lower does not qualify failed catch.",
+      "path": "../catch-repair-20261115-out-performance"
+    },
+    {
+      "id": "fall-measured-state-drive-replacement",
+      "scope": "Causal measured-state impedance transition removes ongoing gaitdrive",
+      "result": "Nominal headcontact0 and lower peak/short impulse/range excess, but frozen totalnonfootimpulse fails. Five perturbations all fail that gate, with release+ jointovertravel worsening. Three aim/height cases share exact fall body trajectory. Mechanical work erratum preserved. Offline protective arm proposal only.",
+      "path": "../fall-recovery-20261115-early-transition/drive-replacement-r1"
+    },
+    {
+      "id": "go-persistent-physical-sensor-stress",
+      "scope": "NinefixedGo02conditions, baseline/persistentpairs, mass\u00b110%, friction\u00b120%, nativecaps\u00d7.75, addedencoder20/40ms anddeclaredquantization",
+      "result": "All18scores/models/sensorbuffer/forcecaps independentlyverified. Persistentpassesall9fixedconditions, baseline6. No pooledreliabilityrate; nohardwarecalibration.",
+      "path": "../catch-repair-20261114/post-study/training-three-routes/independent/persistent-go-sensitivity-r1/independent-audit.json"
+    },
+    {
+      "id": "out-persistent-regulation-transfer",
+      "scope": "Same frozen Go eight finger1.5mm rule on originalOut06, no new arm/feedforward changes",
+      "result": "Nominal3.380 to3.392s; first0.5s scalar impulse19.259 to10.414Ns. Fixed seven conditions remain1/7 bothmethods; no reliability improvement. Failures retained.",
+      "path": "../catch-repair-20261115-out-performance"
+    },
+    {
+      "id": "go-tenyard-dry",
+      "scope": "Separate10yard fixture and surveyed camera, fixed machine, same Go walking controller; football contacts removed for offline dry metrology only",
+      "result": "First tenyard fullcontact independentlyverified and exactrepeated:1.645s clean/end1/form11/11, pelvis9.11658m depth/lateral\u2212.22639m, speed.93437m/s/zero flights. Initialsumpeak1047.12N, handoverlap8.457mm, startupankleovertravel.016879rad. Transverse zero-spin ball. Seven fixed developmentconditions2/7 BOTH disabled/persistent. No reliability or running promotion.",
+      "path": "../catch-repair-20261115-go-tenyard"
+    },
+    {
+      "id": "go-error-ceiling-ablation",
+      "scope": "Same seven selectedGo02 developmentthrows at0.75,1.5,3mm",
+      "result": "Independentlyverified5/7,6/7,3/7 respectively. Initialsummedimpactpeak unchanged;lowerlimitreduceslaterforcebutloseslateral-minus. Neitherchangedsettingpromoted.",
+      "path": "../catch-repair-20261115-go-performance/persistent-r1/error-ceiling-ablation-r1"
+    },
+    {
+      "id": "out-synchronized-entry-bundle",
+      "scope": "Knowncommand IK synchronization combinedwith torso pitch/desiredvelocityfeedforward/indexregulation; originalfixture unchanged",
+      "result": "Nominal1.735s/end1/form.818 exactrepeat andindependentpass. Fixed7development3/7 vs1/7 original. ORIGINAL50development7/50 vs9/50; retains5of9,2gains/4losses. Frozenconfirmationgatefailed; no promotion orconfirmation. Increasedinitialsummedpeak/impulse retained.",
+      "path": "../catch-repair-20261115-out-performance"
+    },
+    {
+      "id": "slant-fixed-aim-synchronous-palm-entry",
+      "scope": "One frozenQBaimfrom finitepalmarunion, originalplane/arms unchanged",
+      "result": "Both dry palm entries same1ms bin andwhole dryrobottrajectoryexact. Actualfullpassform1 butonly3msbilateral/enddrop. Ball rollsdownfieldwithhighspin, fingersmostlyopen. One causal earlierfingerpreparation dry approved; no forcecap increase.",
+      "path": "../catch-repair-20261115-slant-performance"
+    },
+    {
+      "id": "slant-modest-early-finger-preparation",
+      "scope": "Remove160ms delay from the same RGBD receive cue, retain legacy final target,1.5mm encoder regulation, all thumbs/arms/aim/model",
+      "result": "Selected nominal short receive improves3ms to171ms, relative speed0.238m/s; endpointdrop and retained0.75s check fail. Form1, selfpenetration2.104mm. Full exact anchor and independent scores verified. Physical force replay closes ball momentum to1.7e-12Ns.",
+      "path": "../catch-repair-20261115-slant-performance/early-finger-contact-r1"
+    },
+    {
+      "id": "slant-native-preload-transfer",
+      "scope": "Two frozen sensor timed preparations, calibrated legacy0.4 and true Out staged0.4; no hidden contacts or increased caps",
+      "result": "Legacy0.4 gives74ms/enddrop/selfpenetration5.176mm; true Out0.4 gives0ms/enddrop/formfail. Stronger closure creates upstream right finger impact12/21ms before left. Both dry design gate failures retained; no promotion.",
+      "path": "../catch-repair-20261115-slant-performance"
+    },
+    {
+      "id": "go-pulling-only-tendon-stress",
+      "scope": "Only12 tendon force ranges changed from symmetric to shortening only; opposition joints unchanged. Single paired nominal",
+      "result": "Both full11s primary pass, clean5.595s versus5.663s, actual forcecapexcess0. Exact original anchor/model differences/freeball/score audited. Not calibrated hardware or population robustness.",
+      "path": "../catch-repair-20261115-go-performance/tendon-sign-stress-r1/root-audit.json"
+    },
+    {
+      "id": "natural-go11-fall-interventions",
+      "scope": "Current two yard failedcatch/full12s, causal IMUrisk at8.68s, frozen protection/drive cancellation/mode isolation",
+      "result": "Protective arms with drive cancellation, drive cancellation alone and retaining WALK mode all worsen head peak and150ms nonfoot impulse. No policy qualified; traces, videos and failed derivative screen archived.",
+      "path": "../fall-recovery-20261115-natural-go11"
+    },
+    {
+      "id": "visual-low-ball-hazard-observability",
+      "scope": "Frozen low visible ball surface bound plus swept CAD foot corridor, surveyed RGBD+IMU+encoders+commands, two fresh frames after actual visual receive cue",
+      "result": "R1 original-delivered-camera claim withdrawn due capture alias mismatch. R2 named dedicated literal pass RGBD stream passes exact shadow. Single naturalGo11 fall prevented; sixprospective nearby baseline cases were nonfalls with nohazard and bit-exact unchanged candidate trajectories; healthyGo02 full11 exact/no warning. All15 fullplays/caps/models independently audited. One affected condition only, no7/7falls claim or graceful recovery. Pretrigger ankle/wrist range excess retained.",
+      "path": "../fall-recovery-20261115-natural-go11/early-visual-development-r1/independent-development-audit.json",
+      "camera_identity_erratum": "../fall-recovery-20261115-natural-go11/visual-hazard-r1/camera-identity-erratum.json"
+    },
+    {
+      "id": "slant-out-descent-fixture",
+      "scope": "One fixed.78s flight atsameorigin/actualtarget/nominalarrival/releasequaternion, original171ms grip;20ms lateractualcue and52.7percenthigherkineticenergy",
+      "result": "Dry form and geometry passed; full physical clean2ms versus171ms, endpointdrop, floor6.731versus8.513s. Initial20ms peak1473.74versus1274.43N; scalar impulse2.24790versus2.10870Ns. All independent checks passed; no improvement and not an angle only test.",
+      "path": "../catch-repair-20261115-slant-performance/out-descent-transfer-proposal-r1"
+    },
+    {
+      "id": "slant-80ms-finger-delay",
+      "scope": "Single frozen midpoint between0ms preparation and160ms legacy delay; same camera event, original1.1s throw, native targets, arm policy and actuator limits",
+      "result": "Clean4ms versus171ms and3ms anchors. Short receive fails, later drop, self peak272N versus11.6N. Dry gate success did not predict physical success. Actual unloaded encoder closure14to16mm/s, distinct from0.12m/s target slew. No promotion.",
+      "path": "../catch-repair-20261115-slant-performance"
+    },
+    {
+      "id": "cross-route-entry-retention-audit",
+      "scope": "Read only150 archived cases with unchanged criteria and separate original horizons",
+      "result": "Original Out9/50 versus originalGo4/50, regulatedGo31/50. Out32/50 torso exclusions precede hand entry;38fail duration gate. OriginalGo28achieve duration then lose endpoint/support. RegulatedGo eliminates that partition but8previously acquired cases worsen below duration. Crossroute observation is not causalproof.",
+      "path": "../catch-repair-20261115-out-performance/acquisition-retention-review-r1"
+    },
+    {
+      "id": "out-longer-flight-passive-proposal",
+      "scope": "One0.86s flight in place of0.70s, samefixedQB/discreteintercept/arrival/attitude. Archivedrobotpath only; not actuateddry or controller comparison.",
+      "result": "Passive nominal torso gap2.50to28.99mm, worldarrival translationalKE24.495to18.456J. Earlierrelease changespreload/cues; actualdry originalandcandidate nominalplusfirsttorsofailureID1 authorized with exactoriginalanchor. No candidatecontactresult.",
+      "path": "../catch-repair-20261115-out-performance/longer-flight-transfer-r1"
+    }
+  ],
+  "confirmation_status": "CONSUMED_BY_FROZEN_GO_CONFIRMATION",
+  "out_regulated_original50": {
+    "original": 9,
+    "combined": 8,
+    "trials_per_method": 50,
+    "preserved_original_successes": 6,
+    "gains": [
+      37,
+      38
+    ],
+    "losses": [
+      29,
+      44,
+      45
+    ],
+    "promotion_gate_passed": false,
+    "artifact_sha256": "b30fde3d82c2c58e491196e232598cd0a06f10074a24d236f6cfe46710ff6d4f"
+  },
+  "transport_PPO_runs": {
+    "status": "All45minute runs complete. Go and Out no retained improvement. Slant short receive and contact duration improve, with endpoint retention unchanged atzero and adverse self contact tradeoffs. All paired scores, sensor ledgers, actual caps, freeball, model identities and weight updates independently verified.",
+    "module_sha256": "eaf01d0524a918566ab0846adc4f6f350f9f6a4b086e655ff63bfa7ec2ed7759",
+    "observation_schema": "native-transported-intercept-169-v1",
+    "reward_schema": "transported-precontact-alignment-no-possession-v1",
+    "wall_budget_s": 2700,
+    "go_source_sha256": "345af8a7810334fc506b43a30b369d36ba1127f3d12b32701feda5929abfff65",
+    "go_receipt": "../catch-repair-20261115-go-performance/ppo-transport-r1/receipt.json",
+    "out_source_sha256": "c4c37842fb1ccb7d3782e5033de3dc903ddef390c7ac8ce5b7ef522bd0b613b9",
+    "out_receipt": "../catch-repair-20261115-out-performance/transport-training-r1-receipt.json",
+    "comparison_limit": "Changes future receiver target, relative velocity feature and uncertainty jointly;45min budgets differ from earlier60 and concurrency differs. Not a mean-only or efficiency ablation.",
+    "provenance_erratum": "Generic camera_optical key does not enforce physical camera separation. Nominal Go/Out endpoints independently all from one pose camera; Slant3of10positive histories mix entry/pass estimates. All are causal calibrated field poses, not truth. Frozen jobs unchanged; single camera guarantee withdrawn.",
+    "slant_baseline": "171ms scripted preparation; initial8 declared/7unique conditions have0retained catches,2of7unique short receives. No shallowthrow orring variant intraining.",
+    "go": {
+      "collected_steps": 1794,
+      "optimized_rollout_steps": 1792,
+      "optimizer_epochs": 56,
+      "wall_s": 2702.2047,
+      "final_checkpoint_sha256": "e73b14ec00bf19cbff58aab37b07b7c7c63f35a2c02962db91948feaacfb2293",
+      "artifact_sha256": "150315a91b68771a47b28a1cca62adab807c290844dadc18ca9cf644877bf996",
+      "retained_counts": {
+        "zero": 6,
+        "learned": 5,
+        "fixed_conditions": 7
+      },
+      "result": "Release minus lost, no new successes. Nominal clean5.663to5.449s. All14 raw scores, numeric models, freeball, caps and sensor ledger audited. Original50 screening failed; no broader job launched.",
+      "audit": "../catch-repair-20261115-go-performance/ppo-transport-r1/independent-final-rescore.json"
+    },
+    "out": {
+      "collected_steps": 3892,
+      "optimized_rollout_steps": 3840,
+      "optimizer_epochs": 120,
+      "wall_s": 2701.63,
+      "final_checkpoint_sha256": "db3c86d348b3d41932afb5509c67a88dce6820cc6830c565c032d033d6153598",
+      "artifact_sha256": "9cb08b10bad7ba42aa2767273c1fcb59126a6c9ca24727fc82b825617e30afe1",
+      "retained_counts": {
+        "zero": 3,
+        "learned": 3,
+        "fixed_conditions": 7
+      },
+      "result": "Same successful conditions, all three clean intervals shorter. Nominal3.183to3.177s; lateralplus3.080to2.612s; heightplus3.298to1.641s. All14 raw scores, models, freeball, caps and sensor ledger audited. Not promoted.",
+      "audit": "../catch-repair-20261115-out-performance/transport-final-analysis-r1/summary.json"
+    },
+    "slant": {
+      "collected_steps": 2714,
+      "optimized_rollout_steps": 2688,
+      "optimizer_epochs": 84,
+      "wall_s": 2700.792,
+      "final_checkpoint_sha256": "58faa28a49460d1231b0672d0d5001451fcf9ce70b077a4f266c170a59559fd1",
+      "training_artifact_sha256": "16298058d89dbd62daca0e34b8da0a567f3b0bf0235d43dc0d4593aae66bdacf",
+      "retained_counts": {
+        "zero": 0,
+        "learned": 0,
+        "unique_conditions": 7,
+        "declared_conditions": 8
+      },
+      "short_receive_counts_unique": {
+        "zero": 2,
+        "learned": 4
+      },
+      "nominal_longest_clean_s": {
+        "zero": 0.171,
+        "learned": 0.873
+      },
+      "nominal_short_window_clean_s": {
+        "zero": 0.171,
+        "learned": 0.293
+      },
+      "result": "Own and independent peer raw rescores of all16plays passed. Nominal longer bilateral control but no legitimate endpoint hold. First excluded left mount support8.475s, nofloor contact through9.5s. Selfpenetration4.774mm versus2.104mm; self force147.19N versus11.60N. First20ms normal force peak650.14versus1274.43N, scalar impulse2.23069versus2.10870Ns. No retained catch or safety promotion.",
+      "evaluation": "../catch-repair-20261115-slant-performance/transport-final-eval-r1",
+      "model_identity": "Physical numeric arrays identical; raw source path metadata differs. Canonical recompilation matches481numeric arrays.",
+      "nominal_video": "../catch-repair-20261115-slant-performance/transport-final-eval-r1/media/full-play.mp4",
+      "nominal_video_sha256": "367237ad9368b9dcdbdddb94bf2a62983d7f8f747b94b0bc87fc2df5cdc6932e",
+      "independent_peer_audit": "../catch-repair-20261114/post-study/training-three-routes/independent/transport-final-slant-r1/independent-final-audit.json",
+      "ending": "Final250ms has zero allowed hand support; both Aero mounts and leftwristyaw/rightwristpitch support the ball. No floor flag or force through9.5s."
+    }
+  },
+  "latest_protocol_inputs": {
+    "out_native_preload": "Preserves existing commanded machine release event; physical machine event link is required and unintegrated. Later grasp remains visual.",
+    "transport_camera_identity": "Current metadata wording corrected only; frozen experiment files unchanged. Generic labels still do not enforce physical camera history separation.",
+    "slant_final_ending": "Both mount/wrist support with no legitimate endpoint hand support; no floor impact in recorded9.5s."
+  },
+  "slant_hybrid_factorial": {
+    "changed_components": [
+      "Frozen final14arm PPO residual",
+      "Scriptedclosingfloor atsamevisualcue+1.30s"
+    ],
+    "seven_fixed_retained": {
+      "zero_without_floor": 0,
+      "zero_with_floor": 1,
+      "learned_without_floor": 0,
+      "learned_with_floor": 4
+    },
+    "nominal_clean_s": 1.995,
+    "nominal_endpoint_bilateral_fraction": 1.0,
+    "nominal_self_overlap_m": 0.0021037761937663536,
+    "nominal_first20ms_peak_N": 650.1396428841733,
+    "nominal_first20ms_scalar_impulse_Ns": 2.2306937105705886,
+    "independent_all30_scores_exact": true,
+    "all14_prefixes_exact": true,
+    "primary_source_sha256": "ec55f70929d48ab4f00e460f0c6bdc34dd8252222ac27527538123c1379d1c57",
+    "artifact_sha256": "cf2859fdcf6366ee8a395f092c0e72e66764a074f5807022f8457640caf2491a",
+    "no_population_or_hardware_claim": true,
+    "running_at_catch": false,
+    "fresh50_confirmation": {
+      "status": "Complete and independently audited; no conditional learning gain established",
+      "conditions": 50,
+      "paired_methods": [
+        "zero+floor",
+        "finalPPO+floor"
+      ],
+      "seed": 2026111527,
+      "bootstrap_seed": 2026111528,
+      "source_sha256": "1f6f2e5e97c3d1eeacb9675c85fd098f5ac12342e09b9052a0fde73bcdd66a7d",
+      "draws_sha256": "8b5bc721fee36d82719702f290d7a1922c6f5233388b0182715b48a920327e6c",
+      "budget_s": 1200,
+      "unique_compute_processes": 2,
+      "distribution": "IID independent worldY andworldZ uniform\u00b1.01m, requestedreleaseuniform\u00b1.01s;20ms quantizationdisclosed",
+      "locked_no_future_tuning_on_this_set": true,
+      "statistics": {
+        "zero": {
+          "throws": 50,
+          "successes": 19,
+          "probability_estimate": 0.38,
+          "wilson95": [
+            0.25862789310193596,
+            0.5184955306900703
+          ],
+          "anatomical_retained": 19,
+          "short_receive": 19,
+          "historical_realistic": 0,
+          "native_cap_failures": 0,
+          "warnings": 0
+        },
+        "learned": {
+          "throws": 50,
+          "successes": 12,
+          "probability_estimate": 0.24,
+          "wilson95": [
+            0.1429739139699173,
+            0.3741268375794292
+          ],
+          "anatomical_retained": 12,
+          "short_receive": 13,
+          "historical_realistic": 0,
+          "native_cap_failures": 0,
+          "warnings": 0
+        },
+        "paired": {
+          "both_success": 6,
+          "gain": 6,
+          "loss": 13,
+          "both_fail": 25,
+          "learned_minus_zero": -0.14,
+          "paired_percentile_bootstrap95": [
+            -0.3,
+            0.02
+          ],
+          "bootstrap_seed": 2026111528,
+          "bootstrap_replicates": 20000
+        }
+      },
+      "artifact_sha256": "4594baee4a6aab9613fae4672083fcf5332583ee6b2e45a3860ff01c0a324cb7",
+      "audit": "../../catch-repair-20261114/post-study/training-three-routes/independent/slant-confirmation-fifty-r1/independent-confirmation-audit.json",
+      "all_102_anatomical_scores_bit_exact": true,
+      "short_score_max_roundoff": 6.800116025829084e-15,
+      "learned_policy_promoted": false
+    }
+  },
+  "website_deployed": "https://g1-receiver-lab-1111.gag009.chatgpt.site",
+  "website_deployment_id": "appgdep_6af9cf945e5c81918ea336d89aa94c4c",
+  "submission_package": "artifacts/verified-current-study-20261115-r5/project.zip",
+  "out_deadline_diagnostic": {
+    "source_sha256": "bbe08fdae55ec7dc9ef124e57cb54041ce8bc9035e2c5a48e4177a77dd6883a4",
+    "artifact_sha256": "2e93860d9624e269f0920a4fd5bcd30be0eebf783bf40fefe4e2071876f214b2",
+    "nominal_clean_s": [
+      0.009,
+      0.008
+    ],
+    "case01_clean_s": [
+      3.172,
+      3.078
+    ],
+    "retained": [
+      1,
+      1
+    ],
+    "fixtures": 2,
+    "promoted": false,
+    "scope": "Two original failures under revised flight; no population gain. Earlier integral deadline alone insufficient."
+  },
+  "submission_zip_sha256": "f6e20c2093c4ea33dd1e2618eaf822b4c9bc4ed902a9e2209254b24d508fe2be",
+  "submission_combined_bytes": 86076903
+}

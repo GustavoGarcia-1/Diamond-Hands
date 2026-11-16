@@ -1,0 +1,297 @@
+{
+  "go-independent-audit.json": {
+    "source": "reports/catch-repair-20261114/validation/go-side-cup-independent.json",
+    "sha256": "b3671dd003935e5e98690488135ccd4ce84a891503279fcba6b858cb46f7059c",
+    "bytes": 59018
+  },
+  "go-reproduction.md": {
+    "source": "reports/catch-repair-20261114/go-side-cup/README.md",
+    "sha256": "6f5ddaf47b899894534182e7b9a62e5b55129034a8f96260f0cf47f02de3d7e9",
+    "bytes": 11112
+  },
+  "go-profile.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/confirmed-thumb30-profile.json",
+    "sha256": "df21abb5a5eba8741f1c04bc94d0a02b8bb59a20f569ea7179ac1ec06b46899a",
+    "bytes": 9775
+  },
+  "go-source.tar.gz": {
+    "source": "reports/catch-repair-20261114/go-side-cup/causal-source-linux/artifacts/source-freeze/frozen-source.tar.gz",
+    "sha256": "a51b42cb372b92092425173af576b894f9753ae72c9bcac8b6e43003a15522db",
+    "bytes": 17459444
+  },
+  "go-source-manifest.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/causal-source-linux/artifacts/source-freeze/manifest.json",
+    "sha256": "e0c4bbff04c25ddb605e15770de0f49f7d6a525bb53d142ce8f3a55706c5e322",
+    "bytes": 28306
+  },
+  "go-compact.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/causal-source-linux/artifacts/source-freeze/compact.json",
+    "sha256": "506e206fc6ce9e0ed6940d1c094bfd67d7f1d3537af44f7cd836a24aed63f02e",
+    "bytes": 8091
+  },
+  "go-cup.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/causal-source-linux/artifacts/source-freeze/cup.json",
+    "sha256": "715860e31efcd3f9da881d6d3bfe90c136439b54080e91b63a282b8d309c13da",
+    "bytes": 4547
+  },
+  "sensor-protocol.json": {
+    "source": "reports/catch-repair-20261114/sensor-realism/protocol-v1.json",
+    "sha256": "45460d2cb47c2964559186067019a027ffe6f14cdd4aa635c49c04b379808dc9",
+    "bytes": 1708
+  },
+  "sensor-zero-results.json": {
+    "source": "reports/catch-repair-20261114/sensor-realism/zero-linux/artifacts/study/summary.json",
+    "sha256": "a4e0624fa88c20dc26fda1b6ccbdb504369fb9e1ac61f35cba3c87f9e022eddc",
+    "bytes": 73793
+  },
+  "sensor-model-results.json": {
+    "source": "reports/catch-repair-20261114/sensor-realism/model-linux/artifacts/study/summary.json",
+    "sha256": "99b7ec1ce27ff95cc5425403f705a1a7d9862a8b8cb54a2c25f233da6e00d0c0",
+    "bytes": 73708
+  },
+  "out-training-receipt.json": {
+    "source": "reports/catch-repair-20261114/late-reach-training/r2-linux/artifacts/study/ppo/receipt.json",
+    "sha256": "b2e80b69046c524268bdfe84f93915cf3410de44b4068591ea4a972581c0c78b",
+    "bytes": 1782
+  },
+  "out-model.zip": {
+    "source": "reports/catch-repair-20261114/late-reach-training/r2-linux/artifacts/study/ppo/final.zip",
+    "sha256": "436da7257d4483eaf9afee633c894babd902bf32c7893b8b570ca35a56ab2443",
+    "bytes": 239115
+  },
+  "out-runtime.tar.gz": {
+    "source": "reports/catch-repair-20261114/sensor-realism/model-linux/artifacts/study/runtime-source.tar.gz",
+    "sha256": "8c574a7f39b811000b4e5a80f0c85cc749d9e30d95b4aa42d8154b40cb8e0585",
+    "bytes": 17363087
+  },
+  "out-runtime-hashes.json": {
+    "source": "reports/catch-repair-20261114/sensor-realism/model-linux/artifacts/study/runtime-hashes.json",
+    "sha256": "ebb53b3182b9ed5ed8fa2db568ac918ebdb142ab268e289a5cd9395e296ef947",
+    "bytes": 20658
+  },
+  "sensor-paired-audit.json": {
+    "source": "reports/catch-repair-20261114/validation/sensor-stress-paired/audit.json",
+    "sha256": "efcab08e012d5d55b19d3556735d2c87763b884ba4bfafa9df2cbea85ad6dd05",
+    "bytes": 9238
+  },
+  "go-media-verification.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/full-play-11s/media-verification.json",
+    "sha256": "ac9a211be0f4ccfd2bb47572961fb5c14da044f054957d57285b4497e2746557",
+    "bytes": 463
+  },
+  "go-common-prefix.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/common-prefix-supplemental.json",
+    "sha256": "9a645cfae036ecf962258a37d6dc80401473d236353acae5ebd7eadd3d120daf",
+    "bytes": 3649
+  },
+  "go-domain-sensitivity.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/domain-sensitivity-summary.json",
+    "sha256": "2712c726f771685de1da4d984eca070bbb51502c0d0e821e7c6d6dc63275d0e9",
+    "bytes": 204509
+  },
+  "go-domain-receipt.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/domain-sensitivity-receipt.json",
+    "sha256": "e4a32619e19872a04870418e11f1bdf0181d4965d523a4df6e842fc826c40552",
+    "bytes": 2096
+  },
+  "out-relative-servo-audit.json": {
+    "source": "reports/catch-repair-20261114/validation/out-relative-servo-independent.json",
+    "sha256": "1e860c28ee8480ac387bb4497cfc7f528f0784b30a2090a6323bc49edb8ac618",
+    "bytes": 16898
+  },
+  "camera-resolution-results.json": {
+    "source": "reports/catch-repair-20261114/sensor-realism/resolution-linux/artifacts/study/summary.json",
+    "sha256": "78767e2e64c017042f5928be55dd030174fe2aefa514127b6790d55f0272b762",
+    "bytes": 34988
+  },
+  "camera-resolution-receipt.json": {
+    "source": "reports/catch-repair-20261114/sensor-realism/resolution-receipt.json",
+    "sha256": "5fa67b74324f6e9388ed4587312f7a5e184e8156286f20055d8e1f3b83054711",
+    "bytes": 46105
+  },
+  "fixed-phase-results.json": {
+    "source": "reports/catch-repair-20261114/late-reach-training/constant-phase-linux/artifacts/study/summary.json",
+    "sha256": "6b04eec14b36ca2d2ef97db919f418eded937d30c53c1afeda5bdea97660814d",
+    "bytes": 18828
+  },
+  "fixed-phase-receipt.json": {
+    "source": "reports/catch-repair-20261114/late-reach-training/constant-phase-receipt.json",
+    "sha256": "56e66cbcfc9fad97a38914930f9b1e9e4dda6f12529651c2a00d17a29d2fe794",
+    "bytes": 44969
+  },
+  "ppo-r3b-stop.json": {
+    "source": "reports/catch-repair-20261114/late-reach-training/receipt-r3b-operator-stop.json",
+    "sha256": "45b42033d431172328dcb8ae0b4cb1319f7a8aff6c137b7b4a7c5e45f3f1d98b",
+    "bytes": 628
+  },
+  "ppo-r3b-evaluation.json": {
+    "source": "reports/catch-repair-20261114/late-reach-training/r3b-evaluation-summary.json",
+    "sha256": "4eaafd7bf481a791b94f15ce52eb77250246f550f92fa6b7e21bce6e67e99b8d",
+    "bytes": 5374
+  },
+  "reward-support-audit.json": {
+    "source": "reports/catch-repair-20261114/validation/constant-phase-risk/audit.json",
+    "sha256": "74edab09e4b7f4fff2b19ac3b2c2bf18cd7e8172833f2683cc69231e98cd2ab1",
+    "bytes": 802385
+  },
+  "reward-support-audit.md": {
+    "source": "reports/catch-repair-20261114/validation/constant-phase-risk/README.md",
+    "sha256": "95b47758cfe46469cd5346d0c797de1f84333bb3dbf5da347a5dc74ad4969973",
+    "bytes": 5709
+  },
+  "onboard-observability.md": {
+    "source": "reports/catch-repair-20261114/go-side-cup/ONBOARD.md",
+    "sha256": "461973da161becf2a11d15adbf85c41e65e5711aa232639d1841a051a28297c1",
+    "bytes": 7928
+  },
+  "onboard-mount-observability.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/onboard-mount-observability-r2.json",
+    "sha256": "44eafc2c79b0f83b05d587622f7090d00d4305810b42c8bb14806bef795c5bd3",
+    "bytes": 105117
+  },
+  "onboard-physical-exact.json": {
+    "source": "reports/catch-repair-20261114/go-side-cup/onboard-r3-physical-exact.json",
+    "sha256": "ed16f280712091e1402bc9ea755a7b29062d4a741c240eecc098487848bdf519",
+    "bytes": 1040
+  },
+  "onboard-analysis-source.tar.gz": {
+    "source": "reports/catch-repair-20261114/go-side-cup/onboard-analysis-source.tar.gz",
+    "sha256": "55c84e0ee934ef061c3fe737471b74c1eef634a6aa8c83a3c1bf4b26f397bf24",
+    "bytes": 43824
+  },
+  "onboard-runtime-source.tar.gz": {
+    "source": "reports/catch-repair-20261114/go-side-cup/onboard-source-linux/artifacts/source-freeze/frozen-source.tar.gz",
+    "sha256": "f2e3cc004580adcb48250243552ea844980e06f10075e5e2bfdb9a16faa45599",
+    "bytes": 17461118
+  },
+  "training-provenance.md": {
+    "source": "docs/training-provenance.md",
+    "sha256": "07f26faab417aee57824ef9041f59e3af6472cd0c81a3d3728a87b136a1f1110",
+    "bytes": 2871
+  },
+  "go-evidence.tar.gz": {
+    "sha256": "34d14fe71466e0d0ebfacddcb3838b19355867163aaffd8fe64632a17b9f33a0",
+    "bytes": 22646476,
+    "files": {
+      "original20/trial/report.json": "36856314240944756f8fff4cbf0368f6e8b52847ab0b82931ea844536a69b037",
+      "original20/trial/anatomical-contact.npz": "2e8f886ceeaad80e3c8cd9c0889845ad4c6ee726bd40edaaeea4cfc90051a4b8",
+      "original20/trial/anatomical-form.json": "a4a544714fa0c7c8cc8f4037cc24ab66034257019824f8e0707f822ee5f49da3",
+      "original20/trial/anatomical-metadata.json": "21cbf8cabd1a663cd8164d6b301a364daa53341fbebf7ffdd7c586d5d290da18",
+      "original20/trial/trace.npz": "8386350538081b16a4b39b384d7f7c5cf3b8aed85bab485a243ceb664d0d7a99",
+      "original20/trial/view.npz": "5d70200a55aa84b6e9263e5acff5f4db19ccf1fc0661fcd669f20278f29cccdc",
+      "original20/controller-receipt.json": "1d6af4a455aa13c018bc836f5a215093667495930ad1bb29fe601c41a6cd4bee",
+      "original20/scene.xml": "f1cd81f88019a9793aa833a17eecadc1e913b0292bacac6700e3bc25fbabfd96",
+      "original20/ball-contact-witness.npz": "2e24a3e44ecc0534913c0937097db160136ba8410687288adcdb605fdfdc1669",
+      "experimental2p5/trial/report.json": "bc5f812e140903a69d69d4db7606f18ab06c12d495c9a9808f851a33f3ade0e2",
+      "experimental2p5/trial/anatomical-contact.npz": "7edecf89c0d31ef9d8b24c10d71700b9f0ba9b1a554a4852024b1b54d9e27061",
+      "experimental2p5/trial/anatomical-form.json": "12733f5f6dbb9610ac722c96189d45e19281cb5bc3a3ce4bee3af59974a8ec52",
+      "experimental2p5/trial/anatomical-metadata.json": "a02e5195b4c4ff9627de227a77f69dd37ed1da3954d85c4797dfb159e998cfaf",
+      "experimental2p5/trial/trace.npz": "f2e4e7d349fd7008276e5e3f1b8b8d39f4ff3b1a763b8735e598683fb7f42fcf",
+      "experimental2p5/trial/view.npz": "af036ce9c2c89dd9e785ba7b260a3d402d74f9a79436188b00f09c4654d44c1a",
+      "experimental2p5/controller-receipt.json": "831deb5d4ad02056491c88524ec6669afd24ae00be8375809c90014ae253f522",
+      "experimental2p5/scene.xml": "80080009a35623e9492674dfb841124c5cb1854a5beb21b860faf31ecfd868e2",
+      "experimental2p5/ball-contact-witness.npz": "48e011538564043ab092927152f136fecc9bce26b048e0d63bcd6bdd80057303",
+      "original20-thumb30/trial/report.json": "1f5d5a4d524fd93a0fcb5f7ce1c755f9a3f43f8bf086b39dc0031ffd364db496",
+      "original20-thumb30/trial/anatomical-contact.npz": "abd29ebfdde5be1f8f54b7abb7fa67c733de23ca43865eedaa06096c82baab74",
+      "original20-thumb30/trial/anatomical-form.json": "33f2e814fc77e18e651490488f90f0080d23ba3af6f9cf17e54e1efb4cebb796",
+      "original20-thumb30/trial/anatomical-metadata.json": "21cbf8cabd1a663cd8164d6b301a364daa53341fbebf7ffdd7c586d5d290da18",
+      "original20-thumb30/trial/trace.npz": "c6482f1d94aaa06ab96d294ca461a68841965f9a723e2cb129c048bca9d432ec",
+      "original20-thumb30/trial/view.npz": "2e9bef03ecc21b781464024a3a047d245bfa76359922b427ed418dbc005d33d4",
+      "original20-thumb30/controller-receipt.json": "ca317c5465af83a9fb1de2a428df1ed95798979b1d97e3381d50bae2d01ab5ea",
+      "original20-thumb30/scene.xml": "9028239d5e32d1609f570f81ad23f509d760fffd3342bb0fa5a6f9a724dc8fc8",
+      "original20-thumb30/ball-contact-witness.npz": "1c30fdf162116890302ef051957cead617e8e356cf127a3158695374067f3e48",
+      "original20-thumb40/trial/report.json": "2f2aec06e869a00ecd52e6e08c249af9c5476c1518dfb164dde05938e0625767",
+      "original20-thumb40/trial/anatomical-contact.npz": "2b9e593e91ee3668b9206a5a71fa16c18449e9a2782e9721b1af28c459478b90",
+      "original20-thumb40/trial/anatomical-form.json": "109de9db3ab138d5ac990835b0ce06d1ed10645a5ae0cb801314fae544b2734d",
+      "original20-thumb40/trial/anatomical-metadata.json": "21cbf8cabd1a663cd8164d6b301a364daa53341fbebf7ffdd7c586d5d290da18",
+      "original20-thumb40/trial/trace.npz": "66a1c858b11d34b32fd063de03e6e929d7df8bf11580ea42fd81ce6cd3ab26ea",
+      "original20-thumb40/trial/view.npz": "2f4917a65d2452c1da4efa5e630e728fa39181693d138f653240bcc30230415a",
+      "original20-thumb40/controller-receipt.json": "0fa4ee3999d2d58fdc89c72abae8b9c840dcab4f4e1ec27369f25e108b13fbb7",
+      "original20-thumb40/scene.xml": "9028239d5e32d1609f570f81ad23f509d760fffd3342bb0fa5a6f9a724dc8fc8",
+      "original20-thumb40/ball-contact-witness.npz": "b6d55c5e893df65834de207419eabefba84899809487ae8b8902c17961533ac9",
+      "experimental2p5-thumb30/trial/report.json": "7e42fc15afe9ad6242840616a1fab7025db2dd8879dca58b311dcb42c572f9cb",
+      "experimental2p5-thumb30/trial/anatomical-contact.npz": "89c2a03a5883190eb290812f5e994b6f2d1ae44aaa36be6817d98f80a413dda2",
+      "experimental2p5-thumb30/trial/anatomical-form.json": "1380112a620c75e309bed98dca493e5bc0181fec5fe59a56c9d1bee540738272",
+      "experimental2p5-thumb30/trial/anatomical-metadata.json": "a02e5195b4c4ff9627de227a77f69dd37ed1da3954d85c4797dfb159e998cfaf",
+      "experimental2p5-thumb30/trial/trace.npz": "c9639f6d0e367d87808ebaa090b513d830bc220671a8657f1f53aea666c3911d",
+      "experimental2p5-thumb30/trial/view.npz": "0657d8e5afd290854201be1ca85c78b9bed46e0c3a2d48737939db6f183b0a6a",
+      "experimental2p5-thumb30/controller-receipt.json": "3fb1393be0bb51c064e62fe235b00eba530b69b76b016df4cfd0802bb677d076",
+      "experimental2p5-thumb30/scene.xml": "5964fcfb27671ced01e3fb1203bbecc1e9762c973c5cac63074af9c6400d2049",
+      "experimental2p5-thumb30/ball-contact-witness.npz": "42b20b50566c5eacc200b2b9334b4474e80003808cfd27ef02be8feddfc607ab",
+      "experimental2p5-thumb40/trial/report.json": "cfce90d21230ee6d9b84871c49dadd61d4c6e1b3e09567a4814bd13b5811f95b",
+      "experimental2p5-thumb40/trial/anatomical-contact.npz": "ecc88e365b56c335e5896e3321df1212960a39cbb05cbaa67248d56efd884b89",
+      "experimental2p5-thumb40/trial/anatomical-form.json": "cce62ca49894b349cb67c14acea41b215963322782eae95ad4db7d95d91abd79",
+      "experimental2p5-thumb40/trial/anatomical-metadata.json": "a02e5195b4c4ff9627de227a77f69dd37ed1da3954d85c4797dfb159e998cfaf",
+      "experimental2p5-thumb40/trial/trace.npz": "ddc06a34ab0dc0c69872b1ff9e3750e9309b82e1d3ef68dbd791b7394731d2ce",
+      "experimental2p5-thumb40/trial/view.npz": "2cac8c376c67e2c0e2cdeca5c064130ce434da9f62efbe8ae262f91eb2a3b8ff",
+      "experimental2p5-thumb40/controller-receipt.json": "9a0df921b795bc08ed7a707791a00a804b83ddde7998fe55a7f3e81a34fdc76f",
+      "experimental2p5-thumb40/scene.xml": "5964fcfb27671ced01e3fb1203bbecc1e9762c973c5cac63074af9c6400d2049",
+      "experimental2p5-thumb40/ball-contact-witness.npz": "90bedb9a1bababf6cf07c8d8d3780fc1f843780db215621510ba034ad3a66e25",
+      "confirm-9s/trial/report.json": "7e42fc15afe9ad6242840616a1fab7025db2dd8879dca58b311dcb42c572f9cb",
+      "confirm-9s/trial/anatomical-contact.npz": "89c2a03a5883190eb290812f5e994b6f2d1ae44aaa36be6817d98f80a413dda2",
+      "confirm-9s/trial/anatomical-form.json": "1380112a620c75e309bed98dca493e5bc0181fec5fe59a56c9d1bee540738272",
+      "confirm-9s/trial/anatomical-metadata.json": "a02e5195b4c4ff9627de227a77f69dd37ed1da3954d85c4797dfb159e998cfaf",
+      "confirm-9s/trial/trace.npz": "c9639f6d0e367d87808ebaa090b513d830bc220671a8657f1f53aea666c3911d",
+      "confirm-9s/trial/view.npz": "0657d8e5afd290854201be1ca85c78b9bed46e0c3a2d48737939db6f183b0a6a",
+      "confirm-9s/controller-receipt.json": "8def8a0285569b19fb9a3d381464d5bee3ce555b9a6c96caa7450c65662a9f64",
+      "confirm-9s/scene.xml": "b15b5cce38361e1802cf8e07d15f008591c1fab40877f5f7b9822f3c1f24848c",
+      "confirm-9s/ball-contact-witness.npz": "42b20b50566c5eacc200b2b9334b4474e80003808cfd27ef02be8feddfc607ab",
+      "confirm-11s/trial/report.json": "9d43458d81df3b3e264e63f924931d410778d3634d22df37f2ba8f3cc6e3e130",
+      "confirm-11s/trial/anatomical-contact.npz": "2b425e70e3416680adabfa589dfb9cdb9a53fae4eeda532402f152cf5fc12d13",
+      "confirm-11s/trial/anatomical-form.json": "fe45254cb569b1be3c61781461df6cc29891eb6cde4c18aa5f6f7e3d482f2b3e",
+      "confirm-11s/trial/anatomical-metadata.json": "a02e5195b4c4ff9627de227a77f69dd37ed1da3954d85c4797dfb159e998cfaf",
+      "confirm-11s/trial/trace.npz": "862d920380c0812e890587cf3a3bde6ab93f1597b3335d799003eb25e4c5bb90",
+      "confirm-11s/trial/view.npz": "7368187daa812a83056249925425ae4763e2fdc243d4d0e8314b1c912afc8220",
+      "confirm-11s/controller-receipt.json": "8def8a0285569b19fb9a3d381464d5bee3ce555b9a6c96caa7450c65662a9f64",
+      "confirm-11s/scene.xml": "b15b5cce38361e1802cf8e07d15f008591c1fab40877f5f7b9822f3c1f24848c",
+      "confirm-11s/ball-contact-witness.npz": "bc71a0922219fec40ddeaa2128d342e1f1bd5fbba2146f94864bc811be259bc5",
+      "causal-pass-receipt.json": "9f307b2a28158d1ca82091a2a9f5a57a3f4b34be5eb94cff97b88458938bae70",
+      "thumb-timing-receipt.json": "4f8e9100bc62ea7b05554fce2ace8a9abba415cce1378cb833967c08caffabbf",
+      "causal-confirm-receipt.json": "a5544579d6fad07f6155639d7208786b535696f596e1cee9e307054bf00a3724",
+      "confirmation-comparison.json": "38c5e1575ae5e7e614d874b5175124c3a63714ac0603004e0044742882e81e78",
+      "fixedplane-receipt.json": "65f0a3efbf9d20e829ec3cdd334f72c83509baf5b248acd92d1e78cc457fb2ae",
+      "fixedplane-summary.json": "8bbd2966780b55cdbe01b6e19b3b8ba2c12018891ddf5fe3a674ee16c6a91ec5",
+      "timestep-summary.json": "47693f82b1073533587d32bccb49ce27fe866aa2b99637c8c5c7eab1790ffb1f",
+      "camera-latency-summary.json": "a5d03879cbce2428fe55ecaf082f2a1d2969d74cc5370ae8153a73e999b0d48e"
+    }
+  },
+  "go-11s-actual-state.npz": {
+    "source": "reports/catch-repair-20261114/go-side-cup/causal-confirm-linux/artifacts/study/confirm-11s/actual-state.npz",
+    "sha256": "4a87e0033b89cf8956fa42cb06a042580fcfc2fe8016158b394beede18eeae33",
+    "bytes": 14407522
+  },
+  "reproduction-supplement.tar.gz": {
+    "sha256": "11ea02831ef8e7d281da07e38bc3ae88a88c4c6ee40384e0e4120e7062b3d4c6",
+    "bytes": 33859
+  },
+  "reproduction-notes.md": {
+    "sha256": "abbfe531e6c9276119a77945de44c46fb4af7f39bef447359f1966e2db423cd9",
+    "bytes": 4745
+  },
+  "onboard-observation-evidence.tar.gz": {
+    "sha256": "dd37c8ffea95da0d4b9821cd92d19e494c23f879631933c75c49b4f1f449f5ed",
+    "bytes": 14435163,
+    "files": {
+      "onboard-observations.json": "ee35df9393521fdb2ae2b63ad85167ac9dd5a0576f43222148659e38627ac786",
+      "onboard-keyframes.npz": "b906c2c0a99b8781c393b957f62af3cac91ba41a82ba3ea86fb5ca5b26559994",
+      "scene.xml": "fe09588f69305ceb2ec7464b2602db3699e6559350cea17514f7d2aa35a1f851",
+      "ball-contact-witness.npz": "bc71a0922219fec40ddeaa2128d342e1f1bd5fbba2146f94864bc811be259bc5",
+      "trial/report.json": "6d45458ff136fc4a1ad3dfb8c144fc38800234f18a583489dbdfb44806f1641f"
+    }
+  },
+  "out-late-palms-up.mp4": {
+    "sha256": "500b5f18f0693e7bf55eaa8c483c12b76c1a2a48540b0a277a32da22c94815fb",
+    "bytes": 162570,
+    "source": "reports/catch-repair-20261114/out-cup/form-pass-fullplay"
+  },
+  "out-late-palms-up.json": {
+    "sha256": "ee7f285ae6af2657d5224a4f5363f1f6be59ade58c69c1cf9dabb5324d7afb8a",
+    "bytes": 1379,
+    "source": "reports/catch-repair-20261114/out-cup/form-pass-fullplay"
+  },
+  "out-late-palms-up.jpg": {
+    "sha256": "fed1b93e1f40884cd20cd89eeb44ec18d4c45f958ea728f672d8896a9089a188",
+    "bytes": 43255,
+    "source": "reports/catch-repair-20261114/out-cup/form-pass-fullplay"
+  }
+}

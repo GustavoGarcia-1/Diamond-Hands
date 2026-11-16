@@ -1,0 +1,128 @@
+{
+  "schema": "slant_fresh_fifty_matched_confirmation_summary_v1",
+  "status": "Complete and independently audited; no conditional learning gain established",
+  "units": {
+    "probability": "fraction",
+    "difference": "learned minus zero probability fraction",
+    "time": "s",
+    "distance": "m"
+  },
+  "distribution": "IID independent uniform world Y aim\u00b10.01m,world Z height\u00b10.01m,requested release\u00b10.01s; fixed original20ms release grid retained",
+  "sample_size": 50,
+  "paired_plays": 100,
+  "anchor_plays": 2,
+  "draw_seed": 2026111527,
+  "bootstrap_seed": 2026111528,
+  "statistics": {
+    "zero": {
+      "throws": 50,
+      "successes": 19,
+      "probability_estimate": 0.38,
+      "wilson95": [
+        0.25862789310193596,
+        0.5184955306900703
+      ],
+      "anatomical_retained": 19,
+      "short_receive": 19,
+      "historical_realistic": 0,
+      "native_cap_failures": 0,
+      "warnings": 0
+    },
+    "learned": {
+      "throws": 50,
+      "successes": 12,
+      "probability_estimate": 0.24,
+      "wilson95": [
+        0.1429739139699173,
+        0.3741268375794292
+      ],
+      "anatomical_retained": 12,
+      "short_receive": 13,
+      "historical_realistic": 0,
+      "native_cap_failures": 0,
+      "warnings": 0
+    },
+    "paired": {
+      "both_success": 6,
+      "gain": 6,
+      "loss": 13,
+      "both_fail": 25,
+      "learned_minus_zero": -0.14,
+      "paired_percentile_bootstrap95": [
+        -0.3,
+        0.02
+      ],
+      "bootstrap_seed": 2026111528,
+      "bootstrap_replicates": 20000
+    }
+  },
+  "quality": {
+    "zero": {
+      "original_quality_check_failures": {
+        "physics_clock_and_endpoint": 0,
+        "initial_free_flight": 0,
+        "verified_free_joint_no_attachment": 0,
+        "continuous_anatomical_bilateral_075s": 31,
+        "final_anatomical_hand_hold": 31,
+        "no_excluded_floor_body_or_applied_support": 31,
+        "load_bearing_hands": 1,
+        "no_deep_interhand_penetration": 15,
+        "no_deep_ball_penetration": 31,
+        "acquisition_lower_palms_up_form": 1,
+        "upright_through_finish": 0,
+        "reference_physics_verified": 50
+      },
+      "actual_release_bin_counts": {
+        "5.320000000000111": 28,
+        "5.300000000000105": 22
+      },
+      "running_at_catch_count": 0,
+      "minimum_form_fraction": 0.7272727272727273,
+      "maximum_self_overlap_m": 0.00956894882854583
+    },
+    "learned": {
+      "original_quality_check_failures": {
+        "physics_clock_and_endpoint": 0,
+        "initial_free_flight": 0,
+        "verified_free_joint_no_attachment": 0,
+        "continuous_anatomical_bilateral_075s": 38,
+        "final_anatomical_hand_hold": 36,
+        "no_excluded_floor_body_or_applied_support": 36,
+        "load_bearing_hands": 0,
+        "no_deep_interhand_penetration": 6,
+        "no_deep_ball_penetration": 35,
+        "acquisition_lower_palms_up_form": 0,
+        "upright_through_finish": 0,
+        "reference_physics_verified": 50
+      },
+      "actual_release_bin_counts": {
+        "5.320000000000111": 28,
+        "5.300000000000105": 22
+      },
+      "running_at_catch_count": 0,
+      "minimum_form_fraction": 0.8181818181818182,
+      "maximum_self_overlap_m": 0.006488378496929552
+    }
+  },
+  "all_102_original_anatomical_scores_bit_exact": true,
+  "all_short_boolean_None_fields_exact": true,
+  "short_float_roundoff_max_abs": 6.800116025829084e-15,
+  "analysis_erratum": "analysis-validation-erratum.json",
+  "all_50_matched_physical_throws_exact": true,
+  "all_profiles_exact_frozen_draws": true,
+  "all_models_byte_identical": true,
+  "all_caps_pass": true,
+  "all_warnings_zero": true,
+  "retries": 0,
+  "dropped_cases": 0,
+  "historical_realistic_flag_count": 0,
+  "running_at_catch_count": 0,
+  "interpretation": "The fresh confirmation sample has19zero plus floor successes versus12final PPO plus the same floor, six gains and thirteen losses. The paired95percent interval includes zero and does not establish a conditional learning gain. The prior4of7 development outcome is not validated as a population gain. No controller selection or retuning uses this confirmation set.",
+  "scope": "Intervals refer only to the declared throw jitter distribution in the fixed2.5ms engineering model, one frozen trained policy and the fixed sensor setup; not hardware, calibrated physics or training seed variation.",
+  "checkpoint_sha256": "58faa28a49460d1231b0672d0d5001451fcf9ce70b077a4f266c170a59559fd1",
+  "source_sha256": "1f6f2e5e97c3d1eeacb9675c85fd098f5ac12342e09b9052a0fde73bcdd66a7d",
+  "draws_sha256": "8b5bc721fee36d82719702f290d7a1922c6f5233388b0182715b48a920327e6c",
+  "artifact_sha256": "4594baee4a6aab9613fae4672083fcf5332583ee6b2e45a3860ff01c0a324cb7",
+  "independent_audit": "../../catch-repair-20261114/post-study/training-three-routes/independent/slant-confirmation-fifty-r1/independent-confirmation-audit.json",
+  "case_results": "independent-summary.json"
+}

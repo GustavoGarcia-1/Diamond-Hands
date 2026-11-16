@@ -1,0 +1,39 @@
+{
+  "session": "ses-3A0R1JMJWD4E7ENS2SEQQZRYS0",
+  "remote_root": "/workspace/g1-receiver-runs/catch-repair-go-side-domain-sensitivity-20261114-r1",
+  "command_handle": "2fab9a0ac3b9773c0992f58d0abffb6ae24c5943af679ecf",
+  "launch": {
+    "wall_seconds": 360,
+    "snapshot_sha256": "482c2a708aa0de0a6f6d59d363b6efa46b6eac21f83934b23e873b2cc95d695c",
+    "command": [
+      "/workspace/g1-receiver-runs/receiver-uniform173-supervised-20261111/.venv/bin/python",
+      "scripts/run_go_side_domain_sensitivity.py",
+      "--root",
+      "/workspace/g1-receiver-runs/catch-repair-go-side-domain-sensitivity-20261114-r1/source",
+      "--profile",
+      "/workspace/g1-receiver-runs/catch-repair-go-side-domain-sensitivity-20261114-r1/profile.json",
+      "--compact",
+      "/workspace/g1-receiver-runs/catch-repair-go-side-domain-sensitivity-20261114-r1/compact.json",
+      "--cup",
+      "/workspace/g1-receiver-runs/catch-repair-go-side-domain-sensitivity-20261114-r1/cup.json",
+      "--source",
+      "/workspace/g1-receiver-runs/out-scrimmage-20261113/source/aero-source",
+      "--amp-source",
+      "/workspace/g1-receiver-runs/out-scrimmage-20261113/amp",
+      "--output",
+      "/workspace/g1-receiver-runs/catch-repair-go-side-domain-sensitivity-20261114-r1/artifacts/study",
+      "--reference",
+      "/workspace/g1-receiver-runs/catch-repair-go-side-thumb-timing-20261114-r1/artifacts/study/experimental2p5-thumb30"
+    ]
+  },
+  "inputs": {
+    "scripts/run_go_side_domain_sensitivity.py": "85e49fba7997b64c8c3187acad072b7393c041ac16c1771f466f6fcfb2d63d06",
+    "scripts/probe_go_side_domain_sensitivity.py": "f1b0aae37470caa0118783b2391a5819a084687d4a1955c8910f45e85330ce19",
+    "profile": "df21abb5a5eba8741f1c04bc94d0a02b8bb59a20f569ea7179ac1ec06b46899a"
+  },
+  "frozen_controller_source": "/workspace/g1-receiver-runs/catch-repair-go-side-causal-pass-20261114-r1/source",
+  "perception_overlay": "intentionalroundoff-tolerancefix,currenthashpinned,nooldexactcontrolclaim",
+  "training": false,
+  "no_privileged_teacher_or_reward": true,
+  "experimental_models_separate": true
+}

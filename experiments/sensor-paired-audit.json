@@ -1,0 +1,271 @@
+{
+  "all14_scores_exact": true,
+  "protocol_byte_identical": true,
+  "runtime_hashes_verified": true,
+  "runtime_differences": [],
+  "model_sha256": "436da7257d4483eaf9afee633c894babd902bf32c7893b8b570ca35a56ab2443",
+  "rows": [
+    {
+      "condition": "nominal",
+      "impairments": {
+        "seed": 9101
+      },
+      "zero": {
+        "hold_s": 0.00500000000000167,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 36.42092184787252,
+        "first_excluded_s": 6.833000000000617,
+        "quality": false,
+        "form": false,
+        "return_": 0.010484814061648418,
+        "qualified": 0,
+        "visible": 15,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "model": {
+        "hold_s": 0.002000000000000668,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 36.113805610785214,
+        "first_excluded_s": 6.868000000000628,
+        "quality": false,
+        "form": false,
+        "return_": 0.02789896421000393,
+        "qualified": 0,
+        "visible": 15,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "physics_and_host_equal": true
+    },
+    {
+      "condition": "latency20",
+      "impairments": {
+        "seed": 9101,
+        "latency_s": 0.02
+      },
+      "zero": {
+        "hold_s": 0.0,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 34.78334674773872,
+        "first_excluded_s": 6.615000000000544,
+        "quality": false,
+        "form": true,
+        "return_": 0.00041662455627122785,
+        "qualified": 0,
+        "visible": 10,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "model": {
+        "hold_s": 0.0,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 33.14348244459854,
+        "first_excluded_s": 6.60500000000054,
+        "quality": false,
+        "form": true,
+        "return_": 0.0004577529379524159,
+        "qualified": 0,
+        "visible": 9,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "physics_and_host_equal": true
+    },
+    {
+      "condition": "latency40",
+      "impairments": {
+        "seed": 9101,
+        "latency_s": 0.04
+      },
+      "zero": {
+        "hold_s": 0.0,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 35.35758789015897,
+        "first_excluded_s": 6.589000000000535,
+        "quality": false,
+        "form": true,
+        "return_": 0.0032089875907369003,
+        "qualified": 0,
+        "visible": 21,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "model": {
+        "hold_s": 0.0,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 36.20796696917433,
+        "first_excluded_s": 6.595000000000537,
+        "quality": false,
+        "form": true,
+        "return_": 0.0019330705252771918,
+        "qualified": 0,
+        "visible": 13,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "physics_and_host_equal": true
+    },
+    {
+      "condition": "latency80",
+      "impairments": {
+        "seed": 9101,
+        "latency_s": 0.08
+      },
+      "zero": {
+        "hold_s": 0.0,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 44.02314895033375,
+        "first_excluded_s": 6.27300000000043,
+        "quality": false,
+        "form": false,
+        "return_": -0.0026839295026052645,
+        "qualified": 0,
+        "visible": 7,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "model": {
+        "hold_s": 0.0,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 44.02314895033375,
+        "first_excluded_s": 6.27300000000043,
+        "quality": false,
+        "form": false,
+        "return_": -0.001546602997064661,
+        "qualified": 0,
+        "visible": 8,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "physics_and_host_equal": true
+    },
+    {
+      "condition": "dropout10",
+      "impairments": {
+        "seed": 9101,
+        "frame_drop_probability": 0.1
+      },
+      "zero": {
+        "hold_s": 0.00500000000000167,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 36.42092184787252,
+        "first_excluded_s": 6.833000000000617,
+        "quality": false,
+        "form": false,
+        "return_": 0.010484814061648418,
+        "qualified": 0,
+        "visible": 14,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "model": {
+        "hold_s": 0.002000000000000668,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 38.876763368341734,
+        "first_excluded_s": 6.875000000000631,
+        "quality": false,
+        "form": false,
+        "return_": 0.011936120461899735,
+        "qualified": 0,
+        "visible": 12,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "physics_and_host_equal": true
+    },
+    {
+      "condition": "survey",
+      "impairments": {
+        "seed": 9101,
+        "survey_position_std_m": 0.005,
+        "survey_angle_std_rad": 0.004363323129985824
+      },
+      "zero": {
+        "hold_s": 0.12000000000004007,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 5.544111174043998,
+        "first_excluded_s": 6.816000000000611,
+        "quality": false,
+        "form": false,
+        "return_": 0.3222715914174905,
+        "qualified": 0,
+        "visible": 47,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "model": {
+        "hold_s": 0.003000000000001002,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 34.29496223590957,
+        "first_excluded_s": 6.850000000000622,
+        "quality": false,
+        "form": false,
+        "return_": 0.005211876902209478,
+        "qualified": 0,
+        "visible": 5,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "physics_and_host_equal": true
+    },
+    {
+      "condition": "combined",
+      "impairments": {
+        "seed": 9101,
+        "latency_s": 0.04,
+        "latency_jitter_s": 0.005,
+        "rate_hz": 25.0,
+        "frame_drop_probability": 0.1,
+        "depth_noise_floor_m": 0.003,
+        "depth_noise_quadratic_per_m": 0.0003,
+        "depth_quantization_m": 0.001,
+        "invalid_pixel_probability": 0.01,
+        "rgb_noise_std": 2.0,
+        "rgb_gain": 0.9,
+        "survey_position_std_m": 0.005,
+        "survey_angle_std_rad": 0.004363323129985824
+      },
+      "zero": {
+        "hold_s": 0.0,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 38.263915085527124,
+        "first_excluded_s": 6.587000000000534,
+        "quality": false,
+        "form": false,
+        "return_": -0.006358957032601031,
+        "qualified": 0,
+        "visible": 3,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "model": {
+        "hold_s": 0.0,
+        "end_fraction": 0.0,
+        "peak_overlap_mm": 36.09546185743806,
+        "first_excluded_s": 6.540000000000519,
+        "quality": false,
+        "form": false,
+        "return_": -0.0040814639556726595,
+        "qualified": 0,
+        "visible": 3,
+        "physics": "db3b37472a55dd4d1cc399231a722079760d47fe3c4ca0916d83c65ad2b6ecce",
+        "host": "55b722850c3b70c235755c4e432d0ec684debbd6b9f0e303c7073b6921461269"
+      },
+      "physics_and_host_equal": true
+    }
+  ],
+  "all_pair_configs_equal_except_rebased_paths": true,
+  "source_receipts": [
+    {
+      "receipt": "reports/catch-repair-20261114/sensor-realism/model-receipt.json",
+      "source_sha256": "d6c5d7d8d17cd7f348742e6fbdebde704a755555e7a9f69f60709f57d0972250",
+      "recorded": "d6c5d7d8d17cd7f348742e6fbdebde704a755555e7a9f69f60709f57d0972250"
+    },
+    {
+      "receipt": "reports/catch-repair-20261114/sensor-realism/zero-receipt.json",
+      "source_sha256": "181feef169aad026ddf14fc528771c438ecb562a1843272b8cd57f55fb407c54",
+      "recorded": "181feef169aad026ddf14fc528771c438ecb562a1843272b8cd57f55fb407c54"
+    }
+  ]
+}

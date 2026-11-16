@@ -1,0 +1,148 @@
+{
+  "schema": "receiver-research-presentation-v1",
+  "frozen450_outcomes_unchanged": true,
+  "source_csv_sha256": "a76c559c9394a770141c200434850f6f6a0912886c1515f4da33940399ee7448",
+  "source_summary_sha256": "099fcb475c1cb5b54496ae270decbdf8042067815a8503d467a8c44451c64aef",
+  "analysis_script_sha256": "91736c3bf222f056d9deec363f5ff677627077dacc1778d0f78e0aaa1ceaf00c",
+  "rates": [
+    {
+      "route": "go",
+      "method": "current",
+      "successes": 4,
+      "total": 50,
+      "rate_percent": 8,
+      "wilson95_percent": [
+        3.154951408859298,
+        18.83824691834284
+      ]
+    },
+    {
+      "route": "go",
+      "method": "earlier",
+      "successes": 3,
+      "total": 50,
+      "rate_percent": 6,
+      "wilson95_percent": [
+        2.061497034897397,
+        16.217091688838174
+      ]
+    },
+    {
+      "route": "go",
+      "method": "exact_ball_diagnostic",
+      "successes": 0,
+      "total": 50,
+      "rate_percent": 0,
+      "wilson95_percent": [
+        0.0,
+        7.134759913335873
+      ]
+    },
+    {
+      "route": "out",
+      "method": "current",
+      "successes": 9,
+      "total": 50,
+      "rate_percent": 18,
+      "wilson95_percent": [
+        9.770192670234177,
+        30.796053674300783
+      ]
+    },
+    {
+      "route": "out",
+      "method": "earlier",
+      "successes": 0,
+      "total": 50,
+      "rate_percent": 0,
+      "wilson95_percent": [
+        0.0,
+        7.134759913335873
+      ]
+    },
+    {
+      "route": "out",
+      "method": "exact_ball_diagnostic",
+      "successes": 0,
+      "total": 50,
+      "rate_percent": 0,
+      "wilson95_percent": [
+        0.0,
+        7.134759913335873
+      ]
+    },
+    {
+      "route": "slant",
+      "method": "current",
+      "successes": 0,
+      "total": 50,
+      "rate_percent": 0,
+      "wilson95_percent": [
+        0.0,
+        7.134759913335873
+      ]
+    },
+    {
+      "route": "slant",
+      "method": "earlier",
+      "successes": 0,
+      "total": 50,
+      "rate_percent": 0,
+      "wilson95_percent": [
+        0.0,
+        7.134759913335873
+      ]
+    },
+    {
+      "route": "slant",
+      "method": "exact_ball_diagnostic",
+      "successes": 0,
+      "total": 50,
+      "rate_percent": 0,
+      "wilson95_percent": [
+        0.0,
+        7.134759913335873
+      ]
+    }
+  ],
+  "exploratory_paired_contrasts": [
+    {
+      "route": "go",
+      "current_only": 2,
+      "reference_only": 1,
+      "both_success": 2,
+      "both_failure": 45,
+      "paired_difference_percentage_points": 2,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "holm_adjusted_p": 1.0
+    },
+    {
+      "route": "out",
+      "current_only": 9,
+      "reference_only": 0,
+      "both_success": 0,
+      "both_failure": 41,
+      "paired_difference_percentage_points": 18,
+      "exact_mcnemar_two_sided_p": 0.00390625,
+      "holm_adjusted_p": 0.01171875
+    },
+    {
+      "route": "slant",
+      "current_only": 0,
+      "reference_only": 0,
+      "both_success": 0,
+      "both_failure": 50,
+      "paired_difference_percentage_points": 0,
+      "exact_mcnemar_two_sided_p": 1.0,
+      "holm_adjusted_p": 1.0
+    }
+  ],
+  "statistical_scope": "Post-hoc exact conditional McNemar test on50paired seeded throws; Holm correction across3current-versus-earlier contrasts. Not a preregistered significance analysis, training-seed comparison, or hardware-reliability claim.",
+  "interval_scope": "Marginal95%Wilson binomial intervals for the fixed per-route engineering sampler; not paired-effect intervals.",
+  "limitations": [
+    "Route-specific controller references differ; Out changes pose and grip together, preventing attribution to a single component.",
+    "Different physical models/horizons across routes; no pooled success rate.",
+    "The exact-ball diagnostic bypasses visibility/confidence and is not a learned-policy upper bound.",
+    "Training repeats are not represented by50throw perturbations."
+  ]
+}

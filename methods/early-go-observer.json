@@ -1,0 +1,360 @@
+{
+  "schema": "go-early-observer-counterexample-v1",
+  "source_sha256": "57ab40e671ef1a957f89f5f1fc975e7408ac481b92ebcb1777917aa8ff4da6c4",
+  "zero": {
+    "sensor_return": 1.1528582901537323,
+    "reward_components": {
+      "visible_dense": 1.7557427891136859,
+      "potential_with_boundary_debits": -0.7709804317450414,
+      "invalid_capture_penalties": -1.4800000000000009,
+      "fragmented_positive_dwell_credit": 1.6800000000005246,
+      "milestones": 0,
+      "terminal_bonus": 0,
+      "form_cost": -0.037482728771156916,
+      "action_cost": -0.0,
+      "discarded_reset_reward": -0.005578661555721174
+    },
+    "potential_boundaries": [
+      {
+        "time_s": 5.220000000000078,
+        "debit": -6.512428811191963e-05
+      },
+      {
+        "time_s": 5.580000000000198,
+        "debit": -0.12365472908102094
+      },
+      {
+        "time_s": 5.900000000000305,
+        "debit": -0.1098198561329329
+      },
+      {
+        "time_s": 6.1800000000003985,
+        "debit": -0.12198263879725596
+      },
+      {
+        "time_s": 6.300000000000439,
+        "debit": -0.12216783509737816
+      },
+      {
+        "time_s": 7.140000000000719,
+        "debit": -0.12451657156054977
+      },
+      {
+        "time_s": 8.540000000000706,
+        "debit": -0.03741596438743042
+      }
+    ],
+    "dwell_windows": [
+      {
+        "start_s": 5.380000000000131,
+        "end_s": 5.540000000000198,
+        "continuous_dwell_s": 0.2000000000000668
+      },
+      {
+        "start_s": 5.740000000000252,
+        "end_s": 5.860000000000305,
+        "continuous_dwell_s": 0.16000000000005343
+      },
+      {
+        "start_s": 6.420000000000479,
+        "end_s": 7.100000000000719,
+        "continuous_dwell_s": 0.7200000000002404
+      },
+      {
+        "start_s": 7.260000000000759,
+        "end_s": 7.300000000000786,
+        "continuous_dwell_s": 0.08000000000002672
+      },
+      {
+        "start_s": 7.380000000000799,
+        "end_s": 7.380000000000813,
+        "continuous_dwell_s": 0.04000000000001336
+      },
+      {
+        "start_s": 7.460000000000826,
+        "end_s": 7.500000000000853,
+        "continuous_dwell_s": 0.08000000000002672
+      },
+      {
+        "start_s": 7.580000000000866,
+        "end_s": 7.660000000000906,
+        "continuous_dwell_s": 0.12000000000004007
+      },
+      {
+        "start_s": 7.7400000000009195,
+        "end_s": 7.8200000000009595,
+        "continuous_dwell_s": 0.12000000000004007
+      },
+      {
+        "start_s": 7.900000000000973,
+        "end_s": 7.940000000001,
+        "continuous_dwell_s": 0.08000000000002672
+      },
+      {
+        "start_s": 8.020000000000994,
+        "end_s": 8.020000000000973,
+        "continuous_dwell_s": 0.04000000000001247
+      },
+      {
+        "start_s": 8.10000000000095,
+        "end_s": 8.100000000000929,
+        "continuous_dwell_s": 0.03999999999997783
+      }
+    ],
+    "valid_samples": 84,
+    "valid_interval_bounds_s": [
+      4.699999999999904,
+      8.500000000000728
+    ],
+    "median_sigma_xyz_m": [
+      0.048565018732143694,
+      0.04771308606014944,
+      0.03952530756077806
+    ],
+    "median_valid_relative_speed_mps": 0.1628776793497469,
+    "precontact_ball_bias_evaluation": {
+      "samples": 21,
+      "mean_xyz_m": [
+        -0.0011550166022201952,
+        -0.01982044812371166,
+        0.013009445054324532
+      ],
+      "median_xyz_m": [
+        0.0007015167655061161,
+        -0.022265110063380833,
+        0.011840223178948062
+      ],
+      "p95_norm_m": 0.04361726950547291,
+      "method": "linear interpolation of 25Hz archived ball qpos at exposure; evaluation only, not exact 1kHz state"
+    },
+    "physical_clean_hold_s": 3.537000000001181,
+    "first_excluded_s": null,
+    "post_exclusion_positive_policy_packets": []
+  },
+  "learned": {
+    "sensor_return": 2.0994654759816243,
+    "reward_components": {
+      "visible_dense": 2.083761319593193,
+      "potential_with_boundary_debits": -0.5719732396451975,
+      "invalid_capture_penalties": -1.3400000000000007,
+      "fragmented_positive_dwell_credit": 1.9600000000005826,
+      "milestones": 0,
+      "terminal_bonus": 0,
+      "form_cost": -0.036489827498234664,
+      "action_cost": -0.001411438024440047,
+      "discarded_reset_reward": -0.005578661555721174
+    },
+    "potential_boundaries": [
+      {
+        "time_s": 5.220000000000078,
+        "debit": -9.73357608251642e-05
+      },
+      {
+        "time_s": 5.340000000000118,
+        "debit": -0.13953234698372322
+      },
+      {
+        "time_s": 5.580000000000198,
+        "debit": -0.12143759136603906
+      },
+      {
+        "time_s": 6.1800000000003985,
+        "debit": -0.11641611666267895
+      },
+      {
+        "time_s": 8.580000000000684,
+        "debit": -0.03922478168302834
+      }
+    ],
+    "dwell_windows": [
+      {
+        "start_s": 5.460000000000158,
+        "end_s": 5.540000000000198,
+        "continuous_dwell_s": 0.12000000000004007
+      },
+      {
+        "start_s": 5.820000000000278,
+        "end_s": 6.1400000000003985,
+        "continuous_dwell_s": 0.3600000000001202
+      },
+      {
+        "start_s": 6.300000000000439,
+        "end_s": 6.860000000000639,
+        "continuous_dwell_s": 0.6000000000002004
+      },
+      {
+        "start_s": 6.940000000000652,
+        "end_s": 7.180000000000746,
+        "continuous_dwell_s": 0.2800000000000935
+      },
+      {
+        "start_s": 7.260000000000759,
+        "end_s": 7.380000000000813,
+        "continuous_dwell_s": 0.16000000000005343
+      },
+      {
+        "start_s": 7.460000000000826,
+        "end_s": 7.540000000000866,
+        "continuous_dwell_s": 0.12000000000004007
+      },
+      {
+        "start_s": 7.660000000000893,
+        "end_s": 7.740000000000933,
+        "continuous_dwell_s": 0.12000000000004007
+      },
+      {
+        "start_s": 7.8600000000009596,
+        "end_s": 7.860000000000973,
+        "continuous_dwell_s": 0.04000000000001336
+      },
+      {
+        "start_s": 7.940000000000986,
+        "end_s": 7.940000000001,
+        "continuous_dwell_s": 0.04000000000001336
+      },
+      {
+        "start_s": 8.020000000000994,
+        "end_s": 8.020000000000973,
+        "continuous_dwell_s": 0.04000000000001247
+      },
+      {
+        "start_s": 8.10000000000095,
+        "end_s": 8.100000000000929,
+        "continuous_dwell_s": 0.03999999999997783
+      },
+      {
+        "start_s": 8.260000000000861,
+        "end_s": 8.26000000000084,
+        "continuous_dwell_s": 0.03999999999997783
+      }
+    ],
+    "valid_samples": 91,
+    "valid_interval_bounds_s": [
+      4.699999999999904,
+      8.540000000000706
+    ],
+    "median_sigma_xyz_m": [
+      0.044671758271842985,
+      0.04677723394851942,
+      0.03903037293095379
+    ],
+    "median_valid_relative_speed_mps": 0.15422728552909126,
+    "precontact_ball_bias_evaluation": {
+      "samples": 21,
+      "mean_xyz_m": [
+        -0.0011550166022201952,
+        -0.01982044812371166,
+        0.013009445054324532
+      ],
+      "median_xyz_m": [
+        0.0007015167655061161,
+        -0.022265110063380833,
+        0.011840223178948062
+      ],
+      "p95_norm_m": 0.04361726950547291,
+      "method": "linear interpolation of 25Hz archived ball qpos at exposure; evaluation only, not exact 1kHz state"
+    },
+    "physical_clean_hold_s": 0.9920000000003313,
+    "first_excluded_s": 7.8150000000009445,
+    "post_exclusion_positive_policy_packets": [
+      {
+        "time_s": 7.820000000000946,
+        "reward": 0.034840973451812224,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 7.8600000000009596,
+        "reward": 0.0810277903568707,
+        "dwell_s": 0.04000000000001336
+      },
+      {
+        "time_s": 7.900000000000973,
+        "reward": 0.022898172993075377,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 7.940000000000986,
+        "reward": 0.08314773595744178,
+        "dwell_s": 0.04000000000001336
+      },
+      {
+        "time_s": 7.980000000001,
+        "reward": 0.01655280423430866,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 8.020000000000994,
+        "reward": 0.0813484491111342,
+        "dwell_s": 0.04000000000001247
+      },
+      {
+        "time_s": 8.060000000000972,
+        "reward": 0.013185534550326379,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 8.10000000000095,
+        "reward": 0.07844166627603512,
+        "dwell_s": 0.03999999999997783
+      },
+      {
+        "time_s": 8.140000000000928,
+        "reward": 0.020382313829030888,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 8.180000000000906,
+        "reward": 0.03335775910138957,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 8.220000000000883,
+        "reward": 0.026872899466855088,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 8.260000000000861,
+        "reward": 0.0901535225293873,
+        "dwell_s": 0.03999999999997783
+      },
+      {
+        "time_s": 8.30000000000084,
+        "reward": 0.014483194374068097,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 8.340000000000817,
+        "reward": 0.04319657140549213,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 8.380000000000795,
+        "reward": 0.0006126750589243251,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 8.420000000000773,
+        "reward": 0.012918325732967795,
+        "dwell_s": 0.0
+      },
+      {
+        "time_s": 8.46000000000075,
+        "reward": 0.010111343636878553,
+        "dwell_s": 0.0
+      }
+    ]
+  },
+  "counterexample_pass": true,
+  "recommendations": [
+    "Do not promote by sensor return or accumulated fragmented dwell. Keep physical held/support/form/endpoint evaluation independent.",
+    "A successor may log dense approach separately from uninterrupted retention evidence and assess coverage for the full required hold horizon; do not re-label fragments as sustained retention.",
+    "Expose uncertainty, invalid reasons and separate RGBD receiver/ball error against archived state in evaluation; improve camera geometry/calibration before relaxing gates.",
+    "Neither 0.75s nor 2s milestone was paid. The return increase comes from more visible proximity/fragmented dwell and fewer invalidation/potential losses; no evidence of terminal bonus exploit."
+  ],
+  "limits": [
+    "Potential and dense reconstruction uses saved policy capture cadence; exact returned ledger equality asserted.",
+    "Camera logs lack receiver XY estimate, so receiver localization bias cannot be independently reconstructed from this archive; pose covariance alone is not accuracy.",
+    "Precontact ball bias interpolates 25Hz view and excludes all postcontact frames; not a high-frequency impact metrology claim.",
+    "No controller, reward, confidence threshold or training changed."
+  ]
+}

@@ -1,0 +1,481 @@
+{
+  "schema": "diamond_hands_combined_writing_study_v1",
+  "title": "How robotics papers build an argument",
+  "subtitle": "A writing study for Diamond Hands",
+  "date": "15 November 2026",
+  "prepared_for": "Gustavo Garcia",
+  "affiliation": "University of California San Diego",
+  "introduction": [
+    "This study asks how influential robotics papers make an argument understandable and testable. Ten papers provide examples of control methods, planning algorithms, geometric estimation, mapping, tutorials and motor representations. They are a selected corpus, not a definitive ranking of robotics literature. Their citation counts help document influence within one database; they do not measure prose quality or establish why the work became influential.",
+    "The review covers primary full papers beyond their abstracts, including technical development, evaluation and closing limitations. The notes below analyze writing choices in original paraphrase. No full paper or source figure is redistributed. The purpose is to improve the presentation of Diamond Hands, not to imply that these papers validate its controller or demonstrate a new catching algorithm."
+  ],
+  "selection_and_count_method": "OpenAlex counts were obtained from exact DOI queries on 15 November 2026. Counts depend on database coverage and record merging. The corpus spans different evidence genres: a tutorial synthesizes prior results, a theory paper supports qualified guarantees, and a system paper evaluates interacting components. These genres should not be judged by one rhetorical template or one success metric.",
+  "papers": [
+    {
+      "id": "khatib_1986",
+      "title": "Real Time Obstacle Avoidance for Manipulators and Mobile Robots",
+      "authors": "Oussama Khatib",
+      "year": 1986,
+      "genre": "Local control method",
+      "citation_count": 8057,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://cs.stanford.edu/groups/manips/publications/pdfs/Khatib_1986_IJRR.pdf",
+      "bibliographic_url": "https://journals.sagepub.com/doi/10.1177/027836498600500106",
+      "doi_url": "https://doi.org/10.1177/027836498600500106",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1177/027836498600500106?select=id,doi,display_name,cited_by_count,publication_year,updated_date",
+      "citation_work_url": "https://openalex.org/W2103120971",
+      "source_version": "Published journal pages hosted by the author laboratory",
+      "locators": [
+        "Section 1: control level motivation",
+        "Sections 2 through 7: formulation and geometry",
+        "Section 8: competence limits",
+        "Sections 9 through 11: implementation and discussion"
+      ],
+      "pdf_sha256": "665d255ca6c6d5645ad685804e61b2713ba2ee51d6625fd796ed03cd141c69ba",
+      "original_metadata": {
+        "title": "Real-Time Obstacle Avoidance for Manipulators and Mobile Robots",
+        "authors": [
+          "Oussama Khatib"
+        ],
+        "publication_year": 1986,
+        "venue": "The International Journal of Robotics Research",
+        "volume": "5",
+        "issue": "1",
+        "pages": "90 through 98",
+        "doi": "10.1177/027836498600500106"
+      },
+      "note": "Khatib opens with a timing problem: global planning cannot supply every immediate response in a changing environment. Operational coordinates and force construction follow before the treatment expands to links and joint limits. Figure 3 then makes the implementation architecture legible. The important rhetorical choice is the placement of local minima and competence limits before the application claims. PUMA demonstrations support implementation feasibility, rather than a universal collision guarantee. A typical paragraph defines a control object, explains its physical role, and derives a consequence. Diamond Hands can adopt this bounded progression while preserving the distinction between a local response and reliable task completion.",
+      "note_word_count": 102,
+      "quoted_words": 0
+    },
+    {
+      "id": "icp",
+      "title": "A Method for Registration of 3D Shapes",
+      "authors": "Paul Besl and Neil McKay",
+      "year": 1992,
+      "genre": "Foundational geometric method used in robotics",
+      "citation_count": 18995,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://graphics.stanford.edu/courses/cs348a-21-winter/Handouts/Besl92.pdf",
+      "bibliographic_url": "https://doi.org/10.1109/34.121791",
+      "doi_url": "https://doi.org/10.1109/34.121791",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1109/34.121791",
+      "citation_work_url": "https://openalex.org/W2049981393",
+      "source_version": "Original IEEE article scan, eighteen PDF pages; printed pages 239 to 256. Page images inspected directly.",
+      "locators": [
+        "I, printed page 239",
+        "IV A and IV B, printed page 244",
+        "VI and VII, printed pages 248 to 254"
+      ],
+      "pdf_sha256": "e4cccdc03efaa55ad01738d69adb4a74618228042adabf5cb3c1658217379a6c",
+      "original_metadata": {
+        "original_title": "A method for registration of 3-D shapes",
+        "original_authors": [
+          "Paul J. Besl",
+          "Neil David McKay"
+        ],
+        "doi_url": "https://doi.org/10.1109/34.121791",
+        "full_paper_sha256": "e4cccdc03efaa55ad01738d69adb4a74618228042adabf5cb3c1658217379a6c",
+        "full_paper_bytes": 1715444,
+        "citation_response_sha256": "941a434723a52c4f2b38a83c6701bcae464483040337b89467fa7b79920b9c30",
+        "verbatim_quotation_words": 0,
+        "analysis_word_count": 142
+      },
+      "note": "Besl and McKay organize registration around a precise error objective and reusable geometric operations. Algorithm steps and the descent argument are placed together, showing why alternating updates cannot increase that objective. Convergence figures and noisy alignment examples connect the construction to visible behavior. Crucially, the local convergence result does not become a claim of universal registration; initialization, segmentation and excluded uncertainty assumptions remain consequential. Definitions lead to operations, operations to a guarantee, and examples to its limits. Diamond Hands needs the same separation between a decreasing visual objective and physical possession, with a failed receive retained as an explicit counterexample.",
+      "note_word_count": 100,
+      "quoted_words": 0
+    },
+    {
+      "id": "kavraki_1996",
+      "title": "Probabilistic Roadmaps for Path Planning in High Dimensional Configuration Spaces",
+      "authors": "Lydia E. Kavraki and Petr Švestka and Jean Claude Latombe and Mark H. Overmars",
+      "year": 1996,
+      "genre": "Planning method",
+      "citation_count": 6542,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://kavrakilab.rice.edu/publications/kavraki-svestka1996probabilistic-roadmaps-for.pdf",
+      "bibliographic_url": "https://kavrakilab.rice.edu/publications/kavraki-svestka1996probabilistic-roadmaps-for.html",
+      "doi_url": "https://doi.org/10.1109/70.508439",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1109/70.508439?select=id,doi,display_name,cited_by_count,publication_year,updated_date",
+      "citation_work_url": "https://openalex.org/W2128990851",
+      "source_version": "Author manuscript with journal citation on its first page",
+      "locators": [
+        "Sections 1 through 3: purpose and two phases",
+        "Sections 4 through 6: specialization and experiments",
+        "Section 7: computation tradeoffs"
+      ],
+      "pdf_sha256": "a2e0797b0872635aa96c37754a99a13e6a2c333583dd736ec3756088ecb7fcd9",
+      "original_metadata": {
+        "title": "Probabilistic Roadmaps for Path Planning in High-Dimensional Configuration Spaces",
+        "authors": [
+          "Lydia E. Kavraki",
+          "Petr Švestka",
+          "Jean-Claude Latombe",
+          "Mark H. Overmars"
+        ],
+        "publication_year": 1996,
+        "venue": "IEEE Transactions on Robotics and Automation",
+        "volume": "12",
+        "issue": "4",
+        "pages": "566 through 580",
+        "doi": "10.1109/70.508439"
+      },
+      "note": "Kavraki and colleagues explain roadmap preparation and later queries at the outset, so the reader understands where computation is spent. General components precede specialized implementations, and experiments revisit those choices. Tables report outcomes across independently constructed roadmaps and declared query budgets, making performance more than a selected path. The conclusion restores preparation cost when comparing alternatives: rapid queries do not make every complete planning task cheaper. Paragraphs name a component, expose its tradeoff, and justify an implementation. Diamond Hands should similarly separate calibration, training and evaluation costs, while distinguishing a general controller claim from a tuned receiving fixture and its repeated tests.",
+      "note_word_count": 102,
+      "quoted_words": 0
+    },
+    {
+      "id": "fox_1997",
+      "title": "The Dynamic Window Approach to Collision Avoidance",
+      "authors": "Dieter Fox and Wolfram Burgard and Sebastian Thrun",
+      "year": 1997,
+      "genre": "Reactive robot control",
+      "citation_count": 3970,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://publications.ri.cmu.edu/storage/publications/pub_files/pub1/fox_dieter_1997_1/fox_dieter_1997_1.pdf",
+      "bibliographic_url": "https://publications.ri.cmu.edu/the-dynamic-window-approach-to-collision-avoidance",
+      "doi_url": "https://doi.org/10.1109/100.580977",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1109/100.580977?select=id,doi,display_name,cited_by_count,publication_year,updated_date",
+      "citation_work_url": "https://openalex.org/W2117211893",
+      "source_version": "Full author manuscript hosted by Carnegie Mellon Robotics Institute",
+      "locators": [
+        "Sections 1 and 2: motivation and alternatives",
+        "Sections 3 and 4: dynamics and worked example",
+        "Section 5: RHINO experiments",
+        "Section 6: comparison and sensor limits"
+      ],
+      "pdf_sha256": "7b398d18448ca622a4011957a57dd32714cc97c8e8f981a98722baafa7f68ff1",
+      "original_metadata": {
+        "title": "The Dynamic Window Approach to Collision Avoidance",
+        "authors": [
+          "Dieter Fox",
+          "Wolfram Burgard",
+          "Sebastian Thrun"
+        ],
+        "publication_year": 1997,
+        "venue": "IEEE Robotics and Automation Magazine",
+        "volume": "4",
+        "issue": "1",
+        "pages": "23 through 33",
+        "doi": "10.1109/100.580977"
+      },
+      "note": "Fox and colleagues turn a practical failure into the organizing example: a desirable turn can be unreachable at the current speed. The corridor example persists through dynamics, admissible velocities, the objective and physical experiments. Figure 20 changes dynamic conditions in that same setting, connecting the design to an observable decision. Later examples broaden the demonstration, while the discussion qualifies comparisons across robots and exposes sensing assumptions that can cause failure. Paragraphs move from a concrete situation to a mechanism and then its consequence. For Diamond Hands, one complete receive can connect forecast, command, contact and final possession before aggregate results establish scope.",
+      "note_word_count": 102,
+      "quoted_words": 0
+    },
+    {
+      "id": "lavalle_2001",
+      "title": "Randomized Kinodynamic Planning",
+      "authors": "Steven M. LaValle and James J. Kuffner, Jr.",
+      "year": 2001,
+      "genre": "Kinodynamic planning",
+      "citation_count": 3329,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://lavalle.pl/papers/LavKuf01b.pdf",
+      "bibliographic_url": "https://lavalle.pl/research.html",
+      "doi_url": "https://doi.org/10.1177/02783640122067453",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1177/02783640122067453?select=id,doi,display_name,cited_by_count,publication_year,updated_date",
+      "citation_work_url": "https://openalex.org/W2000359213",
+      "source_version": "Correct author manuscript linked as LavKuf01b.pdf, verified against its title and journal metadata",
+      "locators": [
+        "Sections 1 through 3: motivation and state constraints",
+        "Section 4: tree construction and propagation",
+        "Section 5 and Table 1: experiments",
+        "Sections 6 and 7: qualified analysis and open issues"
+      ],
+      "pdf_sha256": "c8dee51d6f1fa16f2f03e0a29c0ab75323ace847e0729c964b1d36648a02b092",
+      "original_metadata": {
+        "title": "Randomized Kinodynamic Planning",
+        "authors": [
+          "Steven M. LaValle",
+          "James J. Kuffner, Jr."
+        ],
+        "publication_year": 2001,
+        "venue": "The International Journal of Robotics Research",
+        "volume": "20",
+        "issue": "5",
+        "pages": "378 through 400",
+        "doi": "10.1177/02783640122067453"
+      },
+      "note": "LaValle and Kuffner formulate motion through states, controls and differential constraints before constructing their randomized search. Figure 2 explains why momentum can invalidate a geometrically clear route. Tree growth and propagation then lead to experiments whose table exposes dimensions, controls and computation time. The analysis follows the examples and states restrictions, while the conclusion avoids an optimality claim and identifies sensitivity to the distance metric. The progression makes modeling choices accountable to the problem they solve. Diamond Hands should retain the analogous distinction between a projected hand trajectory, measured actuator response and actual retained support, rather than treating those stages as interchangeable.",
+      "note_word_count": 102,
+      "quoted_words": 0
+    },
+    {
+      "id": "slam",
+      "title": "Simultaneous Localization and Mapping Part I",
+      "authors": "Hugh Durrant Whyte and Tim Bailey",
+      "year": 2006,
+      "genre": "Tutorial and synthesis",
+      "citation_count": 4394,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://www-personal.acfr.usyd.edu.au/tbailey/papers/slamtute1.pdf",
+      "bibliographic_url": "https://doi.org/10.1109/MRA.2006.1638022",
+      "doi_url": "https://doi.org/10.1109/MRA.2006.1638022",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1109/MRA.2006.1638022",
+      "citation_work_url": "https://openalex.org/W2146881125",
+      "source_version": "Author manuscript with nine PDF pages; section locators refer to this version.",
+      "locators": [
+        "I and II",
+        "III and IV",
+        "V and VI"
+      ],
+      "pdf_sha256": "e1e9d435c73d78597b605f1c2c18e89e85bc5ae25861fa85eacb0f51181be945",
+      "original_metadata": {
+        "original_title": "Simultaneous localization and mapping: part I",
+        "original_authors": [
+          "Hugh F Durrant-Whyte",
+          "T. Bailey"
+        ],
+        "doi_url": "https://doi.org/10.1109/MRA.2006.1638022",
+        "full_paper_sha256": "e1e9d435c73d78597b605f1c2c18e89e85bc5ae25861fa85eacb0f51181be945",
+        "full_paper_bytes": 512717,
+        "citation_response_sha256": "f3ea002f200ba74a8e7fc38dadf4544fcc70835589542fbefd3712db4ce45011",
+        "verbatim_quotation_words": 0,
+        "analysis_word_count": 137
+      },
+      "note": "Durrant Whyte and Bailey write a tutorial rather than a new benchmark paper. They define the coupled localization and mapping problem, separate conceptual progress from practical realization, and derive solution families before discussing implementations. Figure 2 uses a spring analogy to explain correlation; later diagrams make conditional independence visible. The convergence caveat restricts the theoretical setting, while examples and available datasets support the tutorial purpose. Paragraphs advance dependencies, making the estimator necessary after the uncertainty structure is understood. Diamond Hands can use this approach to explain how sensing and control interact, while distinguishing a formal information boundary from qualified physical sensing.",
+      "note_word_count": 101,
+      "quoted_words": 0
+    },
+    {
+      "id": "karaman_2011",
+      "title": "Sampling Based Algorithms for Optimal Motion Planning",
+      "authors": "Sertac Karaman and Emilio Frazzoli",
+      "year": 2011,
+      "genre": "Theory and algorithms",
+      "citation_count": 5625,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://arxiv.org/pdf/1105.1186",
+      "bibliographic_url": "https://dspace.mit.edu/entities/publication/77dff1d1-ffd6-42f3-a3a5-fef87a964959",
+      "doi_url": "https://doi.org/10.1177/0278364911406761",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1177/0278364911406761?select=id,doi,display_name,cited_by_count,publication_year,updated_date",
+      "citation_work_url": "https://openalex.org/W1481356306",
+      "source_version": "Author manuscript on arXiv, cross checked with the MIT journal record",
+      "locators": [
+        "Section 1.3 and Table 1: exact contributions",
+        "Sections 2 through 4: definitions, algorithms and proofs",
+        "Section 5: numerical comparisons",
+        "Section 6: conclusions and scope"
+      ],
+      "pdf_sha256": "d06c76af8c0a3a941354aadfbf29378de50b569def1459f669a3cecc6e6a015b",
+      "original_metadata": {
+        "title": "Sampling-based Algorithms for Optimal Motion Planning",
+        "authors": [
+          "Sertac Karaman",
+          "Emilio Frazzoli"
+        ],
+        "publication_year": 2011,
+        "venue": "The International Journal of Robotics Research",
+        "volume": "30",
+        "issue": "7",
+        "pages": "846 through 894",
+        "doi": "10.1177/0278364911406761"
+      },
+      "note": "Karaman and Frazzoli distinguish finding a feasible path from approaching the best path cost. Table 1 states which properties each algorithm possesses, establishing a compact contract before the detailed analysis. Definitions and negative baseline results motivate the new constructions; proofs precede numerical comparisons that illustrate their consequences. The repeated cost and runtime experiments support empirical behavior without replacing the assumptions behind the guarantees. The stated scope also excludes differential constraints. The transferable pattern is a precise property, a baseline failure and a targeted change. Diamond Hands should define retention, form, impact and sensor reward separately before interpreting improvement in any one of them.",
+      "note_word_count": 103,
+      "quoted_words": 0
+    },
+    {
+      "id": "octomap",
+      "title": "OctoMap An Efficient Probabilistic 3D Mapping Framework Based on Octrees",
+      "authors": "Armin Hornung, Kai Wurm, Maren Bennewitz, Cyrill Stachniss and Wolfram Burgard",
+      "year": 2013,
+      "genre": "Representation, implementation and systems evaluation",
+      "citation_count": 3014,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://www.arminhornung.de/Research/pub/hornung13auro.pdf",
+      "bibliographic_url": "https://doi.org/10.1007/s10514-012-9321-0",
+      "doi_url": "https://doi.org/10.1007/s10514-012-9321-0",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1007/s10514-012-9321-0",
+      "citation_work_url": "https://openalex.org/W2133844819",
+      "source_version": "Author hosted preprint with seventeen PDF pages.",
+      "locators": [
+        "1 and 3",
+        "5.3 and Table 1",
+        "5.4 to 5.6"
+      ],
+      "pdf_sha256": "5a660dbab6415efee333f15f6b732fca4abed71ddfa025748d8c596a5593ba42",
+      "original_metadata": {
+        "original_title": "OctoMap: an efficient probabilistic 3D mapping framework based on octrees",
+        "original_authors": [
+          "Armin Hornung",
+          "Kai M. Wurm",
+          "Maren Bennewitz",
+          "Cyrill Stachniss",
+          "Wolfram Burgard"
+        ],
+        "doi_url": "https://doi.org/10.1007/s10514-012-9321-0",
+        "full_paper_sha256": "5a660dbab6415efee333f15f6b732fca4abed71ddfa025748d8c596a5593ba42",
+        "full_paper_bytes": 3679095,
+        "citation_response_sha256": "d2c6720627737b526fd7f4d71b1d0e7313269d5c1ed08328cb6b88e7c02d53a0",
+        "verbatim_quotation_words": 0,
+        "analysis_word_count": 132
+      },
+      "note": "Hornung and colleagues derive representation requirements from robot tasks, then separate probabilistic design from implementation choices. Evaluation returns to those requirements through accuracy, memory, runtime and confidence behavior. Figure 4 exposes free space that a surface rendering hides, while Figure 18 connects resource use with information loss. The distinction between reused measurements and a separate evaluation split makes the accuracy claim interpretable; agreement with scans is not independent physical truth. The rhetorical lesson is to reveal what a representation omits and to evaluate competing requirements separately. Diamond Hands should place support exclusions, uncertainty and force costs beside attractive receiving footage.",
+      "note_word_count": 100,
+      "quoted_words": 0
+    },
+    {
+      "id": "dmp",
+      "title": "Dynamical Movement Primitives Learning Attractor Models for Motor Behaviors",
+      "authors": "Auke Jan Ijspeert, Jun Nakanishi, Heiko Hoffmann, Peter Pastor and Stefan Schaal",
+      "year": 2013,
+      "genre": "Motor control framework and theoretical synthesis",
+      "citation_count": 1641,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://infoscience.epfl.ch/bitstreams/d3bc5b52-603d-4006-9fd1-54b7cd46c461/download",
+      "bibliographic_url": "https://doi.org/10.1162/NECO_a_00393",
+      "doi_url": "https://doi.org/10.1162/NECO_a_00393",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1162/NECO_a_00393",
+      "citation_work_url": "https://openalex.org/W2136719407",
+      "source_version": "Author institution full article PDF with forty six pages; printed pages 328 to 373.",
+      "locators": [
+        "2 and 2.1.7",
+        "3.1 and 3.2.2",
+        "3.4 and 4.3"
+      ],
+      "pdf_sha256": "db4a4042b192c2459829f0af4c592d9aeaafcc481388e9e497196d0977713381",
+      "original_metadata": {
+        "original_title": "Dynamical Movement Primitives: Learning Attractor Models for Motor Behaviors",
+        "original_authors": [
+          "Auke Jan Ijspeert",
+          "Jun Nakanishi",
+          "Heiko Hoffmann",
+          "Peter Pástor",
+          "Stefan Schaal"
+        ],
+        "doi_url": "https://doi.org/10.1162/NECO_a_00393",
+        "full_paper_sha256": "db4a4042b192c2459829f0af4c592d9aeaafcc481388e9e497196d0977713381",
+        "full_paper_bytes": 2628948,
+        "citation_response_sha256": "a0fcb679dca9064e6ed78441b307f6aedc19e7e51882731d3d2260db64a0a4cf",
+        "verbatim_quotation_words": 0,
+        "analysis_word_count": 133
+      },
+      "note": "Ijspeert and colleagues first declare desired modeling properties, then build dynamics and learned forcing that address them. Extensions answer earlier requirements, so the reader can see why each addition exists. Figure 10 combines a complete trace with timing detail, and Figure 14 exposes distortion caused by coordinate choices. Attractor stability remains a model property, while robot examples require tracking and feedback. The paper therefore offers a useful distinction between a trajectory representation and its physical execution. Diamond Hands should show desired hand motion, measured joint response and retention as separate outcomes, with sensitivity tests where a claim crosses from one level to another.",
+      "note_word_count": 103,
+      "quoted_words": 0
+    },
+    {
+      "id": "orb",
+      "title": "ORB SLAM A Versatile and Accurate Monocular SLAM System",
+      "authors": "Raul Mur Artal, Jose Maria Montiel and Juan Tardos",
+      "year": 2015,
+      "genre": "Integrated system and comparative evaluation",
+      "citation_count": 7623,
+      "citation_date": "15 November 2026",
+      "primary_url": "https://webdiis.unizar.es/~jdtardos/papers/2015_TRO_Mur_Montiel_Tardos.pdf",
+      "bibliographic_url": "https://doi.org/10.1109/TRO.2015.2463671",
+      "doi_url": "https://doi.org/10.1109/TRO.2015.2463671",
+      "citation_api_url": "https://api.openalex.org/works/https://doi.org/10.1109/TRO.2015.2463671",
+      "citation_work_url": "https://openalex.org/W1612997784",
+      "source_version": "Author hosted accepted article with seventeen PDF pages and provisional pagination.",
+      "locators": [
+        "I and III",
+        "VIII B and VIII E",
+        "IX B and IX C"
+      ],
+      "pdf_sha256": "342e7424e5138e9bc356140f223d5532018ffa09e715b0edd5f006355810208e",
+      "original_metadata": {
+        "original_title": "ORB-SLAM: A Versatile and Accurate Monocular SLAM System",
+        "original_authors": [
+          "Raul Mur-Artal",
+          "J. M. M. Montiel",
+          "Juan D. Tardós"
+        ],
+        "doi_url": "https://doi.org/10.1109/TRO.2015.2463671",
+        "full_paper_sha256": "342e7424e5138e9bc356140f223d5532018ffa09e715b0edd5f006355810208e",
+        "full_paper_bytes": 1560683,
+        "citation_response_sha256": "079c8a1a6a87aec32719b339a590e587c6a5bde470a5e3b8fa9ac6c98d03f749",
+        "verbatim_quotation_words": 0,
+        "analysis_word_count": 134
+      },
+      "note": "Mur Artal and colleagues translate system requirements into explicit contributions and interacting modules. Figure 1 assigns responsibilities; subsequent evaluation questions correspond to capabilities introduced earlier. A controlled loop optimization comparison reports error and runtime together, while a failed sequence and drift without loops remain visible. The discussion acknowledges advantages of alternative methods instead of presenting every design choice as dominant. This creates a traceable chain from requirement to module to evidence and tradeoff. Diamond Hands should likewise identify what each scripted or learned component changes, preserve failed routes, and state eligibility conditions beside the quantitative comparison rather than only in a distant appendix.",
+      "note_word_count": 103,
+      "quoted_words": 0
+    }
+  ],
+  "synthesis": [
+    {
+      "title": "Begin with a difficulty the evidence can answer",
+      "text": "A strong opening makes the physical or computational difficulty concrete before listing components. It establishes what is being attempted, why an existing approach leaves a gap, and what a useful answer would look like. For Diamond Hands, the central difficulty is coordinating route motion, visual interception and sustained hand support. The opening should name that challenge and the present simulation boundary. A selected video can illustrate the question, but it should not silently answer a broader reliability or hardware question."
+    },
+    {
+      "title": "Make design choices follow from the problem",
+      "text": "Methods become readable when each decision resolves a previously introduced difficulty. A representation needs a reason, a controller needs an observable input, and a timing rule needs an actuator constraint. This creates transitions through necessity rather than a catalogue of implementation details. Diamond Hands can explain the tracker, grip schedule and residual policy in that order, identifying what is fixed and what changes. The reader then knows which mechanism a comparison tests and which alternatives the experiment cannot distinguish."
+    },
+    {
+      "title": "Give every claim the right kind of evidence",
+      "text": "A mathematical property, a physical demonstration and a repeated comparison answer different questions. A proof needs assumptions; a demonstration needs its complete outcome; a comparative claim needs matched conditions and clear denominators. Sensor reward, commanded motion and admissible possession are different measurements. Their agreement must be tested rather than assumed. The website should preserve these distinctions in its grammar as well as its plots, so that an improvement in an intermediate signal does not become an unsupported claim of improved catching."
+    },
+    {
+      "title": "Use figures to expose the mechanism",
+      "text": "Useful figures reveal structure or change, rather than decorate the page. A complete example can connect inputs, a decision and its consequence; repeated trials then show its scope. Full timelines, units, source versions and failure markers make that connection inspectable. For Diamond Hands, contact and support labels belong beside the recorded play, with those evaluation labels kept outside the policy. A selected success should remain adjacent to the full comparison, while a force reduction should be read with retention and eventual impact."
+    },
+    {
+      "title": "Put limitations where they change interpretation",
+      "text": "Assumptions are most useful at the point where they constrain a conclusion. Preparation cost belongs beside query speed, local convergence beside an objective, and sensor coverage beside an observation claim. Diamond Hands similarly needs model assumptions near its rates, possession criteria before its formal results, and reward failures near training returns. Negative controls and failed cases should advance the argument. They explain why an apparently favorable intermediate result did not qualify, instead of appearing as unrelated caveats after a broad capability claim."
+    },
+    {
+      "title": "Close with a discriminating next question",
+      "text": "A conclusion should retain the strongest supported finding and identify the unresolved mechanism. It should not inflate one successful condition into a general capability, or replace a failed result with a list of ambitions. Diamond Hands can conclude that its fixture permits occasional walking retention while exposing reward ambiguity and physical sensitivity. The next question is whether an accessible possession estimate and independently tested coordination changes improve complete outcomes. New experiments would still need declared criteria, reserved evaluation conditions and full negative evidence."
+    }
+  ],
+  "applied_changes": [
+    {
+      "title": "Motivation now leads to mechanism",
+      "status": "Observed in current source",
+      "location": "method",
+      "text": "The opening connects moving vision, route following and manipulation to the football task. It then explains pretrained locomotion, scripted catch coordination, sensed inputs and machine commands before distinguishing the learning question. This provides a reason for the components instead of presenting them as an unconnected feature list."
+    },
+    {
+      "title": "Criteria precede the formal rate displays",
+      "status": "Observed in current source",
+      "location": "criteria",
+      "text": "The results narrative defines sustained bilateral support, endpoint retention, form, exclusions, overlap and balance before the formal comparison displays. Selected demonstrations and summary counts still appear earlier, so the report does not claim that every number waits for the definition. The important evaluation contract is now visible at the comparison."
+    },
+    {
+      "title": "Negative learning is part of the main result",
+      "status": "Observed in current source",
+      "location": "reward",
+      "text": "The page separates the scripted study from later PPO runs and explains what each policy can change. It reports failed promotion and the reward ranking counterexample in the main argument. Greater observer coverage is therefore not presented as possession detection or as evidence of a better physical catch."
+    },
+    {
+      "title": "Diagnostics test specific explanations",
+      "status": "Observed in current source",
+      "location": "diagnostics",
+      "text": "The discussion moves through physical sensitivity, observer ambiguity, reward replay and local command response. Each comparison states what stays fixed and what its measurement can establish. The Out calibration correctly disables ball contacts while retaining the visual ball for a causal forecast; it is not an experiment with the ball absent."
+    },
+    {
+      "title": "Falls and the ending retain whole outcomes",
+      "status": "Observed in current source",
+      "location": "falls",
+      "text": "The fall section ties a missed receive to balance and landing consequences, including a rejected stylized response. The closing paragraph connects occasional walking retention to reward and model limitations, then identifies independent evaluation and physical transfer as unresolved. It does not convert a lower head force into a general safety claim."
+    }
+  ],
+  "future_presentation_ideas": "Further presentation ideas remain proposals. One synchronized timeline could show the same recorded play, sensor validity, reward increments and admissible support labels. Another figure could separate requested hand motion, projected commands and encoder response. Such figures would clarify existing evidence; creating them would not constitute a new scientific experiment, controller improvement or physical validation.",
+  "provenance_policy": "Primary paper links, DOI records and exact OpenAlex query URLs are attached to every paper entry and embedded as clickable source links in this PDF. The combined JSON retains original bibliographic metadata, source versions, reading locators and PDF checksums. Counts are dated database observations. The reading records retain access details, including the corrected LaValle paper URL. No claim is made that citation count causes good writing, or that a selected corpus represents all robotics research.",
+  "site_snapshot_audit": {
+    "path": "site/dist/index.html",
+    "sha256": "09ef4ed15625dcf7ef0eba9346a79be84346f1f0c97df5446e688872cc897c2e",
+    "method": "HTML source inspection, not a browser interaction test",
+    "criteria_before_formal_success_display": true,
+    "ball_contact_disabled_wording_present": true,
+    "no_site_edits_by_report_worker": true
+  },
+  "worker_sha256": {
+    "worker-a.json": "5835b3d826497c97c5889a4f260d30be33a1bd8040ebc9a3fe263181c8760766",
+    "worker-b.json": "6576472ba2c95c024027815bbecf507a17b02bebf1586a5d64da1a46052c71e3"
+  },
+  "original_analysis_not_impersonation": true,
+  "quoted_words": 0,
+  "no_new_experiments": true,
+  "pdf_path": "output/pdf/diamond-hands-writing-study.pdf",
+  "word_counts": {
+    "paper_notes": 1018,
+    "synthesis": 487,
+    "introduction": 121,
+    "applied_changes": 247,
+    "narrative_total": 2060
+  }
+}

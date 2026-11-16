@@ -1,0 +1,147 @@
+"""Export audited, exploratory receiver diagnostics without changing their scores.
+
+Frames are correlated and physical cells are single deterministic runs. This
+export deliberately reports neither frame confidence intervals nor pooled rates.
+"""
+from pathlib import Path
+import csv
+import gzip
+import hashlib
+import json
+import shutil
+
+import numpy as np
+
+ROOT = Path(__file__).resolve().parents[1]
+POST = ROOT / "reports/catch-repair-20261114/post-study"
+INDEPENDENT = POST / "training-three-routes/independent"
+PERCEPTION = ROOT / "reports/perception-pair-benchmark-20261115"
+OUTPUT = ROOT / "site/dist/diagnostics"
+
+
+def digest(path):
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def write_json(name, data):
+    (OUTPUT / name).write_text(json.dumps(data, indent=2, allow_nan=False) + "\n")
+
+
+def main():
+    OUTPUT.mkdir(exist_ok=True)
+    audit = json.loads((INDEPENDENT / "perception-final-independent.json").read_text())
+    assert audit["all600summaries_exact"] and audit["all_observer_pairs_identical_packet_hash"]
+    physics_audit = json.loads((INDEPENDENT / "go-physics-sensitivity-independent.json").read_text())
+    assert physics_audit["all6scores_exact"] and physics_audit["all_nominal_arrays_exact"]
+    physics = json.loads((POST / "go-physics-sensitivity-r1/site-summary.json").read_text())
+    training = json.loads((INDEPENDENT / "final-three-route-summary.json").read_text())
+    assert training["all_declared_conditions_present"]
+    input_csv = PERCEPTION / "linux/artifacts/benchmark/paired-observations.csv"
+    rows = list(csv.DictReader(input_csv.open()))
+    assert len(rows) == 40200
+    conditions = list(dict.fromkeys(r["condition"] for r in rows))
+    aggregate = []
+    for policy in ["zero", "learned"]:
+        for visibility in ["intact", "yellow_marker_hidden", "ball_hidden"]:
+            for condition in conditions:
+                for method in ["original", "rig_association"]:
+                    cell = [r for r in rows if (r["policy"], r["visibility"], r["condition"], r["method"]) == (policy, visibility, condition, method)]
+                    assert len(cell) == 335
+                    errors = [float(r["xyz_error_m"]) * 1000 for r in cell if r["pose_usable"] == "True"]
+                    aggregate.append(dict(trajectory=policy, visibility=visibility, condition=condition, method=method,
+                                          camera_frames=335, usable=len(errors), coverage_percent=len(errors) / 335 * 100,
+                                          xyz_rmse_mm=float(np.sqrt(np.mean(np.square(errors)))) if errors else None,
+                                          xyz_p95_mm=float(np.percentile(errors, 95)) if errors else None))
+    # Errors conditional on returning a pose use different subsets. Explicitly
+    # compare the common subset, rather than interpreting their RMSE as a gain.
+    common_subset = []
+    for policy in ["zero", "learned"]:
+        cell = [r for r in rows if r["visibility"] == "intact" and r["condition"] == "clean" and r["policy"] == policy]
+        grouped = {}
+        for r in cell:
+            grouped.setdefault((r["camera"], r["capture_s"]), {})[r["method"]] = r
+        pairs = [v for v in grouped.values() if all(x["pose_usable"] == "True" for x in v.values())]
+        common_subset.append(dict(trajectory=policy, paired_usable_frames=len(pairs),
+                                  rmse_mm={m: float(np.sqrt(np.mean([float(p[m]["xyz_error_m"])**2 for p in pairs]))) * 1000 for m in ["original", "rig_association"]}))
+    write_json("perception-aggregate.json", dict(cells=aggregate, clean_common_subset=common_subset,
+                                                scope="Five fixed cameras, 67 times each, two archived trajectories. Camera-frame availability, not runtime selection or independent trials. No frame-wise confidence interval.",
+                                                source_csv_sha256=digest(input_csv)))
+    write_json("physics-summary.json", physics)
+    training_rows = []
+    for route, group in training["routes"].items():
+        for trial in group["trials"]:
+            assert trial["fullscore_exact"]
+            assert trial["warnings"] == 0
+            assert abs(trial["actual_episode_duration_s"] - {"go": 11.0, "out": 10.0, "slant": 9.5}[route]) < .002
+            training_rows.append(dict(route=route, condition=trial["condition"], policy=trial["policy"],
+                                      clean_hold_s=trial["clean_hold_s"], held_at_finish=trial["held_at_finish"],
+                                      experimental_physical_pass=trial["primary_experimental_physical_pass"],
+                                      original_realistic_lower_catch=trial["fullscore"]["realistic_lower_catch"],
+                                      sensor_return=trial["proxyreturn"], form_pass=trial["formpass"],
+                                      checkpoint_sha256=trial["checkpoint_sha256"]))
+    assert len(training_rows) == 26
+    with (OUTPUT / "final-training-trials.csv").open("w") as f:
+        writer = csv.DictWriter(f, fieldnames=list(training_rows[0])); writer.writeheader(); writer.writerows(training_rows)
+    # Download compressed observation rows; deterministic gzip header.
+    (OUTPUT / "paired-observations.csv.gz").write_bytes(gzip.compress(input_csv.read_bytes(), mtime=0))
+    sources = {
+        "perception-protocol.json": PERCEPTION / "protocol.json",
+        "perception-benchmark.py.txt": PERCEPTION / "benchmark.py",
+        "perception-independent.json": INDEPENDENT / "perception-final-independent.json",
+        "physics-protocol.json": POST / "go-physics-sensitivity-r1/protocol.json",
+        "physics-model-audit.json": POST / "go-physics-sensitivity-r1/model-cross-comparison.json",
+        "physics-independent.json": INDEPENDENT / "go-physics-sensitivity-independent.json",
+        "physics-evidence-manifest.json": POST / "go-physics-sensitivity-r1/evidence-manifest.json",
+        "final-training-independent.json": INDEPENDENT / "final-three-route-summary.json",
+        "final-training-protocol.json": INDEPENDENT / "final-evaluation-plan.json",
+        "associated-markers.py.txt": ROOT / "src/g1_receiver/associated_markers.py",
+    }
+    for name, source in sources.items():
+        shutil.copyfile(source, OUTPUT / name)
+    import matplotlib
+    matplotlib.use("Agg")
+    import matplotlib.pyplot as plt
+    plt.rcParams.update({"font.family": "sans-serif", "font.sans-serif": ["Arial", "Helvetica", "DejaVu Sans"],
+                         "font.size": 10, "axes.spines.top": False, "axes.spines.right": False,
+                         "svg.fonttype": "none", "savefig.facecolor": "white"})
+    labels = ["Nominal", "Ball mass / inertia −10%", "Ball mass / inertia +10%", "Hand contact friction −20%", "Hand contact friction +20%", "Native actuator force limits −25%"]
+    fig, ax = plt.subplots(figsize=(8.6, 4.9))
+    for i, r in enumerate(physics["rows"]):
+        good = r["engineering_endpoint_retained"]
+        color = "#247a73" if good else "#8a4743"
+        ax.hlines(i, 0, r["clean_bilateral_hold_s"], color="#d5d5d5", lw=4)
+        ax.scatter(r["clean_bilateral_hold_s"], i, marker="o" if good else "x", color=color, s=65, linewidth=2)
+        ax.text(r["clean_bilateral_hold_s"] + .12, i, f'{r["clean_bilateral_hold_s"]:.3f} s', va="center", fontsize=10)
+    ax.scatter([], [], c="#247a73", marker="o", label="Retained at finish")
+    ax.scatter([], [], c="#8a4743", marker="x", label="Lost by finish")
+    ax.set(yticks=range(6), yticklabels=labels, xlim=(0, 6.2), ylim=(5.6, -.6), xlabel="Longest clean bilateral control (s)", title="Go: sensitivity to the physical model")
+    ax.grid(axis="x", alpha=.15); ax.set_axisbelow(True)
+    fig.legend(*ax.get_legend_handles_labels(), loc="upper center", bbox_to_anchor=(.63, .135), ncol=2, frameon=False, fontsize=9)
+    fig.text(.03, .025, "One fixed play per condition · Same controller and throw · No confidence interval or hardware calibration", fontsize=8, color="#555")
+    fig.tight_layout(rect=(0, .16, 1, 1))
+    for ext in ["png", "svg"]: fig.savefig(OUTPUT / f"go-physics-sensitivity.{ext}", dpi=180)
+    plt.close(fig)
+    labels = ["Clean", "RGB brightness ×0.65", "RGB brightness ×1.25", "Depth bias +10 mm", "Depth noise σ = 5 mm", "Depth dropout 10%", "Survey X bias +20 mm", "Capture age 40 ms", "Capture age 120 ms", "Timestamp 40 ms in future"]
+    fig, axes = plt.subplots(1, 2, figsize=(10, 5.7), sharey=True)
+    for ax, policy, title in zip(axes, ["zero", "learned"], ["Baseline trajectory", "Final learned trajectory"]):
+        data = np.array([[next(r["coverage_percent"] for r in aggregate if (r["trajectory"], r["visibility"], r["condition"], r["method"]) == (policy, "intact", cond, method)) for method in ["original", "rig_association"]] for cond in conditions])
+        ax.imshow(data, cmap="Blues", vmin=0, vmax=100, aspect="auto")
+        for i in range(len(conditions)):
+            for j in range(2): ax.text(j, i, f"{data[i,j]:.1f}%", ha="center", va="center", fontsize=10, color="#151515")
+        ax.set(xticks=[0, 1], xticklabels=["Color only", "Marker pair check"], yticks=range(10), yticklabels=labels, title=title)
+        ax.tick_params(length=0, pad=9)
+        for spine in ax.spines.values(): spine.set_visible(False)
+    fig.suptitle("Usable receiver pose observations", fontsize=14, y=.99)
+    fig.text(.025, .025, "335 camera frames per cell (67 times × 5 views) · Correlated samples · 80 ms freshness limit", fontsize=9, color="#555")
+    fig.tight_layout(rect=(0, .06, 1, .96), w_pad=3)
+    for ext in ["png", "svg"]: fig.savefig(OUTPUT / f"perception-stress.{ext}", dpi=180)
+    plt.close(fig)
+    write_json("export-manifest.json", dict(script_sha256=digest(Path(__file__)),
+               inputs={str(v.relative_to(ROOT)): digest(v) for v in sources.values()},
+               outputs={p.name: digest(p) for p in sorted(OUTPUT.iterdir()) if p.is_file() and p.name != "export-manifest.json"},
+               scope="Post-study engineering diagnostics. Original 600 outcomes and all thresholds remain unchanged."))
+    print(json.dumps({"training_rows": len(training_rows), "perception_rows": len(rows), "physics_cases": len(physics["rows"]), "output": str(OUTPUT)}))
+
+
+if __name__ == "__main__":
+    main()

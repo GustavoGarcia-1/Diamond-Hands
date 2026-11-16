@@ -1,0 +1,1090 @@
+{
+  "all_10_pretrigger_prefixes_exact": true,
+  "old_archive_exact": false,
+  "first_tip_s": 4.539,
+  "deep_tuck_trigger_while_bilateral": true,
+  "drop_end_baseline_s": 4.823,
+  "drop_end_tuck_s": 4.819,
+  "rows": [
+    {
+      "case": "baseline",
+      "trigger_phase": "baseline",
+      "stable_ground_final2s": true,
+      "overall_peak_nonfoot_normal_n": 2755.2487342468826,
+      "maximum150ms_nonfoot_impulse_ns": 140.69929576169045,
+      "first150ms_nonfoot_impulse_ns": 29.19875599431472,
+      "first_nonfoot_floor_s": 5.124000000000046,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-linux/artifacts/study/baseline",
+      "source_hash": "b73d73a8f99c65d3164950bd918e4bfd38137107a7a2add02480792d0671c45b",
+      "trigger_s": null,
+      "prefix_beforetrigger": {},
+      "metrics": {
+        "head": {
+          "peak_normal_n": 1182.7525288036218,
+          "peak_time_s": 5.591000000000202,
+          "first_contact_s": 5.591000000000202,
+          "first150ms_impulse_ns": 12.244909064774848,
+          "whole_episode_impulse_ns": 33.601038209812906
+        },
+        "hand": {
+          "peak_normal_n": 1118.7172537039485,
+          "peak_time_s": 5.394000000000136,
+          "first_contact_s": 5.394000000000136,
+          "first150ms_impulse_ns": 11.673094427476345,
+          "whole_episode_impulse_ns": 139.64790571754216
+        },
+        "torso": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 2755.2487342468826,
+          "peak_time_s": 5.561000000000192,
+          "first_contact_s": 5.124000000000046,
+          "first150ms_impulse_ns": 29.19875599431472,
+          "whole_episode_impulse_ns": 2105.244808685737
+        }
+      },
+      "stable_standing": false,
+      "final_height_m": 0.12437820451461792,
+      "final_upright_cos": 0.03545752140396807,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-baseline.mp4",
+      "evidence": "falls/baseline-forces.npz",
+      "poses": "falls/baseline-poses.npz",
+      "video_metadata": {
+        "mode": "baseline",
+        "trigger_s": null,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": false,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 1182.7525288036218,
+            "first_contact_s": 5.591000000000202
+          },
+          "hand": {
+            "peak_sum_normal_n": 1118.7172537039485,
+            "first_contact_s": 5.394000000000136
+          },
+          "torso": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "other": {
+            "peak_sum_normal_n": 2755.2487342468826,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "3b9f0339c8f8a8006e47ae90019aff49abedba4ef467bee4ce0159f745abc027",
+        "source_view_sha256": "9f9c8dc3664420cd44c75a5de8caaacff7ae0c005b99273297c3f24e12d6247b",
+        "source": "reports/fall-recovery-20261114/fullplay-linux/artifacts/study/baseline",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    },
+    {
+      "case": "crouch_tuck",
+      "trigger_phase": "during_unstable_bilateral_receive",
+      "stable_ground_final2s": true,
+      "overall_peak_nonfoot_normal_n": 4175.901316312441,
+      "maximum150ms_nonfoot_impulse_ns": 130.75538163148275,
+      "first150ms_nonfoot_impulse_ns": 130.75538163148275,
+      "first_nonfoot_floor_s": 5.10700000000004,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-linux/artifacts/study/crouch_tuck",
+      "source_hash": "e169f21c1a5224baa08e2e6a99e341f28613721ddf6b94f155f9cdf3cda8d660",
+      "trigger_s": 4.679999999999898,
+      "prefix_beforetrigger": {
+        "view.npz:qpos": true,
+        "trace.npz:motion": true,
+        "trace.npz:contact": true
+      },
+      "metrics": {
+        "head": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "hand": {
+          "peak_normal_n": 693.0231184373941,
+          "peak_time_s": 5.151000000000055,
+          "first_contact_s": 5.145000000000053,
+          "first150ms_impulse_ns": 15.380137551336148,
+          "whole_episode_impulse_ns": 130.94295039277176
+        },
+        "torso": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 4175.901316312441,
+          "peak_time_s": 5.139000000000051,
+          "first_contact_s": 5.10700000000004,
+          "first150ms_impulse_ns": 116.58033289893116,
+          "whole_episode_impulse_ns": 2103.7886390707754
+        }
+      },
+      "stable_standing": false,
+      "final_height_m": 0.17329109109233473,
+      "final_upright_cos": 0.07775667584000145,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-crouch_tuck.mp4",
+      "evidence": "falls/crouch_tuck-forces.npz",
+      "poses": "falls/crouch_tuck-poses.npz",
+      "video_metadata": {
+        "mode": "crouch_tuck",
+        "trigger_s": 4.679999999999898,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": false,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "hand": {
+            "peak_sum_normal_n": 693.0231184373941,
+            "first_contact_s": 5.145000000000053
+          },
+          "torso": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "other": {
+            "peak_sum_normal_n": 4175.901316312441,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "256e11616dd9401a8de60c2a017c46e269f52983fa11c12e093c2eec9c4439f6",
+        "source_view_sha256": "6bbb9a5b41ec87cfd9c31037c77fb55a9c5a12d88c4e7f726a6e447eafaf9566",
+        "source": "reports/fall-recovery-20261114/fullplay-linux/artifacts/study/crouch_tuck",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    },
+    {
+      "case": "crouch_tuck-kp0.25",
+      "trigger_phase": "during_unstable_bilateral_receive",
+      "stable_ground_final2s": true,
+      "overall_peak_nonfoot_normal_n": 5495.9927585802225,
+      "maximum150ms_nonfoot_impulse_ns": 131.13815315789603,
+      "first150ms_nonfoot_impulse_ns": 131.13815315789603,
+      "first_nonfoot_floor_s": 5.064000000000026,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-low-gains-linux/artifacts/study/crouch_tuck-kp0.25",
+      "source_hash": "5e5df8b344fd30959ea3a2ca4482a063a10cf18d5e9aae6b440172364e530fa1",
+      "trigger_s": 4.679999999999898,
+      "prefix_beforetrigger": {
+        "view.npz:qpos": true,
+        "trace.npz:motion": true,
+        "trace.npz:contact": true
+      },
+      "metrics": {
+        "head": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "hand": {
+          "peak_normal_n": 502.3223694823471,
+          "peak_time_s": 5.127000000000047,
+          "first_contact_s": 5.124000000000046,
+          "first150ms_impulse_ns": 10.66969377165547,
+          "whole_episode_impulse_ns": 106.24815274112959
+        },
+        "torso": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 5495.9927585802225,
+          "peak_time_s": 5.091000000000035,
+          "first_contact_s": 5.064000000000026,
+          "first150ms_impulse_ns": 121.34580576084336,
+          "whole_episode_impulse_ns": 2271.004342848097
+        }
+      },
+      "stable_standing": false,
+      "final_height_m": 0.13363731577862897,
+      "final_upright_cos": -0.2906495190121965,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-crouch_tuck-kp0.25.mp4",
+      "evidence": "falls/crouch_tuck-kp0.25-forces.npz",
+      "poses": "falls/crouch_tuck-kp0.25-poses.npz",
+      "video_metadata": {
+        "mode": "crouch_tuck",
+        "label": "crouch_tuck-kp0.25",
+        "fall_body_stiffness_fraction": 0.25,
+        "fall_gain_transition_s": 0.15,
+        "damping_retained": true,
+        "native_hand_gains_unchanged": true,
+        "trigger_s": 4.679999999999898,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": false,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "hand": {
+            "peak_sum_normal_n": 502.3223694823471,
+            "first_contact_s": 5.124000000000046
+          },
+          "torso": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "other": {
+            "peak_sum_normal_n": 5495.9927585802225,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "809feccf951ef68e93f60aadd1eb8e312376ea7be7844a3cd4204d898547cb9f",
+        "source_view_sha256": "2beb9547c4941504d317f004b53259e86564150637e6587dc6f49b10253e9c49",
+        "source": "reports/fall-recovery-20261114/fullplay-low-gains-linux/artifacts/study/crouch_tuck-kp0.25",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    },
+    {
+      "case": "crouch_tuck-kp0.5",
+      "trigger_phase": "during_unstable_bilateral_receive",
+      "stable_ground_final2s": false,
+      "overall_peak_nonfoot_normal_n": 4567.308775059182,
+      "maximum150ms_nonfoot_impulse_ns": 132.34488129058684,
+      "first150ms_nonfoot_impulse_ns": 132.34488129058687,
+      "first_nonfoot_floor_s": 5.0840000000000325,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-low-gains-linux/artifacts/study/crouch_tuck-kp0.5",
+      "source_hash": "44114cf8424cdfef646640b66dc510ef542d0bb7a4e6695c8a8f90e6dc9f9887",
+      "trigger_s": 4.679999999999898,
+      "prefix_beforetrigger": {
+        "view.npz:qpos": true,
+        "trace.npz:motion": true,
+        "trace.npz:contact": true
+      },
+      "metrics": {
+        "head": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "hand": {
+          "peak_normal_n": 524.9062561373955,
+          "peak_time_s": 5.1350000000000495,
+          "first_contact_s": 5.133000000000049,
+          "first150ms_impulse_ns": 11.465419952640122,
+          "whole_episode_impulse_ns": 80.71984546236249
+        },
+        "torso": {
+          "peak_normal_n": 535.2350145788189,
+          "peak_time_s": 11.633999999998991,
+          "first_contact_s": 11.633999999998991,
+          "first150ms_impulse_ns": 27.513641843942935,
+          "whole_episode_impulse_ns": 55.92591853042641
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 4567.308775059182,
+          "peak_time_s": 5.115000000000043,
+          "first_contact_s": 5.0840000000000325,
+          "first150ms_impulse_ns": 121.41743085049436,
+          "whole_episode_impulse_ns": 2194.732040344797
+        }
+      },
+      "stable_standing": false,
+      "final_height_m": 0.0731904734046505,
+      "final_upright_cos": 0.03602317340043748,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-crouch_tuck-kp0.5.mp4",
+      "evidence": "falls/crouch_tuck-kp0.5-forces.npz",
+      "poses": "falls/crouch_tuck-kp0.5-poses.npz",
+      "video_metadata": {
+        "mode": "crouch_tuck",
+        "label": "crouch_tuck-kp0.5",
+        "fall_body_stiffness_fraction": 0.5,
+        "fall_gain_transition_s": 0.15,
+        "damping_retained": true,
+        "native_hand_gains_unchanged": true,
+        "trigger_s": 4.679999999999898,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": false,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "hand": {
+            "peak_sum_normal_n": 524.9062561373955,
+            "first_contact_s": 5.133000000000049
+          },
+          "torso": {
+            "peak_sum_normal_n": 535.2350145788189,
+            "first_contact_s": 11.633999999998991
+          },
+          "other": {
+            "peak_sum_normal_n": 4567.308775059182,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "1214e48bba5ceb247a0eb7f13904419f390261883e839181d62d51c7b6d5352c",
+        "source_view_sha256": "72d744b53d04aa01d258b14bc35e820386152186438cd3d583868019d9b732e4",
+        "source": "reports/fall-recovery-20261114/fullplay-low-gains-linux/artifacts/study/crouch_tuck-kp0.5",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    },
+    {
+      "case": "balance_abort-late0.7",
+      "trigger_phase": "after_last_sustained_bilateral_contact",
+      "stable_ground_final2s": true,
+      "overall_peak_nonfoot_normal_n": 3792.8799451682585,
+      "maximum150ms_nonfoot_impulse_ns": 140.82922548005988,
+      "first150ms_nonfoot_impulse_ns": 29.19875599431472,
+      "first_nonfoot_floor_s": 5.124000000000046,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-late-balance-linux/artifacts/study/balance_abort-late0.7",
+      "source_hash": "1dab1ccfea64a5f2f4291e481a17a616f8128abe2d9d95ef46da90b953a76d81",
+      "trigger_s": 5.240000000000085,
+      "prefix_beforetrigger": {
+        "view.npz:qpos": true,
+        "trace.npz:motion": true,
+        "trace.npz:contact": true
+      },
+      "metrics": {
+        "head": {
+          "peak_normal_n": 1593.7983452740023,
+          "peak_time_s": 6.0840000000003664,
+          "first_contact_s": 6.0840000000003664,
+          "first150ms_impulse_ns": 31.107042548730714,
+          "whole_episode_impulse_ns": 149.76920650803032
+        },
+        "hand": {
+          "peak_normal_n": 616.8151841589859,
+          "peak_time_s": 5.395000000000136,
+          "first_contact_s": 5.394000000000136,
+          "first150ms_impulse_ns": 9.522209061729116,
+          "whole_episode_impulse_ns": 15.24223409990725
+        },
+        "torso": {
+          "peak_normal_n": 1364.7244768226938,
+          "peak_time_s": 7.715000000000911,
+          "first_contact_s": 7.401000000000806,
+          "first150ms_impulse_ns": 15.294973510478693,
+          "whole_episode_impulse_ns": 737.6712784788376
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 3642.7094755330886,
+          "peak_time_s": 5.391000000000135,
+          "first_contact_s": 5.124000000000046,
+          "first150ms_impulse_ns": 29.19875599431472,
+          "whole_episode_impulse_ns": 1189.9981466466916
+        }
+      },
+      "stable_standing": false,
+      "final_height_m": 0.06117916869820758,
+      "final_upright_cos": -0.06701190059861495,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-balance_abort-late0.7.mp4",
+      "evidence": "falls/balance_abort-late0.7-forces.npz",
+      "poses": "falls/balance_abort-late0.7-poses.npz",
+      "video_metadata": {
+        "mode": "balance_abort",
+        "label": "balance_abort-late0.7",
+        "late_balance_threshold": 0.7,
+        "fall_body_stiffness_fraction": 1.0,
+        "fall_gain_transition_s": 0.15,
+        "damping_retained": true,
+        "native_hand_gains_unchanged": true,
+        "trigger_s": 5.240000000000085,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": false,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 1593.7983452740023,
+            "first_contact_s": 6.0840000000003664
+          },
+          "hand": {
+            "peak_sum_normal_n": 616.8151841589859,
+            "first_contact_s": 5.394000000000136
+          },
+          "torso": {
+            "peak_sum_normal_n": 1364.7244768226938,
+            "first_contact_s": 7.401000000000806
+          },
+          "other": {
+            "peak_sum_normal_n": 3642.7094755330886,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "dd3afb8bfdd750a9f0a46ca2e6bbdd97c73811dde70ecf67e203cb7668b9a68c",
+        "source_view_sha256": "71bdc01d991eeba4b9a8f8dcd523abd637a68a535bf9a38550e7bb4f152db5d7",
+        "source": "reports/fall-recovery-20261114/fullplay-late-balance-linux/artifacts/study/balance_abort-late0.7",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    },
+    {
+      "case": "balance_abort-late0.84",
+      "trigger_phase": "during_unstable_bilateral_receive",
+      "stable_ground_final2s": false,
+      "overall_peak_nonfoot_normal_n": 4982.509231789674,
+      "maximum150ms_nonfoot_impulse_ns": 116.91143443310537,
+      "first150ms_nonfoot_impulse_ns": 116.91143443310538,
+      "first_nonfoot_floor_s": 5.390000000000135,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-late-balance-linux/artifacts/study/balance_abort-late0.84",
+      "source_hash": "2e1b9ea05faabeb51509013a028ef5eb83e3fff2e90f900d53f1745b71baf020",
+      "trigger_s": 4.679999999999898,
+      "prefix_beforetrigger": {
+        "view.npz:qpos": true,
+        "trace.npz:motion": true,
+        "trace.npz:contact": true
+      },
+      "metrics": {
+        "head": {
+          "peak_normal_n": 751.4493859910483,
+          "peak_time_s": 10.194999999999789,
+          "first_contact_s": 10.194999999999789,
+          "first150ms_impulse_ns": 16.82183235016347,
+          "whole_episode_impulse_ns": 41.89707590365803
+        },
+        "hand": {
+          "peak_normal_n": 508.0205381589329,
+          "peak_time_s": 5.433000000000149,
+          "first_contact_s": 5.430000000000148,
+          "first150ms_impulse_ns": 10.894210367813425,
+          "whole_episode_impulse_ns": 140.81730582080445
+        },
+        "torso": {
+          "peak_normal_n": 1308.529447917199,
+          "peak_time_s": 10.349999999999703,
+          "first_contact_s": 10.349999999999703,
+          "first150ms_impulse_ns": 35.22322260023362,
+          "whole_episode_impulse_ns": 98.46990606247032
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 4474.488693630741,
+          "peak_time_s": 5.433000000000149,
+          "first_contact_s": 5.390000000000135,
+          "first150ms_impulse_ns": 106.01722406529197,
+          "whole_episode_impulse_ns": 1822.3520324848719
+        }
+      },
+      "stable_standing": false,
+      "final_height_m": 0.2992985921819573,
+      "final_upright_cos": -0.804475657718315,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-balance_abort-late0.84.mp4",
+      "evidence": "falls/balance_abort-late0.84-forces.npz",
+      "poses": "falls/balance_abort-late0.84-poses.npz",
+      "video_metadata": {
+        "mode": "balance_abort",
+        "label": "balance_abort-late0.84",
+        "late_balance_threshold": 0.84,
+        "fall_body_stiffness_fraction": 1.0,
+        "fall_gain_transition_s": 0.15,
+        "damping_retained": true,
+        "native_hand_gains_unchanged": true,
+        "trigger_s": 4.679999999999898,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": false,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 751.4493859910483,
+            "first_contact_s": 10.194999999999789
+          },
+          "hand": {
+            "peak_sum_normal_n": 508.0205381589329,
+            "first_contact_s": 5.430000000000148
+          },
+          "torso": {
+            "peak_sum_normal_n": 1308.529447917199,
+            "first_contact_s": 10.349999999999703
+          },
+          "other": {
+            "peak_sum_normal_n": 4474.488693630741,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "f403b703fea2493628d4b335f763a95b7e207b0a001364b9699249e39113ef66",
+        "source_view_sha256": "da60841ca912de1bd03d7c68ad8f8dd3995ff73c826c246e62f319e171b264a2",
+        "source": "reports/fall-recovery-20261114/fullplay-late-balance-linux/artifacts/study/balance_abort-late0.84",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    },
+    {
+      "case": "visual-balance",
+      "trigger_phase": "before_fingertip_contact",
+      "stable_ground_final2s": false,
+      "overall_peak_nonfoot_normal_n": 0.0,
+      "maximum150ms_nonfoot_impulse_ns": 0.0,
+      "first150ms_nonfoot_impulse_ns": 0.0,
+      "first_nonfoot_floor_s": null,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-visual-linux/artifacts/study/visual-balance",
+      "source_hash": "9df3de52789dfd653a3e7e9e3cded069f559857f78a493934d3d7b4f441f5d15",
+      "trigger_s": 4.079999999999697,
+      "prefix_beforetrigger": {
+        "view.npz:qpos": true,
+        "trace.npz:motion": true,
+        "trace.npz:contact": true
+      },
+      "metrics": {
+        "head": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "hand": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "torso": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        }
+      },
+      "stable_standing": true,
+      "final_height_m": 0.7491522617481823,
+      "final_upright_cos": 0.9984887101357975,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-visual-balance.mp4",
+      "evidence": "falls/visual-balance-forces.npz",
+      "poses": "falls/visual-balance-poses.npz",
+      "video_metadata": {
+        "mode": "balance_abort",
+        "label": "visual-balance",
+        "visual_receive_phase_armed_s": 4.0599999999996905,
+        "visual_phase_sensor_command_only": true,
+        "late_balance_threshold": null,
+        "fall_body_stiffness_fraction": 1.0,
+        "fall_gain_transition_s": 0.15,
+        "damping_retained": true,
+        "native_hand_gains_unchanged": true,
+        "trigger_s": 4.079999999999697,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": true,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "hand": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "torso": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "other": {
+            "peak_sum_normal_n": 1212.749514180358,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "20a35f582fb43ce80fe5881a4869fa986093e7073eb73e94f88f63d649c6589e",
+        "source_view_sha256": "a033c8be5251299ed81b48acda96f6648490005d6ce8e836b51004536fa19f71",
+        "source": "reports/fall-recovery-20261114/fullplay-visual-linux/artifacts/study/visual-balance",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    },
+    {
+      "case": "visual-shallow-brace",
+      "trigger_phase": "before_fingertip_contact",
+      "stable_ground_final2s": true,
+      "overall_peak_nonfoot_normal_n": 2542.0147300971425,
+      "maximum150ms_nonfoot_impulse_ns": 124.8911520952441,
+      "first150ms_nonfoot_impulse_ns": 123.46840980913667,
+      "first_nonfoot_floor_s": 4.522999999999845,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-visual-linux/artifacts/study/visual-shallow-brace",
+      "source_hash": "805c6aa39418c68977b59180e581af8ecd2fe0ff861f10d4b2a6f2570ef47c06",
+      "trigger_s": 4.079999999999697,
+      "prefix_beforetrigger": {
+        "view.npz:qpos": true,
+        "trace.npz:motion": true,
+        "trace.npz:contact": true
+      },
+      "metrics": {
+        "head": {
+          "peak_normal_n": 76.98416108257231,
+          "peak_time_s": 5.109000000000041,
+          "first_contact_s": 5.095000000000036,
+          "first150ms_impulse_ns": 6.326211365841007,
+          "whole_episode_impulse_ns": 6.326211365841007
+        },
+        "hand": {
+          "peak_normal_n": 718.903245168995,
+          "peak_time_s": 4.5479999999998535,
+          "first_contact_s": 4.522999999999845,
+          "first150ms_impulse_ns": 20.18170295742127,
+          "whole_episode_impulse_ns": 154.45367151497933
+        },
+        "torso": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 2508.382152339207,
+          "peak_time_s": 4.611999999999875,
+          "first_contact_s": 4.570999999999861,
+          "first150ms_impulse_ns": 113.32974798015323,
+          "whole_episode_impulse_ns": 2170.9742598100283
+        }
+      },
+      "stable_standing": false,
+      "final_height_m": 0.18001987744150735,
+      "final_upright_cos": 0.1291491294283148,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-visual-shallow-brace.mp4",
+      "evidence": "falls/visual-shallow-brace-forces.npz",
+      "poses": "falls/visual-shallow-brace-poses.npz",
+      "video_metadata": {
+        "mode": "crouch_tuck",
+        "label": "visual-shallow-brace",
+        "visual_receive_phase_armed_s": 4.0599999999996905,
+        "visual_phase_sensor_command_only": true,
+        "late_balance_threshold": null,
+        "fall_body_stiffness_fraction": 1.0,
+        "fall_gain_transition_s": 0.15,
+        "damping_retained": true,
+        "native_hand_gains_unchanged": true,
+        "trigger_s": 4.079999999999697,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": false,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 76.98416108257231,
+            "first_contact_s": 5.095000000000036
+          },
+          "hand": {
+            "peak_sum_normal_n": 718.903245168995,
+            "first_contact_s": 4.522999999999845
+          },
+          "torso": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "other": {
+            "peak_sum_normal_n": 2508.382152339207,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "26b0c4cfa3f28bd9c5ab37ecdf8aa1ab9960a3ad85aebd1c9ef48870da118ac1",
+        "source_view_sha256": "4733ea0c72dfba7e004138176872ef4dc1234e3fd82737820f26fbbb55b87779",
+        "source": "reports/fall-recovery-20261114/fullplay-visual-linux/artifacts/study/visual-shallow-brace",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    },
+    {
+      "case": "visual-late-brace0.7",
+      "trigger_phase": "after_last_sustained_bilateral_contact",
+      "stable_ground_final2s": true,
+      "overall_peak_nonfoot_normal_n": 6212.905808755146,
+      "maximum150ms_nonfoot_impulse_ns": 116.98256585470884,
+      "first150ms_nonfoot_impulse_ns": 29.19875599431472,
+      "first_nonfoot_floor_s": 5.124000000000046,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-late-brace-linux/artifacts/study/visual-late-brace0.7",
+      "source_hash": "116c78bc445416a86100334cd96b1d0fab24da3b240e079b4d2fc7f9c288462a",
+      "trigger_s": 5.240000000000085,
+      "prefix_beforetrigger": {
+        "view.npz:qpos": true,
+        "trace.npz:motion": true,
+        "trace.npz:contact": true
+      },
+      "metrics": {
+        "head": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "hand": {
+          "peak_normal_n": 476.9727649673231,
+          "peak_time_s": 5.400000000000138,
+          "first_contact_s": 5.400000000000138,
+          "first150ms_impulse_ns": 5.3124142617688,
+          "whole_episode_impulse_ns": 9.817175467634126
+        },
+        "torso": {
+          "peak_normal_n": 615.9549137829346,
+          "peak_time_s": 7.3060000000007745,
+          "first_contact_s": 7.3060000000007745,
+          "first150ms_impulse_ns": 33.036534697661665,
+          "whole_episode_impulse_ns": 561.536341288446
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 6212.905808755146,
+          "peak_time_s": 5.393000000000136,
+          "first_contact_s": 5.124000000000046,
+          "first150ms_impulse_ns": 29.19875599431472,
+          "whole_episode_impulse_ns": 1429.2765704003373
+        }
+      },
+      "stable_standing": false,
+      "final_height_m": 0.05847966563405565,
+      "final_upright_cos": 0.007135773026012204,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-visual-late-brace0.7.mp4",
+      "evidence": "falls/visual-late-brace0.7-forces.npz",
+      "poses": "falls/visual-late-brace0.7-poses.npz",
+      "video_metadata": {
+        "mode": "crouch_tuck",
+        "label": "visual-late-brace0.7",
+        "visual_receive_phase_armed_s": 4.0599999999996905,
+        "visual_phase_sensor_command_only": true,
+        "late_balance_threshold": 0.7,
+        "fall_body_stiffness_fraction": 1.0,
+        "fall_gain_transition_s": 0.15,
+        "damping_retained": true,
+        "native_hand_gains_unchanged": true,
+        "trigger_s": 5.240000000000085,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": false,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "hand": {
+            "peak_sum_normal_n": 476.9727649673231,
+            "first_contact_s": 5.400000000000138
+          },
+          "torso": {
+            "peak_sum_normal_n": 615.9549137829346,
+            "first_contact_s": 7.3060000000007745
+          },
+          "other": {
+            "peak_sum_normal_n": 6311.181083599398,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "06d6b1da8051f375fff654f069929eabe6800b7d10ba983b692c9652c4c038f8",
+        "source_view_sha256": "5de7b1e33cf9c13513c3902f6c29becdf07191e2ac4762712a2b6b2101eb28e6",
+        "source": "reports/fall-recovery-20261114/fullplay-late-brace-linux/artifacts/study/visual-late-brace0.7",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    },
+    {
+      "case": "visual-late-brace0.84",
+      "trigger_phase": "during_unstable_bilateral_receive",
+      "stable_ground_final2s": true,
+      "overall_peak_nonfoot_normal_n": 3928.4597966700285,
+      "maximum150ms_nonfoot_impulse_ns": 131.94070325731028,
+      "first150ms_nonfoot_impulse_ns": 131.94070325731028,
+      "first_nonfoot_floor_s": 5.121000000000045,
+      "source": "/Users/gustavogarcia/projects/HIM/g1-receiver/reports/fall-recovery-20261114/fullplay-late-brace-linux/artifacts/study/visual-late-brace0.84",
+      "source_hash": "b343629e884830ec2ec1a1bf91b49a19d8af054fa124eba8d2812c120423318a",
+      "trigger_s": 4.679999999999898,
+      "prefix_beforetrigger": {
+        "view.npz:qpos": true,
+        "trace.npz:motion": true,
+        "trace.npz:contact": true
+      },
+      "metrics": {
+        "head": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "hand": {
+          "peak_normal_n": 564.6478001033079,
+          "peak_time_s": 5.152000000000055,
+          "first_contact_s": 5.148000000000054,
+          "first150ms_impulse_ns": 17.347372750891065,
+          "whole_episode_impulse_ns": 78.77956587963965
+        },
+        "torso": {
+          "peak_normal_n": 0.0,
+          "peak_time_s": 0.001,
+          "first_contact_s": null,
+          "first150ms_impulse_ns": 0.0,
+          "whole_episode_impulse_ns": 0.0
+        },
+        "other_nonfoot": {
+          "peak_normal_n": 3363.8119965667206,
+          "peak_time_s": 5.152000000000055,
+          "first_contact_s": 5.121000000000045,
+          "first150ms_impulse_ns": 116.74143787221725,
+          "whole_episode_impulse_ns": 2263.814829911821
+        }
+      },
+      "stable_standing": false,
+      "final_height_m": 0.1828044926652039,
+      "final_upright_cos": 0.052366647871039174,
+      "torque_caps_respected": true,
+      "warnings": 0,
+      "video": "falls/play-visual-late-brace0.84.mp4",
+      "evidence": "falls/visual-late-brace0.84-forces.npz",
+      "poses": "falls/visual-late-brace0.84-poses.npz",
+      "video_metadata": {
+        "mode": "crouch_tuck",
+        "label": "visual-late-brace0.84",
+        "visual_receive_phase_armed_s": 4.0599999999996905,
+        "visual_phase_sensor_command_only": true,
+        "late_balance_threshold": 0.84,
+        "fall_body_stiffness_fraction": 1.0,
+        "fall_gain_transition_s": 0.15,
+        "damping_retained": true,
+        "native_hand_gains_unchanged": true,
+        "trigger_s": 4.679999999999898,
+        "duration_s": 11.999999999998789,
+        "stable_standing_final2s": false,
+        "impacts": {
+          "head": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "hand": {
+            "peak_sum_normal_n": 564.6478001033079,
+            "first_contact_s": 5.148000000000054
+          },
+          "torso": {
+            "peak_sum_normal_n": 0.0,
+            "first_contact_s": null
+          },
+          "other": {
+            "peak_sum_normal_n": 3363.8119965667206,
+            "first_contact_s": 0.03400000000000002
+          }
+        },
+        "actual_torque_caps_respected": true,
+        "warning_count": 0,
+        "evaluation_stop_removed_only": true,
+        "no_midplay_pose_overwrite": true,
+        "actual_machine_split_m": 3.45,
+        "historical_route_not_qualified": true,
+        "video_sha256": "916ab8c22b6f568cc4d18133dddc58f66e5f793464c6fc29c6380c6a20e1a413",
+        "source_view_sha256": "b0787b64e5d33aa538694379f6cb9646f22f2f02aef1b170e1ebc869b1eb2786",
+        "source": "reports/fall-recovery-20261114/fullplay-late-brace-linux/artifacts/study/visual-late-brace0.84",
+        "frame_count": 301,
+        "fps": 25,
+        "fixed_camera": {
+          "lookat": [
+            6.556921636837428,
+            2.164410109695473,
+            0.8
+          ],
+          "distance": 11.950922360329399,
+          "azimuth": 110,
+          "elevation": -15
+        },
+        "source_poses_unmodified": true,
+        "no_physics_steps_during_render": true,
+        "field_decor_centered_on_measured_machine_only": true
+      }
+    }
+  ]
+}

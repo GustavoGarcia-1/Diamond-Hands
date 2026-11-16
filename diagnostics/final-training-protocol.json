@@ -1,0 +1,27 @@
+{
+  "schema": "three-route-final-training-independent-plan-v1",
+  "scope": "Read-only independent audit of each frozen one-hour experiment's already-declared initial/final matched evaluations. No new checkpoint selection, simulation search or mutation of published600.",
+  "inputs_pending": {
+    "go": "post-study/training-go-r1 final archive: artifacts/ppo/evaluation; verify nominal and fixed throw-only lateral +/-2cm cases and exact final checkpoint/source hashes",
+    "slant": "post-study/slant-clearance/training-slant-r2 final archive; enumerate the worker-declared evaluation protocol before scoring, preserve initial/final and every condition",
+    "out": "post-study/out-impact/training-1h/linux/artifacts/training/paired/{initial,final}/{case}/evaluation/episode-0001; nominal, four fixed fresh throw draws seed202611150627,40ms and80ms latency"
+  },
+  "required_checks": [
+    "Archive SHA256, final checkpoint SHA256 and actual training steps/optimizer updates/wall time/source snapshot. Label any intentional early stop accurately.",
+    "Each initial/final pair has matching physical model/host gains/caps, profile/command plane, throw fixture, seed, duration and sensing domain. Log exact differences instead of assuming labels establish equivalence.",
+    "Recompute unchanged anatomical-v1 full score from all1kHz contact, original form and first5motioncolumns; require exact archived-score equality.",
+    "Report all physics_checks,form,upright,fullhorizon,simulationwarnings separately. Original-reference identity stays separate; experimental contact-model success is not hardware validation.",
+    "Verify freeball/source one-release/no attachments, prerelease stationaryview, zero postrelease appliedloads where recorded. Assess firstexcluded support and laterdrop, not only longest bilateral window.",
+    "Retainedzero/initial anchors match protectedpreflight when claimed; CPU/CUDA inference differences labeled and not used for checkpoint selection.",
+    "Reconcile returned Gym reward with sensor ledger/reset handling; report proxyreturn alongside cleanhold/finalheld/form/overlap/support. Never promote by proxyreturn.",
+    "Read source sensorboundary: actorcriticreward consume camera/IMU/encoders/knowncommands only; fixture mutation and physicalquality remain offline evaluation.",
+    "Preserve all declared testconditions, failures and missingartifacts. Incomplete outputs remain pending; do not count them as physicalfailures or infer successrates from fewdiagnostics."
+  ],
+  "reporting": {
+    "per_condition": "route,initial/final,fixturehash,modelhash,checkpointdevice,fullhorizon,cleanholdseconds,finalbilateral,firstexcluded,formfraction,upright,ball/selfoverlap,warnings,proxyreturn,observercoverage",
+    "comparisons": "Within-route paired initial/final only; no pooledrate across3differentarchitectures/models/fixtures and no claims basedon earlycheckpointselection.",
+    "primary": "All unchanged physics_checks AND form.pass AND upright AND fullhorizon AND zerowarnings; preserve original_reference_match separately.",
+    "limitations": "Existing geometry/handinlet/contactmodel/camera observability can limit learning. Runtimephysicaltransfer unverified; these are small fixedcondition diagnosticpairs, not50independenttrainingseeds."
+  },
+  "rescore_helper": "audit.py in this directory; explicit --trial route:policy:condition=TRIALDIR and fresh --output; refuses scoremismatch/missingdata"
+}

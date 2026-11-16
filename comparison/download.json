@@ -1,0 +1,18 @@
+{
+  "zip": "/Users/gustavogarcia/projects/HIM/g1-receiver/artifacts/receiver-comparison-study.zip",
+  "sha256": "5f1136f6a5e9e8689923c2193b50bc5dde2cdaa247630587ae0b70e0ce0ac395",
+  "bytes": 88852367,
+  "snapshots": {
+    "go-primary": 236,
+    "go-floor": 238,
+    "slant-primary": 165,
+    "slant-floor": 166,
+    "out-primary": 346,
+    "out-floor": 178
+  },
+  "unique_source_objects": 271,
+  "missing_inputs": [],
+  "verified_every_object_and_evidence": true,
+  "final_authoritative_600_summary": true,
+  "no_duplicate_zip_entries": true
+}

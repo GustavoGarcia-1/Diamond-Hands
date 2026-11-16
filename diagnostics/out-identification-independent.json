@@ -1,0 +1,27 @@
+{
+  "source_artifact_sha256": {
+    "excitation-r1-receipt.source.tar.gz": "d550b8ef3142bb4cbec8396ebac7dbaa658b7bcdb287bece77d987b7e05df916",
+    "excitation-r1-receipt.artifacts.tar.gz": "4ae16732014dcdae6d1e03892c52bb1e2eace3570ad73f57ad20856ada607a05"
+  },
+  "training_samples": 18,
+  "test_samples": 18,
+  "lag": 2,
+  "a": 0.6525368989336241,
+  "b": 0.34965051184172447,
+  "axis_rmse_rad": 0.0005600730864819254,
+  "persistence_rmse_rad": 0.012770441449048691,
+  "prediction_all_values_exact": true,
+  "max_palm_error_m": [
+    0.0012184458856786633,
+    0.001602055817575144
+  ],
+  "qualification": false,
+  "source_review": "Modelinputs are raw29encoder knowncommands plusCAD. No contact/ball/exactstate inputs in analysis. Future B encoders only conditional FK evaluation, not ARXprediction.",
+  "caveats": [
+    "Second temporal bump within same deterministic dryrun is conditional validation, not independent hardware/fixture replication.",
+    "Peraxis nointercept ARX ignores measured coupled otherjoint andbodyresponse; leftpalmmax1.218mm andright1.602mm fail declared1mmgate.",
+    "Optimal lag2 chosen firstbumptrainingMSE only; discrete lag is not proven physicaltransportdelay.",
+    "No deployment, catchimprovement or confidenceinterval claim."
+  ],
+  "all_conditional_FK_max_and_RMSE_exact": true
+}

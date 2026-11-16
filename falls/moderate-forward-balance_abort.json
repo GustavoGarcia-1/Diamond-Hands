@@ -1,0 +1,73 @@
+{
+  "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+  "mode": "balance_abort",
+  "initial_pitch_rad": 0.25,
+  "initial_angular_velocity_rad_s": 0.8,
+  "duration_s": 11.999999999998789,
+  "minimum_initial_floor_gap_m": 0.0029999999999999792,
+  "initial_pelvis_height_m": 0.786234249573861,
+  "supervisor_trigger_s": 0.02000000000000001,
+  "supervisor_config": {
+    "mode": "balance_abort",
+    "severe_upright_cos": 0.95,
+    "warning_upright_cos": 0.985,
+    "warning_gyro_rad_s": 0.35,
+    "confirm_samples": 2,
+    "max_target_velocity_rad_s": 2.5,
+    "max_target_acceleration_rad_s2": 10.0
+  },
+  "impacts_evaluation_only": {
+    "head": {
+      "first_floor_force_s": null,
+      "peak_sum_normal_n": 0.0,
+      "first150ms_normal_impulse_ns": 0.0
+    },
+    "hand": {
+      "first_floor_force_s": null,
+      "peak_sum_normal_n": 0.0,
+      "first150ms_normal_impulse_ns": 0.0
+    },
+    "torso": {
+      "first_floor_force_s": null,
+      "peak_sum_normal_n": 0.0,
+      "first150ms_normal_impulse_ns": 0.0
+    },
+    "other": {
+      "first_floor_force_s": 0.02000000000000001,
+      "peak_sum_normal_n": 888.0680218089722,
+      "first150ms_normal_impulse_ns": 38.84474727534713
+    }
+  },
+  "first_nonfoot_floor_force_s": null,
+  "stable_standing_final2s": true,
+  "recovery_label": "stumble_recovery",
+  "final_pelvis_height_m": 0.7470742568370924,
+  "final_upright_cos": 0.9993725439969258,
+  "minimum_pelvis_height_m": 0.6770203349232117,
+  "joint_gain_and_effort_clamps_unchanged": true,
+  "actual_body_torque_within_original_limits": true,
+  "no_midplay_state_overwrite": true,
+  "no_active_external_push": true,
+  "head_geometry": "head_link collisionmesh weldedtorso_link",
+  "physics_timestep_s": 0.001,
+  "warning_count": 0,
+  "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+  "initial_state_sha256": "d9a3dcfd124f03ea39b82eae5c292e537bd7bfcf874412f87448cc0e65f19610",
+  "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8",
+  "video_file": "moderate-forward-balance_abort.mp4",
+  "video_sha256": "45c34bbc982df99626274003c2b524c50c5b97bb2576f29e3303aae03d3d16dd",
+  "source_view_sha256": "36e18b90fae3cc4321af023ac9a9d06eaf385b7cf8e37650f2f0120af8cd367e",
+  "frame_count": 301,
+  "fps": 25,
+  "render_only_no_physics_steps": true,
+  "fixed_camera": {
+    "azimuth": 110,
+    "elevation": -18,
+    "lookat": [
+      1.770883934573567,
+      -0.06352613708749513,
+      0.65
+    ],
+    "distance": 9.380705136136891
+  }
+}

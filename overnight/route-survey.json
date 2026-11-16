@@ -1,0 +1,2988 @@
+{
+  "schema": "Independent route and declared frame audit v1",
+  "rows": [
+    {
+      "id": "Go6m persistent selected02",
+      "kind": "go",
+      "declared_field_heading_deg": 0.0,
+      "alongfield_unit_world_xy": [
+        1.0,
+        0.0
+      ],
+      "left_unit_world_xy": [
+        -0.0,
+        1.0
+      ],
+      "field_origin_world_xy_m": [
+        0.0,
+        0.0
+      ],
+      "profile_legacy_route_frame": {
+        "heading_rad": 0.0,
+        "scrimmage_origin_xy_m": [
+          0.0,
+          0.0
+        ]
+      },
+      "profile_declared_route_frame": null,
+      "declared_initial_stance_yaw_rad": -0.7,
+      "longest_clean_control_phase": {
+        "window_s": [
+          5.338000000000117,
+          10.999999999999343
+        ],
+        "travel_heading_world_deg": -1.3637830935412212,
+        "travel_heading_relative_field_deg": -1.3637830935412212,
+        "mean_body_heading_world_deg": 0.1962932939290737,
+        "mean_body_heading_relative_field_deg": 0.1962932939290737,
+        "mean_forward_velocity_mps": 1.0504401963516072,
+        "minimum_forward_velocity_mps": 0.9146121740049787,
+        "mean_horizontal_speed_mps": 1.061804210038315,
+        "body_travel_misalignment_deg": -1.5600763874702952
+      },
+      "longest_clean_start": {
+        "time_s": 5.338000000000117,
+        "world_xy_m": [
+          6.05032882136153,
+          -0.16809120513029913
+        ],
+        "alongfield_m": 6.05032882136153,
+        "alongfield_yards": 6.616720058356879,
+        "left_lateral_m": -0.16809120513029913,
+        "left_lateral_yards": -0.18382677726410665,
+        "body_heading_world_deg": 3.3312131010496056,
+        "body_heading_relative_field_deg": 3.3312131010496056,
+        "velocity_heading_world_deg": -3.8209394376039785,
+        "velocity_heading_relative_field_deg": -3.8209394376039785,
+        "horizontal_speed_mps": 0.9882640053863748,
+        "body_forward_velocity_mps": 0.9805743435273607
+      },
+      "longest_clean_end": {
+        "time_s": 10.999999999999343,
+        "world_xy_m": [
+          11.993361043155726,
+          -0.30957698191637606
+        ],
+        "alongfield_m": 11.993361043155726,
+        "alongfield_yards": 13.116099128560506,
+        "left_lateral_m": -0.30957698191637606,
+        "left_lateral_yards": -0.33855750428300097,
+        "body_heading_world_deg": 7.053208071831375,
+        "body_heading_relative_field_deg": 7.053208071831375,
+        "velocity_heading_world_deg": 0.9021255773983404,
+        "velocity_heading_relative_field_deg": 0.9021255773983404,
+        "horizontal_speed_mps": 0.9963688996995467,
+        "body_forward_velocity_mps": 0.9906326130452439
+      },
+      "physical_initial": {
+        "time_s": 0.0,
+        "world_xy_m": [
+          0.0,
+          0.0
+        ],
+        "body_heading_world_deg": -40.10704565915762,
+        "body_heading_relative_field_deg": -40.10704565915762
+      },
+      "machine_initial_formation": {
+        "world_xy_m": [
+          0.0,
+          -1.8288
+        ],
+        "alongfield_m": 0.0,
+        "left_lateral_m": -1.8288,
+        "lateral_split_yards": 2.0,
+        "receiver_to_machine_xy_distance_m": 1.8288
+      },
+      "release": {
+        "ball_release_s": 4.379999999999797,
+        "machine_world_xy_m": [
+          0.0,
+          -1.8288
+        ],
+        "receiver": {
+          "time_s": 4.379999999999797,
+          "world_xy_m": [
+            5.135194250665164,
+            -0.11730539022506378
+          ],
+          "alongfield_m": 5.135194250665164,
+          "alongfield_yards": 5.615916722074764,
+          "left_lateral_m": -0.11730539022506378,
+          "left_lateral_yards": -0.12828673471682392,
+          "body_heading_world_deg": 12.855046943277719,
+          "body_heading_relative_field_deg": 12.855046943277719,
+          "velocity_heading_world_deg": -7.1776230012420115,
+          "velocity_heading_relative_field_deg": -7.1776230012420115,
+          "horizontal_speed_mps": 0.9190631571448212,
+          "body_forward_velocity_mps": 0.8634574914254529
+        },
+        "actual_receiver_to_machine_xy_distance_m": 5.412895139512054
+      },
+      "turn": null,
+      "first_contact": {
+        "time_s": 5.222000000000079,
+        "world_xy_m": [
+          5.939621247695962,
+          -0.16420175851977759
+        ],
+        "alongfield_m": 5.939621247695962,
+        "alongfield_yards": 6.4956487835695125,
+        "left_lateral_m": -0.16420175851977759,
+        "left_lateral_yards": -0.1795732267276658,
+        "body_heading_world_deg": 7.686942377043455,
+        "body_heading_relative_field_deg": 7.686942377043455,
+        "velocity_heading_world_deg": 6.956846094692766,
+        "velocity_heading_relative_field_deg": 6.956846094692766,
+        "horizontal_speed_mps": 1.0367190975955975,
+        "body_forward_velocity_mps": 1.0366349309079712
+      },
+      "end": {
+        "time_s": 10.999999999999343,
+        "world_xy_m": [
+          11.993361043155726,
+          -0.30957698191637606
+        ],
+        "alongfield_m": 11.993361043155726,
+        "alongfield_yards": 13.116099128560506,
+        "left_lateral_m": -0.30957698191637606,
+        "left_lateral_yards": -0.33855750428300097,
+        "body_heading_world_deg": 7.053208071831375,
+        "body_heading_relative_field_deg": 7.053208071831375,
+        "velocity_heading_world_deg": 0.9021255773983404,
+        "velocity_heading_relative_field_deg": 0.9021255773983404,
+        "horizontal_speed_mps": 0.9963688996995467,
+        "body_forward_velocity_mps": 0.9906326130452439
+      },
+      "phases": {
+        "approach": {
+          "window_s": [
+            0.4000000000000003,
+            1.1999999999999786
+          ],
+          "travel_heading_world_deg": -1.116616690857274,
+          "travel_heading_relative_field_deg": -1.116616690857274,
+          "mean_body_heading_world_deg": -19.974469452663183,
+          "mean_body_heading_relative_field_deg": -19.974469452663183,
+          "mean_forward_velocity_mps": 1.260607082374713,
+          "minimum_forward_velocity_mps": 0.3694456501331213,
+          "mean_horizontal_speed_mps": 1.3777207733366883,
+          "body_travel_misalignment_deg": 18.857852761805912
+        },
+        "pre_receive": {
+          "window_s": [
+            4.722999999999912,
+            5.122000000000045
+          ],
+          "travel_heading_world_deg": -10.067096976304374,
+          "travel_heading_relative_field_deg": -10.067096976304374,
+          "mean_body_heading_world_deg": 7.5226787260649335,
+          "mean_body_heading_relative_field_deg": 7.5226787260649335,
+          "mean_forward_velocity_mps": 0.9343690265942886,
+          "minimum_forward_velocity_mps": 0.8548333749998067,
+          "mean_horizontal_speed_mps": 0.9829480220781116,
+          "body_travel_misalignment_deg": -17.589775702369305
+        },
+        "post_receive": {
+          "window_s": [
+            5.322000000000112,
+            5.821000000000279
+          ],
+          "travel_heading_world_deg": -6.963538943490357,
+          "travel_heading_relative_field_deg": -6.963538943490357,
+          "mean_body_heading_world_deg": 5.874519693631765,
+          "mean_body_heading_relative_field_deg": 5.874519693631765,
+          "mean_forward_velocity_mps": 1.1463164241523687,
+          "minimum_forward_velocity_mps": 0.9536179693344121,
+          "mean_horizontal_speed_mps": 1.1838576788527428,
+          "body_travel_misalignment_deg": -12.838058637122122
+        },
+        "late_exit": {
+          "window_s": [
+            10.249999999999758,
+            10.999999999999343
+          ],
+          "travel_heading_world_deg": -1.992867448602712,
+          "travel_heading_relative_field_deg": -1.992867448602712,
+          "mean_body_heading_world_deg": 2.624770091175509,
+          "mean_body_heading_relative_field_deg": 2.624770091175509,
+          "mean_forward_velocity_mps": 1.0126838512387832,
+          "minimum_forward_velocity_mps": 0.9146121740049787,
+          "mean_horizontal_speed_mps": 1.0243827107930281,
+          "body_travel_misalignment_deg": -4.617637539778221
+        }
+      },
+      "maximum_alongfield_m": 11.993361043155726,
+      "maximum_prebreak_abs_lateral_m": 0.3883596953133219,
+      "maximum_downfield_overshoot_after_break_m": null,
+      "sustained_backward_intervals_below_minus0p1mps_at_least0p1s": [],
+      "raw_fullplay_bothfeet_floorfree_intervals": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.03399999999999991,
+          "duration_s": 0.03399999999999991
+        },
+        {
+          "start_s": 0.7490000000000006,
+          "end_s": 0.7520000000000004,
+          "duration_s": 0.0029999999999998916
+        },
+        {
+          "start_s": 0.7600000000000006,
+          "end_s": 0.7740000000000005,
+          "duration_s": 0.013999999999999901
+        },
+        {
+          "start_s": 1.0999999999999897,
+          "end_s": 1.1009999999999895,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.46099999999995,
+          "end_s": 1.4619999999999498,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.9829999999998924,
+          "end_s": 2.00699999999989,
+          "duration_s": 0.02399999999999758
+        }
+      ],
+      "fullplay_floorfree_and_bothsoles5mm_intervals_atleast25ms": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.026999999999999906,
+          "duration_s": 0.026999999999999906
+        }
+      ],
+      "catchwindow_clear_intervals": [],
+      "independent_declared_field_running_score": {
+        "strict_in_stride_catch_and_route": false,
+        "running_long_pass_and_route": false,
+        "running_at_catch": false,
+        "foot_sample_clock_ok": true,
+        "pre_tip_forward_speed_mps": 0.9713822825778642,
+        "qualified_flight_phases": [],
+        "max_recurrent_flights": 0,
+        "recurrent_flights_span_catch": false,
+        "first_ball_contact_s": 5.222000000000079,
+        "unassisted_ball_flight_s": 0.8420000000002812,
+        "ball_toward_receiver_travel_m": -6.402648498626048,
+        "ball_rise_m": 0.7671814705636666,
+        "ball_descent_into_contact_m": 0.16697213715805703,
+        "longer_airborne_pass": false,
+        "criteria": {
+          "min_forward_speed_mps": 0.8,
+          "min_flight_s": 0.025,
+          "min_sole_clearance_m": 0.005,
+          "min_ground_interval_s": 0.035,
+          "min_ground_fraction": 0.8,
+          "min_recurrent_flights": 2,
+          "max_neighbor_flight_spacing_s": 0.72,
+          "gait_window_s": 0.75,
+          "startup_exclusion_s": 0.35,
+          "terminal_exclusion_s": 0.4,
+          "max_foot_sample_gap_s": 0.005,
+          "max_motion_gap_s": 0.04,
+          "min_ball_flight_s": 0.18,
+          "min_ball_forward_travel_m": 0.25,
+          "min_ball_rise_m": 0.03,
+          "min_ball_descent_m": 0.015,
+          "ball_descent_window_s": 0.04,
+          "max_ball_sample_gap_s": 0.005
+        }
+      },
+      "independent_running_forward_axis_world_xy": [
+        1.0,
+        0.0
+      ],
+      "archived_running_score": {
+        "strict_in_stride_catch_and_route": false,
+        "running_long_pass_and_route": false,
+        "running_at_catch": false,
+        "foot_sample_clock_ok": true,
+        "pre_tip_forward_speed_mps": 0.9713822825778642,
+        "qualified_flight_phases": [],
+        "max_recurrent_flights": 0,
+        "recurrent_flights_span_catch": false,
+        "first_ball_contact_s": 5.222000000000079,
+        "unassisted_ball_flight_s": 0.8420000000002812,
+        "ball_toward_receiver_travel_m": 6.233383965896999,
+        "ball_rise_m": 0.7671814705636666,
+        "ball_descent_into_contact_m": 0.16697213715805703,
+        "longer_airborne_pass": true,
+        "criteria": {
+          "min_forward_speed_mps": 0.8,
+          "min_flight_s": 0.025,
+          "min_sole_clearance_m": 0.005,
+          "min_ground_interval_s": 0.035,
+          "min_ground_fraction": 0.8,
+          "min_recurrent_flights": 2,
+          "max_neighbor_flight_spacing_s": 0.72,
+          "gait_window_s": 0.75,
+          "startup_exclusion_s": 0.35,
+          "terminal_exclusion_s": 0.4,
+          "max_foot_sample_gap_s": 0.005,
+          "max_motion_gap_s": 0.04,
+          "min_ball_flight_s": 0.18,
+          "min_ball_forward_travel_m": 0.25,
+          "min_ball_rise_m": 0.03,
+          "min_ball_descent_m": 0.015,
+          "ball_descent_window_s": 0.04,
+          "max_ball_sample_gap_s": 0.005
+        }
+      },
+      "archived_strict_checks": {
+        "in_stride_catch_and_route": false,
+        "checks": {
+          "complete_synchronized_traces": true,
+          "initial_free_flight": true,
+          "first_tip_contact": true,
+          "pre_contact_speed": true,
+          "immediate_post_contact_progress": true,
+          "total_post_contact_progress": true,
+          "ordered_route_finish": false,
+          "hands_only_retention_at_finish": false,
+          "no_floor_contact": true,
+          "no_nonhand_body_contact_force": true,
+          "no_applied_ball_load": true
+        },
+        "failed_checks": [
+          "ordered_route_finish",
+          "hands_only_retention_at_finish"
+        ],
+        "criteria": {
+          "pre_contact_window_s": 0.14,
+          "min_pre_contact_speed_mps": 0.1,
+          "post_contact_window_s": 0.5,
+          "min_immediate_route_displacement_m": 0.05,
+          "min_total_route_displacement_m": 0.1,
+          "waypoint_tolerance_cap_m": 0.05,
+          "waypoint_tolerance_fraction": 0.1,
+          "min_upright_cosine": 0.9,
+          "settling_window_s": 0.5,
+          "max_settled_speed_mps": 0.075,
+          "max_motion_gap_s": 0.04,
+          "min_initial_ball_height_m": 0.15,
+          "force_zero_tolerance_n": 1e-09
+        },
+        "retention_criteria": {
+          "window_s": 2.0,
+          "min_normal_per_hand_n": 0.1,
+          "min_bilateral_fraction": 0.85,
+          "max_bilateral_gap_s": 0.1,
+          "max_nonhand_normal_n": 0.1,
+          "min_mean_hand_weight_fraction": 0.8,
+          "min_initial_free_flight_s": 0.02
+        },
+        "first_tip_contact_s": 5.222000000000079,
+        "pre_tip_speed_mps": 0.9720639181861748,
+        "immediate_post_tip_route_displacement_m": 0.5585437023737407,
+        "total_post_tip_route_displacement_m": 6.053770400701135,
+        "ordered_waypoint_hit_times_s": [],
+        "endpoint_error_m": 0.3096481607896814,
+        "endpoint_tolerance_m": 0.05,
+        "final_mean_speed_mps": 1.0331868436796245,
+        "first_floor_contact_s": null,
+        "peak_nonhand_body_normal_force_n": 0.0,
+        "retention": {
+          "bilateral_palm_tip_fraction": 0.511,
+          "max_bilateral_gap_s": 0.23,
+          "mean_vertical_hand_force_as_ball_weight": 0.9944687928132677,
+          "bilateral_at_finish": true,
+          "hands_only_retention_at_finish": false
+        }
+      },
+      "anatomical_catch": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 5.222000000000079,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 5.663000000001891,
+        "longest_clean_start_s": 5.338000000000117,
+        "longest_clean_end_s": 10.999999999999343,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.0056303153843351,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 1.0,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 1.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004840296023049943,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 137.6985527498647,
+          "left_thumb": 17.882785470794634,
+          "left_palmar": 721.6804215145393,
+          "right_finger": 458.53698875810653,
+          "right_thumb": 35.858410160643665,
+          "right_palmar": 66.69545168924425,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "source": {
+        "report": "reports/catch-repair-20261115-go-performance/ppo-precontact-r3/linux/artifacts/evaluation/center/zero/evaluation/episode-0001/rollout/trial/report.json",
+        "report_sha256": "efe3c55b4e18b5c2981cc23f2a065f79520b5a39ef46c39c7b0ca9ae2a477df2",
+        "view": "reports/catch-repair-20261115-go-performance/ppo-precontact-r3/linux/artifacts/evaluation/center/zero/evaluation/episode-0001/rollout/trial/view.npz",
+        "view_sha256": "dad09f757c968ac6bc0fc84aeffcb6db49b807f162a71181aca34f206ad11d9e",
+        "profile": "GoR3 frozen source archive profile.json"
+      },
+      "method": "Exact states/foot contacts are offline labels only. Dense root position and quaternion define actual physical movement/facing. Headings use declared axes, not renderer. Phase travel headings are endpoint displacement vectors; local speed is finite difference. Out uses archived40ms full play qposes outside its available1kHz4.301\u20136.999s dense metrology window; exact saved poses are merged without interpolation. Low speed headings are omitted.",
+      "ball_flight_offline": {
+        "first_contact_center_world_m": [
+          6.239512630476148,
+          -0.36469929718472194,
+          1.1899124974115702
+        ],
+        "world_x_advance_m": 6.239512630476148,
+        "declared_alongfield_advance_m": 6.239512630476148,
+        "declared_left_advance_m": 1.4641007028152782,
+        "horizontal_distance_m": 6.408986560592523,
+        "note": "Some legacy pass metrics call world X advance downfield. That label does not equal declared field depth in rotated Out or Slant coordinates. Football final7qpos ABI verified in prior model audits."
+      }
+    },
+    {
+      "id": "Go10yard nominal",
+      "kind": "go",
+      "declared_field_heading_deg": 0.0,
+      "alongfield_unit_world_xy": [
+        1.0,
+        0.0
+      ],
+      "left_unit_world_xy": [
+        -0.0,
+        1.0
+      ],
+      "field_origin_world_xy_m": [
+        0.0,
+        0.0
+      ],
+      "profile_legacy_route_frame": {
+        "heading_rad": 0.0,
+        "scrimmage_origin_xy_m": [
+          0.0,
+          0.0
+        ]
+      },
+      "profile_declared_route_frame": null,
+      "declared_initial_stance_yaw_rad": -0.7,
+      "longest_clean_control_phase": {
+        "window_s": [
+          8.773000000000577,
+          10.416999999999666
+        ],
+        "travel_heading_world_deg": -0.29129791490745,
+        "travel_heading_relative_field_deg": -0.29129791490745,
+        "mean_body_heading_world_deg": 1.5103143779436743,
+        "mean_body_heading_relative_field_deg": 1.5103143779436743,
+        "mean_forward_velocity_mps": 1.0916645110272507,
+        "minimum_forward_velocity_mps": 0.9684830676752277,
+        "mean_horizontal_speed_mps": 1.0979538318176525,
+        "body_travel_misalignment_deg": -1.8016122928511242
+      },
+      "longest_clean_start": {
+        "time_s": 8.773000000000577,
+        "world_xy_m": [
+          9.482309874602437,
+          -0.2446920162953704
+        ],
+        "alongfield_m": 9.482309874602437,
+        "alongfield_yards": 10.369980177824187,
+        "left_lateral_m": -0.2446920162953704,
+        "left_lateral_yards": -0.26759844301768415,
+        "body_heading_world_deg": 7.875881808792406,
+        "body_heading_relative_field_deg": 7.875881808792406,
+        "velocity_heading_world_deg": 6.396187651406735,
+        "velocity_heading_relative_field_deg": 6.396187651406735,
+        "horizontal_speed_mps": 1.2488992529372815,
+        "body_forward_velocity_mps": 1.2484827942506687
+      },
+      "longest_clean_end": {
+        "time_s": 10.416999999999666,
+        "world_xy_m": [
+          11.270985246583807,
+          -0.253785912915042
+        ],
+        "alongfield_m": 11.270985246583807,
+        "alongfield_yards": 12.32609935103216,
+        "left_lateral_m": -0.253785912915042,
+        "left_lateral_yards": -0.27754364929466535,
+        "body_heading_world_deg": 3.6068913602628125,
+        "body_heading_relative_field_deg": 3.6068913602628125,
+        "velocity_heading_world_deg": -2.22901879734963,
+        "velocity_heading_relative_field_deg": -2.22901879734963,
+        "horizontal_speed_mps": 0.9735286952236787,
+        "body_forward_velocity_mps": 0.9684830676752277
+      },
+      "physical_initial": {
+        "time_s": 0.0,
+        "world_xy_m": [
+          0.0,
+          0.0
+        ],
+        "body_heading_world_deg": -40.10704565915762,
+        "body_heading_relative_field_deg": -40.10704565915762
+      },
+      "machine_initial_formation": {
+        "world_xy_m": [
+          0.0,
+          -1.8288
+        ],
+        "alongfield_m": 0.0,
+        "left_lateral_m": -1.8288,
+        "lateral_split_yards": 2.0,
+        "receiver_to_machine_xy_distance_m": 1.8288
+      },
+      "release": {
+        "ball_release_s": 7.220000000000746,
+        "machine_world_xy_m": [
+          0.0,
+          -1.8288
+        ],
+        "receiver": {
+          "time_s": 7.220000000000746,
+          "world_xy_m": [
+            7.907098487488639,
+            -0.25242564024921477
+          ],
+          "alongfield_m": 7.907098487488639,
+          "alongfield_yards": 8.647308057183551,
+          "left_lateral_m": -0.25242564024921477,
+          "left_lateral_yards": -0.2760560370179514,
+          "body_heading_world_deg": -1.4691058123137999,
+          "body_heading_relative_field_deg": -1.4691058123137999,
+          "velocity_heading_world_deg": -3.7015021191054145,
+          "velocity_heading_relative_field_deg": -3.7015021191054145,
+          "horizontal_speed_mps": 0.9692739152859718,
+          "body_forward_velocity_mps": 0.9685382861644972
+        },
+        "actual_receiver_to_machine_xy_distance_m": 8.062701942458547
+      },
+      "turn": null,
+      "first_contact": {
+        "time_s": 8.445000000000759,
+        "world_xy_m": [
+          9.116576951983712,
+          -0.22638859383634383
+        ],
+        "alongfield_m": 9.116576951983712,
+        "alongfield_yards": 9.970009790008433,
+        "left_lateral_m": -0.22638859383634383,
+        "left_lateral_yards": -0.24758157681139964,
+        "body_heading_world_deg": -1.0863020034403927,
+        "body_heading_relative_field_deg": -1.0863020034403927,
+        "velocity_heading_world_deg": -4.4811044718068205,
+        "velocity_heading_relative_field_deg": -4.4811044718068205,
+        "horizontal_speed_mps": 0.9428157637137041,
+        "body_forward_velocity_mps": 0.9411613141350543
+      },
+      "end": {
+        "time_s": 10.999999999999343,
+        "world_xy_m": [
+          11.872810231703163,
+          -0.29499099635164655
+        ],
+        "alongfield_m": 11.872810231703163,
+        "alongfield_yards": 12.984263158030581,
+        "left_lateral_m": -0.29499099635164655,
+        "left_lateral_yards": -0.3226060765000509,
+        "body_heading_world_deg": 6.6437529048480135,
+        "body_heading_relative_field_deg": 6.6437529048480135,
+        "velocity_heading_world_deg": -8.079635648396609,
+        "velocity_heading_relative_field_deg": -8.079635648396609,
+        "horizontal_speed_mps": 0.9462015458293112,
+        "body_forward_velocity_mps": 0.9151321535784578
+      },
+      "phases": {
+        "approach": {
+          "window_s": [
+            0.4000000000000003,
+            1.1999999999999786
+          ],
+          "travel_heading_world_deg": -1.116616690857274,
+          "travel_heading_relative_field_deg": -1.116616690857274,
+          "mean_body_heading_world_deg": -19.974469452663183,
+          "mean_body_heading_relative_field_deg": -19.974469452663183,
+          "mean_forward_velocity_mps": 1.260607082374713,
+          "minimum_forward_velocity_mps": 0.3694456501331213,
+          "mean_horizontal_speed_mps": 1.3777207733366883,
+          "body_travel_misalignment_deg": 18.857852761805912
+        },
+        "pre_receive": {
+          "window_s": [
+            7.945000000000988,
+            8.344000000000815
+          ],
+          "travel_heading_world_deg": 4.215659096692179,
+          "travel_heading_relative_field_deg": 4.215659096692179,
+          "mean_body_heading_world_deg": 4.53285244825036,
+          "mean_body_heading_relative_field_deg": 4.53285244825036,
+          "mean_forward_velocity_mps": 0.9857960825817336,
+          "minimum_forward_velocity_mps": 0.8650254104155244,
+          "mean_horizontal_speed_mps": 0.9898369500592591,
+          "body_travel_misalignment_deg": -0.31719335155818
+        },
+        "post_receive": {
+          "window_s": [
+            8.546000000000703,
+            9.045000000000426
+          ],
+          "travel_heading_world_deg": 2.05917240398448,
+          "travel_heading_relative_field_deg": 2.05917240398448,
+          "mean_body_heading_world_deg": 4.103521783615822,
+          "mean_body_heading_relative_field_deg": 4.103521783615822,
+          "mean_forward_velocity_mps": 1.167955810397795,
+          "minimum_forward_velocity_mps": 1.0342881790827947,
+          "mean_horizontal_speed_mps": 1.1742787194483768,
+          "body_travel_misalignment_deg": -2.044349379631342
+        },
+        "late_exit": {
+          "window_s": [
+            10.249999999999758,
+            10.999999999999343
+          ],
+          "travel_heading_world_deg": -5.094746721527503,
+          "travel_heading_relative_field_deg": -5.094746721527503,
+          "mean_body_heading_world_deg": 2.6862349986734593,
+          "mean_body_heading_relative_field_deg": 2.6862349986734593,
+          "mean_forward_velocity_mps": 1.0383878662832788,
+          "minimum_forward_velocity_mps": 0.9151321535784578,
+          "mean_horizontal_speed_mps": 1.0556991218055674,
+          "body_travel_misalignment_deg": -7.780981720200963
+        }
+      },
+      "maximum_alongfield_m": 11.872810231703163,
+      "maximum_prebreak_abs_lateral_m": 0.29499099635164655,
+      "maximum_downfield_overshoot_after_break_m": null,
+      "sustained_backward_intervals_below_minus0p1mps_at_least0p1s": [],
+      "raw_fullplay_bothfeet_floorfree_intervals": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.03399999999999991,
+          "duration_s": 0.03399999999999991
+        },
+        {
+          "start_s": 0.7490000000000006,
+          "end_s": 0.7520000000000004,
+          "duration_s": 0.0029999999999998916
+        },
+        {
+          "start_s": 0.7600000000000006,
+          "end_s": 0.7740000000000005,
+          "duration_s": 0.013999999999999901
+        },
+        {
+          "start_s": 1.0999999999999897,
+          "end_s": 1.1009999999999895,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.46099999999995,
+          "end_s": 1.4619999999999498,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.9829999999998924,
+          "end_s": 2.00699999999989,
+          "duration_s": 0.02399999999999758
+        },
+        {
+          "start_s": 8.863000000000527,
+          "end_s": 8.868000000000524,
+          "duration_s": 0.004999999999997673
+        }
+      ],
+      "fullplay_floorfree_and_bothsoles5mm_intervals_atleast25ms": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.026999999999999906,
+          "duration_s": 0.026999999999999906
+        }
+      ],
+      "catchwindow_clear_intervals": [],
+      "independent_declared_field_running_score": {
+        "strict_in_stride_catch_and_route": false,
+        "running_long_pass_and_route": false,
+        "running_at_catch": false,
+        "foot_sample_clock_ok": true,
+        "pre_tip_forward_speed_mps": 0.9343705466032327,
+        "qualified_flight_phases": [],
+        "max_recurrent_flights": 0,
+        "recurrent_flights_span_catch": false,
+        "first_ball_contact_s": 8.445000000000759,
+        "unassisted_ball_flight_s": 1.225000000000013,
+        "ball_toward_receiver_travel_m": -9.52103698102141,
+        "ball_rise_m": 1.7594568721357629,
+        "ball_descent_into_contact_m": 0.23743285361375732,
+        "longer_airborne_pass": false,
+        "criteria": {
+          "min_forward_speed_mps": 0.8,
+          "min_flight_s": 0.025,
+          "min_sole_clearance_m": 0.005,
+          "min_ground_interval_s": 0.035,
+          "min_ground_fraction": 0.8,
+          "min_recurrent_flights": 2,
+          "max_neighbor_flight_spacing_s": 0.72,
+          "gait_window_s": 0.75,
+          "startup_exclusion_s": 0.35,
+          "terminal_exclusion_s": 0.4,
+          "max_foot_sample_gap_s": 0.005,
+          "max_motion_gap_s": 0.04,
+          "min_ball_flight_s": 0.18,
+          "min_ball_forward_travel_m": 0.25,
+          "min_ball_rise_m": 0.03,
+          "min_ball_descent_m": 0.015,
+          "ball_descent_window_s": 0.04,
+          "max_ball_sample_gap_s": 0.005
+        }
+      },
+      "independent_running_forward_axis_world_xy": [
+        1.0,
+        0.0
+      ],
+      "archived_running_score": {
+        "strict_in_stride_catch_and_route": false,
+        "running_long_pass_and_route": false,
+        "running_at_catch": false,
+        "foot_sample_clock_ok": true,
+        "pre_tip_forward_speed_mps": 0.9343705466032327,
+        "qualified_flight_phases": [],
+        "max_recurrent_flights": 0,
+        "recurrent_flights_span_catch": false,
+        "first_ball_contact_s": 8.445000000000759,
+        "unassisted_ball_flight_s": 1.225000000000013,
+        "ball_toward_receiver_travel_m": 9.419322707210355,
+        "ball_rise_m": 1.7594568721357629,
+        "ball_descent_into_contact_m": 0.23743285361375732,
+        "longer_airborne_pass": true,
+        "criteria": {
+          "min_forward_speed_mps": 0.8,
+          "min_flight_s": 0.025,
+          "min_sole_clearance_m": 0.005,
+          "min_ground_interval_s": 0.035,
+          "min_ground_fraction": 0.8,
+          "min_recurrent_flights": 2,
+          "max_neighbor_flight_spacing_s": 0.72,
+          "gait_window_s": 0.75,
+          "startup_exclusion_s": 0.35,
+          "terminal_exclusion_s": 0.4,
+          "max_foot_sample_gap_s": 0.005,
+          "max_motion_gap_s": 0.04,
+          "min_ball_flight_s": 0.18,
+          "min_ball_forward_travel_m": 0.25,
+          "min_ball_rise_m": 0.03,
+          "min_ball_descent_m": 0.015,
+          "ball_descent_window_s": 0.04,
+          "max_ball_sample_gap_s": 0.005
+        }
+      },
+      "archived_strict_checks": {
+        "in_stride_catch_and_route": false,
+        "checks": {
+          "complete_synchronized_traces": true,
+          "initial_free_flight": true,
+          "first_tip_contact": true,
+          "pre_contact_speed": true,
+          "immediate_post_contact_progress": true,
+          "total_post_contact_progress": true,
+          "ordered_route_finish": false,
+          "hands_only_retention_at_finish": true,
+          "no_floor_contact": true,
+          "no_nonhand_body_contact_force": true,
+          "no_applied_ball_load": true
+        },
+        "failed_checks": [
+          "ordered_route_finish"
+        ],
+        "criteria": {
+          "pre_contact_window_s": 0.14,
+          "min_pre_contact_speed_mps": 0.1,
+          "post_contact_window_s": 0.5,
+          "min_immediate_route_displacement_m": 0.05,
+          "min_total_route_displacement_m": 0.1,
+          "waypoint_tolerance_cap_m": 0.05,
+          "waypoint_tolerance_fraction": 0.1,
+          "min_upright_cosine": 0.9,
+          "settling_window_s": 0.5,
+          "max_settled_speed_mps": 0.075,
+          "max_motion_gap_s": 0.04,
+          "min_initial_ball_height_m": 0.15,
+          "force_zero_tolerance_n": 1e-09
+        },
+        "retention_criteria": {
+          "window_s": 2.0,
+          "min_normal_per_hand_n": 0.1,
+          "min_bilateral_fraction": 0.85,
+          "max_bilateral_gap_s": 0.1,
+          "max_nonhand_normal_n": 0.1,
+          "min_mean_hand_weight_fraction": 0.8,
+          "min_initial_free_flight_s": 0.02
+        },
+        "first_tip_contact_s": 8.445000000000759,
+        "pre_tip_speed_mps": 0.9355158363417857,
+        "immediate_post_tip_route_displacement_m": 0.5790233387775174,
+        "total_post_tip_route_displacement_m": 2.7562198690536928,
+        "ordered_waypoint_hit_times_s": [],
+        "endpoint_error_m": 0.3212427821569542,
+        "endpoint_tolerance_m": 0.05,
+        "final_mean_speed_mps": 1.0589575938783615,
+        "first_floor_contact_s": null,
+        "peak_nonhand_body_normal_force_n": 0.0,
+        "retention": {
+          "bilateral_palm_tip_fraction": 0.9935,
+          "max_bilateral_gap_s": 0.002,
+          "mean_vertical_hand_force_as_ball_weight": 1.0051126858461485,
+          "bilateral_at_finish": true,
+          "hands_only_retention_at_finish": true
+        }
+      },
+      "anatomical_catch": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 8.445000000000759,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 1.6449999999990883,
+        "longest_clean_start_s": 8.773000000000577,
+        "longest_clean_end_s": 10.416999999999666,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 0.9831044882794551,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 1.0,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 1.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.00845719648850886,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 662.8304545003873,
+          "left_thumb": 33.30321867947815,
+          "left_palmar": 161.4257733459852,
+          "right_finger": 1047.1173453744411,
+          "right_thumb": 0.0,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "source": {
+        "report": "reports/catch-repair-20261115-go-tenyard/contact-r1/linux/artifacts/study/tenyard-live/trial/report.json",
+        "report_sha256": "b781238ca768423c854bf09fc91a73329195ca71c9ce64e90fd308966a5ddd37",
+        "view": "reports/catch-repair-20261115-go-tenyard/contact-r1/linux/artifacts/study/tenyard-live/trial/view.npz",
+        "view_sha256": "01f634febb79bf594312493f2a16960d82ba411be009df054be2522772cef75a",
+        "profile": "reports/catch-repair-20261115-go-tenyard/cadence-r3/profile.json"
+      },
+      "method": "Exact states/foot contacts are offline labels only. Dense root position and quaternion define actual physical movement/facing. Headings use declared axes, not renderer. Phase travel headings are endpoint displacement vectors; local speed is finite difference. Out uses archived40ms full play qposes outside its available1kHz4.301\u20136.999s dense metrology window; exact saved poses are merged without interpolation. Low speed headings are omitted.",
+      "ball_flight_offline": {
+        "first_contact_center_world_m": [
+          9.42530570137732,
+          -0.4393282816627595,
+          1.2386828115092372
+        ],
+        "world_x_advance_m": 9.42530570137732,
+        "declared_alongfield_advance_m": 9.42530570137732,
+        "declared_left_advance_m": 1.3894717183372405,
+        "horizontal_distance_m": 9.527172677162667,
+        "note": "Some legacy pass metrics call world X advance downfield. That label does not equal declared field depth in rotated Out or Slant coordinates. Football final7qpos ABI verified in prior model audits."
+      }
+    },
+    {
+      "id": "Out06 original fallback",
+      "kind": "out",
+      "declared_field_heading_deg": 23.777748497929164,
+      "alongfield_unit_world_xy": [
+        0.9151163204946318,
+        0.4031899303856266
+      ],
+      "left_unit_world_xy": [
+        -0.4031899303856266,
+        0.9151163204946318
+      ],
+      "field_origin_world_xy_m": [
+        0.0,
+        0.0
+      ],
+      "profile_legacy_route_frame": {
+        "heading_rad": 0.415,
+        "scrimmage_origin_xy_m": [
+          0,
+          0
+        ],
+        "quarterback_depth_m": 0.0,
+        "five_yard_line_point_xy_m": [
+          4.183911817301457,
+          1.843384361723085
+        ],
+        "evidence": "alignment-only input; no receive claim; original target retained"
+      },
+      "profile_declared_route_frame": null,
+      "declared_initial_stance_yaw_rad": null,
+      "longest_clean_control_phase": {
+        "window_s": [
+          6.621000000000546,
+          9.999999999999897
+        ],
+        "travel_heading_world_deg": 124.01289923332212,
+        "travel_heading_relative_field_deg": 100.23515073539295,
+        "mean_body_heading_world_deg": 98.55179455063255,
+        "mean_body_heading_relative_field_deg": 74.77404605270338,
+        "mean_forward_velocity_mps": 1.1772454974666886,
+        "minimum_forward_velocity_mps": 1.0347760090923386,
+        "mean_horizontal_speed_mps": 1.2935500762336365,
+        "body_travel_misalignment_deg": 25.46110468268957
+      },
+      "longest_clean_start": {
+        "time_s": 6.621000000000546,
+        "world_xy_m": [
+          2.657138857276167,
+          5.345275289655538
+        ],
+        "alongfield_m": 4.5867523060421025,
+        "alongfield_yards": 5.016133318068791,
+        "left_lateral_m": 3.820217024210331,
+        "left_lateral_yards": 4.177840140212523,
+        "body_heading_world_deg": 97.71013653430008,
+        "body_heading_relative_field_deg": 73.93238803637091,
+        "velocity_heading_world_deg": 119.19518040321937,
+        "velocity_heading_relative_field_deg": 95.4174319052902,
+        "horizontal_speed_mps": 1.245911183101411,
+        "body_forward_velocity_mps": 1.159336808712115
+      },
+      "longest_clean_end": {
+        "time_s": 9.999999999999897,
+        "world_xy_m": [
+          0.2170983484795514,
+          8.96102792535058
+        ],
+        "alongfield_m": 3.8116664672518246,
+        "alongfield_yards": 4.1684891374145066,
+        "left_lateral_m": 8.11285103488616,
+        "left_lateral_yards": 8.87232177918434,
+        "body_heading_world_deg": 117.29499304975026,
+        "body_heading_relative_field_deg": 93.5172445518211,
+        "velocity_heading_world_deg": 130.31789642241728,
+        "velocity_heading_relative_field_deg": 106.54014792448812,
+        "horizontal_speed_mps": 1.3893424120979312,
+        "body_forward_velocity_mps": 1.35360861580357
+      },
+      "physical_initial": {
+        "time_s": 0.0,
+        "world_xy_m": [
+          0.0,
+          0.0
+        ],
+        "body_heading_world_deg": 0.0,
+        "body_heading_relative_field_deg": -23.777748497929164
+      },
+      "machine_initial_formation": {
+        "world_xy_m": [
+          0.737353744689234,
+          -1.6735647269205824
+        ],
+        "alongfield_m": 1.1102230246251565e-16,
+        "left_lateral_m": -1.8287999999999998,
+        "lateral_split_yards": 1.9999999999999998,
+        "receiver_to_machine_xy_distance_m": 1.8287999999999998
+      },
+      "release": {
+        "ball_release_s": 5.500000000000171,
+        "machine_world_xy_m": [
+          0.737353744689234,
+          -1.6735647269205824
+        ],
+        "receiver": {
+          "time_s": 5.500000000000171,
+          "world_xy_m": [
+            3.3569509352207048,
+            4.232652555205237
+          ],
+          "alongfield_m": 4.778563476999929,
+          "alongfield_yards": 5.225900565397997,
+          "left_lateral_m": 2.5198806183720177,
+          "left_lateral_yards": 2.755774954475085,
+          "body_heading_world_deg": 98.45559579037622,
+          "body_heading_relative_field_deg": 74.67784729244705,
+          "velocity_heading_world_deg": 127.8038060138169,
+          "velocity_heading_relative_field_deg": 104.02605751588773,
+          "horizontal_speed_mps": 1.0562437178845465,
+          "body_forward_velocity_mps": 0.9206824248497708
+        },
+        "actual_receiver_to_machine_xy_distance_m": 6.46109062189365
+      },
+      "turn": {
+        "time_s": 3.1199999999997674,
+        "world_xy_m": [
+          3.98460379113213,
+          2.3703493342410105
+        ],
+        "alongfield_m": 4.602076943032045,
+        "alongfield_yards": 5.03289254487319,
+        "left_lateral_m": 0.5625932358766661,
+        "left_lateral_yards": 0.6152594443095648,
+        "body_heading_world_deg": 26.55248403800842,
+        "body_heading_relative_field_deg": 2.774735540079257,
+        "velocity_heading_world_deg": 28.601003348399814,
+        "velocity_heading_relative_field_deg": 4.823254850470653,
+        "horizontal_speed_mps": 0.8134062946023821,
+        "body_forward_velocity_mps": 0.8128864588697451
+      },
+      "first_contact": {
+        "time_s": 6.193000000000403,
+        "world_xy_m": [
+          2.8653716873254655,
+          4.87559507680785
+        ],
+        "alongfield_m": 4.587939234961436,
+        "alongfield_yards": 5.017431359319155,
+        "left_lateral_m": 3.306447615768442,
+        "left_lateral_yards": 3.6159750828613757,
+        "body_heading_world_deg": 104.09544946715184,
+        "body_heading_relative_field_deg": 80.31770096922267,
+        "velocity_heading_world_deg": 139.60346961186593,
+        "velocity_heading_relative_field_deg": 115.82572111393678,
+        "horizontal_speed_mps": 1.3824986774013504,
+        "body_forward_velocity_mps": 1.125401239120642
+      },
+      "end": {
+        "time_s": 9.999999999999897,
+        "world_xy_m": [
+          0.2170983484795514,
+          8.96102792535058
+        ],
+        "alongfield_m": 3.8116664672518246,
+        "alongfield_yards": 4.1684891374145066,
+        "left_lateral_m": 8.11285103488616,
+        "left_lateral_yards": 8.87232177918434,
+        "body_heading_world_deg": 117.29499304975026,
+        "body_heading_relative_field_deg": 93.5172445518211,
+        "velocity_heading_world_deg": 130.31789642241728,
+        "velocity_heading_relative_field_deg": 106.54014792448812,
+        "horizontal_speed_mps": 1.3893424120979312,
+        "body_forward_velocity_mps": 1.35360861580357
+      },
+      "phases": {
+        "approach": {
+          "window_s": [
+            0.4000000000000003,
+            1.1999999999999786
+          ],
+          "travel_heading_world_deg": 41.46413227878967,
+          "travel_heading_relative_field_deg": 17.686383780860513,
+          "mean_body_heading_world_deg": 15.060559302523211,
+          "mean_body_heading_relative_field_deg": -8.71718919540595,
+          "mean_forward_velocity_mps": 1.3547200360599214,
+          "minimum_forward_velocity_mps": 0.3380429422970692,
+          "mean_horizontal_speed_mps": 1.5383418569335245,
+          "body_travel_misalignment_deg": 26.403572976266464
+        },
+        "pre_receive": {
+          "window_s": [
+            5.694000000000236,
+            6.0930000000003695
+          ],
+          "travel_heading_world_deg": 122.09871691478371,
+          "travel_heading_relative_field_deg": 98.32096841685454,
+          "mean_body_heading_world_deg": 100.3848651952819,
+          "mean_body_heading_relative_field_deg": 76.60711669735274,
+          "mean_forward_velocity_mps": 1.0510400967398004,
+          "minimum_forward_velocity_mps": 0.8597472649087003,
+          "mean_horizontal_speed_mps": 1.1361597888780888,
+          "body_travel_misalignment_deg": 21.713851719501807
+        },
+        "post_receive": {
+          "window_s": [
+            6.293000000000436,
+            6.792000000000603
+          ],
+          "travel_heading_world_deg": 115.2845036042552,
+          "travel_heading_relative_field_deg": 91.50675510632604,
+          "mean_body_heading_world_deg": 93.91786454546308,
+          "mean_body_heading_relative_field_deg": 70.14011604753391,
+          "mean_forward_velocity_mps": 1.1883559125810712,
+          "minimum_forward_velocity_mps": 0.9458619713716022,
+          "mean_horizontal_speed_mps": 1.2833903151741033,
+          "body_travel_misalignment_deg": 21.36663905879213
+        },
+        "late_exit": {
+          "window_s": [
+            9.280000000000296,
+            9.999999999999897
+          ],
+          "travel_heading_world_deg": 124.14700673486465,
+          "travel_heading_relative_field_deg": 100.36925823693548,
+          "mean_body_heading_world_deg": 113.21052614363664,
+          "mean_body_heading_relative_field_deg": 89.43277764570747,
+          "mean_forward_velocity_mps": 1.275445488904591,
+          "minimum_forward_velocity_mps": 1.1874503911189482,
+          "mean_horizontal_speed_mps": 1.3024109253599354,
+          "body_travel_misalignment_deg": 10.936480591228
+        },
+        "pre_cut": {
+          "window_s": [
+            2.4399999999998423,
+            2.959999999999785
+          ],
+          "travel_heading_world_deg": 20.035327179778093,
+          "travel_heading_relative_field_deg": -3.742421318151068,
+          "mean_body_heading_world_deg": 18.186461244076614,
+          "mean_body_heading_relative_field_deg": -5.591287253852549,
+          "mean_forward_velocity_mps": 1.2476228724596872,
+          "minimum_forward_velocity_mps": 1.0076411894648039,
+          "mean_horizontal_speed_mps": 1.2596825907055524,
+          "body_travel_misalignment_deg": 1.8488659357014805
+        },
+        "post_cut": {
+          "window_s": [
+            3.6799999999997057,
+            4.199999999999737
+          ],
+          "travel_heading_world_deg": 105.52856194279971,
+          "travel_heading_relative_field_deg": 81.75081344487054,
+          "mean_body_heading_world_deg": 36.89692663047164,
+          "mean_body_heading_relative_field_deg": 13.119178132542475,
+          "mean_forward_velocity_mps": 0.32869731724287693,
+          "minimum_forward_velocity_mps": 0.23231411485231368,
+          "mean_horizontal_speed_mps": 0.8756885623079781,
+          "body_travel_misalignment_deg": 68.63163531232807
+        }
+      },
+      "maximum_alongfield_m": 4.984191182121794,
+      "maximum_prebreak_abs_lateral_m": 0.6106692290216793,
+      "maximum_downfield_overshoot_after_break_m": 0.3821142390897494,
+      "sustained_backward_intervals_below_minus0p1mps_at_least0p1s": [],
+      "raw_fullplay_bothfeet_floorfree_intervals": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.03299999999999991,
+          "duration_s": 0.03299999999999991
+        },
+        {
+          "start_s": 0.6100000000000004,
+          "end_s": 0.6110000000000003,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 0.6340000000000005,
+          "end_s": 0.6350000000000003,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.050999999999995,
+          "end_s": 1.051999999999995,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.069999999999993,
+          "end_s": 1.0719999999999927,
+          "duration_s": 0.0019999999999997797
+        },
+        {
+          "start_s": 1.3629999999999607,
+          "end_s": 1.3639999999999606,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.3769999999999591,
+          "end_s": 1.378999999999959,
+          "duration_s": 0.0019999999999997797
+        },
+        {
+          "start_s": 1.3829999999999585,
+          "end_s": 1.4339999999999529,
+          "duration_s": 0.05099999999999438
+        },
+        {
+          "start_s": 1.7219999999999211,
+          "end_s": 1.722999999999921,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.7399999999999192,
+          "end_s": 1.7429999999999188,
+          "duration_s": 0.0029999999999996696
+        },
+        {
+          "start_s": 1.750999999999918,
+          "end_s": 1.7549999999999175,
+          "duration_s": 0.0039999999999995595
+        },
+        {
+          "start_s": 1.759999999999917,
+          "end_s": 1.7619999999999167,
+          "duration_s": 0.0019999999999997797
+        },
+        {
+          "start_s": 2.0009999999998906,
+          "end_s": 2.0099999999998897,
+          "duration_s": 0.008999999999999009
+        },
+        {
+          "start_s": 2.2089999999998677,
+          "end_s": 2.2099999999998676,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 2.2219999999998663,
+          "end_s": 2.2659999999998615,
+          "duration_s": 0.043999999999995154
+        },
+        {
+          "start_s": 2.4659999999998394,
+          "end_s": 2.478999999999838,
+          "duration_s": 0.012999999999998568
+        },
+        {
+          "start_s": 2.6629999999998177,
+          "end_s": 2.6659999999998174,
+          "duration_s": 0.0029999999999996696
+        },
+        {
+          "start_s": 2.9029999999997913,
+          "end_s": 2.91299999999979,
+          "duration_s": 0.009999999999998899
+        },
+        {
+          "start_s": 4.431999999999815,
+          "end_s": 4.434999999999816,
+          "duration_s": 0.0030000000000005578
+        },
+        {
+          "start_s": 7.011000000000676,
+          "end_s": 7.0120000000006755,
+          "duration_s": 0.0009999999999998899
+        }
+      ],
+      "fullplay_floorfree_and_bothsoles5mm_intervals_atleast25ms": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.025999999999999905,
+          "duration_s": 0.025999999999999905
+        },
+        {
+          "start_s": 2.233999999999865,
+          "end_s": 2.262999999999862,
+          "duration_s": 0.028999999999996806
+        }
+      ],
+      "catchwindow_clear_intervals": [],
+      "independent_declared_field_running_score": {
+        "strict_in_stride_catch_and_route": false,
+        "running_long_pass_and_route": false,
+        "running_at_catch": false,
+        "foot_sample_clock_ok": true,
+        "pre_tip_forward_speed_mps": 1.2308131763843566,
+        "qualified_flight_phases": [],
+        "max_recurrent_flights": 0,
+        "recurrent_flights_span_catch": false,
+        "first_ball_contact_s": 6.193000000000403,
+        "unassisted_ball_flight_s": 0.6930000000002314,
+        "ball_toward_receiver_travel_m": -7.0108682073034005,
+        "ball_rise_m": 0.5138964233626313,
+        "ball_descent_into_contact_m": 0.13667999711568202,
+        "longer_airborne_pass": false,
+        "criteria": {
+          "min_forward_speed_mps": 0.8,
+          "min_flight_s": 0.025,
+          "min_sole_clearance_m": 0.005,
+          "min_ground_interval_s": 0.035,
+          "min_ground_fraction": 0.8,
+          "min_recurrent_flights": 2,
+          "max_neighbor_flight_spacing_s": 0.72,
+          "gait_window_s": 0.75,
+          "startup_exclusion_s": 0.35,
+          "terminal_exclusion_s": 0.4,
+          "max_foot_sample_gap_s": 0.005,
+          "max_motion_gap_s": 0.04,
+          "min_ball_flight_s": 0.18,
+          "min_ball_forward_travel_m": 0.25,
+          "min_ball_rise_m": 0.03,
+          "min_ball_descent_m": 0.015,
+          "ball_descent_window_s": 0.04,
+          "max_ball_sample_gap_s": 0.005
+        }
+      },
+      "independent_running_forward_axis_world_xy": [
+        -0.4031899303856266,
+        0.9151163204946318
+      ],
+      "archived_running_score": null,
+      "archived_strict_checks": {
+        "in_stride_catch_and_route": false,
+        "checks": {
+          "complete_synchronized_traces": true,
+          "initial_free_flight": true,
+          "first_tip_contact": true,
+          "pre_contact_speed": true,
+          "immediate_post_contact_progress": true,
+          "total_post_contact_progress": true,
+          "ordered_route_finish": false,
+          "hands_only_retention_at_finish": false,
+          "no_floor_contact": true,
+          "no_nonhand_body_contact_force": true,
+          "no_applied_ball_load": true
+        },
+        "failed_checks": [
+          "ordered_route_finish",
+          "hands_only_retention_at_finish"
+        ],
+        "criteria": {
+          "pre_contact_window_s": 0.14,
+          "min_pre_contact_speed_mps": 0.1,
+          "post_contact_window_s": 0.5,
+          "min_immediate_route_displacement_m": 0.05,
+          "min_total_route_displacement_m": 0.1,
+          "waypoint_tolerance_cap_m": 0.05,
+          "waypoint_tolerance_fraction": 0.1,
+          "min_upright_cosine": 0.9,
+          "settling_window_s": 0.5,
+          "max_settled_speed_mps": 0.075,
+          "max_motion_gap_s": 0.04,
+          "min_initial_ball_height_m": 0.15,
+          "force_zero_tolerance_n": 1e-09
+        },
+        "retention_criteria": {
+          "window_s": 2.0,
+          "min_normal_per_hand_n": 0.1,
+          "min_bilateral_fraction": 0.85,
+          "max_bilateral_gap_s": 0.1,
+          "max_nonhand_normal_n": 0.1,
+          "min_mean_hand_weight_fraction": 0.8,
+          "min_initial_free_flight_s": 0.02
+        },
+        "first_tip_contact_s": 6.193000000000403,
+        "pre_tip_speed_mps": 1.28125976849924,
+        "immediate_post_tip_route_displacement_m": 0.5877513814194986,
+        "total_post_tip_route_displacement_m": 4.497342265837061,
+        "ordered_waypoint_hit_times_s": [
+          3.079999999999772
+        ],
+        "endpoint_error_m": 6.127198908010759,
+        "endpoint_tolerance_m": 0.05,
+        "final_mean_speed_mps": 1.2908898030172795,
+        "first_floor_contact_s": null,
+        "peak_nonhand_body_normal_force_n": 0.0,
+        "retention": {
+          "bilateral_palm_tip_fraction": 0.8805,
+          "max_bilateral_gap_s": 0.114,
+          "mean_vertical_hand_force_as_ball_weight": 1.0042248239442608,
+          "bilateral_at_finish": true,
+          "hands_only_retention_at_finish": false
+        }
+      },
+      "anatomical_catch": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.193000000000403,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 3.3800000000011288,
+        "longest_clean_start_s": 6.621000000000546,
+        "longest_clean_end_s": 9.999999999999897,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.0010656029822358,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.8181818181818182,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.8181818181818182,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.0030368556108338078,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 579.7242984599476,
+          "left_thumb": 381.39784929635806,
+          "left_palmar": 78.12343409927594,
+          "right_finger": 854.3949393407993,
+          "right_thumb": 340.1688942079327,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "source": {
+        "report": "reports/catch-repair-20261114/out-comparison/batch-r1/artifacts/study/current/trial-06/rollout/trial/report.json",
+        "report_sha256": "644b660290e2bea70338df1cb35ef02e1a21a4a13aa652bc13676e991297f6a6",
+        "view": "reports/catch-repair-20261114/out-comparison/batch-r1/artifacts/study/current/trial-06/rollout/trial/view.npz",
+        "view_sha256": "4c4dee10e1f62164d82160b93aa283bfc6a1ac32e60c6ba0d706db1f79600479",
+        "profile": "reports/catch-repair-20261114/out-comparison/batch-r1/artifacts/study/current/trial-06/profile.json"
+      },
+      "method": "Exact states/foot contacts are offline labels only. Dense root position and quaternion define actual physical movement/facing. Headings use declared axes, not renderer. Phase travel headings are endpoint displacement vectors; local speed is finite difference. Out uses archived40ms full play qposes outside its available1kHz4.301\u20136.999s dense metrology window; exact saved poses are merged without interpolation. Low speed headings are omitted.",
+      "ball_flight_offline": {
+        "first_contact_center_world_m": [
+          2.746716914128542,
+          5.049510236290676,
+          1.2450528577340114
+        ],
+        "world_x_advance_m": 2.009363169439308,
+        "declared_alongfield_advance_m": 4.5494771565492265,
+        "declared_left_advance_m": 5.342240626337791,
+        "horizontal_distance_m": 7.016927910963403,
+        "note": "Some legacy pass metrics call world X advance downfield. That label does not equal declared field depth in rotated Out or Slant coordinates. Football final7qpos ABI verified in prior model audits."
+      }
+    },
+    {
+      "id": "Out PPO initial synced regulated",
+      "kind": "out",
+      "declared_field_heading_deg": 23.777748497929164,
+      "alongfield_unit_world_xy": [
+        0.9151163204946318,
+        0.4031899303856266
+      ],
+      "left_unit_world_xy": [
+        -0.4031899303856266,
+        0.9151163204946318
+      ],
+      "field_origin_world_xy_m": [
+        0.0,
+        0.0
+      ],
+      "profile_legacy_route_frame": {
+        "heading_rad": 0.415,
+        "scrimmage_origin_xy_m": [
+          0,
+          0
+        ],
+        "quarterback_depth_m": 0.0,
+        "five_yard_line_point_xy_m": [
+          4.183911817301457,
+          1.843384361723085
+        ],
+        "evidence": "alignment-only input; no receive claim; original target retained"
+      },
+      "profile_declared_route_frame": null,
+      "declared_initial_stance_yaw_rad": null,
+      "longest_clean_control_phase": {
+        "window_s": [
+          6.818000000000612,
+          9.999999999999897
+        ],
+        "travel_heading_world_deg": 123.28655879331382,
+        "travel_heading_relative_field_deg": 99.50881029538465,
+        "mean_body_heading_world_deg": 101.08853389519543,
+        "mean_body_heading_relative_field_deg": 77.31078539726627,
+        "mean_forward_velocity_mps": 1.2106818537310347,
+        "minimum_forward_velocity_mps": 1.0647131238630285,
+        "mean_horizontal_speed_mps": 1.275979086396575,
+        "body_travel_misalignment_deg": 22.19802489811838
+      },
+      "longest_clean_start": {
+        "time_s": 6.818000000000612,
+        "world_xy_m": [
+          2.5095665192590406,
+          5.5788828309143526
+        ],
+        "alongfield_m": 4.545894659366779,
+        "alongfield_yards": 4.971450852325874,
+        "left_lateral_m": 4.093494778498865,
+        "left_lateral_yards": 4.476700326442328,
+        "body_heading_world_deg": 95.32528510571062,
+        "body_heading_relative_field_deg": 71.54753660778147,
+        "velocity_heading_world_deg": 122.4012419954448,
+        "velocity_heading_relative_field_deg": 98.62349349751564,
+        "horizontal_speed_mps": 1.2045508041047823,
+        "body_forward_velocity_mps": 1.0725367182931347
+      },
+      "longest_clean_end": {
+        "time_s": 9.999999999999897,
+        "world_xy_m": [
+          0.26186751013472354,
+          9.00242750762932
+        ],
+        "alongfield_m": 3.869327352434295,
+        "alongfield_yards": 4.23154784824398,
+        "left_lateral_m": 8.132685993119926,
+        "left_lateral_yards": 8.89401355328076,
+        "body_heading_world_deg": 117.73613325125729,
+        "body_heading_relative_field_deg": 93.95838475332812,
+        "velocity_heading_world_deg": 129.5505673286461,
+        "velocity_heading_relative_field_deg": 105.77281883071694,
+        "horizontal_speed_mps": 1.339715906437906,
+        "body_forward_velocity_mps": 1.3113351511389881
+      },
+      "physical_initial": {
+        "time_s": 0.0,
+        "world_xy_m": [
+          0.0,
+          0.0
+        ],
+        "body_heading_world_deg": 0.0,
+        "body_heading_relative_field_deg": -23.777748497929164
+      },
+      "machine_initial_formation": {
+        "world_xy_m": [
+          0.737353744689234,
+          -1.6735647269205824
+        ],
+        "alongfield_m": 1.1102230246251565e-16,
+        "left_lateral_m": -1.8287999999999998,
+        "lateral_split_yards": 1.9999999999999998,
+        "receiver_to_machine_xy_distance_m": 1.8287999999999998
+      },
+      "release": {
+        "ball_release_s": 5.500000000000171,
+        "machine_world_xy_m": [
+          0.737353744689234,
+          -1.6735647269205824
+        ],
+        "receiver": {
+          "time_s": 5.500000000000171,
+          "world_xy_m": [
+            3.356626439841662,
+            4.234304805222373
+          ],
+          "alongfield_m": 4.7789326965520305,
+          "alongfield_yards": 5.226304348810182,
+          "left_lateral_m": 2.521523452597523,
+          "left_lateral_yards": 2.7575715798310623,
+          "body_heading_world_deg": 98.47386118053656,
+          "body_heading_relative_field_deg": 74.69611268260739,
+          "velocity_heading_world_deg": 127.48357979895883,
+          "velocity_heading_relative_field_deg": 103.70583130102968,
+          "horizontal_speed_mps": 1.0624045822569073,
+          "body_forward_velocity_mps": 0.9291126051074013
+        },
+        "actual_receiver_to_machine_xy_distance_m": 6.462469486225377
+      },
+      "turn": {
+        "time_s": 3.1199999999997674,
+        "world_xy_m": [
+          3.98460379113213,
+          2.3703493342410105
+        ],
+        "alongfield_m": 4.602076943032045,
+        "alongfield_yards": 5.03289254487319,
+        "left_lateral_m": 0.5625932358766661,
+        "left_lateral_yards": 0.6152594443095648,
+        "body_heading_world_deg": 26.55248403800842,
+        "body_heading_relative_field_deg": 2.774735540079257,
+        "velocity_heading_world_deg": 28.601003765806713,
+        "velocity_heading_relative_field_deg": 4.82325526787755,
+        "horizontal_speed_mps": 0.8134062932794075,
+        "body_forward_velocity_mps": 0.8128864573357948
+      },
+      "first_contact": {
+        "time_s": 6.1920000000004025,
+        "world_xy_m": [
+          2.8619318052568246,
+          4.885881282383512
+        ],
+        "alongfield_m": 4.588938637249829,
+        "alongfield_yards": 5.018524318952131,
+        "left_lateral_m": 3.3172476161784825,
+        "left_lateral_yards": 3.6277861069318487,
+        "body_heading_world_deg": 101.93954265498178,
+        "body_heading_relative_field_deg": 78.16179415705261,
+        "velocity_heading_world_deg": 140.25240467105834,
+        "velocity_heading_relative_field_deg": 116.47465617312919,
+        "horizontal_speed_mps": 1.3790740464424571,
+        "body_forward_velocity_mps": 1.0820728259147567
+      },
+      "end": {
+        "time_s": 9.999999999999897,
+        "world_xy_m": [
+          0.26186751013472354,
+          9.00242750762932
+        ],
+        "alongfield_m": 3.869327352434295,
+        "alongfield_yards": 4.23154784824398,
+        "left_lateral_m": 8.132685993119926,
+        "left_lateral_yards": 8.89401355328076,
+        "body_heading_world_deg": 117.73613325125729,
+        "body_heading_relative_field_deg": 93.95838475332812,
+        "velocity_heading_world_deg": 129.5505673286461,
+        "velocity_heading_relative_field_deg": 105.77281883071694,
+        "horizontal_speed_mps": 1.339715906437906,
+        "body_forward_velocity_mps": 1.3113351511389881
+      },
+      "phases": {
+        "approach": {
+          "window_s": [
+            0.4000000000000003,
+            1.1999999999999786
+          ],
+          "travel_heading_world_deg": 41.46413227878967,
+          "travel_heading_relative_field_deg": 17.686383780860513,
+          "mean_body_heading_world_deg": 15.060559302523211,
+          "mean_body_heading_relative_field_deg": -8.71718919540595,
+          "mean_forward_velocity_mps": 1.3547200360599214,
+          "minimum_forward_velocity_mps": 0.3380429422970692,
+          "mean_horizontal_speed_mps": 1.5383418569335245,
+          "body_travel_misalignment_deg": 26.403572976266464
+        },
+        "pre_receive": {
+          "window_s": [
+            5.693000000000236,
+            6.092000000000369
+          ],
+          "travel_heading_world_deg": 121.94816647405068,
+          "travel_heading_relative_field_deg": 98.17041797612151,
+          "mean_body_heading_world_deg": 99.82173094949174,
+          "mean_body_heading_relative_field_deg": 76.04398245156257,
+          "mean_forward_velocity_mps": 1.0768943926771553,
+          "minimum_forward_velocity_mps": 0.8150413238076315,
+          "mean_horizontal_speed_mps": 1.1681192697340395,
+          "body_travel_misalignment_deg": 22.126435524558946
+        },
+        "post_receive": {
+          "window_s": [
+            6.292000000000436,
+            6.7910000000006026
+          ],
+          "travel_heading_world_deg": 114.6529326734069,
+          "travel_heading_relative_field_deg": 90.87518417547773,
+          "mean_body_heading_world_deg": 95.12026134168504,
+          "mean_body_heading_relative_field_deg": 71.34251284375588,
+          "mean_forward_velocity_mps": 1.219165409083526,
+          "minimum_forward_velocity_mps": 0.9653842238699566,
+          "mean_horizontal_speed_mps": 1.2999867892983765,
+          "body_travel_misalignment_deg": 19.53267133172185
+        },
+        "late_exit": {
+          "window_s": [
+            9.280000000000296,
+            9.999999999999897
+          ],
+          "travel_heading_world_deg": 124.08870373167096,
+          "travel_heading_relative_field_deg": 100.3109552337418,
+          "mean_body_heading_world_deg": 113.17691329560316,
+          "mean_body_heading_relative_field_deg": 89.39916479767399,
+          "mean_forward_velocity_mps": 1.2676850606814827,
+          "minimum_forward_velocity_mps": 1.189351817117425,
+          "mean_horizontal_speed_mps": 1.2940822093430524,
+          "body_travel_misalignment_deg": 10.911790436067799
+        },
+        "pre_cut": {
+          "window_s": [
+            2.4399999999998423,
+            2.959999999999785
+          ],
+          "travel_heading_world_deg": 20.035327179778093,
+          "travel_heading_relative_field_deg": -3.742421318151068,
+          "mean_body_heading_world_deg": 18.186461244076614,
+          "mean_body_heading_relative_field_deg": -5.591287253852549,
+          "mean_forward_velocity_mps": 1.2476228724596872,
+          "minimum_forward_velocity_mps": 1.0076411894648039,
+          "mean_horizontal_speed_mps": 1.2596825907055524,
+          "body_travel_misalignment_deg": 1.8488659357014805
+        },
+        "post_cut": {
+          "window_s": [
+            3.6799999999997057,
+            4.199999999999737
+          ],
+          "travel_heading_world_deg": 105.54330836257743,
+          "travel_heading_relative_field_deg": 81.76555986464827,
+          "mean_body_heading_world_deg": 36.81573250364118,
+          "mean_body_heading_relative_field_deg": 13.037984005712014,
+          "mean_forward_velocity_mps": 0.3268557082020141,
+          "minimum_forward_velocity_mps": 0.23095052332117474,
+          "mean_horizontal_speed_mps": 0.8746610973660774,
+          "body_travel_misalignment_deg": 68.72757585893625
+        }
+      },
+      "maximum_alongfield_m": 4.984081901955629,
+      "maximum_prebreak_abs_lateral_m": 0.6106692290216793,
+      "maximum_downfield_overshoot_after_break_m": 0.3820049589235843,
+      "sustained_backward_intervals_below_minus0p1mps_at_least0p1s": [],
+      "raw_fullplay_bothfeet_floorfree_intervals": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.03299999999999991,
+          "duration_s": 0.03299999999999991
+        },
+        {
+          "start_s": 0.6100000000000004,
+          "end_s": 0.6110000000000003,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 0.6340000000000005,
+          "end_s": 0.6350000000000003,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.050999999999995,
+          "end_s": 1.051999999999995,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.069999999999993,
+          "end_s": 1.0719999999999927,
+          "duration_s": 0.0019999999999997797
+        },
+        {
+          "start_s": 1.3629999999999607,
+          "end_s": 1.3639999999999606,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.3769999999999591,
+          "end_s": 1.378999999999959,
+          "duration_s": 0.0019999999999997797
+        },
+        {
+          "start_s": 1.3829999999999585,
+          "end_s": 1.4339999999999529,
+          "duration_s": 0.05099999999999438
+        },
+        {
+          "start_s": 1.7219999999999211,
+          "end_s": 1.722999999999921,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 1.7399999999999192,
+          "end_s": 1.7429999999999188,
+          "duration_s": 0.0029999999999996696
+        },
+        {
+          "start_s": 1.750999999999918,
+          "end_s": 1.7549999999999175,
+          "duration_s": 0.0039999999999995595
+        },
+        {
+          "start_s": 1.759999999999917,
+          "end_s": 1.7619999999999167,
+          "duration_s": 0.0019999999999997797
+        },
+        {
+          "start_s": 2.0009999999998906,
+          "end_s": 2.0099999999998897,
+          "duration_s": 0.008999999999999009
+        },
+        {
+          "start_s": 2.2089999999998677,
+          "end_s": 2.2099999999998676,
+          "duration_s": 0.0009999999999998899
+        },
+        {
+          "start_s": 2.2219999999998663,
+          "end_s": 2.2659999999998615,
+          "duration_s": 0.043999999999995154
+        },
+        {
+          "start_s": 2.4659999999998394,
+          "end_s": 2.478999999999838,
+          "duration_s": 0.012999999999998568
+        },
+        {
+          "start_s": 2.6629999999998177,
+          "end_s": 2.6659999999998174,
+          "duration_s": 0.0029999999999996696
+        },
+        {
+          "start_s": 2.9029999999997913,
+          "end_s": 2.91299999999979,
+          "duration_s": 0.009999999999998899
+        },
+        {
+          "start_s": 4.432999999999815,
+          "end_s": 4.435999999999815,
+          "duration_s": 0.0030000000000005578
+        }
+      ],
+      "fullplay_floorfree_and_bothsoles5mm_intervals_atleast25ms": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.025999999999999905,
+          "duration_s": 0.025999999999999905
+        },
+        {
+          "start_s": 2.233999999999865,
+          "end_s": 2.262999999999862,
+          "duration_s": 0.028999999999996806
+        }
+      ],
+      "catchwindow_clear_intervals": [],
+      "independent_declared_field_running_score": {
+        "strict_in_stride_catch_and_route": false,
+        "running_long_pass_and_route": false,
+        "running_at_catch": false,
+        "foot_sample_clock_ok": true,
+        "pre_tip_forward_speed_mps": 1.1999251743059982,
+        "qualified_flight_phases": [],
+        "max_recurrent_flights": 0,
+        "recurrent_flights_span_catch": false,
+        "first_ball_contact_s": 6.1920000000004025,
+        "unassisted_ball_flight_s": 0.6920000000002311,
+        "ball_toward_receiver_travel_m": -7.0007368948651,
+        "ball_rise_m": 0.5138964233626313,
+        "ball_descent_into_contact_m": 0.13628759711568228,
+        "longer_airborne_pass": false,
+        "criteria": {
+          "min_forward_speed_mps": 0.8,
+          "min_flight_s": 0.025,
+          "min_sole_clearance_m": 0.005,
+          "min_ground_interval_s": 0.035,
+          "min_ground_fraction": 0.8,
+          "min_recurrent_flights": 2,
+          "max_neighbor_flight_spacing_s": 0.72,
+          "gait_window_s": 0.75,
+          "startup_exclusion_s": 0.35,
+          "terminal_exclusion_s": 0.4,
+          "max_foot_sample_gap_s": 0.005,
+          "max_motion_gap_s": 0.04,
+          "min_ball_flight_s": 0.18,
+          "min_ball_forward_travel_m": 0.25,
+          "min_ball_rise_m": 0.03,
+          "min_ball_descent_m": 0.015,
+          "ball_descent_window_s": 0.04,
+          "max_ball_sample_gap_s": 0.005
+        }
+      },
+      "independent_running_forward_axis_world_xy": [
+        -0.4031899303856266,
+        0.9151163204946318
+      ],
+      "archived_running_score": null,
+      "archived_strict_checks": {
+        "in_stride_catch_and_route": false,
+        "checks": {
+          "complete_synchronized_traces": true,
+          "initial_free_flight": true,
+          "first_tip_contact": true,
+          "pre_contact_speed": true,
+          "immediate_post_contact_progress": true,
+          "total_post_contact_progress": true,
+          "ordered_route_finish": false,
+          "hands_only_retention_at_finish": false,
+          "no_floor_contact": true,
+          "no_nonhand_body_contact_force": true,
+          "no_applied_ball_load": true
+        },
+        "failed_checks": [
+          "ordered_route_finish",
+          "hands_only_retention_at_finish"
+        ],
+        "criteria": {
+          "pre_contact_window_s": 0.14,
+          "min_pre_contact_speed_mps": 0.1,
+          "post_contact_window_s": 0.5,
+          "min_immediate_route_displacement_m": 0.05,
+          "min_total_route_displacement_m": 0.1,
+          "waypoint_tolerance_cap_m": 0.05,
+          "waypoint_tolerance_fraction": 0.1,
+          "min_upright_cosine": 0.9,
+          "settling_window_s": 0.5,
+          "max_settled_speed_mps": 0.075,
+          "max_motion_gap_s": 0.04,
+          "min_initial_ball_height_m": 0.15,
+          "force_zero_tolerance_n": 1e-09
+        },
+        "retention_criteria": {
+          "window_s": 2.0,
+          "min_normal_per_hand_n": 0.1,
+          "min_bilateral_fraction": 0.85,
+          "max_bilateral_gap_s": 0.1,
+          "max_nonhand_normal_n": 0.1,
+          "min_mean_hand_weight_fraction": 0.8,
+          "min_initial_free_flight_s": 0.02
+        },
+        "first_tip_contact_s": 6.1920000000004025,
+        "pre_tip_speed_mps": 1.246031561609429,
+        "immediate_post_tip_route_displacement_m": 0.5946758294609786,
+        "total_post_tip_route_displacement_m": 4.519220108408855,
+        "ordered_waypoint_hit_times_s": [
+          3.079999999999772
+        ],
+        "endpoint_error_m": 6.136108244496213,
+        "endpoint_tolerance_m": 0.05,
+        "final_mean_speed_mps": 1.2904556866485957,
+        "first_floor_contact_s": null,
+        "peak_nonhand_body_normal_force_n": 0.0,
+        "retention": {
+          "bilateral_palm_tip_fraction": 0.0,
+          "max_bilateral_gap_s": 2.0,
+          "mean_vertical_hand_force_as_ball_weight": 1.0017777301159956,
+          "bilateral_at_finish": false,
+          "hands_only_retention_at_finish": false
+        }
+      },
+      "anatomical_catch": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.1920000000004025,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 3.183000000001063,
+        "longest_clean_start_s": 6.818000000000612,
+        "longest_clean_end_s": 9.999999999999897,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.001137772646389,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.8181818181818182,
+          "both_height_fraction": 0.9090909090909091,
+          "joint_form_fraction": 0.8181818181818182,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.006420323780104425,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 740.5782518177839,
+          "left_thumb": 236.62848990501652,
+          "left_palmar": 0.0,
+          "right_finger": 869.5343092873566,
+          "right_thumb": 255.09054660520408,
+          "right_palmar": 57.222558994094115,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "source": {
+        "report": "reports/catch-repair-20261115-out-performance/precontact-training-r1/artifacts/training/paired/initial/center/evaluation/episode-0001/rollout/rollout/trial/report.json",
+        "report_sha256": "ec13c46d6be8695261747cfb5d30248bb720ede8b5f216ca30d49c76ec5b4ab6",
+        "view": "reports/catch-repair-20261115-out-performance/precontact-training-r1/artifacts/training/paired/initial/center/evaluation/episode-0001/rollout/rollout/trial/view.npz",
+        "view_sha256": "990549a88b18a6b9dd7290813e01aba8ef1eb3d51b51209d0058de5577076972",
+        "profile": "reports/catch-repair-20261115-out-performance/precontact-training-r1/artifacts/training/paired/initial/center/evaluation/episode-0001/episode-profile.json"
+      },
+      "method": "Exact states/foot contacts are offline labels only. Dense root position and quaternion define actual physical movement/facing. Headings use declared axes, not renderer. Phase travel headings are endpoint displacement vectors; local speed is finite difference. Out uses archived40ms full play qposes outside its available1kHz4.301\u20136.999s dense metrology window; exact saved poses are merged without interpolation. Low speed headings are omitted.",
+      "ball_flight_offline": {
+        "first_contact_center_world_m": [
+          2.74354680618486,
+          5.039538772678587,
+          1.2491037249296977
+        ],
+        "world_x_advance_m": 2.006193061495626,
+        "declared_alongfield_advance_m": 4.542555745312633,
+        "declared_left_advance_m": 5.334393732848279,
+        "horizontal_distance_m": 7.006466241717276,
+        "note": "Some legacy pass metrics call world X advance downfield. That label does not equal declared field depth in rotated Out or Slant coordinates. Football final7qpos ABI verified in prior model audits."
+      }
+    },
+    {
+      "id": "Slant scripted171ms",
+      "kind": "slant",
+      "declared_field_heading_deg": 42.742662976261364,
+      "alongfield_unit_world_xy": [
+        0.7344094273945345,
+        0.6787067061360392
+      ],
+      "left_unit_world_xy": [
+        -0.6787067061360392,
+        0.7344094273945345
+      ],
+      "field_origin_world_xy_m": [
+        0.0,
+        0.0
+      ],
+      "profile_legacy_route_frame": {
+        "heading_rad": 0.415,
+        "scrimmage_origin_xy_m": [
+          0,
+          0
+        ],
+        "quarterback_depth_m": 0.0,
+        "five_yard_line_point_xy_m": [
+          4.183911817301457,
+          1.843384361723085
+        ],
+        "evidence": "alignment-only input; no receive claim; original target retained"
+      },
+      "profile_declared_route_frame": {
+        "stem_heading_deg": 42.742662976261364,
+        "origin_world_xy_m": [
+          0.0,
+          0.0
+        ],
+        "quarterback_lateral_m": -1.8288,
+        "quarterback_downfield_m": 0.0,
+        "note": "Receiver starts2yardsbesidepassingmachine, machineatfieldcenterlineonLOS; physicsQB changed, notonlyavatar.",
+        "receiver_initial_lateral_from_machine_m": 1.8288,
+        "render_field_translation_normal_m": 6.2992
+      },
+      "declared_initial_stance_yaw_rad": null,
+      "longest_clean_control_phase": {
+        "window_s": [
+          6.636000000000551,
+          6.806000000000608
+        ],
+        "travel_heading_world_deg": -16.995311877616018,
+        "travel_heading_relative_field_deg": -59.73797485387739,
+        "mean_body_heading_world_deg": -18.57911049302818,
+        "mean_body_heading_relative_field_deg": -61.321773469289546,
+        "mean_forward_velocity_mps": 1.336285172598282,
+        "minimum_forward_velocity_mps": 1.3105837627853059,
+        "mean_horizontal_speed_mps": 1.3378808503632915,
+        "body_travel_misalignment_deg": 1.5837986154121622
+      },
+      "longest_clean_start": {
+        "time_s": 6.636000000000551,
+        "world_xy_m": [
+          10.048032103830467,
+          -1.0586002410650612
+        ],
+        "alongfield_m": 6.660890421087948,
+        "alongfield_yards": 7.284438343272034,
+        "left_lateral_m": -7.59711276922026,
+        "left_lateral_yards": -8.308303553390486,
+        "body_heading_world_deg": -16.889219167985328,
+        "body_heading_relative_field_deg": -59.631882144246696,
+        "velocity_heading_world_deg": -13.654818896217735,
+        "velocity_heading_relative_field_deg": -56.397481872479105,
+        "horizontal_speed_mps": 1.3318972701330976,
+        "body_forward_velocity_mps": 1.3297756498236903
+      },
+      "longest_clean_end": {
+        "time_s": 6.806000000000608,
+        "world_xy_m": [
+          10.265292762265378,
+          -1.1250040521183629
+        ],
+        "alongfield_m": 6.775379984969625,
+        "alongfield_yards": 7.4096456528539205,
+        "left_lateral_m": -7.793336619932036,
+        "left_lateral_yards": -8.522896565979918,
+        "body_heading_world_deg": -18.510363992456192,
+        "body_heading_relative_field_deg": -61.253026968717556,
+        "velocity_heading_world_deg": -21.82666753965483,
+        "velocity_heading_relative_field_deg": -64.56933051591619,
+        "horizontal_speed_mps": 1.3842473422967643,
+        "body_forward_velocity_mps": 1.3819292766029085
+      },
+      "physical_initial": {
+        "time_s": 0.0,
+        "world_xy_m": [
+          0.0,
+          0.0
+        ],
+        "body_heading_world_deg": 0.0,
+        "body_heading_relative_field_deg": -42.742662976261364
+      },
+      "machine_initial_formation": {
+        "world_xy_m": [
+          1.2412188241815885,
+          -1.3430879608191246
+        ],
+        "alongfield_m": 0.0,
+        "left_lateral_m": -1.8287999999999998,
+        "lateral_split_yards": 1.9999999999999998,
+        "receiver_to_machine_xy_distance_m": 1.8287999999999998
+      },
+      "release": {
+        "ball_release_s": 5.300000000000105,
+        "machine_world_xy_m": [
+          1.2412188241815885,
+          -1.3430879608191246
+        ],
+        "receiver": {
+          "time_s": 5.300000000000105,
+          "world_xy_m": [
+            8.302671012729675,
+            -0.4173632457138025
+          ],
+          "alongfield_m": 5.81429263054334,
+          "alongfield_yards": 6.35858774118913,
+          "left_lateral_m": -5.941593997481129,
+          "left_lateral_yards": -6.497806208968863,
+          "body_heading_world_deg": -15.473752009681567,
+          "body_heading_relative_field_deg": -58.21641498594293,
+          "velocity_heading_world_deg": -23.78521620281049,
+          "velocity_heading_relative_field_deg": -66.52787917907185,
+          "horizontal_speed_mps": 1.653737301759463,
+          "body_forward_velocity_mps": 1.636367909244691
+        },
+        "actual_receiver_to_machine_xy_distance_m": 7.121872875817666
+      },
+      "turn": {
+        "time_s": 1.0799999999999919,
+        "world_xy_m": [
+          0.801792085444864,
+          0.7923816235165544
+        ],
+        "alongfield_m": 1.1266383880606798,
+        "alongfield_yards": 1.2321067236009184,
+        "left_lateral_m": 0.03775086908651493,
+        "left_lateral_yards": 0.0412848524568186,
+        "body_heading_world_deg": 32.59692287861553,
+        "body_heading_relative_field_deg": -10.145740097645838,
+        "velocity_heading_world_deg": 42.471883827016605,
+        "velocity_heading_relative_field_deg": -0.2707791492447586,
+        "horizontal_speed_mps": 2.306311300755129,
+        "body_forward_velocity_mps": 2.2721418400671496
+      },
+      "first_contact": {
+        "time_s": 6.400000000000472,
+        "world_xy_m": [
+          9.76652723576073,
+          -0.9914993118044803
+        ],
+        "alongfield_m": 6.499692442797195,
+        "alongfield_yards": 7.108150090548113,
+        "left_lateral_m": -7.356773972415485,
+        "left_lateral_yards": -8.0454658490983,
+        "body_heading_world_deg": -14.564881503621239,
+        "body_heading_relative_field_deg": -57.30754447988261,
+        "velocity_heading_world_deg": -20.578440689310778,
+        "velocity_heading_relative_field_deg": -63.32110366557215,
+        "horizontal_speed_mps": 1.1156212500857985,
+        "body_forward_velocity_mps": 1.1094821320516688
+      },
+      "end": {
+        "time_s": 9.500000000000174,
+        "world_xy_m": [
+          12.83411553642929,
+          -1.893389334682907
+        ],
+        "alongfield_m": 8.14043940344859,
+        "alongfield_yards": 8.902492785923656,
+        "left_lateral_m": -10.101123259018681,
+        "left_lateral_yards": -11.046722724211156,
+        "body_heading_world_deg": -14.596158369072885,
+        "body_heading_relative_field_deg": -57.338821345334246,
+        "velocity_heading_world_deg": -11.429445642289767,
+        "velocity_heading_relative_field_deg": -54.172108618551135,
+        "horizontal_speed_mps": 0.8558832127044025,
+        "body_forward_velocity_mps": 0.8545763016673088
+      },
+      "phases": {
+        "approach": {
+          "window_s": [
+            0.4000000000000003,
+            1.1999999999999786
+          ],
+          "travel_heading_world_deg": 41.31835766164147,
+          "travel_heading_relative_field_deg": -1.4243053146199034,
+          "mean_body_heading_world_deg": 15.396061904092276,
+          "mean_body_heading_relative_field_deg": -27.34660107216909,
+          "mean_forward_velocity_mps": 1.3796754640201623,
+          "minimum_forward_velocity_mps": 0.33603581281562794,
+          "mean_horizontal_speed_mps": 1.561586956207606,
+          "body_travel_misalignment_deg": 25.922295757549186
+        },
+        "pre_receive": {
+          "window_s": [
+            5.901000000000305,
+            6.300000000000439
+          ],
+          "travel_heading_world_deg": -19.548688251415573,
+          "travel_heading_relative_field_deg": -62.29135122767695,
+          "mean_body_heading_world_deg": -20.302975162185902,
+          "mean_body_heading_relative_field_deg": -63.045638138447266,
+          "mean_forward_velocity_mps": 1.3081067103535722,
+          "minimum_forward_velocity_mps": 1.2048331129105756,
+          "mean_horizontal_speed_mps": 1.312072468051849,
+          "body_travel_misalignment_deg": 0.7542869107703299
+        },
+        "post_receive": {
+          "window_s": [
+            6.500000000000505,
+            6.999000000000672
+          ],
+          "travel_heading_world_deg": -16.342226679933564,
+          "travel_heading_relative_field_deg": -59.084889656194925,
+          "mean_body_heading_world_deg": -15.367382114332512,
+          "mean_body_heading_relative_field_deg": -58.11004509059387,
+          "mean_forward_velocity_mps": 1.3114341206392135,
+          "minimum_forward_velocity_mps": 1.120291167120352,
+          "mean_horizontal_speed_mps": 1.3167466446041742,
+          "body_travel_misalignment_deg": -0.9748445656010478
+        },
+        "late_exit": {
+          "window_s": [
+            8.75000000000059,
+            9.500000000000174
+          ],
+          "travel_heading_world_deg": -16.687535727211486,
+          "travel_heading_relative_field_deg": -59.43019870347286,
+          "mean_body_heading_world_deg": -17.06918023196782,
+          "mean_body_heading_relative_field_deg": -59.81184320822919,
+          "mean_forward_velocity_mps": 0.8701531738964711,
+          "minimum_forward_velocity_mps": 0.7989359110914971,
+          "mean_horizontal_speed_mps": 0.8751867943218639,
+          "body_travel_misalignment_deg": 0.38164450475633493
+        },
+        "pre_cut": {
+          "window_s": [
+            0.3800000000000003,
+            0.9590000000000007
+          ],
+          "travel_heading_world_deg": 42.75000876386084,
+          "travel_heading_relative_field_deg": 0.0073457875994745155,
+          "mean_body_heading_world_deg": 8.099282468570681,
+          "mean_body_heading_relative_field_deg": -34.643380507690686,
+          "mean_forward_velocity_mps": 1.076237697079201,
+          "minimum_forward_velocity_mps": 0.29667424534964026,
+          "mean_horizontal_speed_mps": 1.3315124946772718,
+          "body_travel_misalignment_deg": 34.65072629529016
+        },
+        "post_cut": {
+          "window_s": [
+            1.6309999999999312,
+            2.179999999999871
+          ],
+          "travel_heading_world_deg": 0.1899333522706286,
+          "travel_heading_relative_field_deg": -42.552729623990736,
+          "mean_body_heading_world_deg": 14.020689334718112,
+          "mean_body_heading_relative_field_deg": -28.721973641543258,
+          "mean_forward_velocity_mps": 1.3272270589757125,
+          "minimum_forward_velocity_mps": 1.2443946990735202,
+          "mean_horizontal_speed_mps": 1.38380914921009,
+          "body_travel_misalignment_deg": -13.830755982447482
+        }
+      },
+      "maximum_alongfield_m": 8.14043940344859,
+      "maximum_prebreak_abs_lateral_m": 0.08802847227248906,
+      "maximum_downfield_overshoot_after_break_m": 7.0138010153879105,
+      "sustained_backward_intervals_below_minus0p1mps_at_least0p1s": [],
+      "raw_fullplay_bothfeet_floorfree_intervals": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.03300000000000002,
+          "duration_s": 0.03300000000000002
+        },
+        {
+          "start_s": 0.6100000000000004,
+          "end_s": 0.6110000000000004,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 0.6340000000000005,
+          "end_s": 0.6350000000000005,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 1.050999999999995,
+          "end_s": 1.0519999999999952,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 1.069999999999993,
+          "end_s": 1.071999999999993,
+          "duration_s": 0.0019999999999998908
+        },
+        {
+          "start_s": 1.3269999999999647,
+          "end_s": 1.3409999999999633,
+          "duration_s": 0.01399999999999857
+        },
+        {
+          "start_s": 1.541999999999941,
+          "end_s": 1.5769999999999373,
+          "duration_s": 0.034999999999996256
+        },
+        {
+          "start_s": 1.82299999999991,
+          "end_s": 1.8309999999999094,
+          "duration_s": 0.00799999999999923
+        },
+        {
+          "start_s": 2.0029999999998904,
+          "end_s": 2.0129999999998893,
+          "duration_s": 0.00999999999999901
+        },
+        {
+          "start_s": 2.985999999999782,
+          "end_s": 2.986999999999782,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 2.994999999999781,
+          "end_s": 2.995999999999781,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 3.0009999999997805,
+          "end_s": 3.070999999999773,
+          "duration_s": 0.0699999999999924
+        },
+        {
+          "start_s": 3.5539999999997196,
+          "end_s": 3.5549999999997195,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 3.5729999999997175,
+          "end_s": 3.5749999999997173,
+          "duration_s": 0.0019999999999998908
+        },
+        {
+          "start_s": 3.578999999999717,
+          "end_s": 3.6009999999997144,
+          "duration_s": 0.021999999999997688
+        },
+        {
+          "start_s": 3.7819999999996945,
+          "end_s": 3.7829999999996944,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 3.841999999999688,
+          "end_s": 3.8429999999996878,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 3.8619999999996857,
+          "end_s": 3.8639999999996855,
+          "duration_s": 0.0019999999999998908
+        },
+        {
+          "start_s": 3.8829999999996834,
+          "end_s": 3.8889999999996827,
+          "duration_s": 0.00599999999999945
+        },
+        {
+          "start_s": 4.079999999999697,
+          "end_s": 4.0809999999996975,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 4.126999999999713,
+          "end_s": 4.127999999999713,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 4.160999999999724,
+          "end_s": 4.162999999999725,
+          "duration_s": 0.002000000000000335
+        },
+        {
+          "start_s": 4.17899999999973,
+          "end_s": 4.233999999999749,
+          "duration_s": 0.055000000000018034
+        },
+        {
+          "start_s": 4.426999999999813,
+          "end_s": 4.427999999999813,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 4.4699999999998274,
+          "end_s": 4.470999999999828,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 4.4969999999998365,
+          "end_s": 4.498999999999837,
+          "duration_s": 0.002000000000000335
+        },
+        {
+          "start_s": 4.501999999999838,
+          "end_s": 4.521999999999845,
+          "duration_s": 0.020000000000006346
+        },
+        {
+          "start_s": 4.740999999999918,
+          "end_s": 4.788999999999934,
+          "duration_s": 0.0480000000000157
+        },
+        {
+          "start_s": 4.990000000000001,
+          "end_s": 4.991000000000001,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 5.001000000000005,
+          "end_s": 5.01700000000001,
+          "duration_s": 0.01600000000000501
+        },
+        {
+          "start_s": 5.222000000000079,
+          "end_s": 5.22700000000008,
+          "duration_s": 0.005000000000001337
+        },
+        {
+          "start_s": 5.461000000000158,
+          "end_s": 5.478000000000164,
+          "duration_s": 0.017000000000005344
+        },
+        {
+          "start_s": 5.743000000000253,
+          "end_s": 5.755000000000257,
+          "duration_s": 0.012000000000003674
+        },
+        {
+          "start_s": 6.022000000000346,
+          "end_s": 6.026000000000347,
+          "duration_s": 0.004000000000001003
+        },
+        {
+          "start_s": 6.30300000000044,
+          "end_s": 6.307000000000441,
+          "duration_s": 0.004000000000001003
+        },
+        {
+          "start_s": 6.856000000000624,
+          "end_s": 6.857000000000625,
+          "duration_s": 0.0010000000000000009
+        },
+        {
+          "start_s": 6.861000000000626,
+          "end_s": 6.867000000000628,
+          "duration_s": 0.006000000000001671
+        },
+        {
+          "start_s": 7.449000000000822,
+          "end_s": 7.451000000000823,
+          "duration_s": 0.002000000000000335
+        }
+      ],
+      "fullplay_floorfree_and_bothsoles5mm_intervals_atleast25ms": [
+        {
+          "start_s": 0.0,
+          "end_s": 0.026000000000000016,
+          "duration_s": 0.026000000000000016
+        },
+        {
+          "start_s": 1.5489999999999402,
+          "end_s": 1.5739999999999377,
+          "duration_s": 0.024999999999997358
+        },
+        {
+          "start_s": 3.0299999999997773,
+          "end_s": 3.0669999999997732,
+          "duration_s": 0.036999999999996036
+        },
+        {
+          "start_s": 4.201999999999738,
+          "end_s": 4.228999999999747,
+          "duration_s": 0.027000000000008684
+        },
+        {
+          "start_s": 4.748999999999921,
+          "end_s": 4.784999999999933,
+          "duration_s": 0.03600000000001169
+        }
+      ],
+      "catchwindow_clear_intervals": [],
+      "independent_declared_field_running_score": {
+        "strict_in_stride_catch_and_route": false,
+        "running_long_pass_and_route": false,
+        "running_at_catch": false,
+        "foot_sample_clock_ok": true,
+        "pre_tip_forward_speed_mps": 1.2605721322550143,
+        "qualified_flight_phases": [],
+        "max_recurrent_flights": 0,
+        "recurrent_flights_span_catch": false,
+        "first_ball_contact_s": 6.400000000000472,
+        "unassisted_ball_flight_s": 1.1000000000003674,
+        "ball_toward_receiver_travel_m": -9.005892416282657,
+        "ball_rise_m": 1.3618858142429966,
+        "ball_descent_into_contact_m": 0.21663325774239506,
+        "longer_airborne_pass": false,
+        "criteria": {
+          "min_forward_speed_mps": 0.8,
+          "min_flight_s": 0.025,
+          "min_sole_clearance_m": 0.005,
+          "min_ground_interval_s": 0.035,
+          "min_ground_fraction": 0.8,
+          "min_recurrent_flights": 2,
+          "max_neighbor_flight_spacing_s": 0.72,
+          "gait_window_s": 0.75,
+          "startup_exclusion_s": 0.35,
+          "terminal_exclusion_s": 0.4,
+          "max_foot_sample_gap_s": 0.005,
+          "max_motion_gap_s": 0.04,
+          "min_ball_flight_s": 0.18,
+          "min_ball_forward_travel_m": 0.25,
+          "min_ball_rise_m": 0.03,
+          "min_ball_descent_m": 0.015,
+          "ball_descent_window_s": 0.04,
+          "max_ball_sample_gap_s": 0.005
+        }
+      },
+      "independent_running_forward_axis_world_xy": [
+        0.955336489125606,
+        -0.29552020666133955
+      ],
+      "archived_running_score": {
+        "strict_in_stride_catch_and_route": false,
+        "running_long_pass_and_route": false,
+        "running_at_catch": false,
+        "foot_sample_clock_ok": true,
+        "pre_tip_forward_speed_mps": 1.1411928688748723,
+        "qualified_flight_phases": [],
+        "max_recurrent_flights": 0,
+        "recurrent_flights_span_catch": false,
+        "first_ball_contact_s": 6.400000000000472,
+        "unassisted_ball_flight_s": 1.1000000000003674,
+        "ball_toward_receiver_travel_m": 9.003688933945092,
+        "ball_rise_m": 1.3618858142429966,
+        "ball_descent_into_contact_m": 0.21663325774239506,
+        "longer_airborne_pass": true,
+        "criteria": {
+          "min_forward_speed_mps": 0.8,
+          "min_flight_s": 0.025,
+          "min_sole_clearance_m": 0.005,
+          "min_ground_interval_s": 0.035,
+          "min_ground_fraction": 0.8,
+          "min_recurrent_flights": 2,
+          "max_neighbor_flight_spacing_s": 0.72,
+          "gait_window_s": 0.75,
+          "startup_exclusion_s": 0.35,
+          "terminal_exclusion_s": 0.4,
+          "max_foot_sample_gap_s": 0.005,
+          "max_motion_gap_s": 0.04,
+          "min_ball_flight_s": 0.18,
+          "min_ball_forward_travel_m": 0.25,
+          "min_ball_rise_m": 0.03,
+          "min_ball_descent_m": 0.015,
+          "ball_descent_window_s": 0.04,
+          "max_ball_sample_gap_s": 0.005
+        }
+      },
+      "archived_strict_checks": {
+        "in_stride_catch_and_route": false,
+        "checks": {
+          "complete_synchronized_traces": true,
+          "initial_free_flight": true,
+          "first_tip_contact": true,
+          "pre_contact_speed": true,
+          "immediate_post_contact_progress": true,
+          "total_post_contact_progress": true,
+          "ordered_route_finish": false,
+          "hands_only_retention_at_finish": false,
+          "no_floor_contact": false,
+          "no_nonhand_body_contact_force": true,
+          "no_applied_ball_load": true
+        },
+        "failed_checks": [
+          "ordered_route_finish",
+          "hands_only_retention_at_finish",
+          "no_floor_contact"
+        ],
+        "criteria": {
+          "pre_contact_window_s": 0.14,
+          "min_pre_contact_speed_mps": 0.1,
+          "post_contact_window_s": 0.5,
+          "min_immediate_route_displacement_m": 0.05,
+          "min_total_route_displacement_m": 0.1,
+          "waypoint_tolerance_cap_m": 0.05,
+          "waypoint_tolerance_fraction": 0.1,
+          "min_upright_cosine": 0.9,
+          "settling_window_s": 0.5,
+          "max_settled_speed_mps": 0.075,
+          "max_motion_gap_s": 0.04,
+          "min_initial_ball_height_m": 0.15,
+          "force_zero_tolerance_n": 1e-09
+        },
+        "retention_criteria": {
+          "window_s": 2.0,
+          "min_normal_per_hand_n": 0.1,
+          "min_bilateral_fraction": 0.85,
+          "max_bilateral_gap_s": 0.1,
+          "max_nonhand_normal_n": 0.1,
+          "min_mean_hand_weight_fraction": 0.8,
+          "min_initial_free_flight_s": 0.02
+        },
+        "first_tip_contact_s": 6.400000000000472,
+        "pre_tip_speed_mps": 1.278515315279445,
+        "immediate_post_tip_route_displacement_m": 0.5653807178591723,
+        "total_post_tip_route_displacement_m": 2.795547264140154,
+        "ordered_waypoint_hit_times_s": [
+          1.0999999999999897
+        ],
+        "endpoint_error_m": 5.832421931872794,
+        "endpoint_tolerance_m": 0.05,
+        "final_mean_speed_mps": 0.8636403600316032,
+        "first_floor_contact_s": 8.513000000000721,
+        "peak_nonhand_body_normal_force_n": 0.0,
+        "retention": {
+          "bilateral_palm_tip_fraction": 0.109,
+          "max_bilateral_gap_s": 1.562,
+          "mean_vertical_hand_force_as_ball_weight": 0.2767861791776801,
+          "bilateral_at_finish": false,
+          "hands_only_retention_at_finish": false
+        }
+      },
+      "anatomical_catch": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.400000000000472,
+        "first_excluded_support_s": 8.014000000000998,
+        "longest_clean_bilateral_s": 0.1710000000000571,
+        "longest_clean_start_s": 6.636000000000551,
+        "longest_clean_end_s": 6.806000000000608,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.1212162883272194,
+        "form": {
+          "available": true,
+          "sample_count": 12,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 1.0,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 1.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 11.604843378407743,
+        "minimum_interhand_distance_m": -0.0021037761937663536,
+        "minimum_ball_contact_distance_m": -0.03104741536438701,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 704.8670273179083,
+          "left_thumb": 98.72049628603448,
+          "left_palmar": 40.773863669521425,
+          "right_finger": 569.5634224303634,
+          "right_thumb": 67.24227313141844,
+          "right_palmar": 0.0,
+          "excluded_hand": 151.55836317076165,
+          "torso": 0.0,
+          "floor": 188.40734077390385,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "source": {
+        "report": "reports/catch-repair-20261115-slant-performance/early-finger-contact-r1/linux/artifacts/early-preparation-contact/report.json",
+        "report_sha256": "ab3c27225cc87c11086cbe3e142f3fcdffa52038e4e613263f5c38389e915aec",
+        "view": "reports/catch-repair-20261115-slant-performance/early-finger-contact-r1/linux/artifacts/early-preparation-contact/view.npz",
+        "view_sha256": "31e65d00148bf9d22c7bf06cd95b95dd84c63a51aa184fe3c3044d54ebd41225",
+        "profile": "reports/catch-repair-20261115-slant-performance/early-finger-preparation-r1/candidate-profile.json"
+      },
+      "method": "Exact states/foot contacts are offline labels only. Dense root position and quaternion define actual physical movement/facing. Headings use declared axes, not renderer. Phase travel headings are endpoint displacement vectors; local speed is finite difference. Out uses archived40ms full play qposes outside its available1kHz4.301\u20136.999s dense metrology window; exact saved poses are merged without interpolation. Low speed headings are omitted.",
+      "ball_flight_offline": {
+        "first_contact_center_world_m": [
+          10.24979882889858,
+          -1.1434896773489864,
+          1.153397590179126
+        ],
+        "world_x_advance_m": 9.008580004716991,
+        "declared_alongfield_advance_m": 6.751454776426484,
+        "declared_left_advance_m": -5.967596800892218,
+        "horizontal_distance_m": 9.01079092955502,
+        "note": "Some legacy pass metrics call world X advance downfield. That label does not equal declared field depth in rotated Out or Slant coordinates. Football final7qpos ABI verified in prior model audits."
+      },
+      "legacy_frame_inconsistency": {
+        "legacy_heading_deg": 23.777748497929164,
+        "QB_alongfield_in_legacy_m": 0.5943400618892924,
+        "QB_lateral_in_legacy_m": -1.7295286441205393,
+        "actual_turn_depth_declared_yards": 1.2321067236009184,
+        "world_x_first_contact_yards": 10.680804063605349,
+        "source_runtime_waypoints_world_m": [
+          [
+            0,
+            0
+          ],
+          [
+            0.87,
+            0.83
+          ],
+          [
+            14.1,
+            3.8
+          ]
+        ],
+        "source_runtime_flags": [
+          "two-step",
+          "disable-braking",
+          "heading=-.85rad",
+          "post-cut-heading=-.3rad"
+        ],
+        "legacy_route_frame_read_by_runtime_entry_chain": false,
+        "declared_frame_rotates_runtime_sensor_field": false
+      }
+    }
+  ],
+  "running_criteria": {
+    "min_forward_speed_mps": 0.8,
+    "min_flight_s": 0.025,
+    "min_sole_clearance_m": 0.005,
+    "min_ground_interval_s": 0.035,
+    "min_ground_fraction": 0.8,
+    "min_recurrent_flights": 2,
+    "max_neighbor_flight_spacing_s": 0.72,
+    "gait_window_s": 0.75,
+    "startup_exclusion_s": 0.35,
+    "terminal_exclusion_s": 0.4,
+    "max_foot_sample_gap_s": 0.005,
+    "max_motion_gap_s": 0.04,
+    "min_ball_flight_s": 0.18,
+    "min_ball_forward_travel_m": 0.25,
+    "min_ball_rise_m": 0.03,
+    "min_ball_descent_m": 0.015,
+    "ball_descent_window_s": 0.04,
+    "max_ball_sample_gap_s": 0.005
+  },
+  "no_source_or_score_changes": true,
+  "scope": "Five current showcased conditions, not a population route assessment. Anatomical receive qualification is separate from strict route, running, and legacy retention checks. Full play raw flight intervals do not establish running at the catch."
+}

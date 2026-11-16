@@ -1,0 +1,40 @@
+{
+  "schema": "receiver-exact-ball-uncertainty-floor-v1",
+  "frozen": true,
+  "original_protocol_sha256": "22bfd969663d641609a87361ee1a3a95900fec6fd584539c4d5933927db93934",
+  "scenarios_sha256": "1d66170292817a58a2eb53881b0c5ac4b4c3cea4a2e82d2876c8a2a0beaa2d1a",
+  "method": "exact_ball_uncertainty_floor",
+  "label": "Exact ball + 1 mm uncertainty floor",
+  "routes": [
+    "go",
+    "out",
+    "slant"
+  ],
+  "trials_per_route": 50,
+  "reason": "Post-hoc diagnostic prompted by a nominal Go pilot estimator failure. Frozen tracker uses9.80665m/s2 while simulator uses9.81; nearzero observation covariance rejects physically valid tracks.",
+  "offline_evidence": "reports/catch-repair-20261114/go-comparison/oracle-tracker-replay.json",
+  "offline_evidence_sha256": "8f7b238c1d855b0f68695bfc60279f23eaee220b7b0835a28eb7ce687c05fb9b",
+  "predeclared_change": {
+    "ball_observation_covariance_m2": "identity * 1e-6",
+    "old_ball_observation_covariance_m2": "identity * 1e-12",
+    "noise_actually_added": false,
+    "confidence_floor_not_camera_calibration": true,
+    "tracker_gravity_unchanged": true,
+    "all_other_controller_physics_and_scenarios_unchanged": true
+  },
+  "selection": "The1mmfloor was tested offline on nominal recorded positions, not tuned to catching outcomes. New closed-loop50case results are separate from the original frozen450. No resampling or replacing original failures.",
+  "oracle_scope": "Same exact captured ballposition/visibility bypass as original diagnostic, no truevelocity/receiver/contact/futurestate.",
+  "physics_and_horizons": "Identical to original protocol within each route.",
+  "primary": "Identical unchanged declared-model primary predicate and full-horizon/warning gates.",
+  "analysis": "Compare paired same50cases against original nearzero-uncertainty diagnostic and current sensor controller. Report as posthoc estimator-compatibility diagnostic, not preregistered primary method or deployable sensor policy.",
+  "required_outputs": [
+    "all50reports",
+    "rawtraces",
+    "sourcearchive andhash",
+    "profiles andcommands",
+    "actualrelease",
+    "frozenmodelidentity",
+    "covariance audit",
+    "independentrescore"
+  ]
+}

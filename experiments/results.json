@@ -1,0 +1,2313 @@
+{
+  "go": [
+    {
+      "case": "original20",
+      "control_s": 0.09500000000003173,
+      "endpoint": 0.0,
+      "final_hold": false,
+      "excluded_s": 5.379000000000131,
+      "overlap_mm": 48.548756128724186,
+      "form": true,
+      "reference_model": true,
+      "peak_force": {
+        "time_s": 5.198000000000071,
+        "geom": "aero_right_if_tip",
+        "body": "aero_right_right_index_distal_link",
+        "penetration_m": 0.005272109352072241,
+        "normal_n": 95.10865061891583
+      },
+      "source": "reports/catch-repair-20261114/go-side-cup/causal-pass-linux/artifacts/study/original20",
+      "report_sha256": "36856314240944756f8fff4cbf0368f6e8b52847ab0b82931ea844536a69b037"
+    },
+    {
+      "case": "experimental2p5",
+      "control_s": 0.057000000000019035,
+      "endpoint": 0.0,
+      "final_hold": false,
+      "excluded_s": 5.684000000000233,
+      "overlap_mm": 6.000300375143891,
+      "form": true,
+      "reference_model": false,
+      "peak_force": {
+        "time_s": 5.198000000000071,
+        "geom": "aero_right_if_tip",
+        "body": "aero_right_right_index_distal_link",
+        "penetration_m": 0.005272109352072241,
+        "normal_n": 822.2827145647938
+      },
+      "source": "reports/catch-repair-20261114/go-side-cup/causal-pass-linux/artifacts/study/experimental2p5",
+      "report_sha256": "bc5f812e140903a69d69d4db7606f18ab06c12d495c9a9808f851a33f3ade0e2"
+    },
+    {
+      "case": "original20-thumb30",
+      "control_s": 0.09500000000003173,
+      "endpoint": 0.0,
+      "final_hold": false,
+      "excluded_s": 5.334000000000116,
+      "overlap_mm": 48.548756128724186,
+      "form": true,
+      "reference_model": true,
+      "peak_force": {
+        "time_s": 5.198000000000071,
+        "geom": "aero_right_if_tip",
+        "body": "aero_right_right_index_distal_link",
+        "penetration_m": 0.005272109352072241,
+        "normal_n": 95.10865061891583
+      },
+      "source": "reports/catch-repair-20261114/go-side-cup/thumb-timing-linux/artifacts/study/original20-thumb30",
+      "report_sha256": "1f5d5a4d524fd93a0fcb5f7ce1c755f9a3f43f8bf086b39dc0031ffd364db496"
+    },
+    {
+      "case": "original20-thumb40",
+      "control_s": 0.09500000000003173,
+      "endpoint": 0.0,
+      "final_hold": false,
+      "excluded_s": 5.379000000000131,
+      "overlap_mm": 48.548756128724186,
+      "form": true,
+      "reference_model": true,
+      "peak_force": {
+        "time_s": 5.198000000000071,
+        "geom": "aero_right_if_tip",
+        "body": "aero_right_right_index_distal_link",
+        "penetration_m": 0.005272109352072241,
+        "normal_n": 95.10865061891583
+      },
+      "source": "reports/catch-repair-20261114/go-side-cup/thumb-timing-linux/artifacts/study/original20-thumb40",
+      "report_sha256": "2f2aec06e869a00ecd52e6e08c249af9c5476c1518dfb164dde05938e0625767"
+    },
+    {
+      "case": "experimental2p5-thumb30",
+      "control_s": 2.6840000000008963,
+      "endpoint": 1.0,
+      "final_hold": true,
+      "excluded_s": null,
+      "overlap_mm": 6.000300375143891,
+      "form": true,
+      "reference_model": false,
+      "peak_force": {
+        "time_s": 5.198000000000071,
+        "geom": "aero_right_if_tip",
+        "body": "aero_right_right_index_distal_link",
+        "penetration_m": 0.005272109352072241,
+        "normal_n": 822.2827145647938
+      },
+      "source": "reports/catch-repair-20261114/go-side-cup/thumb-timing-linux/artifacts/study/experimental2p5-thumb30",
+      "report_sha256": "7e42fc15afe9ad6242840616a1fab7025db2dd8879dca58b311dcb42c572f9cb"
+    },
+    {
+      "case": "experimental2p5-thumb40",
+      "control_s": 2.7330000000009127,
+      "endpoint": 0.0,
+      "final_hold": false,
+      "excluded_s": 8.393000000000788,
+      "overlap_mm": 6.000300375143891,
+      "form": true,
+      "reference_model": false,
+      "peak_force": {
+        "time_s": 5.198000000000071,
+        "geom": "aero_right_if_tip",
+        "body": "aero_right_right_index_distal_link",
+        "penetration_m": 0.005272109352072241,
+        "normal_n": 822.2827145647938
+      },
+      "source": "reports/catch-repair-20261114/go-side-cup/thumb-timing-linux/artifacts/study/experimental2p5-thumb40",
+      "report_sha256": "cfce90d21230ee6d9b84871c49dadd61d4c6e1b3e09567a4814bd13b5811f95b"
+    },
+    {
+      "case": "confirm-9s",
+      "control_s": 2.6840000000008963,
+      "endpoint": 1.0,
+      "final_hold": true,
+      "excluded_s": null,
+      "overlap_mm": 6.000300375143891,
+      "form": true,
+      "reference_model": false,
+      "peak_force": {
+        "time_s": 5.198000000000071,
+        "geom": "aero_right_if_tip",
+        "body": "aero_right_right_index_distal_link",
+        "penetration_m": 0.005272109352072241,
+        "normal_n": 822.2827145647938
+      },
+      "source": "reports/catch-repair-20261114/go-side-cup/causal-confirm-linux/artifacts/study/confirm-9s",
+      "report_sha256": "7e42fc15afe9ad6242840616a1fab7025db2dd8879dca58b311dcb42c572f9cb"
+    },
+    {
+      "case": "confirm-11s",
+      "control_s": 4.085000000001364,
+      "endpoint": 0.0,
+      "final_hold": false,
+      "excluded_s": 10.401999999999674,
+      "overlap_mm": 6.000300375143891,
+      "form": true,
+      "reference_model": false,
+      "peak_force": {
+        "time_s": 5.198000000000071,
+        "geom": "aero_right_if_tip",
+        "body": "aero_right_right_index_distal_link",
+        "penetration_m": 0.005272109352072241,
+        "normal_n": 822.2827145647938
+      },
+      "source": "reports/catch-repair-20261114/go-side-cup/causal-confirm-linux/artifacts/study/confirm-11s",
+      "report_sha256": "9d43458d81df3b3e264e63f924931d410778d3634d22df37f2ba8f3cc6e3e130"
+    }
+  ],
+  "throw_offsets": [
+    {
+      "case": "aim-1-+0.02",
+      "hold": 3.2810000000010957,
+      "final": 1.0,
+      "excluded": null,
+      "depth_mm": 6.334377267391482,
+      "form": true,
+      "cue": 4.579999999999864,
+      "ttc": 0.6312303512178898
+    },
+    {
+      "case": "aim-1--0.02",
+      "hold": 0.4440000000001483,
+      "final": 0.0,
+      "excluded": 6.42300000000048,
+      "depth_mm": 2.7314489460615956,
+      "form": true,
+      "cue": 4.579999999999864,
+      "ttc": 0.6276683106056629
+    },
+    {
+      "case": "aim-2-+0.02",
+      "hold": 2.384000000000796,
+      "final": 1.0,
+      "excluded": null,
+      "depth_mm": 6.524456877451635,
+      "form": true,
+      "cue": 4.579999999999864,
+      "ttc": 0.6301774693404205
+    },
+    {
+      "case": "aim-2--0.02",
+      "hold": 1.5590000000005206,
+      "final": 0.0,
+      "excluded": 7.343000000000787,
+      "depth_mm": 31.14353143584177,
+      "form": true,
+      "cue": 4.5599999999998575,
+      "ttc": 0.6478562512916728
+    }
+  ],
+  "timesteps": [
+    {
+      "case": "dt-0.00025",
+      "hold": 0.6295000000007693,
+      "final": 0.0,
+      "excluded": 6.791750000002555,
+      "depth_mm": 32.056423873027676,
+      "form": true,
+      "cue": 4.559999999999827,
+      "ttc": 0.6495910333711965,
+      "handoff": 1.2800000000000111
+    },
+    {
+      "case": "dt-0.0005",
+      "hold": 2.1189999999988256,
+      "final": 0.0,
+      "excluded": 8.253999999998596,
+      "depth_mm": 3.9176512628140996,
+      "form": true,
+      "cue": 4.560000000000192,
+      "ttc": 0.6497716110608227,
+      "handoff": 1.2799999999999145
+    },
+    {
+      "case": "dt-0.001",
+      "hold": 2.6840000000008963,
+      "final": 1.0,
+      "excluded": null,
+      "depth_mm": 6.000300375143891,
+      "form": true,
+      "cue": 4.579999999999864,
+      "ttc": 0.6290753871329171,
+      "handoff": 1.2799999999999698
+    }
+  ],
+  "latency": [
+    {
+      "case": "latency-0",
+      "hold": 2.6840000000008963,
+      "final": 1.0,
+      "excluded": null,
+      "depth_mm": 6.000300375143891,
+      "form": true,
+      "cue": 4.579999999999864,
+      "ttc": 0.6290753871329171
+    },
+    {
+      "case": "latency-0.02",
+      "hold": 2.6840000000008963,
+      "final": 1.0,
+      "excluded": null,
+      "depth_mm": 6.000300375143891,
+      "form": true,
+      "cue": 4.579999999999864,
+      "ttc": 0.6302050259953447
+    },
+    {
+      "case": "latency-0.04",
+      "hold": 0.26600000000008883,
+      "final": 0.0,
+      "excluded": 6.525000000000514,
+      "depth_mm": 7.103276241057174,
+      "form": true,
+      "cue": 4.599999999999871,
+      "ttc": 0.6102050259953637
+    }
+  ],
+  "out_stress": {
+    "nominal": {
+      "zero": {
+        "control_ms": 5.00000000000167,
+        "endpoint": 0.0,
+        "overlap_mm": 36.42092184787252,
+        "reward": 0.010484814061648418,
+        "coverage": {
+          "calls": 500,
+          "forecast": 29,
+          "forecast_over_half_second": 3,
+          "visible": 15,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      },
+      "model": {
+        "control_ms": 2.000000000000668,
+        "endpoint": 0.0,
+        "overlap_mm": 36.113805610785214,
+        "reward": 0.02789896421000393,
+        "coverage": {
+          "calls": 500,
+          "forecast": 29,
+          "forecast_over_half_second": 3,
+          "visible": 15,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      }
+    },
+    "latency20": {
+      "zero": {
+        "control_ms": 0.0,
+        "endpoint": 0.0,
+        "overlap_mm": 34.78334674773872,
+        "reward": 0.00041662455627122785,
+        "coverage": {
+          "calls": 500,
+          "forecast": 28,
+          "forecast_over_half_second": 2,
+          "visible": 10,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      },
+      "model": {
+        "control_ms": 0.0,
+        "endpoint": 0.0,
+        "overlap_mm": 33.14348244459854,
+        "reward": 0.0004577529379524159,
+        "coverage": {
+          "calls": 500,
+          "forecast": 28,
+          "forecast_over_half_second": 2,
+          "visible": 9,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      }
+    },
+    "latency40": {
+      "zero": {
+        "control_ms": 0.0,
+        "endpoint": 0.0,
+        "overlap_mm": 35.35758789015897,
+        "reward": 0.0032089875907369003,
+        "coverage": {
+          "calls": 500,
+          "forecast": 27,
+          "forecast_over_half_second": 1,
+          "visible": 21,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      },
+      "model": {
+        "control_ms": 0.0,
+        "endpoint": 0.0,
+        "overlap_mm": 36.20796696917433,
+        "reward": 0.0019330705252771918,
+        "coverage": {
+          "calls": 500,
+          "forecast": 27,
+          "forecast_over_half_second": 1,
+          "visible": 13,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      }
+    },
+    "latency80": {
+      "zero": {
+        "control_ms": 0.0,
+        "endpoint": 0.0,
+        "overlap_mm": 44.02314895033375,
+        "reward": -0.0026839295026052645,
+        "coverage": {
+          "calls": 500,
+          "forecast": 25,
+          "forecast_over_half_second": 0,
+          "visible": 7,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      },
+      "model": {
+        "control_ms": 0.0,
+        "endpoint": 0.0,
+        "overlap_mm": 44.02314895033375,
+        "reward": -0.001546602997064661,
+        "coverage": {
+          "calls": 500,
+          "forecast": 25,
+          "forecast_over_half_second": 0,
+          "visible": 8,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      }
+    },
+    "dropout10": {
+      "zero": {
+        "control_ms": 5.00000000000167,
+        "endpoint": 0.0,
+        "overlap_mm": 36.42092184787252,
+        "reward": 0.010484814061648418,
+        "coverage": {
+          "calls": 500,
+          "forecast": 29,
+          "forecast_over_half_second": 3,
+          "visible": 14,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      },
+      "model": {
+        "control_ms": 2.000000000000668,
+        "endpoint": 0.0,
+        "overlap_mm": 38.876763368341734,
+        "reward": 0.011936120461899735,
+        "coverage": {
+          "calls": 500,
+          "forecast": 29,
+          "forecast_over_half_second": 3,
+          "visible": 12,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      }
+    },
+    "survey": {
+      "zero": {
+        "control_ms": 120.00000000004007,
+        "endpoint": 0.0,
+        "overlap_mm": 5.544111174043998,
+        "reward": 0.3222715914174905,
+        "coverage": {
+          "calls": 500,
+          "forecast": 27,
+          "forecast_over_half_second": 1,
+          "visible": 47,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      },
+      "model": {
+        "control_ms": 3.000000000001002,
+        "endpoint": 0.0,
+        "overlap_mm": 34.29496223590957,
+        "reward": 0.005211876902209478,
+        "coverage": {
+          "calls": 500,
+          "forecast": 27,
+          "forecast_over_half_second": 1,
+          "visible": 5,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      }
+    },
+    "combined": {
+      "zero": {
+        "control_ms": 0.0,
+        "endpoint": 0.0,
+        "overlap_mm": 38.263915085527124,
+        "reward": -0.006358957032601031,
+        "coverage": {
+          "calls": 500,
+          "forecast": 23,
+          "forecast_over_half_second": 0,
+          "visible": 3,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      },
+      "model": {
+        "control_ms": 0.0,
+        "endpoint": 0.0,
+        "overlap_mm": 36.09546185743806,
+        "reward": -0.0040814639556726595,
+        "coverage": {
+          "calls": 500,
+          "forecast": 23,
+          "forecast_over_half_second": 0,
+          "visible": 3,
+          "retention_qualified": 0,
+          "max_visual_dwell_s": 0.0
+        }
+      }
+    }
+  },
+  "training": {
+    "elapsed_s": 1806.8276723219897,
+    "timesteps": 32964,
+    "workers": 2,
+    "wall_budget_s": 1800,
+    "final_checkpoint_sha256": "436da7257d4483eaf9afee633c894babd902bf32c7893b8b570ca35a56ab2443",
+    "observation_schema": "late-reach-phase-65-capture-aligned-v2",
+    "reward_schema": "late-reach-sensor-tracking-visible-retention-v3",
+    "learned_component": "scalar reach-phase rate residual; visual cue, arm geometry, grip and locomotion remain separately scripted/pretrained",
+    "action_size": 1,
+    "observation_size": 65,
+    "seed": 173,
+    "config": {
+      "frozen_root": "/workspace/g1-receiver-runs/catch-repair-late-reach-ppo-20261114-r2/artifacts/study/runtime",
+      "profile": "/workspace/g1-receiver-runs/catch-repair-late-reach-ppo-20261114-r2/artifacts/study/runtime/profile.json",
+      "source": "/workspace/g1-receiver-runs/out-scrimmage-20261113/source/aero-source",
+      "amp_source": "/workspace/g1-receiver-runs/out-scrimmage-20261113/amp",
+      "reference": "/workspace/g1-receiver-runs/catch-repair-out-rightup-phase-20261114-r1/artifacts/study/0.001/trial",
+      "model_case": "pair25",
+      "duration_s": 10.0,
+      "timestep_s": 0.001,
+      "fixed_servo": true,
+      "break_release_delay_s": 2.38,
+      "sensor_domains": [
+        {},
+        {
+          "latency_s": 0.02,
+          "frame_drop_probability": 0.03,
+          "depth_noise_floor_m": 0.002,
+          "depth_noise_quadratic_per_m": 0.0001,
+          "depth_quantization_m": 0.001,
+          "rgb_noise_std": 1.0,
+          "survey_position_std_m": 0.002,
+          "survey_angle_std_rad": 0.0017453292519943296
+        }
+      ]
+    },
+    "config_sha256": "a9282c9c8378c1ed732081284a6ba724f6c6a4f6e9d225ad89c5748255a5618d",
+    "torch_version": "2.11.0+cu130",
+    "cuda_available": true,
+    "no_physical_score_reward_or_selection": true
+  },
+  "limitations": [
+    "Explicit 2.5 ms contact model is uncalibrated and distinct from the original model.",
+    "Long clean control starts after initial acquisition/bobbles; short-receive and running checks remain separate.",
+    "Single deterministic cases and exact repeats do not establish statistical robustness or hardware validity."
+  ],
+  "common_prefix": [
+    {
+      "case": "dt-0.00025",
+      "numerical_investigation_only": true,
+      "no_quality_promotion": true,
+      "legacy_clock_gate": false,
+      "legacy_anatomical_control": false,
+      "actual_timestamp_longest_clean_bilateral_s": 2.914250000000008,
+      "longest_start_s": 6.08600000000119,
+      "longest_end_s": 9.000000000001197,
+      "final_bilateral_fraction": 1.0,
+      "final_row_clean": true,
+      "first_excluded_s": null,
+      "wholeepisode_overlap_mm": 5.458540847042578,
+      "peak_single_contact_n": 729.5861880870233,
+      "peak_surface": "aero_right_if_tip",
+      "actual_step_sizes_s": [
+        0.00025,
+        0.001
+      ],
+      "prefix_exact": {
+        "actual-state.npz": {
+          "time_qpos": true,
+          "time_qvel": true,
+          "time_control": true,
+          "time_arm_target_phase": true
+        },
+        "self-contact-witness.npz": {
+          "contacts": true
+        }
+      },
+      "form": {
+        "available": true,
+        "sample_count": 11,
+        "clock_coverage_ok": true,
+        "finite": true,
+        "both_up_fraction": 1.0,
+        "both_height_fraction": 1.0,
+        "joint_form_fraction": 1.0,
+        "height_limit_above_shoulder_m": 0.15,
+        "height_exception_basis": null,
+        "pass": true
+      }
+    },
+    {
+      "case": "dt-0.0005",
+      "numerical_investigation_only": true,
+      "no_quality_promotion": true,
+      "legacy_clock_gate": false,
+      "legacy_anatomical_control": false,
+      "actual_timestamp_longest_clean_bilateral_s": 2.7695000000002405,
+      "longest_start_s": 6.230999999999464,
+      "longest_end_s": 8.999999999999705,
+      "final_bilateral_fraction": 0.9999999999988205,
+      "final_row_clean": true,
+      "first_excluded_s": null,
+      "wholeepisode_overlap_mm": 5.521185065554063,
+      "peak_single_contact_n": 790.5704183338382,
+      "peak_surface": "aero_right_if_tip",
+      "actual_step_sizes_s": [
+        0.0005,
+        0.001
+      ],
+      "prefix_exact": {
+        "actual-state.npz": {
+          "time_qpos": true,
+          "time_qvel": true,
+          "time_control": true,
+          "time_arm_target_phase": true
+        },
+        "self-contact-witness.npz": {
+          "contacts": true
+        }
+      },
+      "form": {
+        "available": true,
+        "sample_count": 11,
+        "clock_coverage_ok": true,
+        "finite": true,
+        "both_up_fraction": 1.0,
+        "both_height_fraction": 1.0,
+        "joint_form_fraction": 1.0,
+        "height_limit_above_shoulder_m": 0.15,
+        "height_exception_basis": null,
+        "pass": true
+      }
+    },
+    {
+      "case": "dt-0.001",
+      "numerical_investigation_only": true,
+      "no_quality_promotion": true,
+      "legacy_clock_gate": true,
+      "legacy_anatomical_control": true,
+      "actual_timestamp_longest_clean_bilateral_s": 2.6840000000000073,
+      "longest_start_s": 6.317000000000444,
+      "longest_end_s": 9.000000000000451,
+      "final_bilateral_fraction": 1.0,
+      "final_row_clean": true,
+      "first_excluded_s": null,
+      "wholeepisode_overlap_mm": 6.000300375143891,
+      "peak_single_contact_n": 822.2827145647938,
+      "peak_surface": "aero_right_if_tip",
+      "actual_step_sizes_s": [
+        0.001
+      ],
+      "prefix_exact": {
+        "actual-state.npz": {
+          "time_qpos": true,
+          "time_qvel": true,
+          "time_control": true,
+          "time_arm_target_phase": true
+        },
+        "self-contact-witness.npz": {
+          "contacts": true
+        }
+      },
+      "form": {
+        "available": true,
+        "sample_count": 11,
+        "clock_coverage_ok": true,
+        "finite": true,
+        "both_up_fraction": 1.0,
+        "both_height_fraction": 1.0,
+        "joint_form_fraction": 1.0,
+        "height_limit_above_shoulder_m": 0.15,
+        "height_exception_basis": null,
+        "pass": true
+      }
+    }
+  ],
+  "camera_resolution": [
+    {
+      "width": 320,
+      "height": 180,
+      "latency_s": 0.0,
+      "cameras": {
+        "late_pose": {
+          "width": 320,
+          "height": 180,
+          "intrinsics": {
+            "fx": 202.1433096513794,
+            "fy": 202.1433096513794,
+            "cx": 159.5,
+            "cy": 89.5
+          }
+        },
+        "late_pose2": {
+          "width": 320,
+          "height": 180,
+          "intrinsics": {
+            "fx": 202.1433096513794,
+            "fy": 202.1433096513794,
+            "cx": 159.5,
+            "cy": 89.5
+          }
+        },
+        "late_ball": {
+          "width": 320,
+          "height": 180,
+          "intrinsics": {
+            "fx": 202.1433096513794,
+            "fy": 202.1433096513794,
+            "cx": 159.5,
+            "cy": 89.5
+          }
+        },
+        "late_retention": {
+          "width": 320,
+          "height": 180,
+          "intrinsics": {
+            "fx": 202.1433096513794,
+            "fy": 202.1433096513794,
+            "cx": 159.5,
+            "cy": 89.5
+          }
+        }
+      },
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 30,
+        "forecast_over_half_second": 4,
+        "visible": 70,
+        "retention_qualified": 29,
+        "max_visual_dwell_s": 0.44000000000014694
+      },
+      "sensor_total_including_reset": 0.6788556705792314,
+      "visible_sigma_median_m": 0.045939570307294106,
+      "capture_wall_s": {
+        "median": 0.0020737299928441644,
+        "p95": 0.002674615033902226,
+        "maximum": 0.1802027950179763
+      },
+      "transport": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.0,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {}
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.188000000000401,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 1.785000000000596,
+        "longest_clean_start_s": 8.216000000000886,
+        "longest_clean_end_s": 9.999999999999897,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.0055150400653305,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.5454545454545454,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.5454545454545454,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004210988830204709,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 466.5866754289332,
+          "left_thumb": 396.27956499209483,
+          "left_palmar": 245.95652529155444,
+          "right_finger": 672.9665686473202,
+          "right_thumb": 332.3071434200801,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "limits": "Late_* camera subsystem only; route/grip cameras unchanged. Workstation render timing is not hardware latency qualification."
+    },
+    {
+      "width": 640,
+      "height": 360,
+      "latency_s": 0.0,
+      "cameras": {
+        "late_pose": {
+          "width": 640,
+          "height": 360,
+          "intrinsics": {
+            "fx": 404.2866193027588,
+            "fy": 404.2866193027588,
+            "cx": 319.5,
+            "cy": 179.5
+          }
+        },
+        "late_pose2": {
+          "width": 640,
+          "height": 360,
+          "intrinsics": {
+            "fx": 404.2866193027588,
+            "fy": 404.2866193027588,
+            "cx": 319.5,
+            "cy": 179.5
+          }
+        },
+        "late_ball": {
+          "width": 640,
+          "height": 360,
+          "intrinsics": {
+            "fx": 404.2866193027588,
+            "fy": 404.2866193027588,
+            "cx": 319.5,
+            "cy": 179.5
+          }
+        },
+        "late_retention": {
+          "width": 640,
+          "height": 360,
+          "intrinsics": {
+            "fx": 404.2866193027588,
+            "fy": 404.2866193027588,
+            "cx": 319.5,
+            "cy": 179.5
+          }
+        }
+      },
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 30,
+        "forecast_over_half_second": 4,
+        "visible": 47,
+        "retention_qualified": 0,
+        "max_visual_dwell_s": 0.0
+      },
+      "sensor_total_including_reset": -0.4508103995769392,
+      "visible_sigma_median_m": 0.04738660767250339,
+      "capture_wall_s": {
+        "median": 0.005521110026165843,
+        "p95": 0.006770467979367822,
+        "maximum": 0.1806826060055755
+      },
+      "transport": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.0,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {}
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.188000000000401,
+        "first_excluded_support_s": 6.480000000000499,
+        "longest_clean_bilateral_s": 0.03300000000001102,
+        "longest_clean_start_s": 6.447000000000488,
+        "longest_clean_end_s": 6.479000000000498,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 0.5389098990466957,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.5454545454545454,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.5454545454545454,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004292951551517771,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 463.07583151201305,
+          "left_thumb": 402.7230667212805,
+          "left_palmar": 270.1762257114618,
+          "right_finger": 677.6676383845122,
+          "right_thumb": 335.6872221214181,
+          "right_palmar": 50.98135305205488,
+          "excluded_hand": 58.59327002386065,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "limits": "Late_* camera subsystem only; route/grip cameras unchanged. Workstation render timing is not hardware latency qualification."
+    },
+    {
+      "width": 848,
+      "height": 480,
+      "latency_s": 0.0,
+      "cameras": {
+        "late_pose": {
+          "width": 848,
+          "height": 480,
+          "intrinsics": {
+            "fx": 539.0488257370118,
+            "fy": 539.0488257370118,
+            "cx": 423.5,
+            "cy": 239.5
+          }
+        },
+        "late_pose2": {
+          "width": 848,
+          "height": 480,
+          "intrinsics": {
+            "fx": 539.0488257370118,
+            "fy": 539.0488257370118,
+            "cx": 423.5,
+            "cy": 239.5
+          }
+        },
+        "late_ball": {
+          "width": 848,
+          "height": 480,
+          "intrinsics": {
+            "fx": 539.0488257370118,
+            "fy": 539.0488257370118,
+            "cx": 423.5,
+            "cy": 239.5
+          }
+        },
+        "late_retention": {
+          "width": 848,
+          "height": 480,
+          "intrinsics": {
+            "fx": 539.0488257370118,
+            "fy": 539.0488257370118,
+            "cx": 423.5,
+            "cy": 239.5
+          }
+        }
+      },
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 30,
+        "forecast_over_half_second": 4,
+        "visible": 53,
+        "retention_qualified": 7,
+        "max_visual_dwell_s": 0.06000000000002004
+      },
+      "sensor_total_including_reset": -0.20803661417533625,
+      "visible_sigma_median_m": 0.04655008158647782,
+      "capture_wall_s": {
+        "median": 0.005759440013207495,
+        "p95": 0.007004703988786784,
+        "maximum": 0.1832887550117448
+      },
+      "transport": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.0,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {}
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.188000000000401,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 2.2000000000007347,
+        "longest_clean_start_s": 7.80100000000094,
+        "longest_clean_end_s": 9.999999999999897,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.0042790944596716,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.5454545454545454,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.5454545454545454,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004379801579650586,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 464.5690536344293,
+          "left_thumb": 407.59897412422254,
+          "left_palmar": 263.5946501846013,
+          "right_finger": 708.630439812434,
+          "right_thumb": 350.58144418460984,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "limits": "Late_* camera subsystem only; route/grip cameras unchanged. Workstation render timing is not hardware latency qualification."
+    },
+    {
+      "width": 640,
+      "height": 360,
+      "latency_s": 0.02,
+      "cameras": {
+        "late_pose": {
+          "width": 640,
+          "height": 360,
+          "intrinsics": {
+            "fx": 404.2866193027588,
+            "fy": 404.2866193027588,
+            "cx": 319.5,
+            "cy": 179.5
+          }
+        },
+        "late_pose2": {
+          "width": 640,
+          "height": 360,
+          "intrinsics": {
+            "fx": 404.2866193027588,
+            "fy": 404.2866193027588,
+            "cx": 319.5,
+            "cy": 179.5
+          }
+        },
+        "late_ball": {
+          "width": 640,
+          "height": 360,
+          "intrinsics": {
+            "fx": 404.2866193027588,
+            "fy": 404.2866193027588,
+            "cx": 319.5,
+            "cy": 179.5
+          }
+        },
+        "late_retention": {
+          "width": 640,
+          "height": 360,
+          "intrinsics": {
+            "fx": 404.2866193027588,
+            "fy": 404.2866193027588,
+            "cx": 319.5,
+            "cy": 179.5
+          }
+        }
+      },
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 29,
+        "forecast_over_half_second": 3,
+        "visible": 40,
+        "retention_qualified": 5,
+        "max_visual_dwell_s": 0.08000000000002672
+      },
+      "sensor_total_including_reset": -0.27848763997810544,
+      "visible_sigma_median_m": 0.05423711144021855,
+      "capture_wall_s": {
+        "median": 0.005595414986601099,
+        "p95": 0.006810105522163213,
+        "maximum": 0.1787137960200198
+      },
+      "transport": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.02,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {
+          "late_pose": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 249,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_pose2": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 249,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_ball": {
+            "calls": 500,
+            "exposures": 500,
+            "dropped": 0,
+            "delivered": 499,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.02000000000000668,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_retention": {
+            "calls": 202,
+            "exposures": 202,
+            "dropped": 0,
+            "delivered": 201,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.02000000000000668,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.187000000000401,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 1.8950000000006328,
+        "longest_clean_start_s": 7.931000000000983,
+        "longest_clean_end_s": 9.824999999999994,
+        "final_bilateral_fraction": 0.952,
+        "final_max_gap_s": 0.003000000000001002,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 0.9903580107071435,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.0,
+          "both_height_fraction": 0.9090909090909091,
+          "joint_form_fraction": 0.0,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.002996656087717394,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 469.9961187509761,
+          "left_thumb": 431.3563779783804,
+          "left_palmar": 76.36983425450731,
+          "right_finger": 445.31052111866484,
+          "right_thumb": 751.1664139274827,
+          "right_palmar": 51.4614972598391,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "limits": "Late_* camera subsystem only; route/grip cameras unchanged. Workstation render timing is not hardware latency qualification."
+    },
+    {
+      "width": 848,
+      "height": 480,
+      "latency_s": 0.02,
+      "cameras": {
+        "late_pose": {
+          "width": 848,
+          "height": 480,
+          "intrinsics": {
+            "fx": 539.0488257370118,
+            "fy": 539.0488257370118,
+            "cx": 423.5,
+            "cy": 239.5
+          }
+        },
+        "late_pose2": {
+          "width": 848,
+          "height": 480,
+          "intrinsics": {
+            "fx": 539.0488257370118,
+            "fy": 539.0488257370118,
+            "cx": 423.5,
+            "cy": 239.5
+          }
+        },
+        "late_ball": {
+          "width": 848,
+          "height": 480,
+          "intrinsics": {
+            "fx": 539.0488257370118,
+            "fy": 539.0488257370118,
+            "cx": 423.5,
+            "cy": 239.5
+          }
+        },
+        "late_retention": {
+          "width": 848,
+          "height": 480,
+          "intrinsics": {
+            "fx": 539.0488257370118,
+            "fy": 539.0488257370118,
+            "cx": 423.5,
+            "cy": 239.5
+          }
+        }
+      },
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 29,
+        "forecast_over_half_second": 3,
+        "visible": 40,
+        "retention_qualified": 7,
+        "max_visual_dwell_s": 0.06000000000002004
+      },
+      "sensor_total_including_reset": -0.22907928154477786,
+      "visible_sigma_median_m": 0.05423165127901278,
+      "capture_wall_s": {
+        "median": 0.005910045001655817,
+        "p95": 0.007098686002427712,
+        "maximum": 0.17874693498015404
+      },
+      "transport": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.02,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {
+          "late_pose": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 249,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_pose2": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 249,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_ball": {
+            "calls": 500,
+            "exposures": 500,
+            "dropped": 0,
+            "delivered": 499,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.02000000000000668,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_retention": {
+            "calls": 202,
+            "exposures": 202,
+            "dropped": 0,
+            "delivered": 201,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.02000000000000668,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.187000000000401,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 2.7440000000009164,
+        "longest_clean_start_s": 6.805000000000607,
+        "longest_clean_end_s": 9.548000000000147,
+        "final_bilateral_fraction": 0.964,
+        "final_max_gap_s": 0.002000000000000668,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.003630973067476,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.18181818181818182,
+          "both_height_fraction": 0.9090909090909091,
+          "joint_form_fraction": 0.18181818181818182,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.003090609794519286,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 475.63226157940636,
+          "left_thumb": 412.64310194502696,
+          "left_palmar": 134.2243970515736,
+          "right_finger": 444.1182910541548,
+          "right_thumb": 753.5824413359825,
+          "right_palmar": 40.13277661694037,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "limits": "Late_* camera subsystem only; route/grip cameras unchanged. Workstation render timing is not hardware latency qualification."
+    }
+  ],
+  "fixed_phase": [
+    {
+      "action": -1.0,
+      "sensor_return": 4.150724807789036,
+      "coverage": {
+        "calls": 500,
+        "forecast": 30,
+        "forecast_over_half_second": 4,
+        "visible": 92,
+        "retention_qualified": 56,
+        "max_visual_dwell_s": 0.8800000000002939
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.1890000000004015,
+        "first_excluded_support_s": 6.1770000000003975,
+        "longest_clean_bilateral_s": 0.0,
+        "longest_clean_start_s": null,
+        "longest_clean_end_s": null,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": null,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.7272727272727273,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.7272727272727273,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.005458606504913231,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 459.30252929667284,
+          "left_thumb": 422.1162540163167,
+          "left_palmar": 77.79695562997871,
+          "right_finger": 515.3454664078369,
+          "right_thumb": 527.683464918022,
+          "right_palmar": 39.758215659672366,
+          "excluded_hand": 40.25844797955008,
+          "torso": 107.6922988103297,
+          "floor": 0.0,
+          "other": 32.289315349795174
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      }
+    },
+    {
+      "action": -0.5,
+      "sensor_return": 1.0409036664023066,
+      "coverage": {
+        "calls": 500,
+        "forecast": 30,
+        "forecast_over_half_second": 4,
+        "visible": 66,
+        "retention_qualified": 27,
+        "max_visual_dwell_s": 0.3600000000001202
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.1890000000004015,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 1.3600000000004542,
+        "longest_clean_start_s": 7.388000000000802,
+        "longest_clean_end_s": 8.747000000000591,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 0.9873108722630152,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.7272727272727273,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.7272727272727273,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.0039459274887034095,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 465.28016743116774,
+          "left_thumb": 426.34362642129065,
+          "left_palmar": 153.6731899771352,
+          "right_finger": 786.4589796884953,
+          "right_thumb": 397.41000529925236,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      }
+    },
+    {
+      "action": 0.0,
+      "sensor_return": 1.1756122162030604,
+      "coverage": {
+        "calls": 500,
+        "forecast": 30,
+        "forecast_over_half_second": 4,
+        "visible": 70,
+        "retention_qualified": 29,
+        "max_visual_dwell_s": 0.44000000000014694
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": true,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": true,
+          "final_anatomical_hand_hold": true,
+          "no_excluded_floor_body_or_applied_support": true,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.188000000000401,
+        "first_excluded_support_s": null,
+        "longest_clean_bilateral_s": 1.785000000000596,
+        "longest_clean_start_s": 8.216000000000886,
+        "longest_clean_end_s": 9.999999999999897,
+        "final_bilateral_fraction": 1.0,
+        "final_max_gap_s": 0.0,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 1.0055150400653305,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.5454545454545454,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.5454545454545454,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.004210988830204709,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 466.5866754289332,
+          "left_thumb": 396.27956499209483,
+          "left_palmar": 245.95652529155444,
+          "right_finger": 672.9665686473202,
+          "right_thumb": 332.3071434200801,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      }
+    },
+    {
+      "action": 0.5,
+      "sensor_return": 0.8114612689089897,
+      "coverage": {
+        "calls": 500,
+        "forecast": 30,
+        "forecast_over_half_second": 4,
+        "visible": 64,
+        "retention_qualified": 21,
+        "max_visual_dwell_s": 0.16000000000005343
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.1890000000004015,
+        "first_excluded_support_s": 6.319000000000445,
+        "longest_clean_bilateral_s": 0.001000000000000334,
+        "longest_clean_start_s": 6.194000000000403,
+        "longest_clean_end_s": 6.194000000000403,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 22.437346329303313,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.5454545454545454,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.5454545454545454,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.001547086460912772,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 423.4658000391053,
+          "left_thumb": 408.7160243658809,
+          "left_palmar": 212.99114378765287,
+          "right_finger": 618.1629120630232,
+          "right_thumb": 354.9635141167765,
+          "right_palmar": 0.0,
+          "excluded_hand": 121.52966050146142,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      }
+    },
+    {
+      "action": 1.0,
+      "sensor_return": 0.8114612689089897,
+      "coverage": {
+        "calls": 500,
+        "forecast": 30,
+        "forecast_over_half_second": 4,
+        "visible": 64,
+        "retention_qualified": 21,
+        "max_visual_dwell_s": 0.16000000000005343
+      },
+      "physical_evaluation_only": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.1890000000004015,
+        "first_excluded_support_s": 6.319000000000445,
+        "longest_clean_bilateral_s": 0.001000000000000334,
+        "longest_clean_start_s": 6.194000000000403,
+        "longest_clean_end_s": 6.194000000000403,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 22.437346329303313,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.5454545454545454,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.5454545454545454,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.001547086460912772,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 423.4658000391053,
+          "left_thumb": 408.7160243658809,
+          "left_palmar": 212.99114378765287,
+          "right_finger": 618.1629120630232,
+          "right_thumb": 354.9635141167765,
+          "right_palmar": 0.0,
+          "excluded_hand": 121.52966050146142,
+          "torso": 0.0,
+          "floor": 0.0,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "archive_sha256": "f661fea568ac3b731020e1fdbaf8767ec4fc668ac041645ae2eb45528ef2d590",
+  "all_original_array_sensor_dict_return_checks_exact": true,
+  "all_component_ledgers_match": true,
+  "offline_truth_labels_recomputed": true,
+  "rows": [
+    {
+      "policy": "zero",
+      "observer": "original",
+      "original_all_policy_arrays_exact": true,
+      "actions_exact": true,
+      "sensor64_exact": true,
+      "ledger_sum": 1.1528582901537472,
+      "sensor_return": 1.1528582901537479,
+      "valid_captures": 84,
+      "policy_steps": 158,
+      "total_dwell_increment_s": 1.6800000000005246,
+      "dwell_increment_original_clean_s": 1.6400000000005113,
+      "instant_bilateral_dwell_s": 1.6400000000005113,
+      "milestones": [],
+      "first_excluded_support_s": null
+    },
+    {
+      "policy": "zero",
+      "observer": "augmented",
+      "original_all_policy_arrays_exact": null,
+      "actions_exact": true,
+      "sensor64_exact": true,
+      "ledger_sum": 8.998117523833038,
+      "sensor_return": 8.998117523833038,
+      "valid_captures": 158,
+      "policy_steps": 158,
+      "total_dwell_increment_s": 3.120000000000225,
+      "dwell_increment_original_clean_s": 3.040000000000198,
+      "instant_bilateral_dwell_s": 3.040000000000198,
+      "milestones": [
+        {
+          "time_s": 6.400000000000472,
+          "instant_excluded_support": false,
+          "original_clean_bilateral": true
+        }
+      ],
+      "first_excluded_support_s": null
+    },
+    {
+      "policy": "learned",
+      "observer": "original",
+      "original_all_policy_arrays_exact": true,
+      "actions_exact": true,
+      "sensor64_exact": true,
+      "ledger_sum": 7.802738413492508,
+      "sensor_return": 7.802738413492504,
+      "valid_captures": 99,
+      "policy_steps": 158,
+      "total_dwell_increment_s": 2.7600000000007796,
+      "dwell_increment_original_clean_s": 0.2800000000000935,
+      "instant_bilateral_dwell_s": 2.280000000000655,
+      "milestones": [
+        {
+          "time_s": 6.040000000000352,
+          "instant_excluded_support": true,
+          "original_clean_bilateral": false
+        },
+        {
+          "time_s": 7.280000000000766,
+          "instant_excluded_support": true,
+          "original_clean_bilateral": false
+        }
+      ],
+      "first_excluded_support_s": 5.6560000000002235
+    },
+    {
+      "policy": "learned",
+      "observer": "augmented",
+      "original_all_policy_arrays_exact": null,
+      "actions_exact": true,
+      "sensor64_exact": true,
+      "ledger_sum": 10.511398039180577,
+      "sensor_return": 10.511398039180573,
+      "valid_captures": 158,
+      "policy_steps": 158,
+      "total_dwell_increment_s": 4.679999999999431,
+      "dwell_increment_original_clean_s": 0.16000000000005343,
+      "instant_bilateral_dwell_s": 4.119999999999386,
+      "milestones": [
+        {
+          "time_s": 6.400000000000472,
+          "instant_excluded_support": true,
+          "original_clean_bilateral": false
+        }
+      ],
+      "first_excluded_support_s": 5.6560000000002235
+    }
+  ],
+  "scope": [
+    "158/158 valid means one selected policy capture per40ms enabled decision, not158independenttrials or benchmarkcamera-framecoverage.",
+    "Four fixedtrajectory renderer replays; source hardblocks mj_step, replays archivedactions and does not evaluate policy.",
+    "Exactball/root state used to render archivedsensorstream only; contacttruth joined offline after rewardcalculation.",
+    "Augmented observer still ranks failedlearned10.511398 above retainedzero8.998118; no reward/controllerpromotion.",
+    "Physicalzero passes experimentalcriteria while originalrealistic_lower_catch remainsfalse dueoriginalreferenceidentity; learned alsofails actualsupport/endpoint/hold."
+  ],
+  "full_original_sensor_summary_keys_exact": true,
+  "support_specificity_caveat": "Learned augmented credits4.12s with instantaneousbilateral contact but only0.16s originalcleanbilateral before first excluded support. No credit occurs with zeroanatomicalhandforce; avoid describing entirecase as visualnohandhallucination."
+}

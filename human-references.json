@@ -1,0 +1,20 @@
+{
+  "go": {
+    "videoId": "uJWXrbns1bw",
+    "sourceLabel": "CoachUp · vertical / outside release",
+    "sourceUrl": "https://www.coachup.com/nation/articles/football-tips-how-to-run-the-fade-route",
+    "note": "CoachUp's fade, or go, demonstration uses an outside release followed by a vertical route. It is an instructional reference, not identical to the robot's commanded straight stem."
+  },
+  "out": {
+    "videoId": "gQbfBnbO8cs",
+    "sourceLabel": "First Down Training ↗",
+    "sourceUrl": "https://www.youtube.com/watch?v=gQbfBnbO8cs",
+    "note": "Independent instructional Out reference from First Down Training. No synchronized segment or matched performance claim."
+  },
+  "slant": {
+    "videoId": "acBNiY7re6w",
+    "sourceLabel": "First Down Training ↗",
+    "sourceUrl": "https://www.youtube.com/watch?v=acBNiY7re6w",
+    "note": "Independent instructional Slant reference from First Down Training. No synchronized segment or matched performance claim."
+  }
+}

@@ -1,0 +1,1046 @@
+[
+  {
+    "case": "mild-forward-baseline",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "baseline",
+    "initial_pitch_rad": 0.12,
+    "initial_angular_velocity_rad_s": 0.3,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.002999999999999993,
+    "initial_pelvis_height_m": 0.7928514115603559,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.01900000000000001,
+        "peak_sum_normal_n": 766.6805733839469,
+        "first150ms_normal_impulse_ns": 52.56138816330126
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7475018400482655,
+    "final_upright_cos": 0.9992870274311944,
+    "minimum_pelvis_height_m": 0.7323092929559856,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "f93a76fdc8bdaa8860315e0105552c5c8436321058304db0e5accdc7890f580c",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "mild-forward-balance_abort",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "balance_abort",
+    "initial_pitch_rad": 0.12,
+    "initial_angular_velocity_rad_s": 0.3,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.002999999999999993,
+    "initial_pelvis_height_m": 0.7928514115603559,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.01900000000000001,
+        "peak_sum_normal_n": 766.6805733839469,
+        "first150ms_normal_impulse_ns": 52.56138816330126
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7475018400482655,
+    "final_upright_cos": 0.9992870274311944,
+    "minimum_pelvis_height_m": 0.7323092929559856,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "f93a76fdc8bdaa8860315e0105552c5c8436321058304db0e5accdc7890f580c",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "mild-forward-crouch_tuck",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "crouch_tuck",
+    "initial_pitch_rad": 0.12,
+    "initial_angular_velocity_rad_s": 0.3,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.002999999999999993,
+    "initial_pelvis_height_m": 0.7928514115603559,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "crouch_tuck",
+      "severe_upright_cos": 0.84,
+      "warning_upright_cos": 0.96,
+      "warning_gyro_rad_s": 1.8,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.01900000000000001,
+        "peak_sum_normal_n": 766.6805733839469,
+        "first150ms_normal_impulse_ns": 52.56138816330126
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7475018400482655,
+    "final_upright_cos": 0.9992870274311944,
+    "minimum_pelvis_height_m": 0.7323092929559856,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "f93a76fdc8bdaa8860315e0105552c5c8436321058304db0e5accdc7890f580c",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "mild-backward-baseline",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "baseline",
+    "initial_pitch_rad": -0.12,
+    "initial_angular_velocity_rad_s": -0.3,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.0029999999999999654,
+    "initial_pelvis_height_m": 0.7906969751952366,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.036000000000000025,
+        "peak_sum_normal_n": 592.9214325167508,
+        "first150ms_normal_impulse_ns": 55.622965629540424
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7473213026098595,
+    "final_upright_cos": 0.999369985631341,
+    "minimum_pelvis_height_m": 0.733090935464698,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "b419b8c965c5d0c326eef831dc2188294b5d7f39b0cf27b4ba049f5ddea43b2f",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "mild-backward-balance_abort",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "balance_abort",
+    "initial_pitch_rad": -0.12,
+    "initial_angular_velocity_rad_s": -0.3,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.0029999999999999654,
+    "initial_pelvis_height_m": 0.7906969751952366,
+    "supervisor_trigger_s": 0.12000000000000009,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.036000000000000025,
+        "peak_sum_normal_n": 469.41614740843767,
+        "first150ms_normal_impulse_ns": 57.533476944507385
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7476653953440248,
+    "final_upright_cos": 0.9991849573937646,
+    "minimum_pelvis_height_m": 0.7364910716340631,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "b419b8c965c5d0c326eef831dc2188294b5d7f39b0cf27b4ba049f5ddea43b2f",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "mild-backward-crouch_tuck",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "crouch_tuck",
+    "initial_pitch_rad": -0.12,
+    "initial_angular_velocity_rad_s": -0.3,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.0029999999999999654,
+    "initial_pelvis_height_m": 0.7906969751952366,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "crouch_tuck",
+      "severe_upright_cos": 0.84,
+      "warning_upright_cos": 0.96,
+      "warning_gyro_rad_s": 1.8,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.036000000000000025,
+        "peak_sum_normal_n": 592.9214325167508,
+        "first150ms_normal_impulse_ns": 55.622965629540424
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7473213026098595,
+    "final_upright_cos": 0.999369985631341,
+    "minimum_pelvis_height_m": 0.733090935464698,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "b419b8c965c5d0c326eef831dc2188294b5d7f39b0cf27b4ba049f5ddea43b2f",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "moderate-forward-baseline",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "baseline",
+    "initial_pitch_rad": 0.25,
+    "initial_angular_velocity_rad_s": 0.8,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.0029999999999999792,
+    "initial_pelvis_height_m": 0.786234249573861,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.02000000000000001,
+        "peak_sum_normal_n": 1008.6171365942015,
+        "first150ms_normal_impulse_ns": 39.46024499187533
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7473213830507736,
+    "final_upright_cos": 0.9995645155112518,
+    "minimum_pelvis_height_m": 0.6783221036168965,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "d9a3dcfd124f03ea39b82eae5c292e537bd7bfcf874412f87448cc0e65f19610",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "moderate-forward-balance_abort",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "balance_abort",
+    "initial_pitch_rad": 0.25,
+    "initial_angular_velocity_rad_s": 0.8,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.0029999999999999792,
+    "initial_pelvis_height_m": 0.786234249573861,
+    "supervisor_trigger_s": 0.02000000000000001,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.02000000000000001,
+        "peak_sum_normal_n": 888.0680218089722,
+        "first150ms_normal_impulse_ns": 38.84474727534713
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7470742568370924,
+    "final_upright_cos": 0.9993725439969258,
+    "minimum_pelvis_height_m": 0.6770203349232117,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "d9a3dcfd124f03ea39b82eae5c292e537bd7bfcf874412f87448cc0e65f19610",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "moderate-forward-crouch_tuck",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "crouch_tuck",
+    "initial_pitch_rad": 0.25,
+    "initial_angular_velocity_rad_s": 0.8,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.0029999999999999792,
+    "initial_pelvis_height_m": 0.786234249573861,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "crouch_tuck",
+      "severe_upright_cos": 0.84,
+      "warning_upright_cos": 0.96,
+      "warning_gyro_rad_s": 1.8,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.02000000000000001,
+        "peak_sum_normal_n": 1008.6171365942015,
+        "first150ms_normal_impulse_ns": 39.46024499187533
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7473213830507736,
+    "final_upright_cos": 0.9995645155112518,
+    "minimum_pelvis_height_m": 0.6783221036168965,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "d9a3dcfd124f03ea39b82eae5c292e537bd7bfcf874412f87448cc0e65f19610",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "moderate-backward-baseline",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "baseline",
+    "initial_pitch_rad": -0.25,
+    "initial_angular_velocity_rad_s": -0.8,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.003000000000000021,
+    "initial_pelvis_height_m": 0.7817817705931167,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.04000000000000003,
+        "peak_sum_normal_n": 870.5833660520057,
+        "first150ms_normal_impulse_ns": 51.83770871899748
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7474515585780473,
+    "final_upright_cos": 0.9993251401946078,
+    "minimum_pelvis_height_m": 0.7119112829287669,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "049fe11d1013b039c02540e377ab6295aa77d389c104556516d04942b3e05756",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "moderate-backward-balance_abort",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "balance_abort",
+    "initial_pitch_rad": -0.25,
+    "initial_angular_velocity_rad_s": -0.8,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.003000000000000021,
+    "initial_pelvis_height_m": 0.7817817705931167,
+    "supervisor_trigger_s": 0.060000000000000046,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.04000000000000003,
+        "peak_sum_normal_n": 847.049812258951,
+        "first150ms_normal_impulse_ns": 50.753115339374894
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7474492367739213,
+    "final_upright_cos": 0.9996220194715119,
+    "minimum_pelvis_height_m": 0.7088500963957638,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "049fe11d1013b039c02540e377ab6295aa77d389c104556516d04942b3e05756",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "moderate-backward-crouch_tuck",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "crouch_tuck",
+    "initial_pitch_rad": -0.25,
+    "initial_angular_velocity_rad_s": -0.8,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.003000000000000021,
+    "initial_pelvis_height_m": 0.7817817705931167,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "crouch_tuck",
+      "severe_upright_cos": 0.84,
+      "warning_upright_cos": 0.96,
+      "warning_gyro_rad_s": 1.8,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.04000000000000003,
+        "peak_sum_normal_n": 870.5833660520057,
+        "first150ms_normal_impulse_ns": 51.83770871899748
+      }
+    },
+    "first_nonfoot_floor_force_s": null,
+    "stable_standing_final2s": true,
+    "recovery_label": "stumble_recovery",
+    "final_pelvis_height_m": 0.7474515585780473,
+    "final_upright_cos": 0.9993251401946078,
+    "minimum_pelvis_height_m": 0.7119112829287669,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "049fe11d1013b039c02540e377ab6295aa77d389c104556516d04942b3e05756",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "full-forward-baseline",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "baseline",
+    "initial_pitch_rad": 0.65,
+    "initial_angular_velocity_rad_s": 2.0,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.003000000000000007,
+    "initial_pelvis_height_m": 0.6851967863144195,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": 1.8619999999999057,
+        "peak_sum_normal_n": 1810.6429478323398,
+        "first150ms_normal_impulse_ns": 8.265502144866343
+      },
+      "hand": {
+        "first_floor_force_s": 0.2830000000000002,
+        "peak_sum_normal_n": 735.0380746855142,
+        "first150ms_normal_impulse_ns": 16.762863721319814
+      },
+      "torso": {
+        "first_floor_force_s": 2.670999999999817,
+        "peak_sum_normal_n": 2174.1552364842764,
+        "first150ms_normal_impulse_ns": 59.197978203049935
+      },
+      "other": {
+        "first_floor_force_s": 0.2640000000000002,
+        "peak_sum_normal_n": 3256.11930137157,
+        "first150ms_normal_impulse_ns": 144.98924963742346
+      }
+    },
+    "first_nonfoot_floor_force_s": 0.2640000000000002,
+    "stable_standing_final2s": false,
+    "recovery_label": "not_recovered",
+    "final_pelvis_height_m": 0.21271914043424395,
+    "final_upright_cos": -0.13340960001454039,
+    "minimum_pelvis_height_m": 0.06424865925768172,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "a21dfb6fbb01270ee087286c4f8933f8c35699f3e03ebf1d6f571d327f933d25",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "full-forward-balance_abort",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "balance_abort",
+    "initial_pitch_rad": 0.65,
+    "initial_angular_velocity_rad_s": 2.0,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.003000000000000007,
+    "initial_pelvis_height_m": 0.6851967863144195,
+    "supervisor_trigger_s": 0.02000000000000001,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": 3.720999999999701,
+        "peak_sum_normal_n": 727.5989533289612,
+        "first150ms_normal_impulse_ns": 2.736821345240989
+      },
+      "hand": {
+        "first_floor_force_s": 0.2850000000000002,
+        "peak_sum_normal_n": 705.1665394856491,
+        "first150ms_normal_impulse_ns": 15.328387802924471
+      },
+      "torso": {
+        "first_floor_force_s": 1.7069999999999228,
+        "peak_sum_normal_n": 2007.945199312535,
+        "first150ms_normal_impulse_ns": 24.994143216416948
+      },
+      "other": {
+        "first_floor_force_s": 0.2620000000000002,
+        "peak_sum_normal_n": 3991.9459737235316,
+        "first150ms_normal_impulse_ns": 162.02768607074088
+      }
+    },
+    "first_nonfoot_floor_force_s": 0.2620000000000002,
+    "stable_standing_final2s": false,
+    "recovery_label": "not_recovered",
+    "final_pelvis_height_m": 0.2630022260293253,
+    "final_upright_cos": -0.08187349655667475,
+    "minimum_pelvis_height_m": 0.05781394232478163,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "a21dfb6fbb01270ee087286c4f8933f8c35699f3e03ebf1d6f571d327f933d25",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "full-forward-crouch_tuck",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "crouch_tuck",
+    "initial_pitch_rad": 0.65,
+    "initial_angular_velocity_rad_s": 2.0,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.003000000000000007,
+    "initial_pelvis_height_m": 0.6851967863144195,
+    "supervisor_trigger_s": 0.02000000000000001,
+    "supervisor_config": {
+      "mode": "crouch_tuck",
+      "severe_upright_cos": 0.84,
+      "warning_upright_cos": 0.96,
+      "warning_gyro_rad_s": 1.8,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "hand": {
+        "first_floor_force_s": 0.2700000000000002,
+        "peak_sum_normal_n": 688.230595716962,
+        "first150ms_normal_impulse_ns": 20.007587771945577
+      },
+      "torso": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "other": {
+        "first_floor_force_s": 0.2840000000000002,
+        "peak_sum_normal_n": 2779.467263710451,
+        "first150ms_normal_impulse_ns": 130.73457164563348
+      }
+    },
+    "first_nonfoot_floor_force_s": 0.2700000000000002,
+    "stable_standing_final2s": false,
+    "recovery_label": "not_recovered",
+    "final_pelvis_height_m": 0.2756685063715904,
+    "final_upright_cos": 0.09730321000729147,
+    "minimum_pelvis_height_m": 0.17982833114837937,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "a21dfb6fbb01270ee087286c4f8933f8c35699f3e03ebf1d6f571d327f933d25",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "full-backward-baseline",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "baseline",
+    "initial_pitch_rad": -0.65,
+    "initial_angular_velocity_rad_s": -2.0,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.003,
+    "initial_pelvis_height_m": 0.6743053690586442,
+    "supervisor_trigger_s": null,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": 0.6000000000000004,
+        "peak_sum_normal_n": 1140.9625484717947,
+        "first150ms_normal_impulse_ns": 16.737164824639468
+      },
+      "hand": {
+        "first_floor_force_s": 1.0469999999999955,
+        "peak_sum_normal_n": 180.4773195681392,
+        "first150ms_normal_impulse_ns": 5.504369790763949
+      },
+      "torso": {
+        "first_floor_force_s": 0.3920000000000003,
+        "peak_sum_normal_n": 1648.2975811810024,
+        "first150ms_normal_impulse_ns": 44.82758866610523
+      },
+      "other": {
+        "first_floor_force_s": 0.3150000000000002,
+        "peak_sum_normal_n": 6656.398434022585,
+        "first150ms_normal_impulse_ns": 110.45450323171741
+      }
+    },
+    "first_nonfoot_floor_force_s": 0.3150000000000002,
+    "stable_standing_final2s": false,
+    "recovery_label": "not_recovered",
+    "final_pelvis_height_m": 0.7489035024050011,
+    "final_upright_cos": 0.9993578910418321,
+    "minimum_pelvis_height_m": 0.05384407708731906,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "ab3c6a1c0b01524d178f9c3f40248093d8f2cfc7537a026e235a2e7b01ed6916",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "full-backward-balance_abort",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "balance_abort",
+    "initial_pitch_rad": -0.65,
+    "initial_angular_velocity_rad_s": -2.0,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.003,
+    "initial_pelvis_height_m": 0.6743053690586442,
+    "supervisor_trigger_s": 0.02000000000000001,
+    "supervisor_config": {
+      "mode": "balance_abort",
+      "severe_upright_cos": 0.95,
+      "warning_upright_cos": 0.985,
+      "warning_gyro_rad_s": 0.35,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": 0.5590000000000004,
+        "peak_sum_normal_n": 1210.7977055381625,
+        "first150ms_normal_impulse_ns": 23.104459879851483
+      },
+      "hand": {
+        "first_floor_force_s": 1.014999999999999,
+        "peak_sum_normal_n": 239.31430212236884,
+        "first150ms_normal_impulse_ns": 5.382982820415044
+      },
+      "torso": {
+        "first_floor_force_s": 0.3920000000000003,
+        "peak_sum_normal_n": 1615.634741614671,
+        "first150ms_normal_impulse_ns": 34.99111117373057
+      },
+      "other": {
+        "first_floor_force_s": 0.3050000000000002,
+        "peak_sum_normal_n": 4630.2962784869815,
+        "first150ms_normal_impulse_ns": 127.51896189028508
+      }
+    },
+    "first_nonfoot_floor_force_s": 0.3050000000000002,
+    "stable_standing_final2s": false,
+    "recovery_label": "not_recovered",
+    "final_pelvis_height_m": 0.06667714752332843,
+    "final_upright_cos": 0.11253377240858498,
+    "minimum_pelvis_height_m": 0.05632251123789385,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "ab3c6a1c0b01524d178f9c3f40248093d8f2cfc7537a026e235a2e7b01ed6916",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  },
+  {
+    "case": "full-backward-crouch_tuck",
+    "scope": "SIMONLYsensor-supervisedabort. No trainedfallpolicy/getup orhardwareclaim.",
+    "mode": "crouch_tuck",
+    "initial_pitch_rad": -0.65,
+    "initial_angular_velocity_rad_s": -2.0,
+    "duration_s": 11.999999999998789,
+    "minimum_initial_floor_gap_m": 0.003,
+    "initial_pelvis_height_m": 0.6743053690586442,
+    "supervisor_trigger_s": 0.02000000000000001,
+    "supervisor_config": {
+      "mode": "crouch_tuck",
+      "severe_upright_cos": 0.84,
+      "warning_upright_cos": 0.96,
+      "warning_gyro_rad_s": 1.8,
+      "confirm_samples": 2,
+      "max_target_velocity_rad_s": 2.5,
+      "max_target_acceleration_rad_s2": 10.0
+    },
+    "impacts_evaluation_only": {
+      "head": {
+        "first_floor_force_s": 0.3710000000000003,
+        "peak_sum_normal_n": 82.84787855802507,
+        "first150ms_normal_impulse_ns": 0.11908830488426761
+      },
+      "hand": {
+        "first_floor_force_s": null,
+        "peak_sum_normal_n": 0.0,
+        "first150ms_normal_impulse_ns": 0.0
+      },
+      "torso": {
+        "first_floor_force_s": 0.35500000000000026,
+        "peak_sum_normal_n": 4588.512486668857,
+        "first150ms_normal_impulse_ns": 70.4839691176117
+      },
+      "other": {
+        "first_floor_force_s": 0.2740000000000002,
+        "peak_sum_normal_n": 3200.019254648938,
+        "first150ms_normal_impulse_ns": 76.53219415419936
+      }
+    },
+    "first_nonfoot_floor_force_s": 0.34600000000000025,
+    "stable_standing_final2s": false,
+    "recovery_label": "not_recovered",
+    "final_pelvis_height_m": 0.06098869610586881,
+    "final_upright_cos": 0.03861676353799148,
+    "minimum_pelvis_height_m": 0.04428162767199797,
+    "joint_gain_and_effort_clamps_unchanged": true,
+    "actual_body_torque_within_original_limits": true,
+    "no_midplay_state_overwrite": true,
+    "no_active_external_push": true,
+    "head_geometry": "head_link collisionmesh weldedtorso_link",
+    "physics_timestep_s": 0.001,
+    "warning_count": 0,
+    "scene_xml_sha256": "f171614f9f896e9e2d6175a66002aedacc482ab89fcaf6b923de15bc8b6bad51",
+    "initial_state_sha256": "ab3c6a1c0b01524d178f9c3f40248093d8f2cfc7537a026e235a2e7b01ed6916",
+    "source_sha256": "02c6eb72a507a8b4e534f421c8869cdc2ccb0ab776dd43b74a3d0e7d7627d2b8"
+  }
+]

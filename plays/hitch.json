@@ -1,0 +1,312 @@
+{
+  "evidence_class": "controlled_free_ball_catch_during_route_simulation",
+  "source_report_sha256": "c05e00e3b5a166d0b375edfb3c76d91931e908c2a8adbe8a602267f879ccd7a9",
+  "video_sha256": "3298f5037639961bd8338ad0751555ab69ca7d8799edae6727b60552274e9241",
+  "initial_free_flight_s": 0.041999999999995374,
+  "ball_horizontal_travel_to_first_tip_m": 0.002591496968665026,
+  "trial": {
+    "route": "hitch",
+    "release_s": 3.2,
+    "drop_forward_m": 0.48,
+    "drop_height_m": 0.515,
+    "close_below_release_m": 0.085,
+    "squeeze_rad": 0.005,
+    "curl_rad": 0.75,
+    "speed_mps": 0.2,
+    "horizon_s": 8.5,
+    "wrist_down_rad": 0.1,
+    "flight_s": 0.0,
+    "incoming_mps": 0.48,
+    "waypoints_m": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.48,
+        0.0
+      ],
+      [
+        0.3,
+        0.0
+      ]
+    ],
+    "waypoint_hit_times_s": [
+      5.0600000000000245,
+      6.380000000000465
+    ],
+    "release": {
+      "time_s": 3.1999999999997586,
+      "position_m": [
+        0.6622695953543577,
+        -0.049117730112318715,
+        1.2482454450659106
+      ],
+      "velocity_mps": [
+        -0.056455464073268735,
+        0.02842421786781682,
+        -0.15
+      ],
+      "estimated_receiver_velocity_mps": [
+        0.143428316635262,
+        0.021607018320788728
+      ],
+      "mode": "controlled_drop"
+    },
+    "close_s": 3.359999999999741,
+    "first_tip_contact_s": 3.241999999999754,
+    "pre_contact_speed_mps": 0.1507567595398535,
+    "route_progress_next_half_second_m": 0.06973228013566735,
+    "post_contact_route_progress_m": 0.4623657743540254,
+    "first_floor_contact_s": null,
+    "localized_frames": 210,
+    "elapsed_s": 8.500000000000728,
+    "endpoint_error_m": 0.008775066688780827,
+    "endpoint_tolerance_m": 0.018,
+    "settled_speed_mps": 0.005228605750960274,
+    "min_upright_cosine": 0.9805650328188024,
+    "route_complete": true,
+    "hands_only_contact": {
+      "evidence_class": "simulation_truth_evaluation_only",
+      "physics_sample_hz": 1000.0,
+      "samples": 5300,
+      "physics_clock_ok": true,
+      "retention_window_s": 2.0,
+      "full_retention_window": true,
+      "initial_free_flight": true,
+      "ball_floor_contact": false,
+      "applied_ball_load": false,
+      "bilateral_palm_tip_fraction": 1.0,
+      "longest_bilateral_gap_s": 0.0,
+      "mean_vertical_hand_force_as_ball_weight": 0.9965371699604079,
+      "max_ball_normal_force_n": {
+        "left_tip": 14.28168929879557,
+        "left_palm": 22.33982739631351,
+        "left_other_hand": 9.05660298542087,
+        "right_tip": 10.308491494721448,
+        "right_palm": 0.0,
+        "right_other_hand": 6.573601376154734,
+        "torso": 0.0,
+        "floor": 0.0,
+        "other": 0.0
+      },
+      "peak_retention_torso_normal_n": 0.0,
+      "peak_episode_nonhand_normal_n": 0.0,
+      "peak_retention_nonhand_normal_n": 0.0,
+      "peak_retention_other_hand_normal_n": 0.0,
+      "min_retention_ball_height_m": 0.8853523228740013,
+      "final_ball_xyz_m": [
+        0.6767002724356121,
+        -0.032685936241362054,
+        0.8853523228740013
+      ],
+      "bilateral_palm_tip_retention": true,
+      "bilateral_load_bearing_retention": true,
+      "torso_assisted_bilateral_retention": false,
+      "hands_only_retention": true,
+      "hands_only_catch": true
+    },
+    "warning_count": 0,
+    "ball_weight_n": 4.1202,
+    "in_stride_catch_and_route": true,
+    "independent_score": {
+      "in_stride_catch_and_route": true,
+      "checks": {
+        "complete_synchronized_traces": true,
+        "initial_free_flight": true,
+        "first_tip_contact": true,
+        "pre_contact_speed": true,
+        "immediate_post_contact_progress": true,
+        "total_post_contact_progress": true,
+        "ordered_route_finish": true,
+        "hands_only_retention_at_finish": true,
+        "no_floor_contact": true,
+        "no_nonhand_body_contact_force": true,
+        "no_applied_ball_load": true
+      },
+      "failed_checks": [],
+      "criteria": {
+        "pre_contact_window_s": 0.14,
+        "min_pre_contact_speed_mps": 0.1,
+        "post_contact_window_s": 0.5,
+        "min_immediate_route_displacement_m": 0.05,
+        "min_total_route_displacement_m": 0.1,
+        "waypoint_tolerance_cap_m": 0.05,
+        "waypoint_tolerance_fraction": 0.1,
+        "min_upright_cosine": 0.9,
+        "settling_window_s": 0.5,
+        "max_settled_speed_mps": 0.075,
+        "max_motion_gap_s": 0.04,
+        "min_initial_ball_height_m": 0.15,
+        "force_zero_tolerance_n": 1e-09
+      },
+      "retention_criteria": {
+        "window_s": 2.0,
+        "min_normal_per_hand_n": 0.1,
+        "min_bilateral_fraction": 0.85,
+        "max_bilateral_gap_s": 0.1,
+        "max_nonhand_normal_n": 0.1,
+        "min_mean_hand_weight_fraction": 0.8,
+        "min_initial_free_flight_s": 0.02
+      },
+      "first_tip_contact_s": 3.241999999999754,
+      "pre_tip_speed_mps": 0.14633693785780086,
+      "immediate_post_tip_route_displacement_m": 0.06973716327217777,
+      "total_post_tip_route_displacement_m": 0.3909259524268165,
+      "ordered_waypoint_hit_times_s": [
+        5.0600000000000245,
+        6.380000000000465
+      ],
+      "endpoint_error_m": 0.008775066688780827,
+      "endpoint_tolerance_m": 0.018,
+      "final_mean_speed_mps": 0.005228605750964447,
+      "first_floor_contact_s": null,
+      "peak_nonhand_body_normal_force_n": 0.0,
+      "retention": {
+        "bilateral_palm_tip_fraction": 1.0,
+        "max_bilateral_gap_s": 0.0,
+        "mean_vertical_hand_force_as_ball_weight": 0.9965371699604079,
+        "bilateral_at_finish": true,
+        "hands_only_retention_at_finish": true
+      }
+    },
+    "ball_detections_until_closure": [
+      [
+        3.1999999999997586,
+        0.6781278536449604,
+        -0.05625961323908024,
+        1.2484797086575286
+      ],
+      [
+        3.2199999999997564,
+        0.675566596619174,
+        -0.05488764329282536,
+        1.2481471016421808
+      ],
+      [
+        3.239999999999754,
+        0.6760031988348447,
+        -0.055434309003995486,
+        1.235282234424942
+      ],
+      [
+        3.259999999999752,
+        0.6754448058252427,
+        -0.05544886684877892,
+        1.222252051304138
+      ],
+      [
+        3.27999999999975,
+        0.6747353859720944,
+        -0.05506904825624637,
+        1.222152027479272
+      ],
+      [
+        3.2999999999997476,
+        0.6775299985479384,
+        -0.05687930219641557,
+        1.2095731336925173
+      ],
+      [
+        3.3199999999997454,
+        0.681502374848352,
+        -0.059634731747869596,
+        1.1841637669772436
+      ],
+      [
+        3.339999999999743,
+        0.6811493889073614,
+        -0.059761625260750684,
+        1.1710649658384331
+      ],
+      [
+        3.359999999999741,
+        0.6854673079167872,
+        -0.06270356518744391,
+        1.145641975542719
+      ]
+    ],
+    "trace_file": "hitch-3.20.npz",
+    "trace_sha256": "2939555fbc9d70f3671f8d4211168013110080767b6361ffeda9f19580904f2e"
+  },
+  "score": {
+    "trace": "hitch-3.20.npz",
+    "trace_sha256": "2939555fbc9d70f3671f8d4211168013110080767b6361ffeda9f19580904f2e",
+    "route": "hitch",
+    "route_waypoints_m": [
+      [
+        0.0,
+        0.0
+      ],
+      [
+        0.48,
+        0.0
+      ],
+      [
+        0.3,
+        0.0
+      ]
+    ],
+    "requested_release_s": 3.2,
+    "visual_close_s": 3.359999999999741,
+    "in_stride_catch_and_route": true,
+    "checks": {
+      "complete_synchronized_traces": true,
+      "initial_free_flight": true,
+      "first_tip_contact": true,
+      "pre_contact_speed": true,
+      "immediate_post_contact_progress": true,
+      "total_post_contact_progress": true,
+      "ordered_route_finish": true,
+      "hands_only_retention_at_finish": true,
+      "no_floor_contact": true,
+      "no_nonhand_body_contact_force": true,
+      "no_applied_ball_load": true
+    },
+    "failed_checks": [],
+    "criteria": {
+      "pre_contact_window_s": 0.14,
+      "min_pre_contact_speed_mps": 0.1,
+      "post_contact_window_s": 0.5,
+      "min_immediate_route_displacement_m": 0.05,
+      "min_total_route_displacement_m": 0.1,
+      "waypoint_tolerance_cap_m": 0.05,
+      "waypoint_tolerance_fraction": 0.1,
+      "min_upright_cosine": 0.9,
+      "settling_window_s": 0.5,
+      "max_settled_speed_mps": 0.075,
+      "max_motion_gap_s": 0.04,
+      "min_initial_ball_height_m": 0.15,
+      "force_zero_tolerance_n": 1e-09
+    },
+    "retention_criteria": {
+      "window_s": 2.0,
+      "min_normal_per_hand_n": 0.1,
+      "min_bilateral_fraction": 0.85,
+      "max_bilateral_gap_s": 0.1,
+      "max_nonhand_normal_n": 0.1,
+      "min_mean_hand_weight_fraction": 0.8,
+      "min_initial_free_flight_s": 0.02
+    },
+    "first_tip_contact_s": 3.241999999999754,
+    "pre_tip_speed_mps": 0.14633693785780086,
+    "immediate_post_tip_route_displacement_m": 0.06973716327217777,
+    "total_post_tip_route_displacement_m": 0.3909259524268165,
+    "ordered_waypoint_hit_times_s": [
+      5.0600000000000245,
+      6.380000000000465
+    ],
+    "endpoint_error_m": 0.008775066688780827,
+    "endpoint_tolerance_m": 0.018,
+    "final_mean_speed_mps": 0.005228605750964447,
+    "first_floor_contact_s": null,
+    "peak_nonhand_body_normal_force_n": 0.0,
+    "retention": {
+      "bilateral_palm_tip_fraction": 1.0,
+      "max_bilateral_gap_s": 0.0,
+      "mean_vertical_hand_force_as_ball_weight": 0.9965371699604079,
+      "bilateral_at_finish": true,
+      "hands_only_retention_at_finish": true
+    }
+  }
+}

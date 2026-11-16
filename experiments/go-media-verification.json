@@ -1,0 +1,21 @@
+{
+  "video_sha256": "33eadb93478b4db8bd8ca016fa58ac4d49be6e68124977f93407c230facf4338",
+  "source_view_sha256": "7368187daa812a83056249925425ae4763e2fdc243d4d0e8314b1c912afc8220",
+  "frames": 276,
+  "fps": 25,
+  "poses_exact": true,
+  "timestamps_exact": true,
+  "width": 1280,
+  "height": 720,
+  "fixed_camera": {
+    "lookat": [
+      6,
+      -0.7,
+      1.1
+    ],
+    "distance": 16,
+    "azimuth": 100,
+    "elevation": -15
+  },
+  "full_simulation": true
+}

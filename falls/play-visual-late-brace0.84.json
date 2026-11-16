@@ -1,0 +1,56 @@
+{
+  "mode": "crouch_tuck",
+  "label": "visual-late-brace0.84",
+  "visual_receive_phase_armed_s": 4.0599999999996905,
+  "visual_phase_sensor_command_only": true,
+  "late_balance_threshold": 0.84,
+  "fall_body_stiffness_fraction": 1.0,
+  "fall_gain_transition_s": 0.15,
+  "damping_retained": true,
+  "native_hand_gains_unchanged": true,
+  "trigger_s": 4.679999999999898,
+  "duration_s": 11.999999999998789,
+  "stable_standing_final2s": false,
+  "impacts": {
+    "head": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "hand": {
+      "peak_sum_normal_n": 564.6478001033079,
+      "first_contact_s": 5.148000000000054
+    },
+    "torso": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "other": {
+      "peak_sum_normal_n": 3363.8119965667206,
+      "first_contact_s": 0.03400000000000002
+    }
+  },
+  "actual_torque_caps_respected": true,
+  "warning_count": 0,
+  "evaluation_stop_removed_only": true,
+  "no_midplay_pose_overwrite": true,
+  "actual_machine_split_m": 3.45,
+  "historical_route_not_qualified": true,
+  "video_sha256": "916ab8c22b6f568cc4d18133dddc58f66e5f793464c6fc29c6380c6a20e1a413",
+  "source_view_sha256": "b0787b64e5d33aa538694379f6cb9646f22f2f02aef1b170e1ebc869b1eb2786",
+  "source": "reports/fall-recovery-20261114/fullplay-late-brace-linux/artifacts/study/visual-late-brace0.84",
+  "frame_count": 301,
+  "fps": 25,
+  "fixed_camera": {
+    "lookat": [
+      6.556921636837428,
+      2.164410109695473,
+      0.8
+    ],
+    "distance": 11.950922360329399,
+    "azimuth": 110,
+    "elevation": -15
+  },
+  "source_poses_unmodified": true,
+  "no_physics_steps_during_render": true,
+  "field_decor_centered_on_measured_machine_only": true
+}

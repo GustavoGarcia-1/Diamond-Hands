@@ -1,0 +1,64 @@
+"""Archived contact chronology only. No new simulation, score or threshold."""
+from pathlib import Path
+from collections import Counter
+import json,hashlib
+import numpy as np
+
+workspace=Path.cwd();out=Path(__file__).resolve().parent
+specs=[('out_original',Path('reports/catch-repair-20261114/out-comparison/batch-r1/artifacts/study/current'),10.,'reports/catch-repair-20261114/out-comparison/batch-r1-receipt.json',9),('go_original',Path('reports/catch-repair-20261115-go-performance/persistent-r1/original50-r2/artifacts/original-distribution/cases'),11.,'reports/catch-repair-20261115-go-performance/persistent-r1/original50-r2-receipt.json',4),('go_persistent',Path('reports/catch-repair-20261115-go-performance/persistent-r1/original50-r2/artifacts/original-distribution/cases'),11.,'reports/catch-repair-20261115-go-performance/persistent-r1/original50-r2-receipt.json',31)]
+groups=['left_finger','left_thumb','left_palmar','right_finger','right_thumb','right_palmar','excluded_hand','torso','floor','other']
+all_rows=[];summaries={};criteria_set=set()
+def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+def runs(mask):
+ e=np.flatnonzero(np.diff(np.r_[False,mask,False]));return list(zip(e[::2],e[1::2]))
+for label,base,horizon,receipt_path,expected in specs:
+ receipt=json.loads(Path(receipt_path).read_text());rows=[]
+ for trial in sorted(base.glob('trial-*')):
+  case=trial if label=='out_original'else trial/('baseline'if label=='go_original'else'persistent')
+  report_paths=list(case.rglob('report.json'));assert len(report_paths)==1
+  rp=report_paths[0];r=json.loads(rp.read_text());s=r['anatomical_score'];c=s['criteria'];criteria_set.add(hashlib.sha256(json.dumps(c,sort_keys=True).encode()).hexdigest())
+  ap=rp.parent/'anatomical-contact.npz';z=np.load(ap);a=z['anatomical_contact'];t=a[:,0];dt=float(np.median(np.diff(t)));n=a[:,6:16];v=a[:,16:26];left=n[:,:3].sum(1);right=n[:,3:6].sum(1)
+  bad=(n[:,6:].sum(1)>c['support_force_tolerance_n'])|a[:,4].astype(bool)|a[:,5].astype(bool)
+  ib=np.flatnonzero(bad);cut=int(ib[0])if len(ib)else len(t);ih=np.flatnonzero(left+right>=c['min_normal_per_hand_n']);first_hand=float(t[ih[0]])if len(ih)else None;first_bad=float(t[cut])if cut<len(t)else None
+  clean=(left>=c['min_normal_per_hand_n'])&(right>=c['min_normal_per_hand_n']);clean[cut:]=False;segments=runs(clean);start,end=max(segments,key=lambda x:x[1]-x[0],default=(0,0));duration=(end-start)*dt
+  assert np.isclose(duration,s['longest_clean_bilateral_s'],atol=1e-9,rtol=1e-12)
+  assert first_hand==s['first_anatomical_contact_s']and first_bad==s['first_excluded_support_s']
+  success=bool(all(s['physics_checks'].values())and s['form']['pass']and s['upright']and r['duration_s']>=horizon-1e-7 and r['warning_count']==0)
+  acquired=bool(s['physics_checks']['continuous_anatomical_bilateral_075s'])
+  endpoint_or_support_failure=not s['physics_checks']['final_anatomical_hand_hold']or not s['physics_checks']['no_excluded_floor_body_or_applied_support']
+  partition='primary_success'if success else'failed_without_required_clean_075s'if not acquired else'acquired075_then_endpoint_or_support_gate_failed'if endpoint_or_support_failure else'acquired075_endpoint_support_pass_other_gate_failed'
+  if first_bad is None:chronology='no_excluded_support'
+  elif first_hand is None:chronology='excluded_and_no_allowed_hand_contact'
+  elif first_bad<first_hand-1e-8:chronology='excluded_before_first_hand'
+  elif abs(first_bad-first_hand)<=1e-8:chronology='excluded_same_sample_as_first_hand'
+  elif first_bad<=first_hand+c['form_after_contact_s']+1e-8:chronology='excluded_after_hand_within_original_200ms_form_window'
+  else:chronology='excluded_after_hand_later_than_200ms'
+  needed=int(np.ceil((c['min_continuous_retention_s']-1e-8)/dt));qualified_runs=[(i,j)for i,j in segments if j-i>=needed];acq_time=float(t[qualified_runs[0][0]+needed-1])if qualified_runs else None
+  if first_bad is None:acq_chronology='no_excluded_support'
+  elif first_hand is None or first_bad<=first_hand+1e-8:acq_chronology='excluded_before_or_at_first_hand'
+  elif acq_time is None or first_bad<acq_time-1e-8:acq_chronology='excluded_after_hand_before_required_clean_acquisition'
+  else:acq_chronology='excluded_after_required_clean_acquisition'
+  pre=n[:cut,:6];long=n[start:end,:6];vv=v[start:end,:6]
+  metadata=json.loads((rp.parent/'anatomical-metadata.json').read_text());weight=metadata['ball_weight_n']
+  mean_vertical=(vv.mean(0)/weight).tolist()if len(vv)else None
+  first_groups=[groups[i]for i,x in enumerate(n[ih[0],:6])if x>c['support_force_tolerance_n']]if len(ih)else[]
+  first_excluded=[groups[i]for i,x in enumerate(n[cut])if i>=6 and x>c['support_force_tolerance_n']]if cut<len(t)else[]
+  if cut<len(t)and a[cut,4]:first_excluded.append('ball_floor_flag')
+  if cut<len(t)and a[cut,5]:first_excluded.append('applied_load_flag')
+  item={'dataset':label,'trial_id':int(trial.name.split('-')[-1]),'primary_success':success,'partition':partition,'required_clean075_acquired':acquired,'first_required_acquisition_s':acq_time,'first_hand_s':first_hand,'first_excluded_s':first_bad,'excluded_chronology':chronology,'excluded_vs_acquisition':acq_chronology,'first_allowed_groups':first_groups,'first_excluded_groups':first_excluded,'longest_clean_bilateral_s':duration,'final_bilateral_fraction':s['final_bilateral_fraction'],'final_hold_pass':s['physics_checks']['final_anatomical_hand_hold'],'first_bilateral_before_excluded_s':float(t[np.flatnonzero(clean)[0]])if clean.any()else None,'palmar_any_before_excluded':bool(len(pre)and(pre[:,[2,5]]>=c['min_normal_per_hand_n']).any()),'both_palms_same_sample_before_excluded':bool(len(pre)and((pre[:,2]>=c['min_normal_per_hand_n'])&(pre[:,5]>=c['min_normal_per_hand_n'])).any()),'finger_any_before_excluded':bool(len(pre)and(pre[:,[0,3]]>=c['min_normal_per_hand_n']).any()),'thumb_any_before_excluded':bool(len(pre)and(pre[:,[1,4]]>=c['min_normal_per_hand_n']).any()),'palmar_force_present_in_longest_run':bool(len(long) and (long[:,[2,5]]>=c['min_normal_per_hand_n']).any()),'finger_force_present_in_longest_run':bool(len(long) and (long[:,[0,3]]>=c['min_normal_per_hand_n']).any()),'thumb_force_present_in_longest_run':bool(len(long) and (long[:,[1,4]]>=c['min_normal_per_hand_n']).any()),'longest_run_mean_signed_vertical_weight_share_by_group':None if mean_vertical is None else dict(zip(groups[:6],mean_vertical)),'failed_physics_checks':[k for k,x in s['physics_checks'].items()if not x],'form_pass':s['form']['pass'],'upright':s['upright'],'duration_s':r['duration_s'],'warning_count':r['warning_count'],'report_path':str(rp),'report_sha256':sha(rp),'contact_path':str(ap),'contact_sha256':sha(ap),'batch_source_archive_sha256':receipt['source_archive_sha256'],'declared_physics_fingerprint_sha256':metadata['physics_sha256'],'compiled_model_sha256':(json.loads((case/'model-identity.json').read_text())['sha256']if label=='out_original'else json.loads((case/'comparison-model.json').read_text())['model_sha256'])}
+  rows.append(item)
+ assert len(rows)==50 and sum(x['primary_success']for x in rows)==expected
+ summaries[label]={'n':50,'primary_successes':expected,'partition':dict(Counter(x['partition']for x in rows)),'excluded_chronology':dict(Counter(x['excluded_chronology']for x in rows)),'excluded_vs_acquisition':dict(Counter(x['excluded_vs_acquisition']for x in rows)),'required_clean075_acquired_count':sum(x['required_clean075_acquired']for x in rows),'first_allowed_group_counts':dict(Counter(g for x in rows for g in x['first_allowed_groups'])),'first_excluded_group_counts':dict(Counter(g for x in rows for g in x['first_excluded_groups'])),'support_presence_counts':{key:sum(x[key]for x in rows)for key in ['palmar_any_before_excluded','both_palms_same_sample_before_excluded','finger_any_before_excluded','thumb_any_before_excluded']},'longest_clean_bilateral_s':{'minimum':min(x['longest_clean_bilateral_s']for x in rows),'median':float(np.median([x['longest_clean_bilateral_s']for x in rows])),'maximum':max(x['longest_clean_bilateral_s']for x in rows)},'source_archive_sha256':receipt['source_archive_sha256'],'horizon_s':horizon,'compiled_model_hashes':sorted({x['compiled_model_sha256']for x in rows}),'declared_physics_fingerprint_hashes':sorted({x['declared_physics_fingerprint_sha256']for x in rows})}
+ summaries[label]['first_allowed_groups_before_any_exclusion'] = dict(Counter(g for x in rows if x['first_hand_s'] is not None and (x['first_excluded_s'] is None or x['first_hand_s'] < x['first_excluded_s']-1e-8) for g in x['first_allowed_groups']))
+ for subset_name,subset in [('acquired075',[x for x in rows if x['required_clean075_acquired']]),('primary_success',[x for x in rows if x['primary_success']])]:
+  summaries[label][subset_name+'_longrun_group_presence_counts'] = {region:sum(x[region+'_force_present_in_longest_run']for x in subset)for region in ['finger','thumb','palmar']}
+  summaries[label][subset_name+'_median_longrun_signed_vertical_weight_share'] = {region:float(np.median([sum(x['longest_run_mean_signed_vertical_weight_share_by_group'][side+'_'+region] for side in ['left','right'])for x in subset]))for region in ['finger','thumb','palmar']}
+ all_rows.extend(rows)
+assert len(criteria_set)==1
+bylabel={label:{x['trial_id']:x for x in all_rows if x['dataset']==label}for label,_,_,_,_ in specs}
+paired=[]
+for i in range(50):
+ a,b=bylabel['go_original'][i],bylabel['go_persistent'][i]
+ paired.append({'trial_id':i,'baseline_success':a['primary_success'],'persistent_success':b['primary_success'],'baseline_partition':a['partition'],'persistent_partition':b['partition'],'baseline_longest_clean_s':a['longest_clean_bilateral_s'],'persistent_longest_clean_s':b['longest_clean_bilateral_s']})
+result={'scope':'Original50 development archives, descriptive contact chronology. Go paired regulator contrast is within route; Out versus Go is observational and differs in route, throw, posture, horizon and model geometry. No new success score or confirmation draws.','partition_definition':{'primary_success':'All original physics, acquisition form, upright, declared full route horizon and zero warning checks.','failed_without_required_clean_075s':'Primary failure and existing0.75s clean bilateral gate not met; does not mean no contact.','acquired075_then_endpoint_or_support_gate_failed':'Existing0.75s gate met, primary failure, and existing endpoint hold or excluded support gate fails. Endpoint failure can mean fragmentation rather than total escape.','acquired075_endpoint_support_pass_other_gate_failed':'Existing0.75s, endpoint and no excluded support gates met, but another original criterion fails.'},'overlap_disclosure':'Partition cells are mutually exclusive. Group counts and support presence overlap; first contact can include more than one group. The200ms chronology window is the existing form window and is descriptive, not a new gate.','criteria_sha256':next(iter(criteria_set)),'source_script_sha256':sha(Path(__file__)),'summaries':summaries,'go_paired':paired,'paired_go_gains_by_baseline_partition':dict(Counter(x['baseline_partition']for x in paired if not x['baseline_success']and x['persistent_success'])),'paired_go_former_acquisition_now_below075':[x['trial_id']for x in paired if x['baseline_partition']=='acquired075_then_endpoint_or_support_gate_failed'and x['persistent_partition']=='failed_without_required_clean_075s'],'rows':all_rows}
+(out/'results.json').write_text(json.dumps(result,indent=2)+'\n');print(json.dumps(summaries,indent=2))

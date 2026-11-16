@@ -1,0 +1,39 @@
+{
+  "all450_scores_recomputed_exact": true,
+  "all450_prerelease_stationary_at_archived_view_cadence": true,
+  "prerelease_frames_min": 109,
+  "prerelease_frames_max": 138,
+  "maximum_prerelease_position_drift_m": 0.0,
+  "postrelease_applied_load_frames": 0,
+  "release_pairing": {
+    "go": {
+      "actual_release_identical_across_methods_all50": true,
+      "mismatches": [],
+      "release_range_s": [
+        4.339999999999784,
+        4.379999999999797
+      ]
+    },
+    "out": {
+      "actual_release_identical_across_methods_all50": true,
+      "mismatches": [],
+      "release_range_s": [
+        5.500000000000171,
+        5.520000000000178
+      ]
+    },
+    "slant": {
+      "actual_release_identical_across_methods_all50": true,
+      "mismatches": [],
+      "release_range_s": [
+        5.300000000000105,
+        5.320000000000111
+      ]
+    }
+  },
+  "raw_execution_rows": 450,
+  "no_failed_execution_rows": true,
+  "foot_gait_route_not_in_primary_catch_predicate": true,
+  "model_scope": "Within-route comparisons only; engineeringcontact/stalllimits, not hardwarecalibration. Originalreferenceflags preservedseparately.",
+  "oracle_caveat": "Near-zero covariance with unchanged tracker is model-mismatched; exactposition/visibility/confidence pipeline not guaranteedupperbound. Appendix separate."
+}

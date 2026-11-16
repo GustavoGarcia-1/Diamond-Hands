@@ -1,0 +1,49 @@
+{
+  "schema": "fixed-trajectory-go-reward-specificity-v1",
+  "passes": [
+    [
+      "zero",
+      "original"
+    ],
+    [
+      "learned",
+      "original"
+    ],
+    [
+      "zero",
+      "augmented"
+    ],
+    [
+      "learned",
+      "augmented"
+    ]
+  ],
+  "max_passes": 4,
+  "wall_seconds": 600,
+  "fixtures": "sealed final Go nominal paired evaluations, seed100173, 11s",
+  "purpose": "Does observer augmentation make unchanged sensor reward rank physically retained zero above failed learned?",
+  "runtime": "No mj_step, no policy evaluation, no new actions. Replay archived poses/qvel into renderer; model FK/sensors only.",
+  "allowed_inputs": [
+    "rendered RGBD and calibrated survey",
+    "29 jointpos/jointvel sensor channels",
+    "IMU orientation/gyro sensor channels",
+    "recorded14 native encoders",
+    "recorded14 nominal native targets",
+    "recorded enabled command state and action sequence",
+    "fixed commanded catchplane/approach"
+  ],
+  "state_boundary": "Full simulator pose is used only for offline scene/sensor reconstruction. Reward receives explicit sensor packets and static isolated FK model, never exact ball/root/contact/score.",
+  "source_alignment": "Original plant calls mj_forward after each control interval. Archived current q/dq match raw actor first58 values bitexact; no1ms shift. At t0 qpos comes from archived view; qvel=0 follows sealed reset code.",
+  "unused_argument": "NativeCupAudit returned control target is discarded. Its body target input is unused by reward/observer; encoder-position placeholder cannot affect score. No controller executes.",
+  "original_gates": "Both original observer passes must reproduce all saved native-policy arrays, sensor samples, exact return and terminalbonus before augmented passes. Stop on mismatch; preserve failure.",
+  "augmented": "Same two extra surveyed views and associated-marker class hashed from go-observer-association-r1; original route localizer unchanged; no threshold/gate/reward modifications.",
+  "reward_components": "Read-only property setter logs original reward arithmetic deltas by source line; zeroing is ledger flush; sum+bonus-resetreward must equal returned ledger.",
+  "physical_labels": "Original archived anatomical score read after replay only, separate from sensor reward. No visual dwell catch claim.",
+  "heldout50": "unused",
+  "sources": {
+    "reports/catch-repair-20261114/post-study/go-reward-specificity-r1/replay.py": "748b6c9b2a139ee3cfe62132abf982c396436cbda617dfa7a22e5115651b9206",
+    "reports/catch-repair-20261114/post-study/go-reward-specificity-r1/associated_markers.py": "73767c778527f84ac9751ea66b1804d261846351388b2a794418a1515c21f562",
+    "reports/catch-repair-20261114/post-study/training-go-r1/train-receipt.source.tar.gz": "493a103647ec7eb94d8a527d8a74d54cf1ad310125626f31de5f544848c32c18",
+    "reports/catch-repair-20261114/post-study/training-go-r1/final-artifacts.tar.gz": "94dffb919c43818a03d0277ec6766ff4ac64f87873e08ad010a6e029194978a8"
+  }
+}

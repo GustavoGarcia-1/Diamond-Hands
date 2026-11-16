@@ -1,0 +1,43 @@
+{
+  "route": "slant",
+  "selected_before_batch": true,
+  "scenario": "nominal zero perturbation adapter pilot",
+  "source_trial": "reports/catch-repair-20261114/slant-comparison/nominal-pilot/trials/pilot-current",
+  "source_view_sha256": "57130512b3e80a7d9af0117828179877bcb096c36990066413b508cff22d105c",
+  "video_sha256": "77ff150d85824a39ff5c2a450e23454d3f1e3cf3c458339100ac462aded42af9",
+  "physics_identity_sha256": "1d88e6d848d04621a56fb1dad34a07a6f53575657b560a09311d9a4c09011c50",
+  "protocol_sha256": "22bfd969663d641609a87361ee1a3a95900fec6fd584539c4d5933927db93934",
+  "full_episode": true,
+  "simulation_finish_s": 9.500000000000174,
+  "clean_bilateral_s": 0.022000000000007347,
+  "form_pass": true,
+  "retained_catch": false,
+  "first_excluded_support_s": 6.6890000000005685,
+  "native_caps": true,
+  "ccd_tolerance": 1e-08,
+  "contact_timeconstant_s": 0.02,
+  "calibrated_hardware": false,
+  "replay_verification": {
+    "video": {
+      "plugin": "ffmpeg",
+      "ffmpeg_version": "7.1 built with Apple clang version 13.1.6 (clang-1316.0.21.2.5)",
+      "codec": "h264",
+      "pix_fmt": "yuv420p(progressive)",
+      "fps": 25.0,
+      "source_size": [
+        1280,
+        720
+      ],
+      "size": [
+        1280,
+        720
+      ],
+      "rotate": 0,
+      "duration": 9.52
+    },
+    "source": "reports/catch-repair-20261114/slant-comparison/nominal-pilot/trials/pilot-current/view.npz",
+    "identical_archive_poses_and_timestamps": true,
+    "presentation": "Original green field markings, plain backdrop, spectator passing machine when a throw is present",
+    "recorded_end_s": 9.480000000000185
+  }
+}

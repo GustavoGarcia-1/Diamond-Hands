@@ -1,0 +1,2359 @@
+[
+  {
+    "case": "nominal",
+    "policy": "zero",
+    "sensor_evaluation": {
+      "returned_reward": 0.010484814061648418,
+      "sensor_return": 0.010484814061648418,
+      "reset_debit": -0.49676127354790484,
+      "policy_calls": 218,
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 29,
+        "forecast_over_half_second": 3,
+        "visible": 15,
+        "retention_qualified": 0,
+        "max_visual_dwell_s": 0.0
+      },
+      "observation_schema": "late-reach-phase-65-capture-aligned-v2",
+      "reward_schema": "late-reach-sensor-tracking-visible-retention-v3",
+      "sensor_impairments": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.0,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {}
+      }
+    },
+    "physical_evaluation_only": {
+      "duration_s": 9.999999999999897,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.187000000000401,
+        "first_excluded_support_s": 6.833000000000617,
+        "longest_clean_bilateral_s": 0.00500000000000167,
+        "longest_clean_start_s": 6.197000000000404,
+        "longest_clean_end_s": 6.2010000000004055,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 28.900201516587995,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.7272727272727273,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.7272727272727273,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.03642092184787252,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 208.54019623288767,
+          "left_thumb": 466.29559783773476,
+          "left_palmar": 178.35503458262423,
+          "right_finger": 160.54579140978,
+          "right_thumb": 625.2992305071391,
+          "right_palmar": 602.9756950184392,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 191.93135149647426,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "quarterback_pass_score": {
+        "flight_s": 0.6870000000002294,
+        "downfield_flight_m": 1.9859024246359134,
+        "horizontal_flight_m": 6.9590538072100845,
+        "receiver_depth_at_fingertip_m": 2.8729868058437984,
+        "continuous_two_hand_contact_s": 0.005,
+        "horizontal_ball_to_body_speed_during_contact_mps": null,
+        "first_floor_or_body_support_s": 6.833000000000617,
+        "controlled_in_stride_receive": false
+      },
+      "minimum_upright_cosine": 0.9527464959705699
+    }
+  },
+  {
+    "case": "latency20",
+    "policy": "zero",
+    "sensor_evaluation": {
+      "returned_reward": 0.00041662455627122785,
+      "sensor_return": 0.00041662455627122785,
+      "reset_debit": -0.4829508045630084,
+      "policy_calls": 223,
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 28,
+        "forecast_over_half_second": 2,
+        "visible": 10,
+        "retention_qualified": 0,
+        "max_visual_dwell_s": 0.0
+      },
+      "observation_schema": "late-reach-phase-65-capture-aligned-v2",
+      "reward_schema": "late-reach-sensor-tracking-visible-retention-v3",
+      "sensor_impairments": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.02,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {
+          "late_pose": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 249,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_pose2": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 249,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_ball": {
+            "calls": 500,
+            "exposures": 500,
+            "dropped": 0,
+            "delivered": 499,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.02000000000000668,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "break": {
+            "calls": 208,
+            "exposures": 208,
+            "dropped": 0,
+            "delivered": 207,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.2800000000000935,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "outside": {
+            "calls": 175,
+            "exposures": 175,
+            "dropped": 0,
+            "delivered": 174,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "pass": {
+            "calls": 24,
+            "exposures": 24,
+            "dropped": 0,
+            "delivered": 23,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.02000000000000668,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_retention": {
+            "calls": 207,
+            "exposures": 207,
+            "dropped": 0,
+            "delivered": 206,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.02000000000000668,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "physical_evaluation_only": {
+      "duration_s": 9.999999999999897,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.071000000000362,
+        "first_excluded_support_s": 6.615000000000544,
+        "longest_clean_bilateral_s": 0.0,
+        "longest_clean_start_s": null,
+        "longest_clean_end_s": null,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": null,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.8181818181818182,
+          "both_height_fraction": 0.9090909090909091,
+          "joint_form_fraction": 0.8181818181818182,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.03478334674773872,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 0.0,
+          "left_thumb": 1753.6491987799234,
+          "left_palmar": 0.0,
+          "right_finger": 0.0,
+          "right_thumb": 0.0,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 206.3413262938589,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "quarterback_pass_score": {
+        "flight_s": 0.6910000000002308,
+        "downfield_flight_m": 1.9974820306104668,
+        "horizontal_flight_m": 6.999631380429969,
+        "receiver_depth_at_fingertip_m": 3.079332629595743,
+        "continuous_two_hand_contact_s": 0.0,
+        "horizontal_ball_to_body_speed_during_contact_mps": null,
+        "first_floor_or_body_support_s": 6.615000000000544,
+        "controlled_in_stride_receive": false
+      },
+      "minimum_upright_cosine": 0.9527464959705699
+    }
+  },
+  {
+    "case": "latency40",
+    "policy": "zero",
+    "sensor_evaluation": {
+      "returned_reward": 0.0032089875907369003,
+      "sensor_return": 0.0032089875907369003,
+      "reset_debit": -0.48295364714995764,
+      "policy_calls": 222,
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 27,
+        "forecast_over_half_second": 1,
+        "visible": 21,
+        "retention_qualified": 0,
+        "max_visual_dwell_s": 0.0
+      },
+      "observation_schema": "late-reach-phase-65-capture-aligned-v2",
+      "reward_schema": "late-reach-sensor-tracking-visible-retention-v3",
+      "sensor_impairments": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.04,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {
+          "late_pose": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 249,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_pose2": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 249,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_ball": {
+            "calls": 500,
+            "exposures": 500,
+            "dropped": 0,
+            "delivered": 498,
+            "invalid_before_first_delivery": 2,
+            "repeated": 2,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "break": {
+            "calls": 208,
+            "exposures": 208,
+            "dropped": 0,
+            "delivered": 207,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.2800000000000935,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "outside": {
+            "calls": 175,
+            "exposures": 175,
+            "dropped": 0,
+            "delivered": 174,
+            "invalid_before_first_delivery": 1,
+            "repeated": 1,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "pass": {
+            "calls": 24,
+            "exposures": 24,
+            "dropped": 0,
+            "delivered": 22,
+            "invalid_before_first_delivery": 2,
+            "repeated": 2,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_retention": {
+            "calls": 206,
+            "exposures": 206,
+            "dropped": 0,
+            "delivered": 204,
+            "invalid_before_first_delivery": 2,
+            "repeated": 2,
+            "max_delivered_age_s": 0.04000000000001336,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "physical_evaluation_only": {
+      "duration_s": 9.999999999999897,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false,
+          "acquisition_lower_palms_up_form": true,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.071000000000362,
+        "first_excluded_support_s": 6.589000000000535,
+        "longest_clean_bilateral_s": 0.0,
+        "longest_clean_start_s": null,
+        "longest_clean_end_s": null,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": null,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.8181818181818182,
+          "both_height_fraction": 0.9090909090909091,
+          "joint_form_fraction": 0.8181818181818182,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": true
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.03535758789015897,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 0.0,
+          "left_thumb": 1851.7774751024474,
+          "left_palmar": 0.0,
+          "right_finger": 0.0,
+          "right_thumb": 0.0,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 217.12470145299775,
+          "other": 231.2580851381684
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "quarterback_pass_score": {
+        "flight_s": 0.6910000000002308,
+        "downfield_flight_m": 1.9974820306104668,
+        "horizontal_flight_m": 6.999631380429969,
+        "receiver_depth_at_fingertip_m": 3.0805518204319435,
+        "continuous_two_hand_contact_s": 0.0,
+        "horizontal_ball_to_body_speed_during_contact_mps": null,
+        "first_floor_or_body_support_s": 6.589000000000535,
+        "controlled_in_stride_receive": false
+      },
+      "minimum_upright_cosine": 0.9527464959705699
+    }
+  },
+  {
+    "case": "latency80",
+    "policy": "zero",
+    "sensor_evaluation": {
+      "returned_reward": -0.0026839295026052645,
+      "sensor_return": -0.0026839295026052645,
+      "reset_debit": -0.4785278601253466,
+      "policy_calls": 222,
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 25,
+        "forecast_over_half_second": 0,
+        "visible": 7,
+        "retention_qualified": 0,
+        "max_visual_dwell_s": 0.0
+      },
+      "observation_schema": "late-reach-phase-65-capture-aligned-v2",
+      "reward_schema": "late-reach-sensor-tracking-visible-retention-v3",
+      "sensor_impairments": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.08,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {
+          "late_pose": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 248,
+            "invalid_before_first_delivery": 2,
+            "repeated": 2,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_pose2": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 248,
+            "invalid_before_first_delivery": 2,
+            "repeated": 2,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_ball": {
+            "calls": 500,
+            "exposures": 500,
+            "dropped": 0,
+            "delivered": 496,
+            "invalid_before_first_delivery": 4,
+            "repeated": 4,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "break": {
+            "calls": 206,
+            "exposures": 206,
+            "dropped": 0,
+            "delivered": 199,
+            "invalid_before_first_delivery": 2,
+            "repeated": 7,
+            "max_delivered_age_s": 0.3600000000001202,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "outside": {
+            "calls": 176,
+            "exposures": 176,
+            "dropped": 0,
+            "delivered": 174,
+            "invalid_before_first_delivery": 2,
+            "repeated": 2,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "pass": {
+            "calls": 50,
+            "exposures": 50,
+            "dropped": 0,
+            "delivered": 46,
+            "invalid_before_first_delivery": 4,
+            "repeated": 4,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_retention": {
+            "calls": 206,
+            "exposures": 206,
+            "dropped": 0,
+            "delivered": 202,
+            "invalid_before_first_delivery": 4,
+            "repeated": 4,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "physical_evaluation_only": {
+      "duration_s": 9.999999999999897,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": false,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": null,
+        "first_excluded_support_s": 6.27300000000043,
+        "longest_clean_bilateral_s": 0.0,
+        "longest_clean_start_s": null,
+        "longest_clean_end_s": null,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": null,
+        "form": {
+          "available": false,
+          "pass": false
+        },
+        "upright": null,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.04402314895033375,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 0.0,
+          "left_thumb": 0.0,
+          "left_palmar": 0.0,
+          "right_finger": 0.0,
+          "right_thumb": 0.0,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 259.550839875702,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "quarterback_pass_score": {
+        "flight_s": 0.9330000000003116,
+        "downfield_flight_m": 2.6980481920709494,
+        "horizontal_flight_m": 9.454574560233024,
+        "receiver_depth_at_fingertip_m": null,
+        "continuous_two_hand_contact_s": 0.0,
+        "horizontal_ball_to_body_speed_during_contact_mps": null,
+        "first_floor_or_body_support_s": 6.27300000000043,
+        "controlled_in_stride_receive": false
+      },
+      "minimum_upright_cosine": 0.9527464959705699
+    }
+  },
+  {
+    "case": "dropout10",
+    "policy": "zero",
+    "sensor_evaluation": {
+      "returned_reward": 0.010484814061648418,
+      "sensor_return": 0.010484814061648418,
+      "reset_debit": -0.49676127354790484,
+      "policy_calls": 218,
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 29,
+        "forecast_over_half_second": 3,
+        "visible": 14,
+        "retention_qualified": 0,
+        "max_visual_dwell_s": 0.0
+      },
+      "observation_schema": "late-reach-phase-65-capture-aligned-v2",
+      "reward_schema": "late-reach-sensor-tracking-visible-retention-v3",
+      "sensor_impairments": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.0,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.1,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.0,
+          "survey_angle_std_rad": 0.0
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {
+          "late_pose": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 28,
+            "delivered": 222,
+            "invalid_before_first_delivery": 0,
+            "repeated": 28,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_pose2": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 27,
+            "delivered": 223,
+            "invalid_before_first_delivery": 0,
+            "repeated": 27,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_ball": {
+            "calls": 500,
+            "exposures": 500,
+            "dropped": 50,
+            "delivered": 450,
+            "invalid_before_first_delivery": 0,
+            "repeated": 50,
+            "max_delivered_age_s": 0.05999999999999339,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "break": {
+            "calls": 203,
+            "exposures": 203,
+            "dropped": 18,
+            "delivered": 185,
+            "invalid_before_first_delivery": 0,
+            "repeated": 18,
+            "max_delivered_age_s": 0.07999999999999119,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "outside": {
+            "calls": 172,
+            "exposures": 172,
+            "dropped": 16,
+            "delivered": 156,
+            "invalid_before_first_delivery": 0,
+            "repeated": 16,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "pass": {
+            "calls": 24,
+            "exposures": 24,
+            "dropped": 2,
+            "delivered": 22,
+            "invalid_before_first_delivery": 0,
+            "repeated": 2,
+            "max_delivered_age_s": 0.02000000000000668,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          },
+          "late_retention": {
+            "calls": 202,
+            "exposures": 202,
+            "dropped": 12,
+            "delivered": 190,
+            "invalid_before_first_delivery": 0,
+            "repeated": 12,
+            "max_delivered_age_s": 0.02000000000000668,
+            "fixed_survey_translation_error_m": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                1.0,
+                0.0,
+                0.0
+              ],
+              [
+                0.0,
+                1.0,
+                0.0
+              ],
+              [
+                0.0,
+                0.0,
+                1.0
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "physical_evaluation_only": {
+      "duration_s": 9.999999999999897,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.187000000000401,
+        "first_excluded_support_s": 6.833000000000617,
+        "longest_clean_bilateral_s": 0.00500000000000167,
+        "longest_clean_start_s": 6.197000000000404,
+        "longest_clean_end_s": 6.2010000000004055,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 28.900201516587995,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.7272727272727273,
+          "both_height_fraction": 0.8181818181818182,
+          "joint_form_fraction": 0.7272727272727273,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.03642092184787252,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 208.54019623288767,
+          "left_thumb": 466.29559783773476,
+          "left_palmar": 178.35503458262423,
+          "right_finger": 160.54579140978,
+          "right_thumb": 625.2992305071391,
+          "right_palmar": 602.9756950184392,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 191.93135149647426,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "quarterback_pass_score": {
+        "flight_s": 0.6870000000002294,
+        "downfield_flight_m": 1.9859024246359134,
+        "horizontal_flight_m": 6.9590538072100845,
+        "receiver_depth_at_fingertip_m": 2.8729868058437984,
+        "continuous_two_hand_contact_s": 0.005,
+        "horizontal_ball_to_body_speed_during_contact_mps": null,
+        "first_floor_or_body_support_s": 6.833000000000617,
+        "controlled_in_stride_receive": false
+      },
+      "minimum_upright_cosine": 0.9527464959705699
+    }
+  },
+  {
+    "case": "survey",
+    "policy": "zero",
+    "sensor_evaluation": {
+      "returned_reward": 0.3222715914174905,
+      "sensor_return": 0.3222715914174905,
+      "reset_debit": -0.4968365368161309,
+      "policy_calls": 216,
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 27,
+        "forecast_over_half_second": 1,
+        "visible": 47,
+        "retention_qualified": 0,
+        "max_visual_dwell_s": 0.0
+      },
+      "observation_schema": "late-reach-phase-65-capture-aligned-v2",
+      "reward_schema": "late-reach-sensor-tracking-visible-retention-v3",
+      "sensor_impairments": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.0,
+          "latency_jitter_s": 0.0,
+          "frame_drop_probability": 0.0,
+          "rate_hz": 0.0,
+          "depth_noise_floor_m": 0.0,
+          "depth_noise_quadratic_per_m": 0.0,
+          "depth_quantization_m": 0.0,
+          "invalid_pixel_probability": 0.0,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 0.0,
+          "rgb_gain": 1.0,
+          "survey_position_std_m": 0.005,
+          "survey_angle_std_rad": 0.004363323129985824
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {
+          "late_pose": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 250,
+            "invalid_before_first_delivery": 0,
+            "repeated": 0,
+            "max_delivered_age_s": 0.0,
+            "fixed_survey_translation_error_m": [
+              -0.0017896254115966424,
+              0.00826102216383415,
+              -0.006219527596532358
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999877729976431,
+                -0.0015917984900170226,
+                -0.0046818834651581685
+              ],
+              [
+                0.0015892048545064674,
+                0.9999985817313425,
+                -0.0005576407750368264
+              ],
+              [
+                0.00468276447673327,
+                0.0005501934848306742,
+                0.9999888844402145
+              ]
+            ]
+          },
+          "late_pose2": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 0,
+            "delivered": 250,
+            "invalid_before_first_delivery": 0,
+            "repeated": 0,
+            "max_delivered_age_s": 0.0,
+            "fixed_survey_translation_error_m": [
+              0.0008175142074722535,
+              0.005416725577227456,
+              -0.00402198569668927
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999786239346768,
+                0.0017753216843076883,
+                0.006292845670066595
+              ],
+              [
+                -0.001726236176532729,
+                0.9999681123474509,
+                -0.0077970761788404685
+              ],
+              [
+                -0.006306487324404818,
+                0.007786046570181733,
+                0.9999498015882767
+              ]
+            ]
+          },
+          "late_ball": {
+            "calls": 500,
+            "exposures": 500,
+            "dropped": 0,
+            "delivered": 500,
+            "invalid_before_first_delivery": 0,
+            "repeated": 0,
+            "max_delivered_age_s": 0.0,
+            "fixed_survey_translation_error_m": [
+              -0.008926256860711123,
+              0.002069805654500936,
+              -0.001152711082638128
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999933240457427,
+                7.88708328944059e-05,
+                0.0036531689446423717
+              ],
+              [
+                -6.672491728423064e-05,
+                0.9999944707304403,
+                -0.003324764101708848
+              ],
+              [
+                -0.0036534109722004076,
+                0.003324498148340133,
+                0.999987800075746
+              ]
+            ]
+          },
+          "break": {
+            "calls": 199,
+            "exposures": 199,
+            "dropped": 0,
+            "delivered": 199,
+            "invalid_before_first_delivery": 0,
+            "repeated": 0,
+            "max_delivered_age_s": 0.0,
+            "fixed_survey_translation_error_m": [
+              0.0013274397904464003,
+              -0.0016034240437415835,
+              0.003337049590603452
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999949366942579,
+                -0.0023378197366331673,
+                -0.002158977703962949
+              ],
+              [
+                0.0023379315626581394,
+                0.9999972658203276,
+                4.927349720735159e-05
+              ],
+              [
+                0.0021588566083757324,
+                -5.432078983778372e-05,
+                0.9999976681909795
+              ]
+            ]
+          },
+          "outside": {
+            "calls": 172,
+            "exposures": 172,
+            "dropped": 0,
+            "delivered": 172,
+            "invalid_before_first_delivery": 0,
+            "repeated": 0,
+            "max_delivered_age_s": 0.0,
+            "fixed_survey_translation_error_m": [
+              -0.007651261348997053,
+              -0.0026853416113818826,
+              -0.0022361038668504726
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999937860819527,
+                0.003524265158227411,
+                8.57471660598612e-05
+              ],
+              [
+                -0.0035237925233668724,
+                0.9999812979882697,
+                -0.0049986558140795645
+              ],
+              [
+                -0.0001033621509388622,
+                0.004998322597619328,
+                0.99998750296565
+              ]
+            ]
+          },
+          "pass": {
+            "calls": 24,
+            "exposures": 24,
+            "dropped": 0,
+            "delivered": 24,
+            "invalid_before_first_delivery": 0,
+            "repeated": 0,
+            "max_delivered_age_s": 0.0,
+            "fixed_survey_translation_error_m": [
+              -0.0012795419497796609,
+              0.00881467862229407,
+              -0.00687681827875878
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999777908616689,
+                -0.006248101719330795,
+                -0.002319268919523589
+              ],
+              [
+                0.006243445565611303,
+                0.9999784905462769,
+                -0.002009435806125195
+              ],
+              [
+                0.002331774192631249,
+                0.0019949109490363264,
+                0.9999952915686253
+              ]
+            ]
+          },
+          "late_retention": {
+            "calls": 200,
+            "exposures": 200,
+            "dropped": 0,
+            "delivered": 200,
+            "invalid_before_first_delivery": 0,
+            "repeated": 0,
+            "max_delivered_age_s": 0.0,
+            "fixed_survey_translation_error_m": [
+              0.008360184168364426,
+              -0.004549239837183401,
+              -0.002267734143618328
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999569957364908,
+                0.009099413057046708,
+                0.0017909102906288922
+              ],
+              [
+                -0.009084766027770946,
+                0.9999265428642186,
+                -0.008023459467889004
+              ],
+              [
+                -0.0018637875073332479,
+                0.00800684442395671,
+                0.9999662077982926
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "physical_evaluation_only": {
+      "duration_s": 9.999999999999897,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": true,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": true,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.1860000000004005,
+        "first_excluded_support_s": 6.816000000000611,
+        "longest_clean_bilateral_s": 0.12000000000004007,
+        "longest_clean_start_s": 6.591000000000536,
+        "longest_clean_end_s": 6.7100000000005755,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": 0.8922681473630473,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.5454545454545454,
+          "both_height_fraction": 0.7272727272727273,
+          "joint_form_fraction": 0.5454545454545454,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.005544111174043998,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 304.5589570024437,
+          "left_thumb": 490.76239075261964,
+          "left_palmar": 135.09616872544677,
+          "right_finger": 383.18003050561447,
+          "right_thumb": 610.2712805468171,
+          "right_palmar": 730.974616977823,
+          "excluded_hand": 17.144536463319337,
+          "torso": 33.42740841541346,
+          "floor": 0.0,
+          "other": 34.023398129629435
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "quarterback_pass_score": {
+        "flight_s": 0.6860000000002291,
+        "downfield_flight_m": 1.983007523142275,
+        "horizontal_flight_m": 6.948909413905112,
+        "receiver_depth_at_fingertip_m": 2.8765210531134233,
+        "continuous_two_hand_contact_s": 0.041,
+        "horizontal_ball_to_body_speed_during_contact_mps": null,
+        "first_floor_or_body_support_s": 6.816000000000611,
+        "controlled_in_stride_receive": false
+      },
+      "minimum_upright_cosine": 0.9527464959705699
+    }
+  },
+  {
+    "case": "combined",
+    "policy": "zero",
+    "sensor_evaluation": {
+      "returned_reward": -0.006358957032601031,
+      "sensor_return": -0.006358957032601031,
+      "reset_debit": -0.48778985236406086,
+      "policy_calls": 216,
+      "sensor_coverage": {
+        "calls": 500,
+        "forecast": 23,
+        "forecast_over_half_second": 0,
+        "visible": 3,
+        "retention_qualified": 0,
+        "max_visual_dwell_s": 0.0
+      },
+      "observation_schema": "late-reach-phase-65-capture-aligned-v2",
+      "reward_schema": "late-reach-sensor-tracking-visible-retention-v3",
+      "sensor_impairments": {
+        "config": {
+          "seed": 9101,
+          "latency_s": 0.04,
+          "latency_jitter_s": 0.005,
+          "frame_drop_probability": 0.1,
+          "rate_hz": 25.0,
+          "depth_noise_floor_m": 0.003,
+          "depth_noise_quadratic_per_m": 0.0003,
+          "depth_quantization_m": 0.001,
+          "invalid_pixel_probability": 0.01,
+          "maximum_depth_m": 0.0,
+          "rgb_noise_std": 2.0,
+          "rgb_gain": 0.9,
+          "survey_position_std_m": 0.005,
+          "survey_angle_std_rad": 0.004363323129985824
+        },
+        "calibrated_hardware_model": false,
+        "runtime_inputs": [
+          "RGB image",
+          "registered axial depth",
+          "surveyed optical extrinsics",
+          "sensor clock"
+        ],
+        "original_exposure_timestamps_preserved": true,
+        "no_geometry_or_state_fill": true,
+        "cameras": {
+          "late_pose": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 29,
+            "delivered": 172,
+            "invalid_before_first_delivery": 2,
+            "repeated": 78,
+            "max_delivered_age_s": 0.16000000000005343,
+            "fixed_survey_translation_error_m": [
+              -0.0017896254115966424,
+              0.00826102216383415,
+              -0.006219527596532358
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999877729976431,
+                -0.0015917984900170226,
+                -0.0046818834651581685
+              ],
+              [
+                0.0015892048545064674,
+                0.9999985817313425,
+                -0.0005576407750368264
+              ],
+              [
+                0.00468276447673327,
+                0.0005501934848306742,
+                0.9999888844402145
+              ]
+            ]
+          },
+          "late_pose2": {
+            "calls": 250,
+            "exposures": 250,
+            "dropped": 30,
+            "delivered": 171,
+            "invalid_before_first_delivery": 2,
+            "repeated": 79,
+            "max_delivered_age_s": 0.15999999999998238,
+            "fixed_survey_translation_error_m": [
+              0.0008175142074722535,
+              0.005416725577227456,
+              -0.00402198569668927
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999786239346768,
+                0.0017753216843076883,
+                0.006292845670066595
+              ],
+              [
+                -0.001726236176532729,
+                0.9999681123474509,
+                -0.0077970761788404685
+              ],
+              [
+                -0.006306487324404818,
+                0.007786046570181733,
+                0.9999498015882767
+              ]
+            ]
+          },
+          "late_ball": {
+            "calls": 500,
+            "exposures": 250,
+            "dropped": 23,
+            "delivered": 226,
+            "invalid_before_first_delivery": 3,
+            "repeated": 274,
+            "max_delivered_age_s": 0.16000000000005343,
+            "fixed_survey_translation_error_m": [
+              -0.008926256860711123,
+              0.002069805654500936,
+              -0.001152711082638128
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999933240457427,
+                7.88708328944059e-05,
+                0.0036531689446423717
+              ],
+              [
+                -6.672491728423064e-05,
+                0.9999944707304403,
+                -0.003324764101708848
+              ],
+              [
+                -0.0036534109722004076,
+                0.003324498148340133,
+                0.999987800075746
+              ]
+            ]
+          },
+          "break": {
+            "calls": 213,
+            "exposures": 213,
+            "dropped": 28,
+            "delivered": 139,
+            "invalid_before_first_delivery": 2,
+            "repeated": 74,
+            "max_delivered_age_s": 0.32000000000010687,
+            "fixed_survey_translation_error_m": [
+              0.0013274397904464003,
+              -0.0016034240437415835,
+              0.003337049590603452
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999949366942579,
+                -0.0023378197366331673,
+                -0.002158977703962949
+              ],
+              [
+                0.0023379315626581394,
+                0.9999972658203276,
+                4.927349720735159e-05
+              ],
+              [
+                0.0021588566083757324,
+                -5.432078983778372e-05,
+                0.9999976681909795
+              ]
+            ]
+          },
+          "outside": {
+            "calls": 174,
+            "exposures": 174,
+            "dropped": 22,
+            "delivered": 116,
+            "invalid_before_first_delivery": 1,
+            "repeated": 58,
+            "max_delivered_age_s": 0.12000000000004007,
+            "fixed_survey_translation_error_m": [
+              -0.007651261348997053,
+              -0.0026853416113818826,
+              -0.0022361038668504726
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999937860819527,
+                0.003524265158227411,
+                8.57471660598612e-05
+              ],
+              [
+                -0.0035237925233668724,
+                0.9999812979882697,
+                -0.0049986558140795645
+              ],
+              [
+                -0.0001033621509388622,
+                0.004998322597619328,
+                0.99998750296565
+              ]
+            ]
+          },
+          "pass": {
+            "calls": 25,
+            "exposures": 13,
+            "dropped": 0,
+            "delivered": 12,
+            "invalid_before_first_delivery": 2,
+            "repeated": 13,
+            "max_delivered_age_s": 0.08000000000002672,
+            "fixed_survey_translation_error_m": [
+              -0.0012795419497796609,
+              0.00881467862229407,
+              -0.00687681827875878
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999777908616689,
+                -0.006248101719330795,
+                -0.002319268919523589
+              ],
+              [
+                0.006243445565611303,
+                0.9999784905462769,
+                -0.002009435806125195
+              ],
+              [
+                0.002331774192631249,
+                0.0019949109490363264,
+                0.9999952915686253
+              ]
+            ]
+          },
+          "late_retention": {
+            "calls": 201,
+            "exposures": 101,
+            "dropped": 9,
+            "delivered": 90,
+            "invalid_before_first_delivery": 2,
+            "repeated": 111,
+            "max_delivered_age_s": 0.12000000000004007,
+            "fixed_survey_translation_error_m": [
+              0.008360184168364426,
+              -0.004549239837183401,
+              -0.002267734143618328
+            ],
+            "fixed_survey_rotation_error": [
+              [
+                0.9999569957364908,
+                0.009099413057046708,
+                0.0017909102906288922
+              ],
+              [
+                -0.009084766027770946,
+                0.9999265428642186,
+                -0.008023459467889004
+              ],
+              [
+                -0.0018637875073332479,
+                0.00800684442395671,
+                0.9999662077982926
+              ]
+            ]
+          }
+        }
+      }
+    },
+    "physical_evaluation_only": {
+      "duration_s": 9.999999999999897,
+      "anatomical_score": {
+        "version": "aero-anatomical-catch-v1-predeclared-20261114",
+        "intended_form": "over_shoulder_lower_upward_cradle",
+        "criteria": {
+          "min_initial_free_flight_s": 0.02,
+          "min_normal_per_hand_n": 0.1,
+          "min_continuous_retention_s": 0.75,
+          "final_window_s": 0.25,
+          "final_bilateral_fraction": 0.9,
+          "max_final_gap_s": 0.025,
+          "support_force_tolerance_n": 1e-09,
+          "min_mean_vertical_hand_weight_fraction": 0.8,
+          "form_before_contact_s": 0.02,
+          "form_after_contact_s": 0.2,
+          "min_palm_up_cos": 0.6,
+          "max_face_height_above_shoulder_m": 0.15,
+          "min_form_fraction": 0.8,
+          "max_form_sample_gap_s": 0.05,
+          "max_interhand_penetration_m": 0.005,
+          "max_ball_penetration_m": 0.01,
+          "min_upright_cosine": 0.9
+        },
+        "anatomical_hand_control": false,
+        "realistic_lower_catch": false,
+        "physics_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false
+        },
+        "quality_checks": {
+          "physics_clock_and_endpoint": true,
+          "initial_free_flight": true,
+          "verified_free_joint_no_attachment": true,
+          "continuous_anatomical_bilateral_075s": false,
+          "final_anatomical_hand_hold": false,
+          "no_excluded_floor_body_or_applied_support": false,
+          "load_bearing_hands": false,
+          "no_deep_interhand_penetration": true,
+          "no_deep_ball_penetration": false,
+          "acquisition_lower_palms_up_form": false,
+          "upright_through_finish": true,
+          "reference_physics_verified": false
+        },
+        "first_anatomical_contact_s": 6.1140000000003765,
+        "first_excluded_support_s": 6.587000000000534,
+        "longest_clean_bilateral_s": 0.0,
+        "longest_clean_start_s": null,
+        "longest_clean_end_s": null,
+        "final_bilateral_fraction": 0.0,
+        "final_max_gap_s": 0.2500000000000835,
+        "mean_vertical_hand_weight_fraction_in_long_hold": null,
+        "form": {
+          "available": true,
+          "sample_count": 11,
+          "clock_coverage_ok": true,
+          "finite": true,
+          "both_up_fraction": 0.09090909090909091,
+          "both_height_fraction": 1.0,
+          "joint_form_fraction": 0.09090909090909091,
+          "height_limit_above_shoulder_m": 0.15,
+          "height_exception_basis": null,
+          "pass": false
+        },
+        "upright": true,
+        "physics_reference_match": false,
+        "peak_interhand_self_normal_n": 0.0,
+        "minimum_interhand_distance_m": 0.0,
+        "minimum_ball_contact_distance_m": -0.03826391508552712,
+        "peak_ball_normal_n_by_group": {
+          "left_finger": 0.0,
+          "left_thumb": 2172.434942170298,
+          "left_palmar": 0.0,
+          "right_finger": 0.0,
+          "right_thumb": 0.0,
+          "right_palmar": 0.0,
+          "excluded_hand": 0.0,
+          "torso": 0.0,
+          "floor": 202.12047331613408,
+          "other": 0.0
+        },
+        "gait_evaluated_separately": true,
+        "legacy_strict_score_unchanged": true
+      },
+      "quarterback_pass_score": {
+        "flight_s": 0.6940000000002318,
+        "downfield_flight_m": 2.006166735091382,
+        "horizontal_flight_m": 7.030064560344883,
+        "receiver_depth_at_fingertip_m": 3.1089237890627515,
+        "continuous_two_hand_contact_s": 0.0,
+        "horizontal_ball_to_body_speed_during_contact_mps": null,
+        "first_floor_or_body_support_s": 6.587000000000534,
+        "controlled_in_stride_receive": false
+      },
+      "minimum_upright_cosine": 0.9527464959705699
+    }
+  }
+]

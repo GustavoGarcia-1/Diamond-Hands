@@ -1,0 +1,30 @@
+{
+  "mode": "balance_abort",
+  "trigger_s": 0.5400000000000004,
+  "duration_s": 11.999999999998789,
+  "stable_standing_final2s": true,
+  "impacts": {
+    "head": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "hand": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "torso": {
+      "peak_sum_normal_n": 0.0,
+      "first_contact_s": null
+    },
+    "other": {
+      "peak_sum_normal_n": 1178.2251412139588,
+      "first_contact_s": 0.03400000000000002
+    }
+  },
+  "actual_torque_caps_respected": true,
+  "warning_count": 0,
+  "evaluation_stop_removed_only": true,
+  "no_midplay_pose_overwrite": true,
+  "actual_machine_split_m": 3.45,
+  "historical_route_not_qualified": true
+}

@@ -1,0 +1,8 @@
+{
+  "stopped_at_utc": "2026-11-15T02:24:55.449427+00:00",
+  "reason": "Matched fixed-phase control exposes sensor-reward false positive: action -1 earns4.1507 with torso/other support before fingertipcontact and zero clean control, versus zeroaction1.1756 with1.785s clean control. Preserve checkpoint as diagnostic; repair visual support qualification before more optimization. No privileged reward substituted.",
+  "signal": "SIGINT",
+  "latest_checkpoint": "study/ppo/checkpoint-00012288.zip",
+  "latest_checkpoint_sha256": "a3806e107c5d6a9cb3815bace04bce9c0240311d9e2b25b7e7782e71f0fea772",
+  "preserve_all_results": true
+}

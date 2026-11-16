@@ -1,0 +1,272 @@
+{
+  "files": {
+    "source.tar.gz": {
+      "bytes": 68668146,
+      "sha256": "363daa7c7d99471799a412946767e0ed6935b5f6e06db4146a5416c3a3adc05a"
+    },
+    "receipt.artifacts.tar.gz": {
+      "bytes": 558987633,
+      "sha256": "6e929132ed5bf80fced20a6a1860d21a9593ec35e59997af7c6f79da6588fbb4"
+    },
+    "receipt.json": {
+      "bytes": 826,
+      "sha256": "fdb00845adee916d856c308cb2921d6713971a5ad48a35e108fd104d6c4f8974"
+    },
+    "protocol.json": {
+      "bytes": 1632,
+      "sha256": "ff2765cff631735beca4fd6a8fd8dad87886813e03f13d4756c1d1f94544aac3"
+    },
+    "source-manifest.json": {
+      "bytes": 45945,
+      "sha256": "c76e7155749733b105a0c3272b08c870774ef62c6278cefd7e0f19d49725eef0"
+    },
+    "results.json": {
+      "bytes": 20314,
+      "sha256": "9d6585aec6538a02445c696af542e87208e18ea16b34de1becd4073df44eed07"
+    },
+    "site-summary.json": {
+      "bytes": 4910,
+      "sha256": "6ac8deaad53b749b1384603195ff5d2b6fdfa25076e0867ea05ed1fc0a662d7e"
+    },
+    "model-cross-comparison.json": {
+      "bytes": 1110,
+      "sha256": "417de06b5f38a059f0a5b61a13773434bf4bf39e040c453177ee19aa84f01db2"
+    },
+    "linux/artifacts/nominal-identity.json": {
+      "bytes": 2388,
+      "sha256": "13c2b7b31a62a8abfc394b3ddb5c9d3a10d00310801b21b20dcead7b4431fc56"
+    },
+    "linux/artifacts/nominal-model.json": {
+      "bytes": 78,
+      "sha256": "00dbabcfd84faba65acf07d219b7cfbe3035a3dae2d2eea5a2d06f8d1fddbda1"
+    },
+    "linux/artifacts/nominal-model.npz": {
+      "bytes": 72559830,
+      "sha256": "2574e3a9de373a27779e1c479bb77f3ac3a960bd2cde0dca79b1a2cb24d79322"
+    },
+    "linux/artifacts/nominal/smoke/episode-0001/trial/scene.xml": {
+      "bytes": 159472,
+      "sha256": "2c9f750ed555e98a1f610b377ff5d7b4f2d24c7d2c186700754cd2474a67aa37"
+    },
+    "linux/artifacts/nominal/smoke/episode-0001/trial/comparison-model.json": {
+      "bytes": 245775,
+      "sha256": "ba09fe4c5ec7df3181665f51f483f6f5497365791988928fe7d125cda2f60bc7"
+    },
+    "linux/artifacts/nominal/smoke/episode-0001/trial/active-contact-parameters.npz": {
+      "bytes": 96717,
+      "sha256": "7f0a0c3b2af0f1b65d610a37c5b8e03244fe6f29701b243bb4da99a6dc6209c0"
+    },
+    "linux/artifacts/nominal/smoke/episode-0001/trial/ball-contact-witness.npz": {
+      "bytes": 1502008,
+      "sha256": "63983efe4a3bbbb186f344124c4908e6f576a9622b23c33b67a8ca19b0c3038c"
+    },
+    "linux/artifacts/nominal/smoke/episode-0001/trial/trial/report.json": {
+      "bytes": 22857,
+      "sha256": "66d560bf0facd4cec4b1100419d0c9579d7ea892a747eca7997201647b4356ab"
+    },
+    "linux/artifacts/mass-090-model.json": {
+      "bytes": 1179,
+      "sha256": "8d3b2aa4f6cedf46011c4fc82eb7b84607924651d8719e311be81423aa54fc40"
+    },
+    "linux/artifacts/mass-090-model.npz": {
+      "bytes": 72559830,
+      "sha256": "7044ec39a0e193f72792706358eee7ad1430b51d6810710e18c877752766e444"
+    },
+    "linux/artifacts/mass-090/smoke/episode-0001/trial/scene.xml": {
+      "bytes": 159600,
+      "sha256": "73b2cf8ddd2e0b919b6cdacabe02ef2eb67507c6016eea8b9a67c98f7473d7da"
+    },
+    "linux/artifacts/mass-090/smoke/episode-0001/trial/comparison-model.json": {
+      "bytes": 245758,
+      "sha256": "fe6fc57468d626c12c077a6d9dfb9228795b78da4504d8e7f0b9088d6e0c0693"
+    },
+    "linux/artifacts/mass-090/smoke/episode-0001/trial/active-contact-parameters.npz": {
+      "bytes": 95052,
+      "sha256": "8f1b5508fbd2d077e64f14977f0e9e214a8cf4f7713a4b8b7897d262bea458cc"
+    },
+    "linux/artifacts/mass-090/smoke/episode-0001/trial/ball-contact-witness.npz": {
+      "bytes": 1465860,
+      "sha256": "74411012d264ead913e8a1922ec557ea034418e82ac0392f7b69ba65e006a899"
+    },
+    "linux/artifacts/mass-090/smoke/episode-0001/trial/trial/report.json": {
+      "bytes": 22838,
+      "sha256": "976aaad08d5bb97388bb6a9b0dd8a93fee646d8ae98b11b441cb50c09853ebc9"
+    },
+    "linux/artifacts/mass-110-model.json": {
+      "bytes": 1181,
+      "sha256": "db19178368522f052dff9eb143a6170545dd0d83b3a5810e9b1cefb15e04ca97"
+    },
+    "linux/artifacts/mass-110-model.npz": {
+      "bytes": 72559827,
+      "sha256": "67f76848bc9c53fb76673c52d9c3c6b991118bdac35f5447073f44c14a1b0ca4"
+    },
+    "linux/artifacts/mass-110/smoke/episode-0001/trial/scene.xml": {
+      "bytes": 159600,
+      "sha256": "ef037989c34750421d361a689d572b45e9801b45db2a5d1b5babc42b1ff869fa"
+    },
+    "linux/artifacts/mass-110/smoke/episode-0001/trial/comparison-model.json": {
+      "bytes": 245758,
+      "sha256": "19fa7e845bcdaaf68f86679775bb6bdacebe8288dc15e871aaff3ad14962d208"
+    },
+    "linux/artifacts/mass-110/smoke/episode-0001/trial/active-contact-parameters.npz": {
+      "bytes": 99583,
+      "sha256": "3259752af309470fbd38a569dfee776dec1eb9c6c919f005602777bb611fe3c0"
+    },
+    "linux/artifacts/mass-110/smoke/episode-0001/trial/ball-contact-witness.npz": {
+      "bytes": 1548626,
+      "sha256": "7d8c16610766ebf4f955fa46804ff6f4b3168aa1117eb02e80e7586e9f8d4c5d"
+    },
+    "linux/artifacts/mass-110/smoke/episode-0001/trial/trial/report.json": {
+      "bytes": 22951,
+      "sha256": "5075bfe287742782296c0761ddfa6fc93f5506b1def10adfd6fd0a61fb3a2a46"
+    },
+    "linux/artifacts/friction-080-model.json": {
+      "bytes": 14485,
+      "sha256": "d69d2eea03fdc9df42d002482650dff63bd0763f525c8d7cb14e47e7c31b9f68"
+    },
+    "linux/artifacts/friction-080-model.npz": {
+      "bytes": 72559832,
+      "sha256": "97b95648fc4d2f99b14a90d8c9f507013d997c53530075e53f5f6fc4204a9235"
+    },
+    "linux/artifacts/friction-080/smoke/episode-0001/trial/scene.xml": {
+      "bytes": 159356,
+      "sha256": "eb677ce30e4aff45195e96441715bc1abfa5a2274f35f98d1354d52f1fea445a"
+    },
+    "linux/artifacts/friction-080/smoke/episode-0001/trial/comparison-model.json": {
+      "bytes": 245543,
+      "sha256": "ee2c6fadd20104898b6eef4f093dd0e3304630d0fa1872429ba8a794db62bf2f"
+    },
+    "linux/artifacts/friction-080/smoke/episode-0001/trial/active-contact-parameters.npz": {
+      "bytes": 88153,
+      "sha256": "7d3f9d9ef85dd839f800b0e99cb8fb6ed3795fecaf6cc17514fb3bbd2b3eed25"
+    },
+    "linux/artifacts/friction-080/smoke/episode-0001/trial/ball-contact-witness.npz": {
+      "bytes": 1320533,
+      "sha256": "1c3b8425c4cddf85bd55ea4de0454779133654824da0988d104afc138ae402c4"
+    },
+    "linux/artifacts/friction-080/smoke/episode-0001/trial/trial/report.json": {
+      "bytes": 22962,
+      "sha256": "2ba827c6fe2ec5a30ed46816eb83884c0bc8b84c86acef8164b1dda318478868"
+    },
+    "linux/artifacts/friction-120-model.json": {
+      "bytes": 14717,
+      "sha256": "53aba5b9e94a55321d9be3f91adfe56b1dfc9c5f1fa47a5fb13b722672ca32fd"
+    },
+    "linux/artifacts/friction-120-model.npz": {
+      "bytes": 72559830,
+      "sha256": "6d5f37d95a16cba9d10e162fbe801bca4890a7668001c4faddae6a23b99ee815"
+    },
+    "linux/artifacts/friction-120/smoke/episode-0001/trial/scene.xml": {
+      "bytes": 159588,
+      "sha256": "bd66df1d6f5c780fa6fd55acfac67ff1d6259db8d3e9ac183dd9021289f1963a"
+    },
+    "linux/artifacts/friction-120/smoke/episode-0001/trial/comparison-model.json": {
+      "bytes": 246007,
+      "sha256": "2dfdc4ff92501dd41e64aef2b5a9976cc1e76ae8d54d76ccfd22988dfe3ed556"
+    },
+    "linux/artifacts/friction-120/smoke/episode-0001/trial/active-contact-parameters.npz": {
+      "bytes": 103225,
+      "sha256": "a14c6518e72610dac1631be77ab6f39b19f5046a339969c04eded08c0f3fd6dc"
+    },
+    "linux/artifacts/friction-120/smoke/episode-0001/trial/ball-contact-witness.npz": {
+      "bytes": 1630074,
+      "sha256": "6775edd184912183a2f123b0984e5decaa3dd6093f60466d27d89b9a390a8ef6"
+    },
+    "linux/artifacts/friction-120/smoke/episode-0001/trial/trial/report.json": {
+      "bytes": 22839,
+      "sha256": "4e07b859b87bd5ac1f20855dd143c0719cf0d11b8c6e29872eaa1dfed1ec3102"
+    },
+    "linux/artifacts/native-force-075-model.json": {
+      "bytes": 3162,
+      "sha256": "2bec44a83789ed032443d248ad3bb2a3fa92b0852bacbcb043e30bf024f9daef"
+    },
+    "linux/artifacts/native-force-075-model.npz": {
+      "bytes": 72559829,
+      "sha256": "9e6a0738bd9d5ff0b297711cc953cabd8fb3958b67050160a4ee766434762f67"
+    },
+    "linux/artifacts/native-force-075/smoke/episode-0001/trial/scene.xml": {
+      "bytes": 159396,
+      "sha256": "b8d59c2e227ac9aa1bb9d601cce13387da791efb98051a4d0a7bb115382b899c"
+    },
+    "linux/artifacts/native-force-075/smoke/episode-0001/trial/comparison-model.json": {
+      "bytes": 245791,
+      "sha256": "b0ead18712d6803c0c897a831724e65c445ae49e9ef8a9490232f165c707997d"
+    },
+    "linux/artifacts/native-force-075/smoke/episode-0001/trial/active-contact-parameters.npz": {
+      "bytes": 105471,
+      "sha256": "93b5dbf80d5d461026fc5467292e0844ea724736bda3f3e2597bbd7a4e40d275"
+    },
+    "linux/artifacts/native-force-075/smoke/episode-0001/trial/ball-contact-witness.npz": {
+      "bytes": 1674810,
+      "sha256": "704551109dad14b6a7645960fe76835ab3eae5c3ac2a7197b6036b504cc07cb6"
+    },
+    "linux/artifacts/native-force-075/smoke/episode-0001/trial/trial/report.json": {
+      "bytes": 22957,
+      "sha256": "5749a57ea06e7c7b3deb6789dc437f15f0b6b965571edd17f7acea4c82070bb9"
+    },
+    "go_physics_condition.py": {
+      "bytes": 3770,
+      "sha256": "15a7591175879f76bf2e0ed71c525e2dea53bab88640ec2b157059c01025e616"
+    },
+    "launch.py": {
+      "bytes": 2129,
+      "sha256": "bb2ecbd0eaafe7ef4172c84de97313aeb10437dc1fb365dcec794b7c3e6a6716"
+    },
+    "peek.py": {
+      "bytes": 1158,
+      "sha256": "c145c7f2bd92c6c3bcfb71ffb4369b0a61d51fbb365ef8a94cfd5d37803fb85d"
+    },
+    "audit_models.py": {
+      "bytes": 1647,
+      "sha256": "9290a2c6466313ec36aad10315c08deb775b101c8d4ac3a34a227545f070959e"
+    },
+    "study.py": {
+      "bytes": 1943,
+      "sha256": "ada29b37b9f175e44521e616d82b84103bbab7d3dd57eeb702a7632b89ea773c"
+    },
+    "analyze.py": {
+      "bytes": 3259,
+      "sha256": "2203bf3416c2d013d5d3a0fc1949d407437f3335b91b01a0e2767cd03c4f53de"
+    },
+    "README.md": {
+      "bytes": 7167,
+      "sha256": "04f4aac783e81a9a06a82332f5ca790a5e0d3262318fd7cf1934a2e54ba04850"
+    },
+    "xml-options-proof.json": {
+      "bytes": 534,
+      "sha256": "f77b5c91c14989d6b3b0d94a95893e959cf29c7988d76f8e61e21ed55c60e184"
+    }
+  },
+  "camera": {
+    "cam_mode": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "cam_pos_sha256": "4b74da220a9f11e8d60b8db9f4fd9cf2a56a290a4618ec58eed98c49bcac1cc6",
+    "cam_quat_sha256": "6eb33773975dabd8e6f128fa6944738f74e259feb0f741e6bf7c8a97654ce040"
+  },
+  "receipt_identity": {
+    "session": "ses-17C5MTT7Z9KW38WRXBT3657RH7",
+    "remote_root": "/workspace/g1-receiver-runs/go-physics-sensitivity-20261115-r1",
+    "gpu": "GPU-8a22e6c4-8f87-1f95-21c7-9fdfa4763df8, NVIDIA RTX PRO 6000 Blackwell Server Edition",
+    "source_archive_sha256": "363daa7c7d99471799a412946767e0ed6935b5f6e06db4146a5416c3a3adc05a",
+    "launch": {
+      "command": [
+        "/workspace/g1-receiver-runs/go-physics-sensitivity-20261115-r1/.venv/bin/python",
+        "-u",
+        "/workspace/g1-receiver-runs/go-physics-sensitivity-20261115-r1/source/scripts/study.py",
+        "/workspace/g1-receiver-runs/go-physics-sensitivity-20261115-r1"
+      ],
+      "wall_seconds": 3600,
+      "snapshot_sha256": "363daa7c7d99471799a412946767e0ed6935b5f6e06db4146a5416c3a3adc05a"
+    },
+    "command_handle": "2e6bcd4f5f970953f3747ecea143cbc2c65a60bae99af8e1"
+  }
+}

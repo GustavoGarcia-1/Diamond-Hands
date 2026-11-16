@@ -1,0 +1,1194 @@
+{
+  "source_script_sha256": "838524a6e4057ac643c7371f98fda0281ae6b2160e0cee7279f0364338b7f564",
+  "shared_validator_sha256": "15b6c021981511c2897fab447e0386eee37c00ee29a1bf65213a8024a371cb95",
+  "schema": "receiver-uncertainty-floor-appendix-analysis-v1",
+  "posthoc": true,
+  "requested_routes": [
+    "go",
+    "out",
+    "slant"
+  ],
+  "full_appendix_complete": true,
+  "new_trials": 150,
+  "original450_replaced": false,
+  "protocol_sha256": "22bfd969663d641609a87361ee1a3a95900fec6fd584539c4d5933927db93934",
+  "appendix_protocol_sha256": "1ecb95d46b3360b83265b347a251c959d52f94ca43a72ec6a1418f8d582c44b6",
+  "base_summary_sha256": "099fcb475c1cb5b54496ae270decbdf8042067815a8503d467a8c44451c64aef",
+  "base_trials_sha256": "a76c559c9394a770141c200434850f6f6a0912886c1515f4da33940399ee7448",
+  "analysis_environment": {
+    "python": "3.12.13 (main, Jul 18 2026, 16:55:18) [Clang 22.1.3 ]",
+    "platform": "macOS-15.7.2-arm64-arm-64bit",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "font_family": "Arial",
+    "font_file": "/System/Library/Fonts/Supplemental/Arial.ttf"
+  },
+  "routes": [
+    {
+      "route": "go",
+      "methods": {
+        "current": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 18,
+            "final_anatomical_hand_hold": 46,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 4,
+            "no_deep_ball_penetration": 35,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 46,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 4,
+          "total": 50,
+          "rate": 0.08,
+          "wilson95": [
+            0.03154951408859298,
+            0.18838246918342838
+          ],
+          "mean_clean_hold_s": 1.9247800000006428,
+          "median_clean_hold_s": 1.692000000000565
+        },
+        "exact_ball_diagnostic": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 50,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 50,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 50,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "mean_clean_hold_s": 0.0,
+          "median_clean_hold_s": 0.0
+        },
+        "exact_ball_uncertainty_floor": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 16,
+            "final_anatomical_hand_hold": 48,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 4,
+            "no_deep_ball_penetration": 37,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 48,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 2,
+          "total": 50,
+          "rate": 0.04,
+          "wilson95": [
+            0.011038884327619805,
+            0.1346009068750702
+          ],
+          "mean_clean_hold_s": 1.9417800000006487,
+          "median_clean_hold_s": 1.599000000000534
+        }
+      },
+      "paired": {
+        "exact_ball_uncertainty_floor-minus-current": {
+          "new_only_success": 0,
+          "reference_only_success": 2,
+          "mean_clean_hold_difference_s": 0.017000000000005677
+        },
+        "exact_ball_uncertainty_floor-minus-exact_ball_diagnostic": {
+          "new_only_success": 2,
+          "reference_only_success": 0,
+          "mean_clean_hold_difference_s": 1.9417800000006487
+        }
+      },
+      "new_trace_scores_exact": true,
+      "covariance_checks": [
+        {
+          "trial_id": 0,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "33120bb67ce687bff1d131910aa70b5cb60922e3aec4817f0766c7d350be4831"
+        },
+        {
+          "trial_id": 1,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "9bfc43238be33e076b3f1be8d2d9d4eb5d265eb0a532f938e7758ff052071a98"
+        },
+        {
+          "trial_id": 2,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "882affb60b7737b830cf93d2c97d2ae8f5e723875232027d0aed3f45b9b06ace"
+        },
+        {
+          "trial_id": 3,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "cc35d45e26af6ec7280e5e0dac6c0ac08982cc6662fcc797489eac538ef91b79"
+        },
+        {
+          "trial_id": 4,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "6763f328fd3e2dfe70a91e7dd4f90be9c29ccc71552ec71087900184ca5eb507"
+        },
+        {
+          "trial_id": 5,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "45456fffd8769ab293f1848adbf5b84f29ed3c8a8f45338a44763f6571d271e7"
+        },
+        {
+          "trial_id": 6,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "caec90b04e40c839e6a0f456953060b2e535b37e75702f4142c47865f767b566"
+        },
+        {
+          "trial_id": 7,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "e4999e318f6ac2c4bfdf5d83d446f3dca7f3b3616e66893c2b601dd7e00b78fe"
+        },
+        {
+          "trial_id": 8,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "4588bbb716b365f78992fbff1cfceee807de6b37b68112b23a330c08bfd0cbac"
+        },
+        {
+          "trial_id": 9,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "d10580999c83f43469e8ef905fb621b1bb7c48bade7f44edc76159bb1fb72307"
+        },
+        {
+          "trial_id": 10,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "cda851db6a87124d01e473f1c862476244da9c668b7fb7c964a226a821e5ef39"
+        },
+        {
+          "trial_id": 11,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "e9eae77b7422b243717df8448795861862ee8657f0cd2b648eeb195c1c41a97d"
+        },
+        {
+          "trial_id": 12,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "6357d725188de3eb69d1c5a5cf22c7d68ffa5c1fedd31b6a3dedb366a0136ff3"
+        },
+        {
+          "trial_id": 13,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "c0cd6cae8c4fdf4574f935de2ab20ba85ebd231ba34ad38849710253073ea1e3"
+        },
+        {
+          "trial_id": 14,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "0973574a55567a50f1da8a32c73aff2fa1e909e54f916f1cf957984fa42f6c40"
+        },
+        {
+          "trial_id": 15,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "278a6c715dc03c79b808965059ade3731a47b732940b7bf6fdee60846c863d4c"
+        },
+        {
+          "trial_id": 16,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "0dcfcce6930650e207899d2f31de5d4d245d3a7a0e67d4357d852beee5f6a596"
+        },
+        {
+          "trial_id": 17,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "fe4f6b44314b254b87fb6d7929de87ecadf36c87d0279b9301cc13d49a71bd70"
+        },
+        {
+          "trial_id": 18,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "4bc0340211299f526f9d7be49912ffdfe4b8638c6647396ac1707fc0fe36a9a3"
+        },
+        {
+          "trial_id": 19,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "e2052fafb24bf70e9b6e22ea8f3a8b61305876e8ce3258c018e4466150b974de"
+        },
+        {
+          "trial_id": 20,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "e5ac774f32eef75d4862d03d680b05ce32552fd1f9cead966dda1df05d54ab45"
+        },
+        {
+          "trial_id": 21,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "731a97c326cb7035be686fa4dbc10350ae16bd7c5134443d175679f53e362b09"
+        },
+        {
+          "trial_id": 22,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "736fbb53b1b3c3aeec96815b1daa7e8146f3cd81007ae0fed355ab2607041515"
+        },
+        {
+          "trial_id": 23,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "aea239c494595e12338a9d257d1eaeb8056bef212c5687bcbfa23292948a2b89"
+        },
+        {
+          "trial_id": 24,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "ba0aec6b7be826f194133dfdb3c7a4691ce1cbd1a58c0aeb84a633d8dd88f170"
+        },
+        {
+          "trial_id": 25,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "c629529cba2e7ac858cda4f4c25b3a94fae399b1038fb24eabcd766c67ef6076"
+        },
+        {
+          "trial_id": 26,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "b71c6889f0e7ddc5d2b1cdabc3c7b5ae3325a4a8c9f986c9f496fc8bcb2c682c"
+        },
+        {
+          "trial_id": 27,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "4c193c8feb6332840d55ef1a2f9f8bae46be2d5d42285d06b17acf199915ce8e"
+        },
+        {
+          "trial_id": 28,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "d6778209d937ae3bccb475a1b831678b9a21ede91bea16339dbc60771dc30390"
+        },
+        {
+          "trial_id": 29,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "e365e0367552808d947bdb879238142c0908b131c4c693647d6a80a0e218c4b9"
+        },
+        {
+          "trial_id": 30,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "39c55eb16aef2156fe7e187274c0da96c7095ce42f6581df940e0f5ba1fdf088"
+        },
+        {
+          "trial_id": 31,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "21dbe3265ff0c4c6f7f8c88c9a7cf9d0f4b258179506c9ceffb493d3184d6664"
+        },
+        {
+          "trial_id": 32,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "24bb3d19ffe9029dc610fb80f22a96b160f9300ebf3bc739c8c5c6a191ca301b"
+        },
+        {
+          "trial_id": 33,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "d27854bf931e989aa2193eb58f82b2c5301331844743814e301269cc795cbeef"
+        },
+        {
+          "trial_id": 34,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "874d1d200d064b5526324fc15f31019d79a7c97a3a4ab71918f81d6954c9cc69"
+        },
+        {
+          "trial_id": 35,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "b9576773b419ebdf6faa97e162d310447ec163ee115870db8a9ce6064887d0b3"
+        },
+        {
+          "trial_id": 36,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "13be83c0aedb9863df755d7e0fbdae39a5e86011191f930f278b08aa1f326599"
+        },
+        {
+          "trial_id": 37,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "906d07337a300a97f33686248fa61e702a56dc77458b3044ca9f7f920ca7c9fa"
+        },
+        {
+          "trial_id": 38,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "af6273e73a0197e65bb8d962494d3c9ab4e684ca8a51640dfc3a23e21bef4c43"
+        },
+        {
+          "trial_id": 39,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "35ec220148056d741b8bb6dbbd0704330b6701f129f1ad59fadcdcd855571512"
+        },
+        {
+          "trial_id": 40,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "f1eb3f3384b4e227c83e6e9d660b3c67969da8c3808967659cd2e9a89e9b7dd8"
+        },
+        {
+          "trial_id": 41,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "823bd056066114cf6502b576182a1e443707588bf3d5c1ecf91d1371effae58c"
+        },
+        {
+          "trial_id": 42,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "71608591f44cc5207cdc1f461bac85dee718e442d998a61531b2b4f378331fb8"
+        },
+        {
+          "trial_id": 43,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "0de565c535c83faf993bee870c069e685ef3e7618d726b03f4ddca0b613387de"
+        },
+        {
+          "trial_id": 44,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "e15670ad477ea1c7b7504a8930ef4c4ce48490cbeb961008d2ef3afc19c49b84"
+        },
+        {
+          "trial_id": 45,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "30de68b270865f0f3df7571fd21068edcf22226650fcb6c11057fbd143bfd5e0"
+        },
+        {
+          "trial_id": 46,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "30adcdd75ed37b3a2b98677abac649c0fc3698d28e311cab974eb9f8790498b5"
+        },
+        {
+          "trial_id": 47,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "78afb1a4703d26bfa8615df9334d6d5cf0602be6acdbc19f0f0c1320297614ea"
+        },
+        {
+          "trial_id": 48,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "c61bdadaf6baa7a1efaca307989f2eb823d672a54f0e4859a809ba3531134052"
+        },
+        {
+          "trial_id": 49,
+          "kind": "per-capture oracle log",
+          "observations": 583,
+          "sha256": "2d9dd97aadbdf7cdf5f65cc5c97fa8b3367a911cbbab4d541714d1fea84932d2"
+        }
+      ],
+      "profiles_and_model_and_actual_release_identical_to_original_current": true,
+      "source_archive_sha256": "bb73c313254f3483d56ff9e88369a1062ff13c8d22573fac1158c00d7a0f9815",
+      "new_manifest_sha256": "7cc0e488d99cc19024d9003eaffbdcf1b7d23e597a541181dc2dbf031376bdb7",
+      "new_results_sha256": "6bf81f6997c5aec4a94e47bd0fbd68e06fbea1aca6e717ab5ab3471b2ac2a13f"
+    },
+    {
+      "route": "out",
+      "methods": {
+        "current": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 38,
+            "final_anatomical_hand_hold": 38,
+            "form.pass": 8,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 34,
+            "no_deep_ball_penetration": 27,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 38,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 9,
+          "total": 50,
+          "rate": 0.18,
+          "wilson95": [
+            0.09770192670234178,
+            0.30796053674300783
+          ],
+          "mean_clean_hold_s": 0.7896400000002636,
+          "median_clean_hold_s": 0.0
+        },
+        "exact_ball_diagnostic": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 38,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 1,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "mean_clean_hold_s": 0.07624000000002545,
+          "median_clean_hold_s": 0.0
+        },
+        "exact_ball_uncertainty_floor": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 45,
+            "final_anatomical_hand_hold": 45,
+            "form.pass": 3,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 42,
+            "no_deep_ball_penetration": 31,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 45,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 4,
+          "total": 50,
+          "rate": 0.08,
+          "wilson95": [
+            0.03154951408859298,
+            0.18838246918342838
+          ],
+          "mean_clean_hold_s": 0.31470000000010506,
+          "median_clean_hold_s": 0.0
+        }
+      },
+      "paired": {
+        "exact_ball_uncertainty_floor-minus-current": {
+          "new_only_success": 1,
+          "reference_only_success": 6,
+          "mean_clean_hold_difference_s": -0.4749400000001587
+        },
+        "exact_ball_uncertainty_floor-minus-exact_ball_diagnostic": {
+          "new_only_success": 4,
+          "reference_only_success": 0,
+          "mean_clean_hold_difference_s": 0.2384600000000796
+        }
+      },
+      "new_trace_scores_exact": true,
+      "covariance_checks": [
+        {
+          "trial_id": 0,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "f184fd1b95ec06bcb4032ebeaf2f23e3cb4ef995aa5f23d73a524e346b036cf4"
+        },
+        {
+          "trial_id": 1,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "933d0d4391b02f73fce40d16a16a0c95e831f23a01ba7ec3fed947c75f4561ad"
+        },
+        {
+          "trial_id": 2,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "2c1beddde8c14a254dd613d3a86cbb8833b8b329a11d3151ef8dd231d9ec981b"
+        },
+        {
+          "trial_id": 3,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "da45f5875e5e997f2f5e65e1f7c37c306c1505fedcb2ec40fd17ee808155b8a9"
+        },
+        {
+          "trial_id": 4,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "8064a48d8e009b23846e1c35350003667ca8bb7e3d6efa61573e08f6cab10f91"
+        },
+        {
+          "trial_id": 5,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "3264b6ea38269301307a92dd37670798bf861318f52ebba35490a28b5361d883"
+        },
+        {
+          "trial_id": 6,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "63a95064d810af8b02585679babe814bd6508de68d7614fa79213134094f4852"
+        },
+        {
+          "trial_id": 7,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "9058128c94202484fef8896859dd8b19671c5becd2914bbb8b46039dadf70f0a"
+        },
+        {
+          "trial_id": 8,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "73165d2b9da8ba2ca151882dd1d1005d29798d28940d5657988b34a25408ae0b"
+        },
+        {
+          "trial_id": 9,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "956c5413d4dd08a4c248a0ca1d19d77a092415cf07afda99134c7a460a4e39a7"
+        },
+        {
+          "trial_id": 10,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "0dddbaf22ad84b9e49d60117158e651858d1cb57ac13a07c8f0ccc117c8f1ac2"
+        },
+        {
+          "trial_id": 11,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "631470ff69204b80672ae94c4bf10567f0a88bccd6d168a81540a4008d27400b"
+        },
+        {
+          "trial_id": 12,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "b7e1a95bcc12a5facb159d2fa4956ace315fbf38c806aa186842c8952343fde0"
+        },
+        {
+          "trial_id": 13,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "1d00b01234a4f5401d48214f4c5d4614381d71eff79a1506ee1fae95674e1563"
+        },
+        {
+          "trial_id": 14,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "79a5d75411e4928c6d4b9da2d4ae85b91ed688ce9172fa22704d519fc867ebfe"
+        },
+        {
+          "trial_id": 15,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "ae4efa9ce0cf8053ea9a57c28dc64ebeec6be77138133ab3c6f83c60045f9b0d"
+        },
+        {
+          "trial_id": 16,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "7fa079fe21d0cdac78ac52e96609aa45c4215233496f1cb3042b9c4d8b1152c3"
+        },
+        {
+          "trial_id": 17,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "a566f353a7c9471b3c030a9ab1a6b3db56e01efdd8cf2bfba75a2150133b4ae1"
+        },
+        {
+          "trial_id": 18,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "8c48709bb98e8229e6d00380bf438f005419e0db7c3fa8ea956bd9d1f2b5e764"
+        },
+        {
+          "trial_id": 19,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "0c0de1470cfc41778bc54ebb36763e77f5d6a19cb7f70628db28a6df837f5923"
+        },
+        {
+          "trial_id": 20,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "d371bdff430c1261f03ba94aee5acb1d40b43d7f8e7f23a7c2a0e18f39cb902a"
+        },
+        {
+          "trial_id": 21,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "1c71d3343088d9b32697f4c131ab25fa5074084d5ef902c0604da7da4b21840b"
+        },
+        {
+          "trial_id": 22,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "a1c96e99cd996e324a3d6f1e9c93b277559144145b4e95256efe27397e1561eb"
+        },
+        {
+          "trial_id": 23,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "709fe269d692a994b46080a53e941e3f64219b68d488bdedcbf566a43dd8efa5"
+        },
+        {
+          "trial_id": 24,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "fd3ae672d85f5f7ff92724f5bbc2a6404150f0498fb958b46539f8b5c023e789"
+        },
+        {
+          "trial_id": 25,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "4161e23d44c898e05a4a095fba0436a37c007e03d3ffb87f110df5d01bfbb190"
+        },
+        {
+          "trial_id": 26,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "3d5d0ee9ec0c5038b0fa857aeb66bc984b7fdbfdc025fdd319cd4b826e046997"
+        },
+        {
+          "trial_id": 27,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "19b2032514b4b655f0b665915c7df527d9d04ed0723ded26320722828328fa23"
+        },
+        {
+          "trial_id": 28,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "8f2bb3236974cf1427f2d1a3bb9b930e4d078b2474ed049f75d669271871a71c"
+        },
+        {
+          "trial_id": 29,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "0ce0f6850869041c51919a54c8bac05243c11d7a1c34ba4953e82d04f6affba4"
+        },
+        {
+          "trial_id": 30,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "2fae30c11042a82060ed4e3708e18d7b67126199d4232d740a5ce47d4e3054e1"
+        },
+        {
+          "trial_id": 31,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "e9d417d6c471c33523304ff41335d79df43cbf8465c946660413884b16429c73"
+        },
+        {
+          "trial_id": 32,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "f091b887330643f4fe853beeb9bee23f3810f224b47d29b75226011d1ad9a7cc"
+        },
+        {
+          "trial_id": 33,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "26b430ebecca846cb9779c953e7fe5adb295f7e7684c506f7c8a0c48d559167b"
+        },
+        {
+          "trial_id": 34,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "b34caadc9e0fef1c0b7a2b152ae90a9a763c1f809aac56a8a66158e28e07e6a9"
+        },
+        {
+          "trial_id": 35,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "724ddf09b44376db4cd00976197707100fd95782a1242fbbd85f03769b92ea4b"
+        },
+        {
+          "trial_id": 36,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "5d7d6c455fdd997726d9a3cd4083cab219a0f5b6c20cb222382c5b31e1c8e904"
+        },
+        {
+          "trial_id": 37,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "fc8ef0e445700a030ce850c3f867ea5081677c4bcd5dc88b6c420875cff1cb42"
+        },
+        {
+          "trial_id": 38,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "e4ecd37af1be526d865bdc4f27b36c177435f2c44f8075c4fa28e0f7cb74abb6"
+        },
+        {
+          "trial_id": 39,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "64637b96abe34e58c19dde81ae7ef8a216211e3467865b16d9ab2cdc40c85672"
+        },
+        {
+          "trial_id": 40,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "cd35709abd5fe667e86c2edf8759b89e37fbe78c380f135a53b9353fffd24eb5"
+        },
+        {
+          "trial_id": 41,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "8b722effdcf02e4f8f43db2d1921a5bd26348b98f943a95745e5718b44f6e66e"
+        },
+        {
+          "trial_id": 42,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "0d0524d97a34ffe3d3e0b529f4806a2ca5c6ec8b274493a7b0c27ed4f1c132dd"
+        },
+        {
+          "trial_id": 43,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "20ea7073d1e8a45ed90fa245333b4213cdf50bf98338eb811c8290def7460ba3"
+        },
+        {
+          "trial_id": 44,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "c1591ce32262c7f9ce3f1c7ab5cacb365fee901333cc130a9523ae510d1b9070"
+        },
+        {
+          "trial_id": 45,
+          "kind": "per-capture oracle log",
+          "observations": 729,
+          "sha256": "d0c5e13fd3c91e0cac9d64cd935f9e8799f5c69edd0cf7e3a57dd9524eaa0174"
+        },
+        {
+          "trial_id": 46,
+          "kind": "per-capture oracle log",
+          "observations": 731,
+          "sha256": "5250400fa4237bc7193ed0ef8e47ec3d78fb288f2bf7ef0d5163be6bdadeed32"
+        },
+        {
+          "trial_id": 47,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "5fd833f6fe95ee4339dfb879b0d9851ae225bae1c2363dd9d2c271ea61092721"
+        },
+        {
+          "trial_id": 48,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "47329d51837b872a6ab08835556238325dac5cfdb5db2649dc965e877c1ae412"
+        },
+        {
+          "trial_id": 49,
+          "kind": "per-capture oracle log",
+          "observations": 730,
+          "sha256": "3764aebfff1adb173b45f30bc26215b022ed5cfdb77a6e703ef5acfef75f41ff"
+        }
+      ],
+      "profiles_and_model_and_actual_release_identical_to_original_current": true,
+      "source_archive_sha256": "8af69334f860b7c9ef1b91c5c915548addea8e3c793fb63d1d25cdc86dfa3b5f",
+      "new_manifest_sha256": "7601f126a789a6f0a89a35b9c78a08992e1727980fa0fff93d82d5d41edb7bb1",
+      "new_results_sha256": "76f1d1fec848b86a9ce4b95f0ec6dbb090b113809daf6ba53b6a7758dc62e6db"
+    },
+    {
+      "route": "slant",
+      "methods": {
+        "current": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 0,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "mean_clean_hold_s": 0.022680000000007573,
+          "median_clean_hold_s": 0.02300000000000768
+        },
+        "exact_ball_diagnostic": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 5,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "mean_clean_hold_s": 0.011800000000003941,
+          "median_clean_hold_s": 0.012000000000004007
+        },
+        "exact_ball_uncertainty_floor": {
+          "failed_check_counts": {
+            "continuous_anatomical_bilateral_075s": 50,
+            "final_anatomical_hand_hold": 50,
+            "form.pass": 0,
+            "full_horizon": 0,
+            "initial_free_flight": 0,
+            "load_bearing_hands": 0,
+            "no_deep_ball_penetration": 50,
+            "no_deep_interhand_penetration": 0,
+            "no_excluded_floor_body_or_applied_support": 50,
+            "physics_clock_and_endpoint": 0,
+            "upright": 0,
+            "verified_free_joint_no_attachment": 0,
+            "zero_warnings": 0
+          },
+          "failure_counts_overlap_not_causal_partition": true,
+          "successes": 0,
+          "total": 50,
+          "rate": 0.0,
+          "wilson95": [
+            0.0,
+            0.07134759913335872
+          ],
+          "mean_clean_hold_s": 0.022660000000007566,
+          "median_clean_hold_s": 0.022000000000007347
+        }
+      },
+      "paired": {
+        "exact_ball_uncertainty_floor-minus-current": {
+          "new_only_success": 0,
+          "reference_only_success": 0,
+          "mean_clean_hold_difference_s": -2.000000000000668e-05
+        },
+        "exact_ball_uncertainty_floor-minus-exact_ball_diagnostic": {
+          "new_only_success": 0,
+          "reference_only_success": 0,
+          "mean_clean_hold_difference_s": 0.010860000000003627
+        }
+      },
+      "new_trace_scores_exact": true,
+      "covariance_checks": [
+        {
+          "trial_id": 0,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "ae27696f451e3d306e8021133ceb4de0ec616e91edc670a7db25ed45aa819e70"
+        },
+        {
+          "trial_id": 1,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "0a4cfef04422602fe121e4a4eb8daa2f7a35cfc087894fbf26144455b01b5bd0"
+        },
+        {
+          "trial_id": 2,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "0be6fce7f26e984aeb6666679161190302e821a76d92768bb16546a9d8dcf837"
+        },
+        {
+          "trial_id": 3,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "041b659552f02deeb2266c1dcc1c8ae6ac9b244f3abcaf27e5b293a9a98be696"
+        },
+        {
+          "trial_id": 4,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "13cc2d8262798f1ec8d5b63ab2e5ec3205985c45c28039aa5eca72c7a088a35c"
+        },
+        {
+          "trial_id": 5,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "88166aaefde2dcad428fe43857fc1abb9187c0e0551636685af1601a51687477"
+        },
+        {
+          "trial_id": 6,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "e69e0fe1cf3701de2f230802ef67f87ea1a90af33c60268ec2fea8d5feefd8a4"
+        },
+        {
+          "trial_id": 7,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "4233cb0c277580f527e104212e15898cfea6eef5ad065bf597cdefd5c8c1e405"
+        },
+        {
+          "trial_id": 8,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "bbbfb15bc97aa5e61a98afe2bf483f2a6afa998fb4fd115c476cc7791528ca9b"
+        },
+        {
+          "trial_id": 9,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "d1426062991bfab8829916865e82a63ac9635ba38fc757fb5f464a5eae415d67"
+        },
+        {
+          "trial_id": 10,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "dc8d2305677417994295280295a967653c3902de69e0b49663a6e4eb8966338d"
+        },
+        {
+          "trial_id": 11,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "70a1fe50c0c36af8a4dff75039eb631e0bf015f7e83bc9cec833b1561bdd1dbe"
+        },
+        {
+          "trial_id": 12,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "489bf6fc3bfebe9d84abc966749896164fc0d5ba161e69abf0d85559b85a4e5b"
+        },
+        {
+          "trial_id": 13,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "e3dc568e203c033fb073aff5b61ea0e5820f1c87c1367f496771b6b12c6a74c7"
+        },
+        {
+          "trial_id": 14,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "42bb13761be651e8195909607b66c0058a42c0bcc10b438eaa5c7f247e3bf135"
+        },
+        {
+          "trial_id": 15,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "aa2051ed9f9a0c15f1bcd553246ea1fb92380e058223c6ea40740a2d14a1ebd0"
+        },
+        {
+          "trial_id": 16,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "5cfb72e8e93db4f021d00ea7067f633159672f75bc38f0700e78937250c02a5d"
+        },
+        {
+          "trial_id": 17,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "a46c4ba4dad714cfa9bb490359db6f6a246a928401f0a21dd55591f526218510"
+        },
+        {
+          "trial_id": 18,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "8031d6d2269c4ed2de8905a07241bf6ac354c70323e5a295167de46673761611"
+        },
+        {
+          "trial_id": 19,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "1b2a8c8b6fea1055b1b9a6387aebc7d0c8fffd07cd3d4b7d1de6e4a4eec2694f"
+        },
+        {
+          "trial_id": 20,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "a0128335e9b1c6c52e9ba1f6ec4282d1b1c95fedb46af5f8b103cfde2703d1e5"
+        },
+        {
+          "trial_id": 21,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "9f5d10ad62b425c43c092f1f55817088a79ff2c50ce24aaf5439826c23dccbbd"
+        },
+        {
+          "trial_id": 22,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "eda9ed02c8b98fa1285b5dad18f7d14be22f5f113c8af0b446c9af60c098ed2f"
+        },
+        {
+          "trial_id": 23,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "928465e30fe61e4c137a35404e030901aba8b7e5f19868ed0077d3be543c2081"
+        },
+        {
+          "trial_id": 24,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "7538cae3f41d3b07a72bfe2a35fef0c4af73ee8f6fee4fb78b48c41d20ad9fc1"
+        },
+        {
+          "trial_id": 25,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "709af86477bc8a4c75ce2a67e60f5fe0403230219643fc1cdefa55f2b2ece738"
+        },
+        {
+          "trial_id": 26,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "3c2ff6944018f8905741449259d848d68ec1df63becddcae5e6ff98034953350"
+        },
+        {
+          "trial_id": 27,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "c3bfbb9bbbe457f42e884194f00034a9c09324304822169908ba531648339c31"
+        },
+        {
+          "trial_id": 28,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "756e075f91b1135a2e2c47083c9a6c6ca7e4cdd6e9df4ee96f21bfc93a00a93b"
+        },
+        {
+          "trial_id": 29,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "ddd0c6ad70dd77fca0f5d9d0e292ee4d8f1f62d85ee39ceb4b54de5ec06b6816"
+        },
+        {
+          "trial_id": 30,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "72afec282eb04854e4e8f6b5ef33aa0515e2fadb6e057df748d96a5fd94a0b91"
+        },
+        {
+          "trial_id": 31,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "a002c715a78ce72d91b3020f6691bad1f6d7a72f4e84797bf6d30cdb1e5232c1"
+        },
+        {
+          "trial_id": 32,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "8bb3ac18ba420296f33988150396c3757fa17b21130293b93def8286c30177b5"
+        },
+        {
+          "trial_id": 33,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "215be8d088a8807cd4b36bf75b5608c9e723ef725e5be11f246988bd62523cbc"
+        },
+        {
+          "trial_id": 34,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "608fa2711518466cfc6b897432a8e6dc6ede1fe6aca4676959ea9041a119d919"
+        },
+        {
+          "trial_id": 35,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "0367f99778bb2be3cdfb4f9464d2e56e92cb7759a5c3e68aa7923d752b16e898"
+        },
+        {
+          "trial_id": 36,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "850c812777f7b139fbabe72edce48693c3fd7c863dbdd9e143e3a2d652c8e7d8"
+        },
+        {
+          "trial_id": 37,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "14b494d2932ca9fce8012c6d100ebf9672462af259a0f61fe5878995db9e2f72"
+        },
+        {
+          "trial_id": 38,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "bdde4e4e85b00eb9a1a6e99a69b1a866f90a387a00f5082c33576cc0de4e0406"
+        },
+        {
+          "trial_id": 39,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "a432dc8715aa14d20f9cf5d3207ae9afab2187fe859803b937871e0e61005d8d"
+        },
+        {
+          "trial_id": 40,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "2611bff364a550b19f730b147eb91705a12cf249e9b42bbeed03651e74e9754f"
+        },
+        {
+          "trial_id": 41,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "8c27a0b2707d60a782f602c17f2b0032ed0339efb4d84e262da9ba3ab233ccb0"
+        },
+        {
+          "trial_id": 42,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "699cb24539d4f05f83a6ab17dd8193be946891aaa00f375817944b9a44e39971"
+        },
+        {
+          "trial_id": 43,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "4d4b7969c4e260da38745995d53f8a73e6676ac23d04a57afcdab3f768168120"
+        },
+        {
+          "trial_id": 44,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "b3727457d2b5083c9619b48db945e45da63c32264f1e48c56185ec810af2250b"
+        },
+        {
+          "trial_id": 45,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "4f239ce13d44d796ad1734f4c09af2ba627bf74ba7b10941269752b1bf25909c"
+        },
+        {
+          "trial_id": 46,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "dd0f62cec443b038f5eadfe36d0fb1691e2489a28028695013a193faec1baa1e"
+        },
+        {
+          "trial_id": 47,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "29025a832ec3fa7df9f028eadd5973b1e5ffce8d015cedc8c406959a6ce855c1"
+        },
+        {
+          "trial_id": 48,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "8e379eba8f93eac1f740a7e240bf012daa8408fa186e0447bc2ee75e2681e9c4"
+        },
+        {
+          "trial_id": 49,
+          "kind": "compiled-run receipt; source constant covariance",
+          "sha256": "aeda4cba493438f5db2d6994e71f20846134dd9a413eec9c3e3e9ede3209e58f"
+        }
+      ],
+      "profiles_and_model_and_actual_release_identical_to_original_current": true,
+      "source_archive_sha256": "fe084e2cd70c314d3404c9d8a18090089dff81992231d91df3cce13e3dde9818",
+      "new_manifest_sha256": "393a17a8713570eb7516060658665e29806aec523ca0942ac7f8eeac1559e39c",
+      "new_results_sha256": "c08ed49172e606e952faa6520e9400cd19621ab1344d89a407b5fdedb6a27a91"
+    }
+  ],
+  "limits": "1mm reported covariance is a compatibility floor, not actualnoise or calibratedsensoruncertainty. Privilegedvisibility/positiondiagnostic, notdeployable. No hardwareorconvergenceclaim."
+}

@@ -1,0 +1,42 @@
+{
+  "elapsed_s": 1806.8276723219897,
+  "timesteps": 32964,
+  "workers": 2,
+  "wall_budget_s": 1800,
+  "final_checkpoint_sha256": "436da7257d4483eaf9afee633c894babd902bf32c7893b8b570ca35a56ab2443",
+  "observation_schema": "late-reach-phase-65-capture-aligned-v2",
+  "reward_schema": "late-reach-sensor-tracking-visible-retention-v3",
+  "learned_component": "scalar reach-phase rate residual; visual cue, arm geometry, grip and locomotion remain separately scripted/pretrained",
+  "action_size": 1,
+  "observation_size": 65,
+  "seed": 173,
+  "config": {
+    "frozen_root": "/workspace/g1-receiver-runs/catch-repair-late-reach-ppo-20261114-r2/artifacts/study/runtime",
+    "profile": "/workspace/g1-receiver-runs/catch-repair-late-reach-ppo-20261114-r2/artifacts/study/runtime/profile.json",
+    "source": "/workspace/g1-receiver-runs/out-scrimmage-20261113/source/aero-source",
+    "amp_source": "/workspace/g1-receiver-runs/out-scrimmage-20261113/amp",
+    "reference": "/workspace/g1-receiver-runs/catch-repair-out-rightup-phase-20261114-r1/artifacts/study/0.001/trial",
+    "model_case": "pair25",
+    "duration_s": 10.0,
+    "timestep_s": 0.001,
+    "fixed_servo": true,
+    "break_release_delay_s": 2.38,
+    "sensor_domains": [
+      {},
+      {
+        "latency_s": 0.02,
+        "frame_drop_probability": 0.03,
+        "depth_noise_floor_m": 0.002,
+        "depth_noise_quadratic_per_m": 0.0001,
+        "depth_quantization_m": 0.001,
+        "rgb_noise_std": 1.0,
+        "survey_position_std_m": 0.002,
+        "survey_angle_std_rad": 0.0017453292519943296
+      }
+    ]
+  },
+  "config_sha256": "a9282c9c8378c1ed732081284a6ba724f6c6a4f6e9d225ad89c5748255a5618d",
+  "torch_version": "2.11.0+cu130",
+  "cuda_available": true,
+  "no_physical_score_reward_or_selection": true
+}
