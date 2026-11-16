@@ -2,8 +2,6 @@
 
 **Can we teach a robot to play football?**
 
-[Gustavo Garcia](https://www.linkedin.com/in/gustavogarcia1/) · UC San Diego
-
 [Website and videos](https://gustavogarcia-1.github.io/Diamond-Hands/) · [Reproduction guide](docs/REPRODUCTION.md) · [Sensor contract](docs/SENSOR_CONTRACT.md)
 
 I developed Diamond Hands for the [HIM Robotics Open Build Challenge](https://arena.himrobotics.com/challenges/open-build). In simulation, a Unitree G1 follows three receiver routes and tries to catch passes from a fixed machine. Pretrained locomotion moves the robot. A camera estimate times the reach, encoder feedback regulates the fingers, and a separate online PPO experiment learns small arm corrections.
