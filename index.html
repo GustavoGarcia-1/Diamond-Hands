@@ -10,12 +10,11 @@
 </head>
 <body>
 <header class="masthead">
-  <p class="eyebrow">Diamond Hands</p>
-  <h1>Can we teach a robot to play football?</h1>
+  <h1>Diamond Hands</h1>
+  <p class="subtitle">Can we teach a robot to play football?</p>
   <div class="byline"><span>Gustavo Garcia</span><span aria-hidden="true">·</span><span>UC San Diego</span><a class="code-link" href="https://github.com/GustavoGarcia-1/Diamond-Hands"><img src="assets/icons/github.svg" width="16" height="16" alt="" aria-hidden="true">Code</a></div>
 </header>
 <main>
-  <p class="lead">A football receiver has to follow a route, read a moving ball, and absorb its momentum without breaking stride. Diamond Hands studies that coordination in simulation with a Unitree G1, compact Aero hands, and a passing machine at midfield. Pretrained locomotion moves the robot; surveyed cameras guide interception, while finger encoders regulate the grip. The three plays below explore a late reach with the palms turned upward. They are selected experiments, not evidence that catching in stride is solved.</p>
   <section class="demo" aria-label="Route videos">
     <div class="route-tabs" role="tablist" aria-label="Choose a route">
       <button role="tab" id="go-tab" aria-controls="route-video" aria-selected="true" data-video="experiments/go-full-11s.mp4" data-poster="experiments/go-full-11s.jpg" data-title="Go" data-caption="The hands stay compact before the pass, then rise into the receiving cup. Under an experimental contact setting, the ball remains between the hands for several seconds before coming loose after 10.4 s.">Go</button>
@@ -27,6 +26,7 @@
       <figcaption><strong id="route-title">Go.</strong> <span id="route-caption">The hands stay compact before the pass, then rise into the receiving cup. Under an experimental contact setting, the ball remains between the hands for several seconds before coming loose after 10.4 s.</span></figcaption>
     </figure>
   </section>
+  <p class="lead">A football receiver has to follow a route, read a moving ball, and absorb its momentum without breaking stride. Diamond Hands studies that coordination in simulation with a Unitree G1, compact Aero hands, and a passing machine at midfield. Pretrained locomotion moves the robot; surveyed cameras guide interception, while finger encoders regulate the grip. The three plays above explore a late reach with the palms turned upward. They are selected experiments, not evidence that catching in stride is solved.</p>
   <section aria-labelledby="findings-heading">
     <h2 id="findings-heading">Findings</h2>
     <p>The strongest measured improvement came from the grip controller. On 50 previously unused Go throws, finger targets regulated by encoder position retained 34 passes, compared with 2 for the fixed target. Both controllers used the same throws and pretrained locomotion. These were walking receives in simulation.</p>
