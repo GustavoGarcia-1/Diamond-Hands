@@ -3,322 +3,81 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Diamond Hands: Can a humanoid robot catch a football pass?</title>
-<meta name="description" content="A simulation study of a Unitree G1 humanoid receiving football passes on three routes. Encoder feedback raises Go retention from 2 to 34 of 50 fresh throws; a learned Slant arm controller loses to a scripted baseline.">
+<title>Diamond Hands | Can we teach a robot to play football?</title>
+<meta name="description" content="A simulation study of a humanoid receiver following football routes and catching with camera guided late hands.">
 <meta name="author" content="Gustavo Garcia">
-<meta property="og:title" content="Diamond Hands: Can a humanoid robot catch a football pass?">
-<meta property="og:description" content="A simulation study of a Unitree G1 receiving football passes. One clear gain on the Go route, one clear negative result on Slant.">
-<meta property="og:type" content="article">
 <link rel="stylesheet" href="paper.css">
 </head>
 <body>
-
-<header>
-  <h1>Diamond Hands</h1>
-  <p class="subtitle">Can a humanoid robot catch a football pass?</p>
-
-  <div class="byline">
-    <span>Gustavo Garcia</span>
-    <span class="dot" aria-hidden="true">·</span>
-    <span>UC San Diego</span>
-    <a class="code-link" href="https://github.com/GustavoGarcia-1/Diamond-Hands">
-      <img src="assets/icons/github.svg" width="16" height="16" alt=""> Code
-    </a>
-  </div>
+<header class="masthead">
+  <p class="eyebrow">Diamond Hands</p>
+  <h1>Can we teach a robot to play football?</h1>
+  <div class="byline"><span>Gustavo Garcia</span><span aria-hidden="true">·</span><span>UC San Diego</span><a class="code-link" href="https://github.com/GustavoGarcia-1/Diamond-Hands"><img src="assets/icons/github.svg" width="16" height="16" alt="" aria-hidden="true">Code</a></div>
 </header>
-
 <main>
-
-<section class="hero">
-  <div class="route-switch" role="tablist" aria-label="Choose a route">
-    <button role="tab" id="tab-go" aria-controls="player" aria-selected="true" data-clip="plays/aero-go-centerline.mp4" data-poster="plays/aero-go-centerline.webp" data-route="Go" data-def="A straight ten yard stem and a pass from the midfield machine." data-note="Selected full play: receives at 9.146 m and holds the ball through the finish while walking. No qualifying running phases at contact." data-source="plays/aero-go-centerline.json">Go</button>
-    <button role="tab" id="tab-slant" aria-controls="player" aria-selected="false" tabindex="-1" data-clip="plays/aero-slant-centerline.mp4" data-poster="plays/aero-slant-centerline.webp" data-route="Slant" data-def="Two sustained foot plants, then an inward break and a full pass." data-note="Selected full play: early heading changes 42.49° inward before later curling farther; the ball is held through the finish while walking." data-source="plays/aero-slant-centerline.json">Slant</button>
-    <button role="tab" id="tab-out" aria-controls="player" aria-selected="false" tabindex="-1" data-clip="plays/aero-out-centerline.mp4" data-poster="plays/aero-out-centerline.webp" data-route="Out" data-def="A five yard stem, then a forward left break toward the sideline." data-note="Selected full play: breaks at 4.602 m, turns left 81.53°, and holds the ball through the finish while walking. There is no backward exit travel." data-source="plays/aero-out-centerline.json">Out</button>
-  </div>
-
-  <figure class="hero-figure">
-    <video id="player" role="tabpanel" controls playsinline preload="none" poster="plays/aero-go-centerline.webp" src="plays/aero-go-centerline.mp4"
-           aria-label="Selected Go full play"></video>
-    <figcaption>
-      <span class="route-name">Go</span>
-      <span class="route-def">A straight ten yard stem and a pass from the midfield machine.</span>
-      <span class="clip-note">Selected full play: receives at 9.146 m and holds the ball through the finish while walking. No qualifying running phases at contact.</span> <a class="clip-source" href="plays/aero-go-centerline.json">Trial record</a><span class="clip-context"> These selected replays illustrate routes; they are separate from the fifty throw comparisons below.</span>
-    </figcaption>
-  </figure>
-</section>
-
-<h2>Introduction</h2>
-<p>Catching a pass is not catching a ball thrown at you. The receiver runs a route, works out where the ball will arrive, and has to hold on while its own body is still moving. We study that in simulation with a Unitree G1, compact Aero hands, three routes and a fixed passing machine.</p>
-<p>One change helped a lot, and it was not learning. Making the fingers respond to their own encoders raised retained Go catches from 2 of 50 fresh throws to 34. One change did not help at all: a learned arm controller lost to a hand-written baseline on the Slant route. Both results are below, in that order of confidence.</p>
-<p class="abstract-note">Everything here is simulation. No physical robot has caught a football, and every catch shown is a walking catch.</p>
-
-<h2>The words we use</h2>
-<dl class="terms">
-  <dt>Retained catch</dt>
-  <dd>The ball still has real hand support at the final frame, with no help from the torso, the floor or the hand mounts. Everything else is a miss, however convincing the contact looked.</dd>
-
-  <dt>Two-hand control</dt>
-  <dd>Both hands on the ball, with the ball held away from the torso. We also record how long it lasts, in milliseconds.</dd>
-
-  <dt>Torso-first</dt>
-  <dd>The chest reaches the ball before the hands do. On the Out route this is the most common failure and it is not a near miss: the hands never get a turn.</dd>
-
-  <dt>Finger regulation</dt>
-  <dd>Each finger tendon's commanded target follows the finger's measured position instead of a fixed number, so closing slows down when the hand meets the ball.</dd>
-
-  <dt>Scripted baseline</dt>
-  <dd>A hand-written controller. Fixed timing, fixed finger targets, no learning. Every learned result here is measured against this.</dd>
-
-  <dt>Learned arms (PPO)</dt>
-  <dd>A policy trained by reinforcement learning to make small pre-arrival arm corrections. PPO is the training algorithm; the learned part is only the arm offset.</dd>
-
-  <dt>Confirmation set</dt>
-  <dd>Throws generated and frozen before the changed controller was ever run. The old page's development numbers are the ones we tuned against; the fresh confirmation numbers are the ones we trust.</dd>
-
-  <dt>Sim2real</dt>
-  <dd>The gap between behaviour in simulation and on the physical robot. Contact stiffness, actuator transmission and camera noise are the reasons we do not claim a transfer.</dd>
-</dl>
-
-<h2>The setup</h2>
-<p>The receiver is a Unitree G1 with compact Aero hands, thrown to by a fixed machine. Locomotion comes from pretrained G1 controllers that we hold fixed; our work is the interception and the grip.</p>
-<p>Perception uses rendered colour and depth images from surveyed external cameras plus a marker rig. IMU and joint encoders give posture and body configuration. Exact simulator state is used only to score, and never enters a controller.</p>
-<p class="src">Sources: <a href="overnight/sensor-contract.md">sensor contract</a> · <a href="overnight/route-survey.json">route survey</a></p>
-
-<h2>What we started with</h2>
-<p>The first receiver was a scripted pipeline. It localises itself on the field, follows the route, turns to the ball, and at a visual grasp cue it runs a fixed finger-close and a fixed arm cradle. It has no idea whether the hand actually met the ball: the fingers keep closing to the same target whether they are around the ball, beside it, or already squeezing it.</p>
-<p>That worked often enough to be interesting on the Go route (4 of 50 development throws) and almost never on fresh throws (2 of 50). Before changing the robot's body, we tried three different fixes, and one of them was learning:</p>
-
-<ul class="methods">
-  <li><strong>Change when the hands arrive.</strong> Time the arms so the hands meet the ball instead of waiting for it. This became the synchronized-entry candidate.</li>
-  <li><strong>Change how the fingers close.</strong> Keep the fixed timing but let the fingers feel their own position. This became encoder-feedback regulation.</li>
-  <li><strong>Change the arms with learning.</strong> Train a small corrective policy on top of the scripted motion, bounded so it cannot fight the body controller.</li>
-</ul>
-
-<h2>What we compared</h2>
-<p>Each row is a method, not a route. Every comparison uses the same throws on both sides, and "of 50" means fifty throws from a set none of the controllers were tuned on.</p>
-
-<table class="compare">
-  <caption>Counts are retained catches. The baseline is the scripted receiver unless stated otherwise.</caption>
-  <thead>
-    <tr><th scope="col">Method</th><th scope="col">What it does</th><th scope="col">Result</th><th scope="col">Verdict</th></tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Fixed finger close</th>
-      <td>Fingers close to one target at the grasp cue and stop listening.</td>
-      <td>Go: 4 of 50 development, 2 of 50 fresh</td>
-      <td>Starting point</td>
-    </tr>
-    <tr>
-      <th scope="row">Encoder-feedback fingers</th>
-      <td>Finger targets stay 1.5 mm behind measured finger position.</td>
-      <td>Go: 31 of 50 development, 34 of 50 fresh</td>
-      <td class="good">Clear gain</td>
-    </tr>
-    <tr>
-      <th scope="row">Synchronized entry + regulation</th>
-      <td>Hands are timed to arrive with the ball, plus encoder fingers.</td>
-      <td>Out: 8 of 50, original 9 of 50</td>
-      <td class="bad">Rejected</td>
-    </tr>
-    <tr>
-      <th scope="row">Learned arms, 7 fixed cases</th>
-      <td>PPO nudges the arms before predicted arrival.</td>
-      <td>Slant: 4 of 7, scripted 1 of 7</td>
-      <td>Looked promising</td>
-    </tr>
-    <tr>
-      <th scope="row">Learned arms, 50 fresh throws</th>
-      <td>The same policy, frozen, on throws it never trained on.</td>
-      <td>Slant: 12 of 50, scripted 19 of 50</td>
-      <td class="bad">Lost</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2>Our best method</h2>
-<p>The winner is the smallest change in the project. After the visual grasp cue, and for a 0.6&nbsp;s window, each of the eight finger flexors limits requested closure so its commanded target stays at least 1.5&nbsp;mm behind where the finger actually is, restoring over 0.2&nbsp;s afterwards. The six thumb requests are untouched, and so is everything the route controller does.</p>
-<p>In practice that means the fingers are allowed to slow down as they meet something. In these trials the measured finger position limits further requested closure after contact.</p>
-<p class="src">Source: <a href="overnight/finger-regulation.py.txt">finger-regulation.py.txt</a> (verbatim excerpt, constants included)</p>
-
-<h2>Its success rate</h2>
-<p>On the frozen Go confirmation set, retained catches went from 2 of 50 to 34 of 50. The Wilson 95% interval is 54.2–79.2% for the changed controller against 1.1–13.5% for the original. Paired over the same throws, that is 32 gained and none lost, a 64-point improvement with a bootstrap interval of 50–78 points.</p>
-
-<figure>
-  <a href="overnight/go-retention-confirmation.svg"><img src="overnight/go-retention-confirmation.png" alt="Retained Go catches rise from 4 to 31 of 50 development throws, and from 2 to 34 of 50 fresh confirmation throws."></a>
-  <figcaption>Development throws on the left, the frozen confirmation set on the right. The gain survives the move from tuning to fresh throws, which is the main reason we trust it.</figcaption>
-</figure>
-
-<figure>
-  <video src="overnight/go-regulated.mp4" controls playsinline preload="metadata"></video>
-  <figcaption>One retained Go throw with encoder regulation, selected from the study runs: two-hand control for 5.66&nbsp;s. This is a selected throw, not a count.</figcaption>
-</figure>
-
-<p>It is still a narrow result: one frozen controller, one route, throws from a distribution we declared in advance. Nothing here speaks to other distances, other seeds, or a real hand.</p>
-<p class="src">Sources: <a href="overnight/go-confirmation.json">go-confirmation.json</a> · <a href="overnight/go-development.json">go-development.json</a> · <a href="overnight/manifest.json">manifest</a></p>
-
-<h2>Why it performs this way</h2>
-<p>A fixed finger target is an open-loop squeeze. The command keeps asking for more closure after the fingers have already met the ball, so the ball is loaded harder and harder until it finds the one direction with the least support and leaves. That is why the original controller can look excellent in a selected clip and collapse over fifty throws: the outcome depends on where in the squeeze the ball happens to sit.</p>
-<p>Encoder feedback replaces the target with a trailing margin. The fingers can still close fast in free space, because nothing is resisting them, but the commanded target moves with the finger, so contact stops being a competition between two positions. The measured improvement is consistent across the development and fresh confirmation sets: 31 of 50 and 34 of 50. The experiment does not isolate which contact forces caused each catch.</p>
-<p>The Slant result is the mirror image. The learned arms held the ball longer during contact — clean two-hand control rose from 171&nbsp;ms to 873&nbsp;ms on fixed conditions — and still ended with fewer catches. Longer contact is not a catch. The policy was paid for alignment and duration, and it delivered alignment and duration.</p>
-
-<h2>How the reward was written</h2>
-<p>We used separate learning objectives for precontact arm correction and for an earlier route and receiving environment. Neither objective uses simulator contact labels or the evaluator’s physical catch score. Both use camera estimates, IMU, encoders and known commands, but their rewards are not added together in one training run.</p>
-
-<p>The learned arm policy pays for alignment with a camera-predicted intercept, and only for fresh captures before a deadline that can move earlier but never later:</p>
-
-<div class="formula">
-  <span class="eq-line">D<sub>0</sub> = +∞; &nbsp; D<sub>k</sub> = min( D<sub>k−1</sub>, T̂<sub>k</sub> − 2σ<sub>T,k</sub> )</span>
-  <span class="eq-line">φ(e, σ) = ∏<sub>i=1..3</sub> s<sub>i</sub> / √(s<sub>i</sub>² + σ<sub>i</sub>²) · exp( −½ ∑<sub>i</sub> e<sub>i</sub>² / (s<sub>i</sub>² + σ<sub>i</sub>²) )</span>
-  <span class="eq-line">r<sub>k</sub> = 25 · Δt<sub>capture</sub> · φ(e<sub>k</sub>, σ<sub>k</sub>) · 1[fresh, enabled, t<sub>k</sub> &lt; D<sub>k</sub>]</span>
-  <span class="eq-line ind">− Δt · [ c<sub>form</sub> + 2·max(0, 0.9 − u) + 0.05·⟨a²⟩ + 0.02·⟨δ̇²⟩ ]</span>
-</div>
-
-<p class="formula-note">Scales s = (0.12, 0.08, 0.10)&nbsp;m. T̂ is the predicted arrival time and σ<sub>T</sub> its uncertainty; D never moves later. Δt<sub>capture</sub> is the interval since the previous accepted camera capture, capped at 0.08&nbsp;s. u is the IMU upright cosine, a the normalized arm request, and δ the delivered arm residual. The equation writes the per step terms; the code accumulates them across 50&nbsp;Hz callbacks. Larger position uncertainty attenuates alignment credit. No physical possession term appears in this objective.</p>
-
-<p>A separate, earlier route and receiving environment used this 25&nbsp;Hz reward. It was not added to the precontact arm objective above. The route progress and cross track terms use surveyed camera estimates; the reach term uses ball estimates and encoder kinematics, and dwell comes from a visual retention proxy:</p>
-
-<div class="formula">
-  <span class="eq-line">r<sub>t</sub> = 3·clip(Δp<sub>t</sub>, −0.03, 0.03) − 0.012·min(e<sub>path</sub>, 0.5) + 0.018·exp( −(e<sub>reach</sub>/0.16)² )</span>
-  <span class="eq-line">− 0.05·max(0, 0.94 − u) − 0.004·⟨(a<sub>t</sub> − a<sub>t−1</sub>)²⟩ − 0.001·⟨a<sub>t</sub>²⟩</span>
-  <span class="eq-line">+ 0.45·Δmin(dwell<sub>t</sub>, 2&nbsp;s) + 2·1[episode ends, visual retention proxy, not fallen]</span>
-</div>
-
-<p class="formula-note">The terminal bonus is paid at most once for the visual retention proxy at a non-fall episode end. It is not a physical catch label. Progress increments are clipped; route terms require a camera receiver estimate, and the reach term requires a valid ball estimate inside the declared receiving volume. The independent physical evaluator, not this reward, determines retained catches.</p>
-<p class="src">Sources: <a href="overnight/precontact-objective.py.txt">precontact objective</a> · <a href="overnight/receiving-reward.py.txt">receiving reward</a> · <a href="overnight/learning-protocol.md">learning protocol</a></p>
-
-<h2>The loss we kept</h2>
-<p>Slant is the route where learning looked right. On seven fixed conditions, the PPO arm policy raised clean two-hand control from 171&nbsp;ms to 873&nbsp;ms by moving the arms before the predicted arrival, and retained 4 of 7 against 1 of 7.</p>
-<p>Frozen and run on 50 fresh throws against the scripted baseline with the same finger limit, it retained 12 of 50 against 19. Six throws were gained, thirteen were lost. The paired difference is −14 points, with a bootstrap interval of −30 to +2.</p>
-
-<figure>
-  <a href="overnight/slant-fresh-confirmation.svg"><img src="overnight/slant-fresh-confirmation.png" alt="Fresh Slant confirmation: scripted arms retain 19 of 50 throws, learned arms 12 of 50."></a>
-  <figcaption>Fifty matched throws, same finger limit on both sides. Holding the ball longer during contact did not translate into holding it at the end, which is the result the manifest records as no learning promotion.</figcaption>
-</figure>
-
-<p>Out is the other negative, and it fails earlier in the play. In an audit of 150 archived plays, 32 of 50 original Out throws hit the torso before the hands, and 38 never reached 0.75&nbsp;s of clean two-hand control. A candidate that combined synchronized entry with finger regulation retained 8 of 50 against 9 for the original, so we kept the original.</p>
-
-<figure>
-  <a href="overnight/out-original-distribution.svg"><img src="overnight/out-original-distribution.png" alt="Out original controller retains 9 of 50 throws, the combined candidate 8 of 50."></a>
-  <figcaption>All fifty matched throws are included. A better-looking selected play would not change this count.</figcaption>
-</figure>
-
-<p class="src">Sources: <a href="overnight/slant-fresh-confirmation.png">Slant confirmation figure</a> · <a href="overnight/slant-factorial.json">factorial</a> · <a href="overnight/out-development.json">Out development</a> · <a href="overnight/entry-retention.json">entry audit</a></p>
-
-<h2>Missed catches and falls</h2>
-<p>A dropped pass is not only a missed catch. It becomes a safety problem when the ball rolls into the feet of a walking robot, and on hardware a fall is the expensive event: damaged joints, a reset that costs minutes, and a risk to anyone standing nearby. That is why we spent effort on the failure case and not only on the catch rate.</p>
-<p>In one natural failed Go catch, a camera spots the loose ball inside the predicted foot corridor and cancels the walking command for 250&nbsp;ms. The warning arrives at 6.88&nbsp;s; the ball reaches the ankle at 7.75&nbsp;s.</p>
-
-<figure>
-  <video src="overnight/missed-catch-trip.mp4" controls playsinline preload="metadata"></video>
-  <figcaption>The baseline: the missed catch ends in a fall. Six nearby baseline cases were already non-falls, and a successful-catch control was unaffected, so this is one prevented trip, not seven recoveries.</figcaption>
-</figure>
-
-<table>
-  <caption>One full twelve-second matched pair in the current scene.</caption>
-  <thead>
-    <tr><th scope="col">Measure</th><th scope="col">Missed catch</th><th scope="col">With visual avoidance</th></tr>
-  </thead>
-  <tbody>
-    <tr><th scope="row">Peak head contact force</th><td>405.59 N</td><td>0 N</td></tr>
-    <tr><th scope="row">Peak floor force outside the feet</th><td>3,935.71 N</td><td>0 N</td></tr>
-    <tr><th scope="row">Largest 150 ms floor impulse</th><td>91.37 N·s</td><td>0 N·s</td></tr>
-  </tbody>
-</table>
-
-<p>This is scripted avoidance with a camera added, not a learned recovery and not a return to standing. The reason it belongs here is sim2real: the video is evidence about a failure mode, not evidence that the catch transfers to hardware.</p>
-<p class="src">Sources: <a href="overnight/avoidance-independent.json">avoidance audit</a> · <a href="overnight/missed-catch-avoidance.mp4">avoidance clip</a></p>
-
-<h2>What is left to fix</h2>
-<ul class="limits">
-  <li><strong>Hardware, entirely.</strong> No physical G1 has run any of this. Contact materials, actuator transmissions and camera noise are uncalibrated, so the 1.5&nbsp;mm margin is a simulation number until someone measures it on a real finger.</li>
-  <li><strong>Out geometry.</strong> Torso-first contact in 32 of 50 throws is a reach and approach problem, not a grip problem. Finger regulation cannot help a hand that never gets to the ball.</li>
-  <li><strong>Slant across the body.</strong> The learned arms bought contact time and lost catches. The next attempt needs a retention signal the policy can actually observe late in the play, not just alignment.</li>
-  <li><strong>Running catches.</strong> Every displayed receive qualifies as walking. Catching inside a recurrent running gait is open.</li>
-  <li><strong>Seed variance.</strong> Each result is one frozen checkpoint. None of these intervals describe seed-to-seed spread, so a rerun with a different seed is the honest next test.</li>
-  <li><strong>Deployment</strong> needs surveyed cameras, a marker rig, a timestamped link to the passing machine and an Aero hand driver. No ARM64 controller image exists.</li>
-</ul>
-
-<h2>Reproduce it</h2>
-<p>The simulator and tests are in the repository. This command renders a short flight episode and writes the sensor and truth arrays; it needs only <code>numpy</code> and <code>mujoco</code>.</p>
-<pre><code>sh run.sh</code></pre>
-<p>It prints <code>Rendered 60 MuJoCo RGB-D frames at 30 Hz</code> and writes <code>flight-sensor.npz</code>, <code>flight-truth.npz</code> and <code>flight-overview.npz</code>. It does not re-render the videos here: those come from frozen study runs, whose simulator trees are too large to ship.</p>
-
-<h2>References</h2>
-<p class="ref-intro">Every file below is served from this site, and each section names the ones it relies on.</p>
-<ol class="refs">
-  <li><a href="overnight/manifest.json">overnight/manifest.json</a> — scope of the verified evidence, SHA-256 for every published figure and video.</li>
-  <li><a href="overnight/experiments.json">overnight/experiments.json</a> — run receipts, checkpoints, counts, and the no-promotion decisions.</li>
-  <li><a href="overnight/go-confirmation.json">overnight/go-confirmation.json</a> — the 50 fresh Go throws, 2 against 34.</li>
-  <li><a href="overnight/go-development.json">overnight/go-development.json</a> — the 50 development Go throws, 4 against 31.</li>
-  <li><a href="overnight/slant-fresh-confirmation.png">overnight/slant-fresh-confirmation.png</a> — 50 fresh Slant throws, 19 scripted against 12 learned.</li>
-  <li><a href="overnight/slant-factorial.json">overnight/slant-factorial.json</a> — the seven fixed conditions and the 171&nbsp;ms to 873&nbsp;ms contact change.</li>
-  <li><a href="overnight/out-development.json">overnight/out-development.json</a> — Out original 9 of 50 against candidate 8 of 50.</li>
-  <li><a href="overnight/entry-retention.json">overnight/entry-retention.json</a> — the 150-play audit behind 32 torso-first and 38 short holds.</li>
-  <li><a href="overnight/finger-regulation.py.txt">overnight/finger-regulation.py.txt</a> — the 1.5&nbsp;mm closure rule, 0.6&nbsp;s window, 0.2&nbsp;s restore.</li>
-  <li><a href="overnight/precontact-objective.py.txt">overnight/precontact-objective.py.txt</a> — the arm policy objective and its 25× alignment weight.</li>
-  <li><a href="overnight/receiving-reward.py.txt">overnight/receiving-reward.py.txt</a> — the 25&nbsp;Hz route and receiving reward, term for term.</li>
-  <li><a href="overnight/learning-protocol.md">overnight/learning-protocol.md</a> — what the actor, critic and reward are allowed to see.</li>
-  <li><a href="overnight/sensor-contract.md">overnight/sensor-contract.md</a> — the strict sensor boundary.</li>
-  <li><a href="overnight/avoidance-independent.json">overnight/avoidance-independent.json</a> — the matched fall pair, forces and timing.</li>
-  <li><a href="overnight/route-survey.json">overnight/route-survey.json</a> — surveyed route geometry and receiving planes.</li>
-  <li><a href="plays/go.json">plays/go.json</a>, <a href="plays/slant.json">plays/slant.json</a>, <a href="plays/out.json">plays/out.json</a> — provenance for the three switch clips, including their controlled release parameters.</li>
-</ol>
-
-<p class="archive">The earlier 600-trial study, including the methods we abandoned, is preserved unedited in the <a href="study-before-overnight.html">previous write-up</a>.</p>
-
+  <p class="lead">A football receiver has to follow a route, read a moving ball, and absorb its momentum without breaking stride. Diamond Hands studies that coordination in simulation with a Unitree G1, compact Aero hands, and a passing machine at midfield. Pretrained locomotion moves the robot; surveyed cameras guide interception, while finger encoders regulate the grip. The three plays below explore a late reach with the palms turned upward. They are selected experiments, not evidence that catching in stride is solved.</p>
+  <section class="demo" aria-label="Route videos">
+    <div class="route-tabs" role="tablist" aria-label="Choose a route">
+      <button role="tab" id="go-tab" aria-controls="route-video" aria-selected="true" data-video="experiments/go-full-11s.mp4" data-poster="experiments/go-full-11s.jpg" data-title="Go" data-caption="The hands stay compact before the pass, then rise into the receiving cup. Under an experimental contact setting, the ball remains between the hands for several seconds before coming loose after 10.4 s.">Go</button>
+      <button role="tab" id="slant-tab" aria-controls="route-video" aria-selected="false" tabindex="-1" data-video="experiments/slant-lower-palms.mp4" data-poster="experiments/slant-lower-palms.jpg" data-title="Slant" data-caption="After the inward cut, the lower palms meet the pass. Two hand control lasts 22 ms; the ball is not retained.">Slant</button>
+      <button role="tab" id="out-tab" aria-controls="route-video" aria-selected="false" tabindex="-1" data-video="experiments/out-late-palms-up.mp4" data-poster="experiments/out-late-palms-up.jpg" data-title="Out" data-caption="A leftward break leads into a lower palm receive. Two hand control lasts 0.855 s, then a hand mount supports the ball, so the strict catch check fails.">Out</button>
+    </div>
+    <figure>
+      <video id="route-video" role="tabpanel" aria-labelledby="go-tab" controls playsinline preload="metadata" poster="experiments/go-full-11s.jpg" src="experiments/go-full-11s.mp4"></video>
+      <figcaption><strong id="route-title">Go.</strong> <span id="route-caption">The hands stay compact before the pass, then rise into the receiving cup. Under an experimental contact setting, the ball remains between the hands for several seconds before coming loose after 10.4 s.</span></figcaption>
+    </figure>
+  </section>
+  <section aria-labelledby="findings-heading">
+    <h2 id="findings-heading">Findings</h2>
+    <p>The strongest measured improvement came from the grip controller. On 50 previously unused Go throws, finger targets regulated by encoder position retained 34 passes, compared with 2 for the fixed target. Both controllers used the same throws and pretrained locomotion. These were walking receives in simulation.</p>
+    <div class="findings" aria-label="Matched trial outcomes">
+      <p><strong>Go <span>34 / 50</span></strong> with encoder regulation, compared with 2 / 50 for fixed closure on fresh throws.</p>
+      <p><strong>Slant <span>12 / 50</span></strong> with learned arm corrections, compared with 19 / 50 for scripted arms on fresh throws.</p>
+      <p><strong>Out <span>8 / 50</span></strong> with timed entry and regulation, compared with 9 / 50 for the original controller on development throws.</p>
+    </div>
+    <p>The Slant experiment explains why contact time alone is insufficient. PPO improved two hand contact on seven development conditions, yet the resulting policy lost to scripted arms on fresh throws. Out showed a similar limit: bringing the hands to the ball did not reliably keep the ball away from the torso and hand mounts.</p>
+  </section>
+  <section aria-labelledby="method-heading">
+    <h2 id="method-heading">Method</h2>
+    <p>The robot receives camera estimates of the ball and its own position, together with IMU and joint readings. After the visual grasp cue, the Go grip controller limits requested finger closure using the measured encoder position. The arm learning study instead applies bounded corrections before predicted arrival. These are separate interventions; the successful Go result is scripted finger regulation, not learned catching.</p>
+    <p>For the arm study, positive reward depends on camera predicted alignment and fades as the estimate becomes less certain:</p>
+    <div class="equation" role="math" aria-label="Visual alignment reward">
+      <span>φ(e, σ) = ∏<sub>i=1</sub><sup>3</sup> s<sub>i</sub> / √(s<sub>i</sub>² + σ<sub>i</sub>²) · exp[−½ Σ<sub>i</sub> e<sub>i</sub>² / (s<sub>i</sub>² + σ<sub>i</sub>²)]</span>
+      <span>r<sub>visual</sub> = 25 Δt<sub>camera</sub> φ(e, σ), for fresh observations before the estimated arrival deadline.</span>
+    </div>
+    <p class="equation-note">Here <em>e</em> is intercept error estimated from images, <em>σ</em> its uncertainty, and <em>s</em> = (0.12, 0.08, 0.10) m. Posture, balance, and action costs are applied separately. Simulator contacts and exact ball state are used to evaluate a rollout, never to award this policy a catch.</p>
+  </section>
+  <section aria-labelledby="limits-heading">
+    <h2 id="limits-heading">Limits and safety</h2>
+    <p>A dropped ball can roll into the robot’s feet. In one matched simulation play, a camera based stop prevented a trip that otherwise ended in a fall. This is scripted avoidance, not learned recovery. Work on controlled, soft falling offers a direction for protecting the robot when stopping is too late.</p>
+    <p>No physical G1 has run this system. Surveyed cameras, Aero hands, the passing machine, contact materials, and actuator limits still need integration and measurement. The clips above use different experimental settings and are not the 50 throw comparison trials.</p>
+  </section>
 </main>
-
 <footer>
-  <p>Diamond Hands · Gustavo Garcia · University of California San Diego</p>
-  <p class="links">
-    <a href="https://github.com/GustavoGarcia-1/Diamond-Hands">Code</a>
-    <a href="overnight/manifest.json">Evidence manifest</a>
-    <a href="overnight/experiments.json">Experiment record</a>
-    <a href="overnight/sensor-contract.md">Sensor contract</a>
-  </p>
-  <p class="stamp">Simulation results, November 15, 2026.</p>
+  <p>Related work: <a href="https://arth-shukla.github.io/catch-it-all/">Catch It All!</a> studies visual catching with dexterous hands. <a href="https://arxiv.org/html/2511.10635v1">Robot Crash Course</a> studies soft, stylized falling.</p>
+  <p>Diamond Hands · Gustavo Garcia · UC San Diego</p>
 </footer>
-
 <script>
-(function () {
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.route-switch [role="tab"]'));
-  var player = document.getElementById('player');
-  var name = document.querySelector('.route-name');
-  var def = document.querySelector('.route-def');
-  var note = document.querySelector('.clip-note');
-  var source = document.querySelector('.clip-source');
-
-  function select(tab) {
-    tabs.forEach(function (t) {
-      var active = t === tab;
-      t.setAttribute('aria-selected', active ? 'true' : 'false');
-      t.tabIndex = active ? 0 : -1;
-    });
-    player.pause();
-    player.poster = tab.dataset.poster;
-    player.src = tab.dataset.clip;
-    player.setAttribute('aria-label', 'Selected ' + tab.dataset.route + ' full play');
-    name.textContent = tab.dataset.route;
-    def.textContent = tab.dataset.def;
-    note.textContent = tab.dataset.note;
-    source.href = tab.dataset.source;
-    player.load();
-  }
-
-  tabs.forEach(function (tab) {
-    tab.addEventListener('click', function () { select(tab); });
-    tab.addEventListener('keydown', function (event) {
-      var i = tabs.indexOf(tab), next = null;
-      if (event.key === 'ArrowRight') next = tabs[(i + 1) % tabs.length];
-      else if (event.key === 'ArrowLeft') next = tabs[(i - 1 + tabs.length) % tabs.length];
-      else if (event.key === 'Home') next = tabs[0];
-      else if (event.key === 'End') next = tabs[tabs.length - 1];
-      if (next) { event.preventDefault(); next.focus(); select(next); }
-    });
+const tabs = [...document.querySelectorAll('.route-tabs [role="tab"]')];
+const video = document.getElementById('route-video');
+const title = document.getElementById('route-title');
+const caption = document.getElementById('route-caption');
+function select(tab) {
+  tabs.forEach(item => { const active = item === tab; item.setAttribute('aria-selected', String(active)); item.tabIndex = active ? 0 : -1; });
+  video.pause(); video.src = tab.dataset.video; video.poster = tab.dataset.poster;
+  video.setAttribute('aria-labelledby', tab.id);
+  title.textContent = tab.dataset.title + '.'; caption.textContent = tab.dataset.caption; video.load();
+}
+tabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => select(tab));
+  tab.addEventListener('keydown', event => {
+    let next = null;
+    if (event.key === 'ArrowRight') next = tabs[(index + 1) % tabs.length];
+    if (event.key === 'ArrowLeft') next = tabs[(index - 1 + tabs.length) % tabs.length];
+    if (event.key === 'Home') next = tabs[0]; if (event.key === 'End') next = tabs[tabs.length - 1];
+    if (next) { event.preventDefault(); next.focus(); select(next); }
   });
-})();
+});
 </script>
-
 </body>
 </html>
