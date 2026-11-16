@@ -30,12 +30,20 @@
   <section aria-labelledby="findings-heading">
     <h2 id="findings-heading">Findings</h2>
     <p>The strongest measured improvement came from the grip controller. On 50 previously unused Go throws, finger targets regulated by encoder position retained 34 passes, compared with 2 for the fixed target. Both controllers used the same throws and pretrained locomotion. These were walking receives in simulation.</p>
-    <div class="findings" aria-label="Matched trial outcomes">
-      <p><strong>Go <span>34 / 50</span></strong> with encoder regulation, compared with 2 / 50 for fixed closure on fresh throws.</p>
-      <p><strong>Slant <span>12 / 50</span></strong> with learned arm corrections, compared with 19 / 50 for scripted arms on fresh throws.</p>
-      <p><strong>Out <span>8 / 50</span></strong> with timed entry and regulation, compared with 9 / 50 for the original controller on development throws.</p>
+    <p>To test whether perception alone explained the failures, we also replayed the original controller on the same 50 throws per route with different ball observations. The table reports retained catches, not brief hand contact.</p>
+    <div class="table-wrap" role="region" aria-label="Observation stress test results" tabindex="0">
+      <table>
+        <caption>Original matched simulation study, 50 throws per route. The uncertainty floor is a separate follow up on those throws.</caption>
+        <thead><tr><th scope="col">Route</th><th scope="col">Camera estimate</th><th scope="col">Exact ball, near zero uncertainty</th><th scope="col">Exact ball, 1 mm uncertainty floor</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Go</th><td>4 / 50</td><td>0 / 50</td><td>2 / 50</td></tr>
+          <tr><th scope="row">Out</th><td>9 / 50</td><td>0 / 50</td><td>4 / 50</td></tr>
+          <tr><th scope="row">Slant</th><td>0 / 50</td><td>0 / 50</td><td>0 / 50</td></tr>
+        </tbody>
+      </table>
     </div>
-    <p>The Slant experiment explains why contact time alone is insufficient. PPO improved two hand contact on seven development conditions, yet the resulting policy lost to scripted arms on fresh throws. Out showed a similar limit: bringing the hands to the ball did not reliably keep the ball away from the torso and hand mounts.</p>
+    <p>Exact ball position is privileged simulator information, not a harder pass. Supplying it with almost no stated uncertainty made the tracker reject otherwise usable flight fits. A small uncertainty floor restored some catches, but the diagnostic still underperformed the camera controller. These tests exposed an estimator mismatch; they are neither a deployable policy nor an upper bound on what a robot could catch.</p>
+    <p>The newer Go finger result above used a different controller and a fresh confirmation set, so its 34 / 50 should not be read as another column of this table. On separate fresh Slant throws, PPO arm corrections retained 12 / 50 against 19 / 50 for scripted arms. A timed Out entry retained 8 / 50 against 9 / 50 in development. Longer contact did not reliably become final possession.</p>
   </section>
   <section aria-labelledby="method-heading">
     <h2 id="method-heading">Method</h2>
@@ -47,10 +55,21 @@
     </div>
     <p class="equation-note">Here <em>e</em> is intercept error estimated from images, <em>σ</em> its uncertainty, and <em>s</em> = (0.12, 0.08, 0.10) m. Posture, balance, and action costs are applied separately. Simulator contacts and exact ball state are used to evaluate a rollout, never to award this policy a catch.</p>
   </section>
-  <section aria-labelledby="limits-heading">
-    <h2 id="limits-heading">Limits and safety</h2>
-    <p>A dropped ball can roll into the robot’s feet. In one matched simulation play, a camera based stop prevented a trip that otherwise ended in a fall. This is scripted avoidance, not learned recovery. Work on controlled, soft falling offers a direction for protecting the robot when stopping is too late.</p>
-    <p>No physical G1 has run this system. Surveyed cameras, Aero hands, the passing machine, contact materials, and actuator limits still need integration and measurement. The clips above use different experimental settings and are not the 50 throw comparison trials.</p>
+  <section aria-labelledby="safety-heading">
+    <h2 id="safety-heading">Responding to a fall</h2>
+    <p>A missed pass can become a fall when the robot loses balance or the loose ball reaches its feet. We tested a small IMU guided safety response on a complete receiver play as a first step toward safer physical trials. The early brace reduced simulated peak head contact from 1,183 N to 77 N, then settled on the ground. It did not stand back up; a separate balance stop prevented floor contact by giving up the catch. These are scripted responses on one simulated play, not a learned recovery or a hardware safety guarantee.</p>
+    <div class="fall-tabs" role="tablist" aria-label="Fall response video">
+      <button role="tab" id="brace-tab" aria-controls="fall-video" aria-selected="true" data-video="falls/play-visual-shallow-brace.mp4" data-poster="falls/play-visual-shallow-brace.jpg" data-caption="Early brace: the robot lands with lower head impact and settles on the ground. It does not return to standing.">Early brace</button>
+      <button role="tab" id="baseline-tab" aria-controls="fall-video" aria-selected="false" tabindex="-1" data-video="falls/play-baseline.mp4" data-poster="falls/play-baseline.jpg" data-caption="Baseline: the failed receive ends in a fall, with 1,183 N peak simulated head contact.">Baseline fall</button>
+      <button role="tab" id="balance-tab" aria-controls="fall-video" aria-selected="false" tabindex="-1" data-video="falls/play-visual-balance.mp4" data-poster="falls/play-visual-balance.jpg" data-caption="Balance stop: the robot abandons the catch and remains standing without nonfoot floor contact.">Balance stop</button>
+    </div>
+    <figure><video id="fall-video" role="tabpanel" aria-labelledby="brace-tab" controls playsinline preload="metadata" poster="falls/play-visual-shallow-brace.jpg" src="falls/play-visual-shallow-brace.mp4"></video><figcaption id="fall-caption">Early brace: the robot lands with lower head impact and settles on the ground. It does not return to standing.</figcaption></figure>
+    <p>This safety study was motivated by the possibility of eventually trying the receiver on a real G1. Disney Research’s controlled falling work points toward a learned response that could protect vulnerable components and guide the final pose; we have not reproduced that policy.</p>
+  </section>
+  <section aria-labelledby="conclusion-heading">
+    <h2 id="conclusion-heading">Where this leads</h2>
+    <p>Diamond Hands gives us a measured starting point: encoder feedback substantially improved Go retention on fresh simulated throws, while Slant, Out, and the late hands examples show where route motion, perception, and impact handling still fail. The next study should calibrate ball and hand contact, integrate the actual cameras and Aero hand driver, test across varied friction and throws, and repeat learning with more than one training seed. A sensor based possession estimate and a qualified fall response would make the controller more credible outside simulation.</p>
+    <p>That is the path to a supervised real world attempt. Today’s results are simulation results, and the privileged ball diagnostic cannot transfer to hardware. The value of this work is that the successful and failed plays are measured under explicit conditions, giving us a way to improve the receiver without mistaking a compelling video for a reliable catch.</p>
   </section>
 </main>
 <footer>
@@ -76,6 +95,24 @@ tabs.forEach((tab, index) => {
     if (event.key === 'ArrowLeft') next = tabs[(index - 1 + tabs.length) % tabs.length];
     if (event.key === 'Home') next = tabs[0]; if (event.key === 'End') next = tabs[tabs.length - 1];
     if (next) { event.preventDefault(); next.focus(); select(next); }
+  });
+});
+const fallTabs = [...document.querySelectorAll('.fall-tabs [role="tab"]')];
+const fallVideo = document.getElementById('fall-video');
+const fallCaption = document.getElementById('fall-caption');
+function selectFall(tab) {
+  fallTabs.forEach(item => { const active = item === tab; item.setAttribute('aria-selected', String(active)); item.tabIndex = active ? 0 : -1; });
+  fallVideo.pause(); fallVideo.src = tab.dataset.video; fallVideo.poster = tab.dataset.poster;
+  fallVideo.setAttribute('aria-labelledby', tab.id); fallCaption.textContent = tab.dataset.caption; fallVideo.load();
+}
+fallTabs.forEach((tab, index) => {
+  tab.addEventListener('click', () => selectFall(tab));
+  tab.addEventListener('keydown', event => {
+    let next = null;
+    if (event.key === 'ArrowRight') next = fallTabs[(index + 1) % fallTabs.length];
+    if (event.key === 'ArrowLeft') next = fallTabs[(index - 1 + fallTabs.length) % fallTabs.length];
+    if (event.key === 'Home') next = fallTabs[0]; if (event.key === 'End') next = fallTabs[fallTabs.length - 1];
+    if (next) { event.preventDefault(); next.focus(); selectFall(next); }
   });
 });
 </script>
