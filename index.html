@@ -10,7 +10,7 @@
 </head>
 <body>
 <header class="masthead">
-  <h1><em>Diamond Hands:</em> Can we teach a robot to play football?</h1>
+  <h1><em><span class="brand-diamond">Diamond</span> <span class="brand-silver">Hands:</span></em> Can we teach a robot to play football?</h1>
   <p class="author">Gustavo Garcia</p>
   <p class="affiliation">UC San Diego</p>
   <a class="code-link" href="https://github.com/GustavoGarcia-1/Diamond-Hands"><img src="assets/icons/github.svg" width="18" height="18" alt="" aria-hidden="true">Code</a>
@@ -27,7 +27,7 @@
       <figcaption><strong id="route-title">Go.</strong> <span id="route-caption">The hands stay compact before the pass, then rise into the receiving cup. Under an experimental contact setting, the ball remains between the hands for several seconds before coming loose after 10.4 s.</span></figcaption>
     </figure>
   </section>
-  <p class="lead">A football receiver has to follow a route, read a moving ball, and absorb its momentum without breaking stride. Diamond Hands studies that coordination in simulation with a Unitree G1, compact Aero hands, and a passing machine at midfield. Pretrained locomotion moves the robot; surveyed cameras guide interception, while finger encoders regulate the grip. The three plays above explore a late reach with the palms turned upward. They are selected experiments, not evidence that catching in stride is solved.</p>
+  <p class="lead">We developed Diamond Hands for the <a href="https://arena.himrobotics.com/challenges/open-build">HIM Robotics Open Build Challenge</a>. We try three football routes: Go runs straight downfield for about ten yards, Slant cuts roughly 45° inward after its opening steps, and Out runs five yards before turning toward the sideline. A receiver has to follow each route, read a moving ball, and absorb its momentum without breaking stride. We study that coordination in simulation with a Unitree G1, compact Aero hands, and a passing machine at midfield. Pretrained locomotion moves the robot; surveyed cameras guide interception, while finger encoders regulate the grip. The selected plays above explore a late reach with the palms turned upward.</p>
   <section aria-labelledby="findings-heading">
     <h2 id="findings-heading">Findings</h2>
     <p>The strongest measured improvement came from the grip controller. On 50 previously unused Go throws, finger targets regulated by encoder position retained 34 passes, compared with 2 for the fixed target. Both controllers used the same throws and pretrained locomotion. These were walking receives in simulation.</p>
@@ -50,9 +50,19 @@
     <h2 id="method-heading">Method</h2>
     <p>The robot receives camera estimates of the ball and its own position, together with IMU and joint readings. After the visual grasp cue, the Go grip controller limits requested finger closure using the measured encoder position. The arm learning study instead applies bounded corrections before predicted arrival. These are separate interventions; the successful Go result is scripted finger regulation, not learned catching.</p>
     <p>For the arm study, positive reward depends on camera predicted alignment and fades as the estimate becomes less certain:</p>
-    <div class="equation" role="math" aria-label="Visual alignment reward">
-      <span>φ(e, σ) = ∏<sub>i=1</sub><sup>3</sup> s<sub>i</sub> / √(s<sub>i</sub>² + σ<sub>i</sub>²) · exp[−½ Σ<sub>i</sub> e<sub>i</sub>² / (s<sub>i</sub>² + σ<sub>i</sub>²)]</span>
-      <span>r<sub>visual</sub> = 25 Δt<sub>camera</sub> φ(e, σ), for fresh observations before the estimated arrival deadline.</span>
+    <div class="equation" aria-label="Visual alignment reward equations">
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Alignment score phi of e and sigma"><mrow>
+        <mi>φ</mi><mo>(</mo><mi>e</mi><mo>,</mo><mi>σ</mi><mo>)</mo><mo>=</mo>
+        <munderover><mo>∏</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mn>3</mn></munderover>
+        <mfrac><msub><mi>s</mi><mi>i</mi></msub><msqrt><msup><msub><mi>s</mi><mi>i</mi></msub><mn>2</mn></msup><mo>+</mo><msup><msub><mi>σ</mi><mi>i</mi></msub><mn>2</mn></msup></msqrt></mfrac>
+        <mo>·</mo><mi mathvariant="normal">exp</mi><mo>[</mo><mo>−</mo><mfrac><mn>1</mn><mn>2</mn></mfrac>
+        <munder><mo>∑</mo><mi>i</mi></munder>
+        <mfrac><msup><msub><mi>e</mi><mi>i</mi></msub><mn>2</mn></msup><mrow><msup><msub><mi>s</mi><mi>i</mi></msub><mn>2</mn></msup><mo>+</mo><msup><msub><mi>σ</mi><mi>i</mi></msub><mn>2</mn></msup></mrow></mfrac><mo>]</mo>
+      </mrow></math>
+      <math xmlns="http://www.w3.org/1998/Math/MathML" display="block" aria-label="Visual reward equals 25 times camera time step times alignment score"><mrow>
+        <msub><mi>r</mi><mtext>visual</mtext></msub><mo>=</mo><mn>25</mn><msub><mi>Δt</mi><mtext>camera</mtext></msub><mi>φ</mi><mo>(</mo><mi>e</mi><mo>,</mo><mi>σ</mi><mo>)</mo>
+      </mrow></math>
+      <p class="equation-condition"><span class="math-scroll-hint">Swipe across the equation to see it in full. </span>Applied only to fresh observations before the predicted arrival deadline.</p>
     </div>
     <p class="equation-note">Here <em>e</em> is intercept error estimated from images, <em>σ</em> its uncertainty, and <em>s</em> = (0.12, 0.08, 0.10) m. Posture, balance, and action costs are applied separately. Simulator contacts and exact ball state are used to evaluate a rollout, never to award this policy a catch.</p>
   </section>
@@ -68,13 +78,14 @@
     <p>This safety study was motivated by the possibility of eventually trying the receiver on a real G1. Disney Research’s controlled falling work points toward a learned response that could protect vulnerable components and guide the final pose; we have not reproduced that policy.</p>
   </section>
   <section aria-labelledby="conclusion-heading">
-    <h2 id="conclusion-heading">Where this leads</h2>
+    <h2 id="conclusion-heading">Conclusion</h2>
     <p>Diamond Hands gives us a measured starting point: encoder feedback substantially improved Go retention on fresh simulated throws, while Slant, Out, and the late hands examples show where route motion, perception, and impact handling still fail. The next study should calibrate ball and hand contact, integrate the actual cameras and Aero hand driver, test across varied friction and throws, and repeat learning with more than one training seed. A sensor based possession estimate and a qualified fall response would make the controller more credible outside simulation.</p>
     <p>That is the path to a supervised real world attempt. Today’s results are simulation results, and the privileged ball diagnostic cannot transfer to hardware. The value of this work is that the successful and failed plays are measured under explicit conditions, giving us a way to improve the receiver without mistaking a compelling video for a reliable catch.</p>
   </section>
 </main>
 <footer>
   <p>Related work: <a href="https://arth-shukla.github.io/catch-it-all/">Catch It All!</a> studies visual catching with dexterous hands. <a href="https://arxiv.org/html/2511.10635v1">Robot Crash Course</a> studies soft, stylized falling.</p>
+  <p>Website design inspired by <a href="https://arth-shukla.github.io/catch-it-all/">Catch It All!</a> and the pages it credits: the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> and <a href="https://nerfies.github.io/">Nerfies</a>.</p>
   <p>Diamond Hands · Gustavo Garcia · UC San Diego</p>
 </footer>
 <script>

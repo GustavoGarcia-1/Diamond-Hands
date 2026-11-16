@@ -5,7 +5,12 @@ body { margin:0; background:var(--paper); color:var(--ink); font:17px/1.65 Georg
 .masthead, main, footer { width:calc(100% - 2.5rem); max-width:60rem; margin-inline:auto; }
 .masthead { padding:3.2rem 0 1.8rem; text-align:center; }
 h1 { max-width:58rem; margin:0 auto; font:600 clamp(2.5rem,4.1vw,3.35rem)/1.12 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; letter-spacing:-.035em; }
-h1 em { color:#1d4fb4; font-style:italic; }
+h1 em { font-style:italic; }
+h1 .brand-diamond { color:#0b849d; text-shadow:0 0 11px rgba(47,199,222,.25); animation:diamond-light 4.8s ease-in-out infinite; }
+h1 .brand-silver { color:#68777e; text-shadow:0 0 11px rgba(143,162,170,.25); animation:silver-light 4.8s ease-in-out infinite; }
+@keyframes diamond-light { 0%,100% { color:#0b849d; text-shadow:0 0 11px rgba(47,199,222,.25); } 50% { color:#68777e; text-shadow:0 0 11px rgba(143,162,170,.25); } }
+@keyframes silver-light { 0%,100% { color:#68777e; text-shadow:0 0 11px rgba(143,162,170,.25); } 50% { color:#0b849d; text-shadow:0 0 11px rgba(47,199,222,.25); } }
+@media (prefers-reduced-motion:reduce) { h1 .brand-diamond,h1 .brand-silver { animation:none; } }
 .author { margin:1.5rem auto .15rem; font:400 1.14rem/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
 .affiliation { margin:0 auto; color:var(--muted); font:400 1rem/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
 .code-link { display:inline-flex; align-items:center; gap:.45rem; margin-top:1.25rem; padding:.43rem 1rem; border-radius:999px; background:#303234; color:#fff; text-decoration:none; font:500 .9rem/1.2 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
@@ -18,7 +23,7 @@ p { max-width:45rem; margin:0 0 1.15rem; }
 .route-tabs button[aria-selected="true"] { color:var(--ink); border-color:var(--green); }
 a { color:var(--ink); text-underline-offset:.16em; }
 a:hover { color:var(--green); }
-.code-link:hover { color:#fff; background:#1d4fb4; }
+.code-link:hover { color:#fff; background:var(--green); }
 .route-tabs button:focus-visible, a:focus-visible { outline:2px solid var(--green); outline-offset:4px; }
 figure { margin:1rem 0 2.6rem; }
 figure video { display:block; width:100%; aspect-ratio:16/9; background:#091218; object-fit:contain; }
@@ -26,11 +31,14 @@ figcaption { max-width:53rem; padding-top:.75rem; color:var(--muted); font:.86re
 figcaption strong { color:var(--ink); }
 section:not(.demo) { border-top:1px solid var(--rule); padding:1.9rem 0 .55rem; }
 h2 { margin:0 0 1rem; font:400 1.78rem/1.2 Georgia,serif; letter-spacing:-.018em; }
-.equation { max-width:56rem; overflow-x:auto; display:grid; gap:.5rem; padding:1rem 1.15rem; margin:.8rem 0; background:#eef2ef; color:#18392c; font:.82rem/1.7 ui-monospace,SFMono-Regular,Menlo,Consolas,monospace; white-space:nowrap; }
+.equation { max-width:56rem; overflow-x:auto; padding:1.2rem 1.4rem .8rem; margin:.8rem 0; background:#eef2ef; color:#18392c; border-block:1px solid #dce8df; }
+.equation math { display:block; width:max-content; font-size:1.18rem; margin:0 0 1rem; }
+.equation-condition { margin:0; color:var(--muted); font:.82rem/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+.math-scroll-hint { display:none; }
 .equation-note { color:var(--muted); font-size:.9rem; }
 footer { border-top:1px solid var(--rule); padding:1.7rem 0 3rem; color:var(--muted); font:.83rem/1.55 Arial,sans-serif; }
 footer p { max-width:54rem; }
-@media (max-width:640px) { .masthead { padding:2.4rem 0 1.5rem; } h1 { font-size:clamp(2.15rem,8vw,2.7rem); } .lead { font-size:1.07rem; } }
+@media (max-width:640px) { .masthead { padding:2.4rem 0 1.5rem; } h1 { font-size:clamp(2.15rem,8vw,2.7rem); } .lead { font-size:1.07rem; } .math-scroll-hint { display:inline; } }
 .table-wrap { max-width:56rem; overflow-x:auto; margin:1.3rem 0 1.45rem; }
 table { border-collapse:collapse; width:100%; min-width:40rem; font:.86rem/1.5 Arial,sans-serif; font-variant-numeric:tabular-nums; }
 th, td { padding:.78rem .9rem .78rem 0; text-align:left; border-bottom:1px solid var(--rule); }
