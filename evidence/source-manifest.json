@@ -126,8 +126,8 @@
       "path": "src/g1_receiver/lower_cup_grip.py",
       "bytes": 4405,
       "source_sha256": "71df1d4174b4a6f1fde1dc5ad0b48a5f899a2691a4337bb2b862297023b04202",
-      "repository_sha256": "71df1d4174b4a6f1fde1dc5ad0b48a5f899a2691a4337bb2b862297023b04202",
-      "repository_bytes": 4405
+      "repository_sha256": "f9b5ac8203d5743639fbbcb1d39c3145a0b869179e131d9808d5cdf38f2aca15",
+      "repository_bytes": 5174
     },
     {
       "source_path": "src/g1_receiver/fall_supervisor.py",
@@ -710,25 +710,16 @@
       "path": "pyproject.toml",
       "bytes": 699,
       "source_sha256": "f01cbb7e2fbddb547187da13ecfaabd041d7baac567584ad92be53637594922d",
-      "repository_sha256": "f01cbb7e2fbddb547187da13ecfaabd041d7baac567584ad92be53637594922d",
-      "repository_bytes": 699
+      "repository_sha256": "9976177050c3ef67aace11ae7e8b977dcc9e371aeaeec80e7a9521e308105ce2",
+      "repository_bytes": 719
     },
     {
       "source_path": "uv.lock",
       "path": "uv.lock",
       "bytes": 275083,
       "source_sha256": "b28da24e1c11b6debefb1c73b1eaad896062388ba23a56c098f66e872cee2fe3",
-      "repository_sha256": "b28da24e1c11b6debefb1c73b1eaad896062388ba23a56c098f66e872cee2fe3",
-      "repository_bytes": 275083
-    },
-    {
-      "source_path": "SENSOR_CONTRACT.md",
-      "path": "docs/reference/sensor-contract-working-record.md",
-      "bytes": 24163,
-      "source_sha256": "9cf683b8866b99fe514ed9593ba75804d7398d004d86084c7fa6d66d5a0e20ea",
-      "repository_sha256": "2d047558ee186935516ab66b0d7f42be31f9c287934a5b3c0ea6af3c370b517e",
-      "repository_bytes": 24193,
-      "curation_note": "Two links to omitted historical documentation are rendered as annotated text. Original source hash and byte count are preserved."
+      "repository_sha256": "00d18f5cd328f3b76e7f808b6324efc24f3d1c2919704c005fe999f9f33d08ad",
+      "repository_bytes": 275190
     },
     {
       "source_path": "tests/test_in_stride_eval.py",
@@ -1306,14 +1297,6 @@
       "repository_sha256": "36b9b642941a146a37df4045cb98acc124d70decd95ca185a124a0b5984a5ece",
       "repository_bytes": 19056,
       "transformation": "Concise extraction; full source digest retained, dense nested ledgers omitted."
-    },
-    {
-      "source_path": "reports/catch-repair-20261114/post-study/out-next-experiment/identification/excitation-analysis/results.json",
-      "path": "evidence/identification/out-single-axis.json",
-      "bytes": 5929,
-      "source_sha256": "8c815df76c17d97b54524ffc013e927e1a8b7521246e9cef85483d626e0c8340",
-      "repository_sha256": "8c815df76c17d97b54524ffc013e927e1a8b7521246e9cef85483d626e0c8340",
-      "repository_bytes": 5929
     }
   ],
   "script_roots": [

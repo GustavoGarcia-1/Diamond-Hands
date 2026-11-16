@@ -422,11 +422,3 @@ visual geometry only. Timestamp-age tests exercise freshness rejection on
 fixed captures; they do not establish delayed-stream tracking robustness.
 Neither improved observation coverage nor visual dwell establishes physical
 hand support. The physical evaluator remains separate.
-
-The no-ball Out response-identification experiment records all 29 body
-encoder positions/velocities, IMU, requested/applied arm targets and native
-actuator channels. Its response fit accepts these sensor/command signals only.
-Conditional offline palm-position errors may use the heldout baseline's
-measured body configuration; they are evaluation quantities, not forecasts
-available ahead of time or controller inputs. The fitted model has not been
-promoted into a catching controller.

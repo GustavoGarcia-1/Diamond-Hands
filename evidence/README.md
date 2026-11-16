@@ -10,8 +10,6 @@ These small records make the claims inspectable without committing dense simulat
 
 `training/go-reward-specificity-independent.json` preserves a particularly important counterexample. Replaying the same actions with an augmented observer improved selected sensor capture coverage to 100%, but the failed learned catch still received 10.511 return versus 8.998 for retained baseline control. Exact array/action/ledger checks passed. Coverage repair alone did not make the reward a possession detector.
 
-`identification/out-single-axis.json` concerns a separate no-contact actuator-response experiment: fit one fixed shoulder-pitch bump, predict a second. It improved axis prediction over persistence, but full-palm maximum error failed the preregistered 1 mm criterion. It is not a new catch, a deployed model or a hardware identification result.
-
 `source-manifest.json` records original and repository hashes for curated source/evidence files. Concise extractions are explicitly distinguished from byte-identical copies. `verification/` records checks performed in the new repository. Git commit/tree identity identifies the final prepared snapshot.
 
 Excluded evidence includes NPZ/full-state/contact traces, source TARs/ZIPs, MP4s, training checkpoints, remote launch receipts/session metadata and external model/asset trees. Their original archive/source digests remain in the selected records. They are preserved separately in the originating research archive; no public GitHub release or download URL has been invented. Exact historical reproduction needs those frozen inputs, as explained in [reproduction notes](../docs/REPRODUCTION.md).
